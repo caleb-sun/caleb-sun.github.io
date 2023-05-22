@@ -159,15 +159,14 @@ header{
     left:0;
 }
 
+img{
+    width:100%;
+}
+
 .homepage{
     display:flex;
     gap: 150px;
     align-items: center;
-}
-
-.abtpage{
-    display:flex;
-    gap:80px;
 }
 
 .body{
@@ -178,6 +177,12 @@ header{
     flex-direction: column;
 }
 
+.abtpage{
+    display:flex;
+    gap:80px;
+    flex-direction: row;
+}
+
 .project{
     align-items:center;
 }
@@ -186,7 +191,7 @@ header{
     width:60%;
 }
 
-.project div h1.title{
+.project div h1.title, .project div h2.title{
     width:80%;
 }
 
@@ -236,7 +241,13 @@ header{
 
 .homeimg{
     width: 108px;
+    height: 100%;
+}
+
+.meimg{
+    width: 300px;
     height: auto;
+    object-fit: cover;
 }
 
 .intro{
@@ -305,6 +316,7 @@ a:hover{
     color: #7333FD;
 }
 
+
 /* spans */
 .smallbr {
     display: block;
@@ -336,6 +348,14 @@ a:hover{
 @media screen and (max-width: 1000px) {
     .body{
         width: 86%;
+    }
+
+    .abtpage {
+        gap:30px;
+    }
+
+    .abtpage p, .abtpage div{
+        width: 100%;
     }
 
     .project div p.text{
@@ -372,7 +392,13 @@ a:hover{
         width: 99%;
     }
 
-    
+    .abtpage{
+        flex-direction: column;
+    }
+
+    .abtpage p, .abtpage div{
+        width: 100%;
+    }
 
     .symbol{
         top:1rem;
