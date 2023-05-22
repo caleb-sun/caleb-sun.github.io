@@ -1,0 +1,324 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*custom css*/
+html{
+    background-color: #fdfdfd;
+}
+
+a:link {
+    text-decoration: none;
+    color: #081F32;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color:#081F32;
+  }
+  
+  a:active {
+    text-decoration: none;
+    color: #081F32;
+  }
+
+/*space*/
+main{
+    padding: 3.5%;
+}
+
+header{
+    position: fixed;
+    top:0;
+    left:0;
+}
+
+.homepage{
+    display:flex;
+    gap: 150px;
+    align-items: center;
+}
+
+.abtpage{
+    display:flex;
+    gap:80px;
+}
+
+.body{
+    width: 75%;
+    margin: auto;
+    margin-top: 10.5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project{
+    align-items:center;
+}
+
+.project div p.text{
+    width:60%;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bodyimg a{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.caption {
+    margin:0;
+}
+
+.body .gallery img{
+    width: 30.5rem;
+    height: 17rem;
+    object-fit: fill;
+}
+
+nav{
+    position: fixed;
+    top: 22%;
+}
+
+.description{
+    position: fixed;
+    bottom: 2%;
+    width: 20%;
+}
+
+.symbol{
+    position: fixed;
+    top:3.5%;
+    left: 3.5%;
+}
+
+.about{
+    position:fixed;
+    top:3.5%;
+    right: 3.5%;
+    font-size: 24px;
+}
+
+.thumbimg{
+    width: 98.8vw;
+}
+
+.homeimg{
+    width: 12%;
+    height: auto;
+}
+
+/*type*/
+html {
+    font-family: "input-mono", monospace;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    color: #081F32;
+  }
+
+h1,h2,li>a{
+    font-family: "campaign", sans-serif;
+    font-style: normal;
+}
+
+h1{
+    font-weight:700;
+    font-size: 44px;
+}
+
+.about h1 a{
+    font-size: 24px;
+}
+
+h2,li>a{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+sub{
+    font-size: 0.5rem;
+}
+
+.caption{
+    font-family: "input-mono", monospace;
+    font-weight: 100;
+    font-style: normal;
+    color: #081F32;
+}
+
+p{
+    font-family: "input-mono", monospace;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+}
+
+a:hover{
+    font-style: italic;
+    color: gray;
+}
+
+.active,a.active{
+    color: #7333FD;
+}
+
+/* spans */
+.smallbr {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.mediumbr{
+    display: block;
+    margin-bottom:15px;
+}
+
+.largebr {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.hugebr{
+    display: block;
+    margin-bottom: 40px;
+}
+
+.gradBg{
+    position:fixed;
+    top:0;
+}
