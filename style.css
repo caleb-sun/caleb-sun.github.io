@@ -192,20 +192,18 @@ header{
     justify-content: space-between;
 }
 
-.bodyimg a{
+.bodyimg {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    width: 49.5%;
+    height: inherit 20%;;
 }
 
-.caption {
-    margin:0;
-}
-
-.body .gallery img{
-    width: 30.5rem;
-    height: 17rem;
-    object-fit: fill;
+.bodyimg a img{
+    width: 100%;
+    height: width 65%;
+    object-fit: cover;
 }
 
 nav{
@@ -237,7 +235,7 @@ nav{
 }
 
 .homeimg{
-    width: 12%;
+    width: 108px;
     height: auto;
 }
 
@@ -321,4 +319,29 @@ a:hover{
 .gradBg{
     position:fixed;
     top:0;
+}
+
+
+/* tablet */
+@media screen and (max-width: 800px) {
+    .bodyimg {
+        width: 100%;
+        height: inherit 20%;;
+    }
+    .homeimg {
+        display: none;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 500px) {
+    h1{
+        font-weight:700;
+        font-size: 32px;
+    }
+
+    .intro{
+        width: 100%;
+    }
+
 }
