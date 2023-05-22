@@ -206,10 +206,6 @@ header{
     object-fit: cover;
 }
 
-nav{
-    position: fixed;
-    top: 22%;
-}
 
 .description{
     position: fixed;
@@ -219,14 +215,14 @@ nav{
 
 .symbol{
     position: fixed;
-    top:3.5%;
-    left: 3.5%;
+    top:3rem;
+    left: 3rem;
 }
 
 .about{
     position:fixed;
-    top:3.5%;
-    right: 3.5%;
+    top:3rem;
+    right: 3rem;
     font-size: 24px;
 }
 
