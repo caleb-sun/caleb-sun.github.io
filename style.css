@@ -173,7 +173,7 @@ header{
 .body{
     width: 75%;
     margin: auto;
-    margin-top: 10.5%;
+    margin-top: 10rem;
     display: flex;
     flex-direction: column;
 }
@@ -184,6 +184,10 @@ header{
 
 .project div p.text{
     width:60%;
+}
+
+.project div h1.title{
+    width:80%;
 }
 
 .gallery{
@@ -234,6 +238,16 @@ header{
     width: 108px;
     height: auto;
 }
+
+.intro{
+    width: 29rem;
+}
+
+.descriptors{
+    display:flex;
+    gap:40px;
+}
+
 
 /*type*/
 html {
@@ -319,7 +333,19 @@ a:hover{
 
 
 /* tablet */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
+    .body{
+        width: 86%;
+    }
+
+    .project div p.text{
+        width:100%;
+    }
+
+    .project div h1.title{
+        width:100%;
+    }
+    
     .bodyimg {
         width: 100%;
         height: inherit 20%;;
@@ -327,13 +353,46 @@ a:hover{
     .homeimg {
         display: none;
     }
+    h1{
+        font-weight:700;
+        font-size: 36px;
+    }
+
+    p{
+        font-size:12px;
+        line-height:14px;
+    }
+       
 }
 
 /* mobile */
 @media screen and (max-width: 500px) {
+    .body{
+        margin-top:5rem;
+        width: 99%;
+    }
+
+    
+
+    .symbol{
+        top:1rem;
+        left: 1rem;
+    }
+    
+    .about{
+        top:1rem;
+        right: 1rem;
+        font-size: 24px;
+    }
+
     h1{
         font-weight:700;
-        font-size: 32px;
+        font-size: 28px;
+    }
+
+    p{
+        font-size:12px;
+        line-height: 14px;
     }
 
     .intro{
