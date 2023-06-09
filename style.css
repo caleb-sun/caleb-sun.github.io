@@ -278,6 +278,15 @@ img{
     width: 49.5%;
 }
 
+footer{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 5rem;
+
+}
+
 
 /*type*/
 html {
