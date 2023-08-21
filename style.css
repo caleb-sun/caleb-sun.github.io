@@ -169,8 +169,8 @@ img{
 
 .homepage{
     display:flex;
-    gap: 150px;
-    align-items: center;
+    gap: 100px;
+    align-items: top;
 }
 
 .body{
@@ -195,10 +195,11 @@ img{
 
 .project{
     align-items:center;
+    width: 75%;
 }
 
 .project div p.text{
-    width:60%;
+    width:70%;
 }
 
 .project div h1.title, .project div h2.title{
@@ -216,7 +217,7 @@ img{
     flex-wrap: wrap;
     flex-direction: column;
     width: 49.5%;
-    height: inherit 20%;;
+    height: inherit 20%;
 }
 
 .bodyimg a img{
@@ -224,7 +225,6 @@ img{
     height: width 65%;
     object-fit: cover;
 }
-
 
 .description{
     position: fixed;
@@ -251,7 +251,7 @@ img{
 }
 
 .homeimg{
-    width: 108px;
+    width: 130px;
     height: 100%;
 }
 
@@ -262,7 +262,7 @@ img{
 }
 
 .intro{
-    width: 29rem;
+    width: 95%;
 }
 
 .descriptors{
@@ -284,7 +284,6 @@ footer{
     flex-direction: column;
     margin: auto;
     margin-top: 5rem;
-
 }
 
 
@@ -299,7 +298,6 @@ html {
 
 h1,h2,li>a{
     font-family: "campaign", sans-serif;
-    font-style: normal;
 }
 
 h1{
@@ -308,16 +306,19 @@ h1{
 }
 
 .about h1 a{
-    font-size: 24px;
+    font-size: 24pt;
 }
 
 h2,li>a{
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 24pt;
 }
 
 sub{
-    font-size: 0.5rem;
+    font-family: "input-mono", monospace;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 9pt;
 }
 
 .caption{
@@ -327,23 +328,31 @@ sub{
     color: #081F32;
 }
 
-p{
+h3{
     font-family: "input-mono", monospace;
-    font-weight: 100;
-    font-style: normal;
-    font-size: 0.9rem;
+    font-weight: 500;
+    font-size: 14pt;
     line-height: 1.3rem;
 }
 
-a:hover{
+p{
+    font-family: "input-mono", monospace;
+    font-weight: 100;
+    font-size: 11pt;
+    line-height: 1.3rem;
+}
+
+.bold{
+    font-weight:500;
+}
+
+a:hover,u:hover,a:hover>.caption{
+    color: rgb(174, 178, 199);
+}
+
+.type{
     font-style: italic;
-    color: gray;
 }
-
-.active,a.active{
-    color: #7333FD;
-}
-
 
 /* spans */
 .smallbr {
@@ -353,7 +362,7 @@ a:hover{
 
 .mediumbr{
     display: block;
-    margin-bottom:15px;
+    margin-bottom:12px;
 }
 
 .largebr {
@@ -364,6 +373,11 @@ a:hover{
 .hugebr{
     display: block;
     margin-bottom: 40px;
+}
+
+.gigabr{
+    display: block;
+    margin-bottom: 80px;
 }
 
 .gradBg{
@@ -401,15 +415,6 @@ a:hover{
     .homeimg {
         display: none;
     }
-    h1{
-        font-weight:700;
-        font-size: 36px;
-    }
-
-    p{
-        font-size:12px;
-        line-height:14px;
-    }
        
 }
 
@@ -444,13 +449,50 @@ a:hover{
         font-size: 28px;
     }
 
+    h2{
+        font-size: 22px;
+    }
+
+    sub{
+        font-size: 10px;
+    }
+
     p{
-        font-size:12px;
-        line-height: 14px;
+        font-size:14px;
+        line-height: 18px;
     }
 
     .intro{
         width: 100%;
+    }
+
+    .smallbr {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    .mediumbr{
+        display: block;
+        margin-bottom:8px;
+    }
+    
+    .largebr {
+        display: block;
+        margin-bottom: 20px;
+    }
+    
+    .hugebr{
+        display: block;
+        margin-bottom: 36px;
+    }
+    
+    .gigabr{
+        display: block;
+        margin-bottom: 64px;
+    }    
+
+    .gallery{
+        row-gap: 24px;
     }
 
 }
