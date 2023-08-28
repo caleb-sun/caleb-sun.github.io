@@ -268,7 +268,9 @@ img{
 .descriptors{
     display:flex;
     gap:40px;
+    flex-wrap: wrap;
 }
+
 .sidepics{
     display: flex;
     justify-content: space-between;
@@ -282,8 +284,17 @@ footer{
     width: 75%;
     display: flex;
     flex-direction: column;
-    margin: auto;
+    right: 1rem;
     margin-top: 5rem;
+}
+
+.descriptors div{
+    width: 25%;
+}
+
+.links{
+    display:flex;
+    gap: 60px;
 }
 
 
@@ -306,7 +317,7 @@ h1{
 }
 
 .about h1 a{
-    font-size: 24pt;
+    font-size: 24px;
 }
 
 h2,li>a{
@@ -319,6 +330,7 @@ sub{
     font-weight: 100;
     font-style: normal;
     font-size: 9pt;
+    color: #a8a8bb;
 }
 
 .caption{
@@ -437,11 +449,14 @@ a:hover,u:hover,a:hover>.caption{
         top:0.7rem;
         left: 1rem;
     }
-    
     .about{
-        top:0.7rem;
+        top: 0.7rem;
         right: 1rem;
         font-size: 24px;
+    }
+
+    .descriptors div{
+        width: 40%;
     }
 
     h1{
@@ -450,7 +465,7 @@ a:hover,u:hover,a:hover>.caption{
     }
 
     h2{
-        font-size: 22px;
+        font-size: 28px;
     }
 
     sub{
@@ -473,7 +488,7 @@ a:hover,u:hover,a:hover>.caption{
     
     .mediumbr{
         display: block;
-        margin-bottom:8px;
+        margin-bottom:14px;
     }
     
     .largebr {
@@ -493,6 +508,10 @@ a:hover,u:hover,a:hover>.caption{
 
     .gallery{
         row-gap: 24px;
+    }
+
+    .links{
+        gap: 40px;
     }
 
 }
