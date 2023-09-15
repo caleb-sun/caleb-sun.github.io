@@ -194,12 +194,27 @@ img{
 }
 
 .project{
-    align-items:center;
-    width: 75%;
+    align-items: center;
+    width: 90%;
+}
+.projdescription{
+    width: 85%;
 }
 
 .project div p.text{
-    width:70%;
+    width:100%;
+    text-align: center;
+}
+
+.project h2{
+    text-align: center;
+}
+
+.company{
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .project div h1.title, .project div h2.title{
@@ -245,10 +260,6 @@ img{
     font-size: 24px;
 }
 
-.thumbimg{
-    width: 100vw;
-    border-radius:0;
-}
 
 .homeimg{
     width: 130px;
@@ -261,17 +272,51 @@ img{
     object-fit: cover;
 }
 
-.intro{
-    width: 95%;
+.textblock{
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    justify-content:space-between;
+}
+
+.textblock .subhead{
+    width: 20%;
+}
+
+.textblock .text{
+    width: 70%;
+}
+
+.video{
+    width: 100vw;
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.company{
+    width: 85%;
 }
 
 .descriptors{
     display:flex;
-    gap:40px;
+    gap:20px;
     flex-wrap: wrap;
 }
 
+.project img{
+    width: 85%;
+}
+
+
+.thumbimg{
+    width: 100vw !important;
+    border-radius:0;
+}
+
 .sidepics{
+    width: 85%;
     display: flex;
     justify-content: space-between;
 }
@@ -297,23 +342,31 @@ footer{
     gap: 60px;
 }
 
+hr {
+    width: 100%;
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border-style: inset;
+    border-width: 1px;
+  }
 
 /*type*/
 html {
-    font-family: "input-mono", monospace;
-    font-weight: 300;
+    font-family: "roc-grotest", sans-serif;
+    font-weight: 200;
     font-style: normal;
     font-size: 1rem;
     color: #081F32;
   }
 
 h1,h2,li>a{
-    font-family: "campaign", sans-serif;
+    font-family: "roc-grotesk", sans-serif;
 }
 
 h1{
     font-weight:700;
-    font-size: 44px;
+    font-size: 36pt;
 }
 
 .about h1 a{
@@ -321,34 +374,39 @@ h1{
 }
 
 h2,li>a{
-    font-weight: 700;
+    font-weight: 100;
     font-size: 24pt;
+    line-height: 26pt;
 }
 
 sub{
-    font-family: "input-mono", monospace;
+    font-family: "roc-grotest", sans-serif;
     font-weight: 100;
-    font-style: normal;
+    font-style: italic;
     font-size: 9pt;
-    color: #a8a8bb;
 }
 
 .caption{
-    font-family: "input-mono", monospace;
-    font-weight: 100;
+    font-family: "roc-grotest", sans-serif;
+    font-weight: 300;
     font-style: normal;
     color: #081F32;
 }
 
+.caption h2{
+    font-weight: 800;
+    line-height: 20pt;
+}
+
 h3{
-    font-family: "input-mono", monospace;
-    font-weight: 500;
-    font-size: 14pt;
-    line-height: 1.3rem;
+    font-family: "roc-grotest", sans-serif;
+    font-weight: 600;
+    font-size: 20pt;
+    line-height: 22pt;
 }
 
 p{
-    font-family: "input-mono", monospace;
+    font-family: "roc-grotest", sans-serif;
     font-weight: 100;
     font-size: 11pt;
     line-height: 1.3rem;
