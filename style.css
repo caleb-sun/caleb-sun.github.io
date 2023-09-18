@@ -206,15 +206,34 @@ img{
     text-align: center;
 }
 
-.project h2{
+.callout h2, .callout h5{
     text-align: center;
 }
 
-.company{
+.callout{
     width: 85%;
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
+    flex-grow: 1;
+}
+
+.callout .columns{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+}
+
+.callout .imgcolumns{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.imgcolumns img{
+    width: 100% !important;
 }
 
 .project div h1.title, .project div h2.title{
@@ -276,16 +295,16 @@ img{
     width: 85%;
     display: flex;
     flex-direction: row;
-    gap: 10%;
+    gap: 5%;
     justify-content:space-between;
 }
 
 .textblock .subhead{
-    width: 20%;
+    width: 15%;
 }
 
 .textblock .text{
-    width: 70%;
+    width: 80%;
 }
 
 .video{
@@ -295,13 +314,13 @@ img{
     padding-bottom: 0;
 }
 
-.company{
+.callout{
     width: 85%;
 }
 
 .descriptors{
     display:flex;
-    gap:20px;
+    gap:10px;
     flex-wrap: wrap;
 }
 
@@ -334,7 +353,7 @@ footer{
 }
 
 .descriptors div{
-    width: 25%;
+    width: 20%;
 }
 
 .links{
@@ -353,14 +372,14 @@ hr {
 
 /*type*/
 html {
-    font-family: "roc-grotest", sans-serif;
+    font-family: "roc-grotesk", sans-serif;
     font-weight: 200;
     font-style: normal;
     font-size: 1rem;
     color: #081F32;
   }
 
-h1,h2,li>a{
+h1,h2,h3,h4, li>a{
     font-family: "roc-grotesk", sans-serif;
 }
 
@@ -379,15 +398,21 @@ h2,li>a{
     line-height: 26pt;
 }
 
+h4{
+    font-weight: 100;
+    font-size: 18pt;
+    line-height: 20pt;
+}
+
 sub{
-    font-family: "roc-grotest", sans-serif;
+    font-family: "forma-djr-mircro", sans-serif;
     font-weight: 100;
     font-style: italic;
     font-size: 9pt;
 }
 
 .caption{
-    font-family: "roc-grotest", sans-serif;
+    font-family: "roc-grotesk", sans-serif;
     font-weight: 300;
     font-style: normal;
     color: #081F32;
@@ -399,16 +424,16 @@ sub{
 }
 
 h3{
-    font-family: "roc-grotest", sans-serif;
+    font-family: "roc-grotesk", sans-serif;
     font-weight: 600;
     font-size: 20pt;
     line-height: 22pt;
 }
 
 p{
-    font-family: "roc-grotest", sans-serif;
+    font-family: "forma-djr-micro", sans-serif;
     font-weight: 100;
-    font-size: 11pt;
+    font-size: 12pt;
     line-height: 1.3rem;
 }
 
@@ -427,7 +452,7 @@ a:hover,u:hover,a:hover>.caption{
 /* spans */
 .smallbr {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .mediumbr{
@@ -485,6 +510,41 @@ a:hover,u:hover,a:hover>.caption{
     .homeimg {
         display: none;
     }
+
+    .textblock{
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content:space-between;
+    }
+    
+    .textblock .subhead{
+        width: 15%;
+    }
+    
+    .textblock .text{
+        width: 80%;
+    }
+
+    .callout{
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .callout .columns{
+        width: 85%;
+    }
+
+
+    .descriptors{
+        display:flex;
+        gap:5%;
+        flex-wrap: wrap;
+    }
+    .project img{
+        width: 100%;
+    }
        
 }
 
@@ -492,7 +552,7 @@ a:hover,u:hover,a:hover>.caption{
 @media screen and (max-width: 500px) {
     .body{
         margin-top:5rem;
-        width: 99%;
+        width: 95%;
     }
 
     .abtpage{
@@ -513,17 +573,28 @@ a:hover,u:hover,a:hover>.caption{
         font-size: 24px;
     }
 
+    .descriptors{
+        gap: 20px;
+    }
     .descriptors div{
         width: 40%;
     }
 
     h1{
         font-weight:700;
-        font-size: 28px;
+        font-size: 24pt;
     }
 
     h2{
-        font-size: 28px;
+        font-size: 22pt;
+    }
+
+    h3{
+        font-size: 22pt;
+    }
+
+    h4{
+        font-size:18pt;
     }
 
     sub{
@@ -531,8 +602,8 @@ a:hover,u:hover,a:hover>.caption{
     }
 
     p{
-        font-size:14px;
-        line-height: 18px;
+        font-size:12pt;
+        line-height: 14pt;
     }
 
     .intro{
@@ -556,12 +627,12 @@ a:hover,u:hover,a:hover>.caption{
     
     .hugebr{
         display: block;
-        margin-bottom: 36px;
+        margin-bottom: 30px;
     }
     
     .gigabr{
         display: block;
-        margin-bottom: 64px;
+        margin-bottom: 48px;
     }    
 
     .gallery{
@@ -571,5 +642,32 @@ a:hover,u:hover,a:hover>.caption{
     .links{
         gap: 40px;
     }
+
+    .projdescription{
+        width: 100%;
+    }
+    .textblock{
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .textblock .text{
+        width: 100%;
+    }
+
+    p{
+        width: 100%;
+    }
+
+    .callout{
+        gap: 10px;
+        width: 100%;
+    }
+
+    .callout .columns{
+        width: 100%;
+    }
+
 
 }
