@@ -216,6 +216,7 @@ img{
     justify-content: space-between;
     flex-direction: row;
     align-items: start;
+    gap: 5%;
     flex-grow: 1;
 }
 
@@ -229,7 +230,9 @@ img{
 .callout .imgcolumns{
     width: 30%;
     display: flex;
+    
     flex-direction: column;
+    gap: 24px;
 }
 
 .imgcolumns img{
@@ -475,6 +478,11 @@ a:hover,u:hover,a:hover>.caption{
     margin-bottom: 80px;
 }
 
+.sectionbr{
+    display: block;
+    margin-bottom: 80px;
+}
+
 .gradBg{
     position:fixed;
     top:0;
@@ -482,7 +490,7 @@ a:hover,u:hover,a:hover>.caption{
 
 
 /* tablet */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) { 
     .body{
         width: 86%;
     }
@@ -520,30 +528,34 @@ a:hover,u:hover,a:hover>.caption{
     }
     
     .textblock .subhead{
-        width: 15%;
+        width: 100%;
     }
     
     .textblock .text{
-        width: 80%;
+        width: 100%;
     }
 
     .callout{
         flex-direction: column;
-        gap: 18px;
+        gap: 24px;
     }
 
     .callout .columns{
         width: 85%;
     }
-
+    .callout .imgcolumns{
+        width: 100%;
+        flex-direction: row;
+    }
+    .imgcolumns img{
+        width: 45% !important; 
+        height: 33.3%;
+    }
 
     .descriptors{
         display:flex;
         gap:5%;
         flex-wrap: wrap;
-    }
-    .project img{
-        width: 100%;
     }
        
 }
@@ -646,13 +658,17 @@ a:hover,u:hover,a:hover>.caption{
     .projdescription{
         width: 100%;
     }
-    .textblock{
+    .textblock, .columns, .callout .imgcolumns{
         width: 100%;
         flex-direction: column;
-        gap: 10px;
+        gap: 24px;
     }
     
     .textblock .text{
+        width: 100%;
+    }
+
+    .project img{
         width: 100%;
     }
 
@@ -661,7 +677,7 @@ a:hover,u:hover,a:hover>.caption{
     }
 
     .callout{
-        gap: 10px;
+        gap: 36px;
         width: 100%;
     }
 
@@ -669,5 +685,9 @@ a:hover,u:hover,a:hover>.caption{
         width: 100%;
     }
 
+    .imgcolumns img{
+        width: 100% !important;
+        height: 75% !important;
+    }
 
 }
