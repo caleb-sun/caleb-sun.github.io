@@ -284,6 +284,11 @@ img{
     height: 28px;
 }
 
+
+.arrow{
+    width: 48px;
+}
+
 .arrow:hover{
     content: url("images/arrow-hover.svg")
 }
