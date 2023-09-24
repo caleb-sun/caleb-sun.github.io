@@ -257,6 +257,10 @@ img{
     height: inherit 20%;
 }
 
+.highlight {
+    width: 100% !important;
+}
+
 .bodyimg a img{
     width: 100%;
     height: width 65%;
@@ -275,11 +279,23 @@ img{
     left: 3rem;
 }
 
+.symbol img{
+    width: 28px;
+    height: 28px;
+}
+
+.arrow:hover{
+    content: url("images/arrow-hover.svg")
+}
+
 .about{
     position:fixed;
     top:2rem;
     right: 3rem;
     font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
 }
 
 
@@ -391,7 +407,7 @@ h1{
     font-size: 36pt;
 }
 
-.about h1 a{
+.about h2 a{
     font-size: 24px;
 }
 
@@ -491,6 +507,10 @@ a:hover,u:hover,a:hover>.caption{
 
 /* tablet */
 @media screen and (max-width: 1000px) { 
+    .cslthumb{
+        content: url("images/thumbnails/csl-thumbnail-alt.jpg")
+    }
+
     .body{
         width: 86%;
     }
