@@ -1,21 +1,12 @@
-$(window).scroll(function() {
-    if ($(this).scrollTop()> 30) {
-        $('.name').fadeOut();
-     }
-    else {
-      $('.name').fadeIn();
-     }
- });
+myID = document.getElementById("myID");
 
- $(window).on( "load", function() {
-    $('.symbol').hide();
-  } );
+var myScrollFunc = function () {
+    var y = window.scrollY;
+    if (y >= 800) {
+        myID.className = "show"
+    } else {
+        myID.className = "hide"
+    }
+};
 
- $(window).scroll(function() {
-    if ($(this).scrollTop()> 20) {
-        $('.symbol').fadeIn();
-     }
-    else {
-      $('.symbol').fadeOut();
-     }
- });
+window.addEventListener("scroll", myScrollFunc);

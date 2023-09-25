@@ -20,17 +20,26 @@
   <body>
     <main>
       <header>
-        <div class="symbol">
-          <h1> <a href="../../index.html">
-            &#10022
+        <div class="symbol" style="width:12%">
+          <a href="../../index.html">
+            <img src = "../../images/arrow.svg" class="arrow">
           </a>
-          </h1>
+          <div id="myID" class="hide">
+            <span class="hugebr"></span>
+            <p style="font-weight: 800;">Quick Nav</p>
+                <p>
+                  <a href="#donor-app-design">Plasma App Design</a><br>
+                  <a href="#usability">Usability Testing</a><br>
+                  <a href="#figma-redesign">Design Reorganization</a><br>
+                </p>
+          </div>
+          <script type = "text/javascript" src="../../script.js"></script>
         </div>
         <div class="about">
-          <h1><a href="../about.html">
+          <h2><a href="../about.html">
             About
           </a>
-          </h1>
+          </h2>
         </div>
       </header>
     <ul class="body project">
@@ -83,8 +92,6 @@
             <h2><u><a href="https://www.csl.com/we-are-csl/our-businesses-and-products/csl-behring" target="_blank">CSL Behring</a></u> is a biopharmaceutical company that develops and delivers innovative therapies for people living with conditions in the immunology, hematology, cardiovascular and metabolic, respiratory, and transplant therapeutic areas. It also manages <u><a href="https://www.cslplasma.com/" target="_blank">CSL Plasma</a></u>, one of the world's largest plasma collection networks.</h2>
           </div>
           <span class="gigabr"></span>
-          <hr>
-          <span class="gigabr"></span>
           <div class="textblock">
             <div class="subhead">
               <h3>Overview</h3>
@@ -93,30 +100,6 @@
               <p>My work at CSL primarily focused around the Plasma Donor Experiences, a series of digital products aimed at streamlining and improving the donation experience. I've done my best to summarize my work from this internship, but please <u><a href=mailto:"sun.cs0327@gmail.com">reach out</a></u> if you'd like to learn more!</p>
             </div>
           </div>
-          <span class="gigabr"></span>
-          <div><!--content nav-->
-            <h2>Quick Nav</h2>
-            <span class="hugebr"></span>
-            <a href="#donor-app-design">
-              <h3>1. Donor App Design</h3>
-              <span class="smallbr"></span>
-              <p>Designing and documenting CSL's Plasma Donor App</p>
-            </a>
-            <span class="largebr"></span>
-            <a href="#usability">
-              <h3>2. Usability Testing</h3>
-              <span class="smallbr"></span>
-              <p>Creating generative activities to support CSL's first in-house usability testing</p>
-            </a>
-            <span class="largebr"></span>
-            <a href="#figma-redesign">
-              <h3>3. Re-Designing for Collaboration</h3>
-              <span class="smallbr"></span>
-              <p>Analyzing and improving the design team's collaborative workflow</p>
-            </a>
-            <span class="gigabr"></span>
-          </div>
-          <hr>
           <div id="donor-app-design"></div>
             <span class="gigabr"></span>
             <div class="textblock">
@@ -127,7 +110,7 @@
                 <p>Auditing and designing user journeys for the CSL Plasma Apps in accordance to business goals and in response to real services offered at donation centers.</p>
               </div>
             </div>
-            <span class="gigabr"></span>
+            <span class="largebr"></span>
             <img src="../../images/csl/plasma-design1.png" alt="Front and back cover of a magazine with different packaging design samples."/>
             <span class="hugebr"></span>
             <div class="textblock">
@@ -140,10 +123,7 @@
             </div>
             <span class="hugebr"></span>
             <img src="../../images/csl/plasma-design2.png" alt="Front and back cover of a magazine with different packaging design samples."/>
-          <div id="usability">
-            </div>
-            <span class="largebr"></span>
-            <hr>
+          <div id="usability"></div>
             <span class="gigabr"></span>
             <div class="textblock">
               <div class="subhead">
@@ -157,32 +137,56 @@
             <span class="largebr"></span>
             <img src="../../images/csl/generative-research.png" alt="Front and back cover of a magazine with different packaging design samples."/>
             <span class="largebr"></span>
+
+          <div id="figma-redesign"></div>
+          <span class="gigabr"></span>
             <div class="textblock">
-              <div class="subhead"></div>
+              <div class="subhead">
+                <h3>Re-Designing for Collaboration</h3>
+              </div>
               <div class="text">
                 <p>A business goal for CSL's user testing trials was to gauge the mental models and understanding of different in-center processes of users who are unfamiliar with donating at CSL Plasma. I created a generative activity to capture participant understanding of several key donation procedures having completed usability testing steps.<br><br>
                   These testing trials are still underway, but this activity has allowed our dry-run participants to show their understanding clearly while also not bogging them down with too much unnecessary information.</p>
               </div>
-            
-            
-          <div id="figma-redesign"></div>
-          <span class="gigabr"></span>
-          <h2>Re-Designing for Collaboration</h2>
-          <span class="mediumbr"></span>
-          <p class="text">Having transitioned recently to an in-house design team, CSL Plasma's design operations were impeded by disorganization and having to collaborate with a multidisciplinary SCRUM team. <br><br>Through a series of workshops and interviews, I lead an initiative to introduce an organization structure to CSL Plasma's design files that balances the needs of different types of stakeholders, as well as opening the ability to scale up in the future. This effort has since been adopted by the team to great enthusiasm, having aligned the workflows of different contributors in an elegant and non-intrusive way.</p>
-          <span class="largebr"></span>
-          <img src="../../images/csl/figma-concept-map.png" alt="Front and back cover of a magazine with different packaging design samples."/>
-          <span class="hugebr"></span>
-          <p class="text">The workshop I lead at the onset of this project revealed a lot of the pain points in the team's current workflow:</p>
-          <span class="largebr"></span>
-          <img src="../../images/csl/workshop-feedback.png" alt="Front and back cover of a magazine with different packaging design samples."/>
-          <span class="hugebr"></span>
-          <p class="text">The core of the re-organization effort lies in the introduction of grouping and labeling components used to indicate key information that assists team members in their respective workflows. Upkeep is simple on the designer's end, and results in much less time spent cross-communicating on issues long since resolved.</p>
-          <img src="../../images/csl/figma-components.png" alt="Front and back cover of a magazine with different packaging design samples."/>
-          <span class="hugebr"></span>
-            
+            </div>
+            <span class="hugebr"></span>
+            <div class="textblock">
+              <div class="subhead">
+                <p style="font-weight:800;">Re-Designing for Collaboration</p>
+              </div>
+              <div class="text">
+                <p>Having transitioned recently to an in-house design team, CSL Plasma's design operations were impeded by disorganization and having to collaborate with a multidisciplinary SCRUM team. <br><br>Through a series of workshops and interviews, I lead an initiative to introduce an organization structure to CSL Plasma's design files that balances the needs of different types of stakeholders, as well as opening the ability to scale up in the future. This effort has since been adopted by the team to great enthusiasm, having aligned the workflows of different contributors in an elegant and non-intrusive way.</p>
+              </div>
+              
+            </div>
             
             <span class="largebr"></span>
+            <img src="../../images/csl/figma-concept-map.png" alt="Front and back cover of a magazine with different packaging design samples."/>
+            <span class="hugebr"></span>
+            <div class="textblock">
+              <div class="subhead">
+                <p style="font-weight:800;">Re-Designing for Collaboration</p>
+              </div>
+              <div class="text">
+                <p>The workshop I lead at the onset of this project revealed a lot of the pain points in the team's current workflow:</p>
+              </div>
+              
+            </div>
+            <span class="largebr"></span>
+            <img src="../../images/csl/workshop-feedback.png" alt="Front and back cover of a magazine with different packaging design samples."/>
+            <span class="hugebr"></span>
+            <div class="textblock">
+              <div class="subhead">
+                <p style="font-weight:800;">Organizational Components</p>
+              </div>
+              <div class="text">
+                <p>The core of the re-organization effort lies in the introduction of grouping and labeling components used to indicate key information that assists team members in their respective workflows. Upkeep is simple on the designer's end, and results in much less time spent cross-communicating on issues long since resolved.</p>
+              </div>
+              
+            </div>
+            
+            <img src="../../images/csl/figma-components.png" alt="Front and back cover of a magazine with different packaging design samples."/>
+            <span class="gigabr"></span>
             
           </div>
       </div>

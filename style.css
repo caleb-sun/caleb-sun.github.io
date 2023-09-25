@@ -174,7 +174,7 @@ img{
 }
 
 .body{
-    width: 75%;
+    width: 70%;
     margin: auto;
     margin-top: 10rem;
     display: flex;
@@ -189,13 +189,13 @@ img{
 
 .projnav{
     display: flex;
-    width: 100%;
+    width: 85%;
     justify-content: space-between;
 }
 
 .project{
     align-items: center;
-    width: 90%;
+    width: 85%;
 }
 .projdescription{
     width: 85%;
@@ -211,24 +211,24 @@ img{
 }
 
 .callout{
-    width: 85%;
+    width:80%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     align-items: start;
-    gap: 5%;
+    gap: 1%;
     flex-grow: 1;
 }
 
 .callout .columns{
-    width: 30%;
+    width: 32%;
     display: flex;
     flex-direction: row;
     gap:10px;
 }
 
 .callout .imgcolumns{
-    width: 30%;
+    width: 32%;
     display: flex;
     
     flex-direction: column;
@@ -303,6 +303,18 @@ img{
     gap: 60px;
 }
 
+.hide {
+    opacity: 0;
+    transform: translate(0, 5%);
+    TRANSITION: all 500ms;
+  }
+  
+.show {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 500ms;
+  }
+
 
 .homeimg{
     width: 130px;
@@ -316,15 +328,15 @@ img{
 }
 
 .textblock{
-    width: 85%;
+    width: 80%;
     display: flex;
-    flex-direction: row;
-    gap: 5%;
+    flex-direction: column;
+    gap: 8px;
     justify-content:space-between;
 }
 
 .textblock .subhead{
-    width: 15%;
+    width: 80%;
 }
 
 .textblock .text{
@@ -339,7 +351,7 @@ img{
 }
 
 .callout{
-    width: 85%;
+    width: 80%;
 }
 
 .descriptors{
@@ -349,7 +361,7 @@ img{
 }
 
 .project img{
-    width: 85%;
+    width: 80%;
 }
 
 
@@ -414,6 +426,7 @@ h1{
 
 .about h2 a{
     font-size: 24px;
+    font-weight:700;
 }
 
 h2,li>a{
@@ -566,7 +579,7 @@ a:hover,u:hover,a:hover>.caption{
     }
 
     .callout .columns{
-        width: 85%;
+        width: 80%;
     }
     .callout .imgcolumns{
         width: 100%;
@@ -713,6 +726,12 @@ a:hover,u:hover,a:hover>.caption{
     .imgcolumns img{
         width: 100% !important;
         height: 75% !important;
+    }
+
+    .projnav{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
     }
 
 }
