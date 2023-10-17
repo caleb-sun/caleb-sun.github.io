@@ -42,7 +42,8 @@
           <span class="hugebr"></span>
           <div class="descriptors">
             <div> <!--skills-->
-              <p style="font-weight: 800;">Skills</p>
+              <p class="descriptor-head">Skills</p>
+              <span class="smallbr"></span>
               <p>
                 UX/UI Design<br>
                 Design Thinking<br>
@@ -52,7 +53,8 @@
               </p>
             </div>
             <div> <!--duration-->
-              <p style="font-weight: 800;">Duration</p>
+              <p class="descriptor-head">Duration</p>
+              <span class="smallbr"></span>
               <p>
                 June 2023 - August 2023<br>
                 September 2023 - Ongoing<br>
@@ -60,7 +62,8 @@
               </p>
             </div>
             <div><!--tools-->
-              <p style="font-weight: 800;">Tools</p>
+              <p class="descriptor-head">Tools</p>
+              <span class="smallbr"></span>
               <p>
                 Figma<br>FigJam<br>Microsoft Office<br>Confluence/Jira
               </p>
@@ -74,17 +77,50 @@
             class="thumbimg"/>
         <span class="gigabr"></span>
         <div class="callout"> 
-          <h2><u><a href="https://www.csl.com/we-are-csl/our-businesses-and-products/csl-behring" target="_blank">CSL Behring</a></u> is a biopharmaceutical company that develops and delivers innovative therapies for people living with conditions in the immunology, hematology, cardiovascular and metabolic, respiratory, and transplant therapeutic areas. It also manages <u><a href="https://www.cslplasma.com/" target="_blank">CSL Plasma</a></u>, one of the world's largest plasma collection networks.</h2>
+          <h2><u><a href="https://www.csl.com/we-are-csl/our-businesses-and-products/csl-behring" target="_blank">CSL Behring</a></u> is a biopharmaceutical company that develops and delivers innovative therapies in various therapeutic areas. It also manages <u><a href="https://www.cslplasma.com/" target="_blank">CSL Plasma</a></u>, one of the world's largest plasma collection networks.</h2>
         </div>
         <span class="gigabr"></span>
-        <div class="textblock">
+        <div class="textblock shown">
+          <div class="subhead">
           <h3>Overview</h3>
+          </div>
+        <div class="text">
           <p>My work at CSL primarily focused around the Plasma Donor Experiences, a series of digital products aimed at streamlining and improving the donation experience. Please <u><a href=mailto:"sun.cs0327@gmail.com">reach out</a></u> if you'd like to learn more!</p>
+          <span class="hugebr"></span>
+          <h4>Passcode</h4>
+          <span class="mediumbr"></span>
+          <input type='text' value='' id='input'>
+          <span class="mediumbr"></span>
+          <input type='button' onclick='protectpasscode()' value="Enter"></input>
+          <script>
+            function protectpasscode() {
+                var a = document.getElementById('input');
+                var b = document.getElementById('hidden');
+                if (a.value === '2023') {
+                  b.style.display = 'flex';
+                } else {
+                  b.style.display = 'none';
+                }
+                var c = document.getElementById('shown1');
+                if (a.value === '2023') {
+                  c.style.display = 'none';
+                } else {
+                  
+                }
+                var d = document.getElementById('shown2');
+                if (a.value === '2023') {
+                  d.style.display = 'none';
+                } else {
+                  
+                }
+            }
+        </script>
         </div>
-        <span class="gigabr"></span> 
+        </div>
+        <span class="gigabr"></span>
       </div>
-      <span class="gigabr"></span>
-      <div class="projnav">
+      <span id="shown1" class="gigabr"></span>
+      <div id="shown2" class="projnav">
         <a href="wnwn.html">
           <h2>&larr; Waste Not Want Not</h2>
         </a>
@@ -93,11 +129,112 @@
         </a>
       </div>
     </ul>
+    <ul id= "hidden" class="body project" style="display: none; margin-top: 0 !important;">
+          <div id="donor-app-design"></div>
+            <span class="gigabr"></span>
+            <div class="textblock">
+              <div class="subhead">
+                <h3>Donor App Design</h3>
+              </div>
+              <div class="text">
+                <p>Auditing and designing user journeys for the CSL Plasma Apps in accordance to business goals and in response to real services offered at donation centers.</p>
+              </div>
+            </div>
+            <span class="largebr"></span>
+            <img src="../../images/csl/plasma-design1.png" alt="Front and back cover of a magazine with different packaging design samples."/>
+            <span class="hugebr"></span>
+            <div class="textblock">
+              <div class="subhead">
+              </div>
+              <div class="text">
+                <p>CSL Plasma's Donor Experiences were designed and developed by external vendors, leading to a lot of missed opportunities and room for improvement. As a part of bi-weekly sprints, I was responsible for identifying areas to redesign, with a priority in improving information architecture, logic of flows, and general look and feel of the app without straying far from the existing app design.<br><br>
+                  Throughout my internship, I redesigned around 10 critical flows that were misaligned with both user and business goals, setting the groundwork for future app updates.</p>
+              </div>
+            </div>
+            <span class="hugebr"></span>
+            <img src="../../images/csl/plasma-design2.png" alt="Front and back cover of a magazine with different packaging design samples."/>
+          <div id="usability"></div>
+            <span class="gigabr"></span>
+            <div class="textblock">
+              <div class="subhead">
+                <h3>Usability Testing</h3>
+              </div>
+              <div class="text">
+                <p>Creating materials for and participating in CSL's first in-house usability testing trials.</p>
+              </div>
+            </div>
+            <span class="mediumbr"></span>
+            <span class="largebr"></span>
+            <img src="../../images/csl/generative-research.png" alt="Front and back cover of a magazine with different packaging design samples."/>
+            <span class="largebr"></span>
+
+          <div id="figma-redesign"></div>
+          <span class="gigabr"></span>
+            <div class="textblock">
+              <div class="subhead">
+                <h3>Re-Designing for Collaboration</h3>
+              </div>
+              <div class="text">
+                <p>A business goal for CSL's user testing trials was to gauge the mental models and understanding of different in-center processes of users who are unfamiliar with donating at CSL Plasma. I created a generative activity to capture participant understanding of several key donation procedures having completed usability testing steps.<br><br>
+                  These testing trials are still underway, but this activity has allowed our dry-run participants to show their understanding clearly while also not bogging them down with too much unnecessary information.</p>
+              </div>
+            </div>
+            <span class="hugebr"></span>
+            <div class="textblock">
+              <div class="subhead">
+                <p style="font-weight:800;">Re-Designing for Collaboration</p>
+              </div>
+              <div class="text">
+                <p>Having transitioned recently to an in-house design team, CSL Plasma's design operations were impeded by disorganization and having to collaborate with a multidisciplinary SCRUM team. <br><br>Through a series of workshops and interviews, I lead an initiative to introduce an organization structure to CSL Plasma's design files that balances the needs of different types of stakeholders, as well as opening the ability to scale up in the future. This effort has since been adopted by the team to great enthusiasm, having aligned the workflows of different contributors in an elegant and non-intrusive way.</p>
+              </div>
+              
+            </div>
+            
+            <span class="largebr"></span>
+            <img src="../../images/csl/figma-concept-map.png" alt="Front and back cover of a magazine with different packaging design samples."/>
+            <span class="hugebr"></span>
+            <div class="textblock">
+              <div class="subhead">
+                <p style="font-weight:800;">Re-Designing for Collaboration</p>
+              </div>
+              <div class="text">
+                <p>The workshop I lead at the onset of this project revealed a lot of the pain points in the team's current workflow:</p>
+              </div>
+              
+            </div>
+            <span class="largebr"></span>
+            <img src="../../images/csl/workshop-feedback.png" alt="Front and back cover of a magazine with different packaging design samples."/>
+            <span class="hugebr"></span>
+            <div class="textblock">
+              <div class="subhead">
+                <p style="font-weight:800;">Organizational Components</p>
+              </div>
+              <div class="text">
+                <p>The core of the re-organization effort lies in the introduction of grouping and labeling components used to indicate key information that assists team members in their respective workflows. Upkeep is simple on the designer's end, and results in much less time spent cross-communicating on issues long since resolved.</p>
+              </div>
+              
+            </div>
+            
+            <img src="../../images/csl/figma-components.png" alt="Front and back cover of a magazine with different packaging design samples."/>
+            <span class="gigabr"></span>
+            
+          </div>
+      </div>
+      <span class="gigabr"></span>
+      <div class="projnav">
+        <a href="wnwn.html">
+          <h2>< Waste Not Want Not</h2>
+        </a>
+        <a href="tlj.html">
+          <h2>Tous Les Jours ></h2>
+        </a>
+      </div>
+    </ul>
     <footer>
-      <p>
+      <sub>
         Updated September 2023<br>
         &copy Caleb Sun
-      </p>
+      </sub>
     </footer>
     </main>
   </body>

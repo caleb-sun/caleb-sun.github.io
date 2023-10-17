@@ -35,7 +35,7 @@
     </header>
     <ul class="body project">
       <div class="projdescription">
-        <p class="type" style="font-style:italic; color: rgb(174, 178, 199)">Personal Project</p>
+        <p class="type" style="font-style:italic;">Personal Project</p>
         <span class="largebr"></span>
           <h1 class="title">
             Reimagining the customer and associate experience at a bakery.
@@ -44,7 +44,8 @@
           <span class="largebr"></span>
           <div class="descriptors">
             <div> <!--skills-->
-              <p style="font-weight: 800;">Skills</p>
+              <p class="descriptor-head">Skills</p>
+              <span class="smallbr"></span>
               <p>
                 UX Design<br>
                 Product Design<br>
@@ -53,13 +54,15 @@
               </p>
             </div>
             <div> <!--duration-->
-              <p style="font-weight: 800;">Duration</p>
+              <p class="descriptor-head">Duration</p>
+              <span class="smallbr"></span>
               <p>
                 Two weeks<br>Winter 2022
               </p>
             </div>
             <div><!--tools-->
-              <p style="font-weight: 800;">Tools</p>
+              <p class="descriptor-head">Tools</p>
+              <span class="smallbr"></span>
               <p>
                 Figma<br>FigJam
               </p>
@@ -79,34 +82,18 @@
       <span class="sectionbr"></span>
       <div class="textblock">
         <div class="subhead">
-          <h3>Overview</h3>
-        </div>
-        <div class="text">
-          <p>Tous les Jours Dublin was a franchised store in my community that I worked at in high school. While there, I quickly noticed that there was a gap in the way the business was handling cake orders, and the customer expectations. The lack of unity, security, and reliability of the ordering system was causing customer distrust and confusion among staff, given how quickly the location had grown since its inception.</p>
-          <span class="mediumbr"></span>
-          <p>This project was self-initated as a challenge to see how I could address this problem space. In high school, I had created a <u><a href="https://www.tlj-dublin.com/" target="_blank">Wix site</a></u> for the bakery so that they could have a digital catalog and ordering site, but I knew that a website was only a bandaid to a bigger problem. My challenge for myself this time around was to create digital products that facilitated better business practices, not just the format of cake ordering on its own.</p>
-        </div>
-      </div>
-      <span class="largebr"></span>
-      <img
-            src="../../images/tlj/tlj_store.jpg"
-            alt="Glass case with slices of cake inside"
-        />
-        <span class="sectionbr"></span>
-      <div class="textblock">
-        <div class="subhead">
           <h3>Problem Space</h3>
         </div>
         <div class="text">
-          <p style="font-weight: 800;">Messy Ordering System</p>
+          <p class="descriptor-head">Messy Ordering System</p>
           <span class="smallbr"></span>
           <p>Tous les Jours Dublin was completely dependent on a paper-based order tracking system for their cakes. This led to lost order slips, customer confusion, and overall pandamonium especially during busy seasons.</p>
           <span class="largebr"></span>
-          <p style="font-weight: 800;">High Customer Expectations</p>
+          <p class="descriptor-head">High Customer Expectations</p>
           <span class="smallbr"></span>
           <p>Customer expectations were progressing based on industry standards of mobile ordering, and the bigger the gap between Tous les Jours and other companies that existed, the more antequated Tous les Jours seemed to the modern customer.</p>
           <span class="largebr"></span>
-          <p style="font-weight: 800;">Security and Verification</p>
+          <p class="descriptor-head">Security and Verification</p>
           <span class="smallbr"></span>
           <p>This is a problem closely tied to the analog ordering system, but customers had no way of proving their identity when picking up cakes, or accessing an order confirmation to verify that their cake was being made.</p>
         </div>
@@ -114,17 +101,9 @@
       </div>
       <span class="sectionbr"></span>
       <div class="textblock">
-        <div class="subhead">
-          <h3>Goals</h3>
-        </div>
-        <div class="text">
-          <p style="font-weight: 800;">Meeting Customers in the Middle</p>
-          <span class="smallbr"></span>
-          <p>Increase customer confidence and overall return rate through transparency and accessibility of basic order information.</p>
-          <span class="largebr"></span>
-          <p style="font-weight: 800;">Improving Organization and Security</p>
-          <span class="smallbr"></span>
-          <p>Providing scaffolding for associates to organize orders digitally, thereby digitizing the paper-based system. Leveraging a new digital system to introduce security verification features.</p>
+        <div style="width: 60%; text-align: center; margin:auto;">
+          <h3>Enhance customer confidence and return rates with transparent order information.<br>
+            <br>Digitize and secure order processes through a new digital system and tools for associates.</h3>
         </div>
       </div>
       <span class="sectionbr"></span>
@@ -133,7 +112,7 @@
           <h3>Personas</h3>
         </div>
         <div class="text">
-          <p>After compiling the, I defined the following users. By establishing these users, I was able to better comprehend and conceptualize the differing but intersecting needs of these user groups.</p>
+          <p>After compiling the feedback, I defined the following users. These helped in comprehending and conceptualizing the differing but intersecting needs of each user group.</p>
         </div>
       </div>
       <span class="hugebr"></span>
@@ -142,11 +121,12 @@
             <img src="../../images/tlj/user1.jpg"
             alt="Glass case with slices of cake inside">
             <div>
-              <p style="font-weight: 800;">The Working Family-person</p>
+              <p class="descriptor-head">The Working Family-person</p>
               <span class="smallbr"></span>
               <p>A busy professional responsible for keeping everyone in the family happy while balancing a full-time job.</p>
+              <span class="largebr"></span>
+              <p class="descriptor-head">Jobs-To-Be-Done</p>
               <span class="smallbr"></span>
-              <p style="font-style:italic; color: rgb(174, 178, 199);">Jobs-To-Be-Done</p>
               <p>Place an order for a cake remotely and pick it up as fast as possible.</p>
             </div>
         </div>
@@ -154,11 +134,12 @@
           <img src="../../images/tlj/user2.jpg"
           alt="Glass case with slices of cake inside">
           <div>
-            <p style="font-weight: 800;">The Bumbling Teen</p>
+            <p class="descriptor-head">The Bumbling Teen</p>
             <span class="smallbr"></span>
-            <p>A proxy picking up a cake that they did not take part in ordering. Very confused and hopes they don't look awkward standing there.</p>
+            <p>A proxy picking up a cake that they did not take part in ordering. Very confused and hopes they don't look awkward.</p>
+            <span class="largebr"></span>
+            <p class="descriptor-head">Jobs-To-Be-Done</p>
             <span class="smallbr"></span>
-            <p style="font-style:italic; color: rgb(174, 178, 199);">Jobs-To-Be-Done</p>
             <p>Pick up a cake without making a fool of themself. Why can't Mom pick up Grandpa's cake herself if it's so important?</p>
           </div>
             
@@ -167,30 +148,17 @@
           <img src="../../images/tlj/user3.jpg"
           alt="Glass case with slices of cake inside">
           <div>
-            <p style="font-weight: 800;">The Earnest Associate</p>
+            <p class="descriptor-head">The Earnest Associate</p>
             <span class="smallbr"></span>
             <p>A part-time bakery worker responsible for maintaining the store, ringing up customers, making drinks, and fulfilling orders.</p>
+            <span class="largebr"></span>
+            <p class="descriptor-head">Jobs-To-Be-Done</p>
             <span class="smallbr"></span>
-            <p style="font-style:italic; color: rgb(174, 178, 199);">Jobs-To-Be-Done</p>
             <p>Fulfill customer cake orders, take new cake orders, and convey cake information like allergens and prices to customers.</p>
           </div>
           </div>
       </div>
       <span class="sectionbr"></span>
-      <div class="textblock"><!--personas-->
-        <div class="subhead">
-          <h3>Concepting</h3>
-        </div>
-        <div class="text">
-          <p>With these personas, I was able to create concept maps documenting user journeys and their relationships with one another at the bakery. This concept map also allowed me to locate customer pain points and indentify areas where these pain points were congregating, like when customers try to order cakes over the phone.</p>
-        </div>
-      </div>
-      <span class="largebr"></span>
-      <img
-        src="../../images/tlj/conceptmap1.jpg"
-        style="border: 1px solid #DEDEDE;"
-        alt="Figjam board concept map documenting Tous les Jours user journeys">
-        <span class="sectionbr"></span>
       <div class="textblock"><!--personas-->
         <div class="subhead">
           <h3>The Plan</h3>
@@ -200,52 +168,100 @@
         </div>
       </div>
       <span class="hugebr"></span>
-      <div class="callout" style="justify-content: center; gap:2%;"><!--plan--> 
-        <div class="imgcolumns">
+      <div class="callout" style="width: 85%; justify-content: center; gap:2%;"><!--plan--> 
+        <div class="imgcolumns" style="width:49%;">
             <img src="../../images/tlj/phone-mockup.jpg"
             alt="Glass case with slices of cake inside">
             <div>
-            <p style="font-weight: 800;">Customer Mobile App</p>
+            <p class="descriptor-head">Customer Mobile App</p>
+            <span class="smallbr"></span>
             <p>Mobile ordering, order tracking and sharing, secure payments, and customizability for return customers. Modeled after common food and cafe apps like Chipotle or Doordash.</p>
           </div>
         </div>
-        <div class="imgcolumns">
+        <div class="imgcolumns" style="width:49%;">
           <img src="../../images/tlj/kiosk-mockup.jpg"
           alt="Glass case with slices of cake inside">
           <div>
-            <p style="font-weight: 800;">Associate Tablet App</p>
+            <p class="descriptor-head">Associate Tablet App</p>
+            <span class="smallbr"></span>
             <p>Overview of all orders, in-store ordering support, order pick-up confirmation, menu information. A more practical tool for tracking and organizing without the fluff of a consumer-facing app.</p>
           </div>
         </div>
       </div>
       <span class="sectionbr"></span>
-      <div class="textblock"><!--lofi-->
+      <div class="textblock"><!--concepting-->
         <div class="subhead">
-          <h3>Sketching</h3>
+          <h3>Concepting</h3>
         </div>
         <div class="text">
-          <p>Having decided on these two sibling products, I knew that sketching and low-fidelity prototyping would be the most important step in immediately determining the difference between the two products' audiences. While I sketched and prototyped, I kept this in mind. Users of the tablet app would be trained and have a better understanding of the store processes. They also wouldn't be </p>
+          <p>With these personas, I was able to create concept maps documenting user journeys and their relationships with one another at the bakery. This concept map also allowed me to locate customer pain points and indentify areas where these pain points were congregating, like when customers try to order cakes over the phone.</p>
         </div>
       </div>
       <span class="largebr"></span>
       <img
-        src="../../images/tlj/lo-fi.jpg"
-        alt="Low fidelity screens of both a mobile app and a tablet app">
+      src="../../images/tlj/concepting.png"
+      style="border:none;"
+      alt="Figjam board concept map documenting Tous les Jours user journeys" class="thumbimg;">
+      <span class="sectionbr"></span>
+      <img src="../../images/tlj/tlj-system.jpg"
+      style="width: 100%;"
+      alt="Figjam board concept map documenting Tous les Jours user journeys"
+      class="thumbimg">
+      <span class="sectionbr"></span>
+      <div class="demosection"><!--Demo Gifs-->
+        <span class="gigabr"></span>
+        <div class="demo">
+          <img
+            src="../../images/wnwn/carrots.gif"
+            alt="Screens from a food tracker app"
+          />
+          <div class="demotext">
+            <h2>Mobile Ordering and Order Tracking</h2>
+            <span class="smallbr"></span>
+            <p>Color-coded digital grocery tracker that decreases decision fatigue by recommending recipes that use produce.</p>
+          </div>
+        </div>
+        <span class="hugebr"></span>
+        <div class="demo">
+          <div class="demotext">
+            <h2>Order Sharing</h2>
+            <span class="smallbr"></span>
+            <p>Scanning a reciept uploads all perishable groceries to digital tracker, making it impossible to miss an item.</p>
+          </div>
+          <img
+            src="../../images/wnwn/scan.gif"
+            alt="Screens from a food tracker app"
+          />
+        </div>
+        <span class="hugebr"></span>
+        <div class="demo">
+          <img
+            src="../../images/wnwn/profile.gif"
+            alt="Screens from a food tracker app"
+          />
+          <div class="demotext">
+            <h2>Personalized History</h2>
+            <span class="smallbr"></span>
+            <p>Gamified and friendly visualization of food waste history nudges user towards more responsible consumtion habits.</p>
+          </div>
+        </div>
+        <span class="gigabr"></span>
+      </div>
       <span class="sectionbr"></span>
       <div class="textblock"> <!--lessons learned-->
         <div class="subhead">
           <h3>Lessons Learned</h3>
         </div>
         <div class="text">
-          <p style="font-weight: 800;">Knowing the System is Subjective</p>
+          <p class="descriptor-head">Knowing the System is Subjective</p>
           <span class="smallbr"></span>
           <p>I thought that by working at TLJ, I understood the cake ordering process. By creating a product based off of this knowledge, I was quickly made aware of the gaps in my knowledge. I know now that if I were to create products for actual clients, I would need to focus a lot more time and attention to the discovery/onboarding phase.</p>
           <span class="largebr"></span>
-          <p style="font-weight: 800;">Time Allocation for Deliverables</p>
+          <p class="descriptor-head">Time Allocation for Deliverables</p>
           <span class="smallbr"></span>
-          <p>When working on a project of this scale with this limited timeframe, I sure did waste a lot of hours working on a payment flow that didn't necessarily demonstrate anything that helps in my final deliverables. In the future, I know to allocate time better towards delivering actual useful flows, instead of just the ones that are technically interesting to me.</p>
+          <p>In spite of working on a project of this scale with this limited of a timeframe, I wasted a lot of hours working on a payment flow that didn't necessarily demonstrate anything that helps in my final deliverables. In the future, I know to allocate time better towards delivering actual useful flows, instead of just the ones that are technically interesting to me.</p>
           <span class="largebr"></span>
-          <p style="font-weight: 800;">Concept Diagramming is So Useful</p>
+          <p class="descriptor-head">Concept Diagramming is So Useful</p>
           <span class="smallbr"></span>
           <p>My earlier diagramming helped streamline the design process so much. It's definitely a practice that I have taken for granted, but not anymore.</p>
           <span class="largebr"></span>
