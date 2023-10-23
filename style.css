@@ -220,11 +220,10 @@ iframe{
 .callout{
     width:80%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
     align-items: start;
     gap: 1%;
-    flex-grow: 1;
 }
 
 .callout .columns{
@@ -237,7 +236,6 @@ iframe{
 .callout .imgcolumns{
     width: 32%;
     display: flex;
-    
     flex-direction: column;
     gap: 24px;
 }
@@ -440,7 +438,7 @@ footer{
 .links{
     display:flex;
     height: 30px;
-    gap: 45px;
+    gap: 2%;
 }
 
 hr {
@@ -732,7 +730,7 @@ input[type=text]:target{
 @media screen and (max-width: 500px) {
     .body{
         margin-top:5rem;
-        width: 95%;
+        width: 98%;
     }
 
     .abtpage{
@@ -767,7 +765,7 @@ input[type=text]:target{
 
     h2{
         font-size: 18pt;
-        line-height: 20pt;
+        line-height: 24pt;
     }
 
     h3{
@@ -779,12 +777,12 @@ input[type=text]:target{
     }
 
     sub{
-        font-size: 10px;
+        font-size: 12pt;
     }
 
     p{
         font-size:14pt;
-        line-height: 14pt;
+        line-height: 16pt;
     }
 
     .intro{
@@ -821,15 +819,16 @@ input[type=text]:target{
     }
 
     .links{
-        gap: 40px;
+        gap: 2%;
     }
 
     .projdescription{
         width: 100%;
     }
-    .textblock, .columns, .callout .imgcolumns{
+
+    .textblock, .columns, .imgcolumns{
         width: 100%;
-        flex-direction: column;
+        flex-direction: column !important;
         gap: 24px;
     }
     
@@ -846,8 +845,9 @@ input[type=text]:target{
     }
 
     .callout{
-        gap: 20px;
         width: 100%;
+        flex-direction: column;
+        gap: 48px;
     }
 
     .callout .columns{
