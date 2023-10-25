@@ -438,7 +438,7 @@ footer{
 .links{
     display:flex;
     height: 30px;
-    gap: 2%;
+    gap: 4%;
 }
 
 hr {
