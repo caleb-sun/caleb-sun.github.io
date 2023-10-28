@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<!--- the doctype declaration tells the file reader that we're using html-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Caleb Sun is a visual designer and student at Carnegie Mellon University. He is currently a UX/UI intern at CSL Behring.">
+    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=">
+    <meta name="robots" content="all">
+    <!---declares what kinds of characters are supportive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!---makes site responsive-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!---makes site work better with microsoft browsers-->
+    <title>Caleb Sun – TLJ Digital Suite</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link
+    rel="stylesheet" href="https://use.typekit.net/vmy4rbx.css"/>
+  </head>  
+  <body>
+    <main>
+        <header>
+            <h2 class="homenav"><a href="../index.html">&#x263C</a></h2>
+            <ul class="menu header">
+                <li class="menuitems">
+                    <a href="../product.html">
+                        <p style="text-decoration:underline; text-decoration-style:dotted;">Product</p>
+                    </a>
+                </li>
+                <li class="menuitems">
+                    <a href="../graphic.html">
+                        <p>Graphic</p>
+                    </a>
+                </li>
+                <li class="menuitems">
+                    <a href="../fun.html">
+                        <p>Fun</p>
+                    </a>
+                </li>
+                <li class="menuitems">
+                    <a href="../about.html">
+                        <p>About</p>
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <div id="tlj" style="display: none; flex-direction: column; position: fixed; top:18%; margin-left:4%; z-index: 100;" class="quicknav">
+            <h4>Quick Nav</h4>
+            <span class="small"></span>
+            <p>
+                <a id="tlj-context-marker" href="#context" style="text-decoration:none;">Context</a><br>
+                <a id="tlj-problem-marker" href="#problem" style="text-decoration:none;">Problem</a><br>
+                <a id="tlj-research-marker" href="#research" style="text-decoration:none;">Research</a><br>
+                <a id="tlj-contextual-marker" href="#contextual" style="text-decoration:none;">Contextualizing</a><br>
+                <a id="tlj-concept-marker" href="#concept" style="text-decoration:none;">Concepting</a><br>
+                <a id="tlj-visual-marker" href="#visual" style="text-decoration:none;">Visual Guide</a><br>
+                <a id="tlj-demo-marker" href="#demo" style="text-decoration:none;">Final Demo</a><br>
+            </p>
+        </div>
+        <script type = "text/javascript" src="../javascript/tlj.js"></script>
+        <div class="project">
+            <img
+                src="../images/tlj/thumb-tlj.jpg">
+            <div class="projectbody">
+                <ul class="columns"> <!--title-->
+                    <li class="eighty">
+                        <sub><a href="../index.html">Home</a> / <a href=../product.html>Product</a> / TLJ</sub>
+                        <h2>Reimagining the customer and associate experience at a bakery.</h2>
+                    </li>
+                    <li class="thirty">
+                        <p><b>Skills</b><br>
+                            UX Design<br>
+                            Product Design<br>
+                            Systems Thinking<br>
+                            UI Design
+                        </p>
+                    </li>
+                    <li class="thirty">
+                        <p><b>Duration</b><br>
+                            Two weeks<br>
+                            Winter 2022
+                        </p>
+                    </li>
+                    <li class="thirty">
+                        <p><b>Tools</b>
+                            <br>
+                            Figma<br>
+                           Figjam
+                        </p>
+                    </li>
+                    <li class="hundred"> <!--img-->
+                        <img
+                            src="../images/tlj/hero1-tlj.jpg"
+                        >
+                        <img
+                            src="../images/tlj/phone-mockup.jpg"
+                        >
+                        <img
+                            src="../images/tlj/kiosk-mockup.jpg"
+                        >
+                    </li>
+                    <li class="fifty"></li>
+                    <li class="fifty"> <!--description-->
+                        <h2 ><a href="https://www.tljus.com/" target="_blank">Tous les Jours</a> is an international bakery and cafe chain based in South Korea. They are a cornerstone in many communities.</h2>
+                    </li>
+                    <li class="hundred"> <!--img-->
+                        <img
+                            src="../images/tlj/screens.jpg"
+                        >
+                    </li>
+                    <li class="hundred"> <!--img-->
+                        <img
+                            src="../images/tlj/tablet-screens.jpg"
+                        >
+                    </li>
+                    <li id="context" class="hundred" style="gap:8px;">
+                        <sub>&#x2022; Context</sub>
+                        <span class="small"></span>
+                        <h3>An antequated system can't serve a modernizing store.</h3>
+                    </li>
+                    <li class="forty"></li>
+                    <li class="fifty">
+                        <p>Tous les Jours Dublin's reliance on a paper-based ordering system 
+                            caused chaos with lost orders, customer confusion, and pandemonium 
+                            during peak times. This exacerbated the growing gap in customer 
+                            expectations for modern, mobile-based ordering, and also hindered 
+                            security and verification for order pickups and tracking.</p>
+                    </li>
+                    <li class="hundred"> <!--img-->
+                        <img
+                            src="../images/tlj/reviews.jpg"
+                        >
+                    </li>
+                    <li class="forty">
+                    </li>
+                    <li class="fifty">
+                        <p>Customers excited to celebrate special occasions in their lives were
+                            paying the price of a disorganized system where they fell through
+                            the cracks. Others had resulted to rolling the dice of fate, because of
+                            poor documentation for how to actually place an order.
+                        </p>
+                    </li>
+                    <span class="medium" style="width: 100%;"></span>
+                    <li class="hundred" style="gap:8px;">
+                        <sub>&#x2022; Problem</sub>
+                        <span class="small"></span>
+                        <h3>An app isn't going to fix an entire failing system</h3>
+                    </li>
+                    <li class="forty"></li>
+                    <li class="fifty">
+                        <p>The core issue that TLJ was facing wasn't necessarily that there wasn't 
+                            a customer-facing order platform, but that their order tracking and 
+                            fulfillment system was unable to keep up with volumne and could not
+                            respond to human error.
+                        </p>
+                    </li>
+                    <li class="forty">
+                        <h4>Considerations</h4>
+                    </li>
+                    <li class="fifty" style="gap:8px">
+                        <p>This was a self-initiated project, so there were no hard-set rules or deadlines
+                            I had to keep in mind. These are considerations I set for myself to limit
+                            the project scope.
+                        </p>
+                        <p>&#x2022; <b>A week deadline</b> because I could work on this for months.</p>
+                        <p>&#x2022; <b>Nothing revolutionary</b> because the goal is to replace a broken system, not to launch a new product that changes the industry landscape of cake ordering.</p>
+                        <p>&#x2022; <b>Not just an app</b> because a bandaid solution doesn't address an infection, and systematic change is required to aleviate the burden on customers and employees.</p>
+                    </li>
+                    <li class="hundred"> <!--img-->
+                        <img
+                            src="../images/tlj/timeline.jpg"
+                        >
+                    </li>
+                    <span class="medium" style="width: 100%;"></span>
+                    <li id="research" class="hundred" style="gap:8px;">
+                        <sub>&#x2022; Research</sub>
+                        <span class="small"></span>
+                        <h3>Understanding multiple user groups and how their different needs intersect.</h3>
+                    </li>
+                    <li class="fifty"></li>
+                    <li class="fifty">
+                        <p>Through a series of online research and informal interviews  with customers, 
+                            front-of-the-house employees, and back-of-the-house employees, I 
+                            identified a series of converging needs that would determine the
+                            form of the final deliverables.</p>
+                    </li>
+                    <li class="hundred">
+                        <img
+                            src="../images/tlj/interviews.jpg"
+                        >
+                    </li>
+                    <li class="fifty">
+                        <h4>Personas</h4>
+                    </li>
+                    <li class="fifty">
+                        <p>Using the findings from the user interviews, I created these personas to
+                            further flesh out each user group's desires. At this point, I also narrowed
+                            my scope to customers and associates and not include managers and bakers, as 
+                            the former two groups have more pressing needs.
+                        </p>
+                    </li>
+                    <li class="thirtythree">
+                        <img
+                            src="../images/tlj/user1.jpg"
+                        >
+                        <p><b>The Working Family-person</b></p>
+                        <p>A busy professional responsible for keeping everyone in the family 
+                            happy while balancing a full-time job.</p>
+                        <p><b>Jobs-To-Be-Done</b></p>
+                        <p>Place an order for a cake remotely and pick it up as fast as possible.</p>
+                    </li>
+                    <li class="thirtythree">
+                        <img
+                            src="../images/tlj/user2.jpg"
+                        >
+                        <p><b>The Bumbling Teen</b></p>
+                        <p>A proxy picking up a cake that they did not take part in ordering. 
+                            Very confused and hopes they don't look awkward.</p>
+                        <p><b>Jobs-To-Be-Done</b></p>
+                        <p>Pick up a cake without making a fool of themself. Why can't Mom pick up 
+                            Grandpa's cake herself if it's so important?</p>
+                    </li>
+                    <li class="thirtythree">
+                        <img
+                            src="../images/tlj/user3.jpg"
+                        >
+                        <p><b>The Earnest Associate</b></p>
+                        <p>A part-time bakery worker responsible for maintaining the store, ringing up 
+                            customers, and fulfilling orders.</p>
+                        <p><b>Jobs-To-Be-Done</b></p>
+                        <p>Fulfill customer cake orders, take new cake orders, and convey cake 
+                            information like allergens and prices to customers.</p>
+                    </li>
+                    <span class="medium" style="width: 100%;"></span>
+                    <li id= "contextual" class="hundred" style="gap:8px;">
+                        <sub>&#x2022; Contextualizing</sub>
+                        <span class="small"></span>
+                        <h3>Fleshing out existing user group interactions, and identifying where pain 
+                            points are congregating.</h3>
+                    </li>
+                    <li class="fifty"></li>
+                    <li class="fifty">
+                        <p>Given the findings from the research and personas, I created concept maps
+                            that would provide further understanding of how different user groups 
+                            work together and where their needs intersect.</p>
+                    </li>
+                    <li class="hundred">
+                        <img
+                            src="../images/tlj/concept-map.jpg"
+                        >
+                    </li>
+                    <li class="fifty"></li>
+                    <li class="fifty" style="gap:8px;">
+                        <p>The concept map allowed me to identify three specific areas where pain 
+                            points congregated:
+                        </p>
+                        <span class="small"></span>
+                        <p>&#x2022; <b>In-person ordering</b> is inconvenient for customers with
+                            busy lives.</p>
+                        <p>&#x2022; <b>Online and phone ordering</b> isn't a wholistic solution because 
+                            there are no transcripts or physical confirmations from the bakery's end.</p>
+                        <p>&#x2022; <b>Cake pickup</b> is confusing for customers without order slips,
+                            and hard to manage for associates at scale.</p>
+                    </li>
+                    <li class="hundred">
+                        <img
+                            src="../images/tlj/concept-map-ideal.jpg"
+                        >
+                    </li>
+                    <span class="small" style="width: 100%;"></span>
+                    <li id="concept" class="eighty" style="gap:8px;">
+                        <sub>&#x2022; Concepting</sub>
+                        <span class="small"></span>
+                        <h3>A pair of sister apps: one for
+                            customers, and one for employees</h3>
+                    </li>
+                    <li class="fifty"></li>
+                    <li class="fifty">
+                        <p>Taking inspiration from existing food-ordering services like Grubhub and Doordash,
+                            I split my solution into two applications, one geared towards customers and one
+                            geared towards employees.</p>
+                    </li>
+                    <li class="fifty">
+                        <img
+                            src="../images/tlj/phone-blank.jpg"
+                        >
+                        <p><b>Customer Mobile App</b> <br>
+                            Mobile ordering, order tracking and sharing, secure payments, and 
+                            customizability for return customers. Modeled after common food and 
+                            cafe apps like Chipotle or Doordash.</p>
+                    </li>
+                    <li class="fifty">
+                        <img
+                            src="../images/tlj/tablet-blank.jpg"
+                        >
+                        <p><b>Associate Tablet App</b> <br>
+                            Overview of all orders, in-store ordering support, order pick-up 
+                            confirmation, menu information. A more practical tool for tracking 
+                            and organizing without the fluff of a consumer-facing app.</p>
+                    </li>
+                    <li class="fifty"></li>
+                    <li class="fifty">
+                        <p>To begin, I created a site inventory to give a better idea of what screens 
+                            I would prioritize when drafting. The low-fidelity sketches allowed for 
+                            exploration in how to differentiate between the two similar but different 
+                            apps. I chose a few key screens.</p>
+                    </li>
+                    <li class="hundred">
+                        <img
+                            src="../images/tlj/inventory.jpg"
+                        >
+                        <img
+                            src="../images/tlj/rough-mobile.jpg"
+                        >
+                        <img
+                            src="../images/tlj/rough-tablet.jpg"
+                        >
+                    </li>
+                    <li class="fifty"></li>
+                    <li class="fifty">
+                        <p>After the initial sketching, I refined and developed the wireframes to 
+                            medium fidelity to flesh out some of the semantics of each screen.</p>
+                    </li>
+                    <li class="hundred">
+                        <img
+                            src="../images/tlj/refine-mobile.jpg"
+                        >
+                        <img
+                            src="../images/tlj/refine-tablet.jpg"
+                        >
+                    </li>
+                    <span class="small"></span>
+                    <li id="visual" class="eighty" style="gap:8px;">
+                        <sub>&#x2022; Visual Guide</sub>
+                        <span class="small"></span>
+                        <h3>Establishing a style and component library.</h3>
+                    </li>
+                    <li class="fifty"></li>
+                    <li class="fifty">
+                        <p>A small challenge with the visual style of this project was how to combine 
+                            the existing Tous Les Jours branding with the modernity that the app offers. 
+                            I created a consistent style sheet and assets to add character to the app.
+                        </p>
+                    </li>
+                    <li class="hundred">
+                        <img
+                            src="../images/tlj/tlj-system.jpg"
+                        >
+                    </li>
+                    <span class="small"></span>
+                    <li id="demo" class="eighty" style="gap:8px;">
+                        <sub>&#x2022; Demo</sub>
+                        <span class="small"></span>
+                        <h3>Key features addressing user needs.</h3>
+                    </li>
+                    <li class="fifty"></li>
+                    <li class="fifty">
+                        <p>A small challenge with the visual style of this project was how to combine 
+                            the existing Tous Les Jours branding with the modernity that the app offers. 
+                            I created a consistent style sheet and assets to add character to the app.
+                        </p>
+                    </li>
+                    <div class="demo">
+                        <div class="demobody" style="background-color: #ECF1ED;">
+                            <span class="medium"></span>
+                            <div class="demogif">
+                                <img
+                                    src="../images/tlj/menu.gif"
+                                >
+                            </div>
+                            <div class="demotext">
+                                <h3>Mobile Menu</h3>
+                                <span class="small"></span>
+                                <p>Comprehensive and up-to-date mobile menu that reflects store-specific 
+                                    cake styles, prices, and flavors.</p>
+                            </div>
+                            <div class="demotext">
+                                <h3>Online Ordering and Tracking</h3>
+                                <span class="small"></span>
+                                <p>Secure online ordering without compromising on specificity. 
+                                    Order confirmation and tracking through pickup.</p>
+                            </div>
+                            <div class="demogif">
+                                <img
+                                    src="../images/tlj/ordering.gif"
+                                >
+                            </div>
+                            <div class="demogif">
+                                <img
+                                    src="../images/tlj/ipad.gif"
+                                    style="width:90%"
+                                >
+                            </div>
+                            <div class="demotext">
+                                <h3>Associate View</h3>
+                                <span class="small"></span>
+                                <p>Centralized spreadsheet-style database supporting in-store 
+                                    pickups and orders.</p>
+                            </div>
+                            <span class="medium"></span>
+                    </div>
+                    </div>
+                    <span class="small" style="width: 100%;"></span>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <div class="columns footmenu" style="margin-bottom:2%;">
+                <ul class="menu" style="margin-left:4%;">
+                    <li class="menuitems"><a href="../pdfs/caleb-sun_resume.pdf" target="_blank"><p>Resume</p></a></li>
+                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><p>LinkedIn</p></a></li>
+                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><p>Email</p></a></li>
+                </ul>
+                <div class="credit">
+                    <p>Updated Oct 2023 | Made using HTML/CSS/JS</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+  </body>
+</html>

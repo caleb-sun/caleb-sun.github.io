@@ -15,173 +15,263 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link
-    rel="stylesheet" href="https://use.typekit.net/bav6mvc.css"/>
+    rel="stylesheet" href="https://use.typekit.net/vmy4rbx.css"/>
   </head>  
   <body>
     <main>
-      <header>
-        <div class="about">
-          <!-- <h2><a href="html/explore.html">
-            Explore
-          </a>
-          </h2> -->
-          <h2><a href="html/about.html">
-            About
-          </a>
-          </h2>
-        </div>
-    </header>
-    <ul class="body">
-      <div class="homepage">
-        <div>
-          <h1>
-            Hello! I’m Caleb. <br>
-            UX/UI Design @ CSL Behring <br>
-            Design + HCI @ CMU
-          </h1>
-          <span class="hugebr"></span>
-          <p class="intro">I design to improve the way people go about their lives. Through careful research and thoughtful consideration, I create digital products, strategies, and design systems that bridge the ever-widening gap between people and the complex world around them.
-          </p>
-          <span class="largebr"></span>
-          <div class="links">
-            <a href="pdfs/caleb-sun_resume_08-23.pdf" target="_blank" class="button">Resume</a>
-            <a href="https://www.linkedin.com/in/calebsun/" target="_blank" class="button">LinkedIn</a>
-            <a href=mailto:sun.cs0327@gmail.com class="button">Email</a>
-          </div>
-        </div>
-        <img
-            src="images/wahllace.png"
-            alt="Cat standing with his belly hanging out."
-            class="homeimg"
-          />
-      </div>
-      <span class="hugebr"></span>
-      <span class="hugebr"></span>
-      <ul class="gallery">
-        <li class="highlight"> <!-- CSL -->
-          <a href="html/projects/csl-temp.html">
-            <img
-            src="images/thumbnails/csl-thumbnail.jpg"
-            alt="Branded presentation slides"
-            class="cslthumb"
-            />
-            <div class="caption">
-                <sub>Internship — Various Projects</sub>
-                <span class="smallbr"></span>
-                <h2>CSL Behring</h2>
-                <span class="smallbr"></span>
-                <p>UX Design + UX Research</p>
-                <span class="hugebr"></span>
+        <header>
+            <h2 class="homenav">&#x263C</h2>
+            <ul class="menu header">
+                <li class="menuitems"><a href="product.html"><p>Product</p></a></li>
+                <li class="menuitems"><a href="graphic.html"><p>Graphic</p></a></li>
+                <li class="menuitems"><a href="fun.html"><p>Fun</p></a></li>
+                <li class="menuitems"><a href="about.html"><p>About</p></a></li>
+            </ul>
+        </header>
+        <ul class="home">
+            <div class="hometitle"> 
+                <li class="hundred">
+                    <h1>Hi, I'm Caleb.<br>I design beautiful artifacts that bridge people to the world around them.</h1>
+                </li>
             </div>
-            </a>
-          </li>
-          <li class="bodyimg"> <!-- tlj -->
-            <a href="html/projects/tlj.html">
-            <img
-            src="images/thumbnails/tlj-thumbnail.jpg"
-            alt="Image of Nod Young and Guang Yu standing in front of a large bush"
-          />
-            <div class="caption">
-                <sub>Personal Project</sub>
-                <span class="smallbr"></span>
-                <h2>Tous les Jours Suite</h2>
-                <span class="smallbr"></span>
-                <p>Product Design + UX/UI Design</p>
-                <span class="hugebr"></span>
+            <span class="small"></span>
+            <ul class="homedescription">
+                <li class="thirty">
+                    <p>
+                        Currently:
+                    </p>
+                </li>
+                <li class="sixty">
+                    <p>
+                        UX/UI Design @ <a href="https://www.csl.com/we-are-csl/our-businesses-and-products/csl-behring" target="_blank">CSL Behring</a><br>
+                        Design + HCI @ <a href="https://design.cmu.edu/" target="_blank">Carnegie Mellon University</a><br>
+                        Designing a book about food
+                    </p>
+                </li>
+            </ul>
+            <span class="medium"></span>
+            <ul class="miniprojnav">
+                <h2><a id=producttop onclick='product()' style="text-decoration:underline; text-decoration-style: dotted;">Product,</a></h2>
+                <h2><a id=graphictop onclick='graphic()'>Graphic,</a></h2>
+                <h2><a id=funtop onclick='fun()'>Fun</a></h2>
+            </ul>
+            <script> <!--hide groups-->
+                function product() {
+                    var product = document.getElementById('product');
+                    var graphic = document.getElementById('graphic');
+                    var fun = document.getElementById('fun');
+                    product.style.display = 'flex';
+                    producttop.style.textDecoration = 'underline';
+                    producttop.style.textDecorationStyle = 'dotted';
+                    graphic.style.display = 'none';
+                    graphictop.style.textDecoration = 'none';
+                    fun.style.display = 'none';
+                    funtop.style.textDecoration = 'none';
+                }
+
+                function graphic() {
+                    var product = document.getElementById('product');
+                    var graphic = document.getElementById('graphic');
+                    var fun = document.getElementById('fun');
+                    product.style.display = 'none';
+                    producttop.style.textDecoration = 'none';
+                    graphic.style.display = 'flex';
+                    graphictop.style.textDecoration = 'underline';
+                    graphictop.style.textDecorationStyle = 'dotted';
+                    fun.style.display = 'none';
+                    funtop.style.textDecoration = 'none';
+                }
+
+                function fun() {
+                    var product = document.getElementById('product');
+                    var graphic = document.getElementById('graphic');
+                    var fun = document.getElementById('fun');
+                    product.style.display = 'none';
+                    producttop.style.textDecoration = 'none';
+                    graphic.style.display = 'none';
+                    graphictop.style.textDecoration = 'none';
+                    fun.style.display = 'flex';
+                    funtop.style.textDecoration = 'underline';
+                    funtop.style.textDecorationStyle = 'dotted';
+                }
+            </script>
+            <ul id="product" class="columns">
+                <div id="CSL" class="fifty">
+                    <a href="projects/csl.html" class="projecthome">
+                        <img 
+                            src="images/csl/thumb-csl.jpg"
+                            alt="A screen from a plasma donation app on a red background 
+                            with the words 'CSL Behring, Biotherapies for Life'">
+                        <span class="small"></span>
+                        <p>CSL Behring</p>
+                        <span class="small"></span>
+                        <h3>The new age of plasma donation</h3>
+                        <span class="medium"></span>
+                        <sub>Product Design / UX Design / Brand Design</sub>
+                    </a>
+                </div>
+                <div id="tlj" class="fifty">
+                    <a href="projects/tlj.html" class="projecthome">
+                        <img 
+                            src="images/tlj/hero1-tlj.jpg"
+                            alt="Screens from the TLJ Suite.">
+                        <span class="small"></span>
+                        <p>TLJ Digital Suite</p>
+                        <span class="small"></span>
+                        <h3>Tools for the modern bakery</h3>
+                        <span class="medium"></span>
+                        <sub>Product Design / UX Design / Brand Design</sub>
+                    </a>
+                </div>
+                <div id="wastenot" class="fifty">
+                    <a href="projects/wnwn.html" class="projecthome">
+                        <img 
+                            src="images/wastenot/thumb-waste.jpg"
+                            alt="Screens from the TLJ Suite.">
+                        <span class="small"></span>
+                        <p>Waste Not Want Not</p>
+                        <span class="small"></span>
+                        <h3>Gamifying food responsibility</h3>
+                        <span class="medium"></span>
+                        <sub>Product Design / UX Design / Brand Design</sub>
+                    </a>   
+                </div>
+                <div id="hash" class="fifty">
+                    <a href="projects/hash" class="projecthome">
+                        <img 
+                            src="images/hash/hash-thumbnail.gif"
+                            alt="Screens from the TLJ Suite.">
+                        <span class="small"></span>
+                        <p>Hash</p>
+                        <span class="small"></span>
+                        <h3>Collaborating in the virtual age</h3>
+                        <span class="medium"></span>
+                        <sub>Product Design / UX Design / Brand Design</sub>
+                    </a>
+                </div>
+                
+            </ul>
+            <ul id="graphic" class="columns" style="display:none;">
+                <div id="guangyu" class="fifty">
+                    <a href="projects/guangyu.html" class="projecthome">
+                        <img 
+                            src="images/gy/thumb-gy.jpg"
+                            alt="Screens from the TLJ Suite.">
+                        <span class="small"></span>
+                        <p>Guang Yu</p>
+                        <span class="small"></span>
+                        <h3>Artifacts for my design hero</h3>
+                        <span class="medium"></span>
+                        <sub>Product Design / UX Design / Brand Design</sub>
+                    </a>
+                </div>
+                <div id="vela" class="fifty">
+                    <a href="projects/vela.html" class="projecthome">
+                        <img 
+                            src="images/vela/thumb-vela.gif"
+                            alt="Screens from the TLJ Suite.">
+                        <span class="small"></span>
+                        <p>Vela Projects</p>
+                        <span class="small"></span>
+                        <h3>Branding for a construction consultancy</h3>
+                        <span class="medium"></span>
+                        <sub>Product Design / UX Design / Brand Design</sub>
+                    </a>
+                </div>
+                <div id="communityofpractice" class="fifty">
+                    <a href="projects/conservancy.html" class="projecthome">
+                        <img 
+                            src="images/conservancy/thumb-conservancy-1.jpg"
+                            alt="Screens from the TLJ Suite.">
+                        <span class="small"></span>
+                        <p>The Nature Conservancy</p>
+                        <span class="small"></span>
+                        <h3>Climate community of practice</h3>
+                        <span class="medium"></span>
+                        <sub>Proposal Design / Systems Thinking / Graphic Design</sub>
+                    </a>
+                </div>
+                <div id="hippo" class="fifty">
+                    <a href="projects/hipposwim.html" class="projecthome">
+                        <img 
+                            src="images/hippo/thumb-hippo.jpg"
+                            alt="Screens from the TLJ Suite.">
+                        <span class="small"></span>
+                        <p>Hippo Swim</p>
+                        <span class="small"></span>
+                        <h3>Branding for a swim school</h3>
+                        <span class="medium"></span>
+                        <sub>Brand Design / Web Design + Development</sub>
+                    </a>
+                </div>
+                <div id="storiesabtfood" class="fifty">
+                    <a  class="projecthome"> <!--href="projects/stories.html"-->
+                        <img 
+                            src="images/coming-soon.gif"
+                            alt="Looping gif that reads 'Coming Soon'.">
+                        <span class="small"></span>
+                        <p>10 Memories of Food</p>
+                        <span class="small"></span>
+                        <h3>A book about food and love</h3>
+                        <span class="medium"></span>
+                        <sub>Book Design / Book Binding</sub>
+                    </a>
+                </div>
+                <div id="sonny" class="fifty">
+                    <a  class="projecthome"> <!--href="projects/sonny.html"-->
+                        <img 
+                            src="images/coming-soon.gif"
+                            alt="Looping gif that reads 'Coming Soon'.">
+                        <span class="small"></span>
+                        <p>Sonny Angel Book</p>
+                        <span class="small"></span>
+                        <h3>A book about a little angel boy</h3>
+                        <span class="medium"></span>
+                        <sub>Book Design / Book Binding</sub>
+                    </a>
+                </div>
+            </ul>
+            <ul id="fun" class="columns" style="display:none;">
+                <div id="CSL" class="fifty">
+                    <a href="projects/whatshould.html" class="projecthome">
+                        <img 
+                            src="images/whatshould/thumb-whatshould.jpg"
+                            alt="Screens from the TLJ Suite.">
+                        <span class="small"></span>
+                        <p>What Should We Eat?</p>
+                        <span class="small"></span>
+                        <h3>A device for connection through food</h3>
+                        <span class="medium"></span>
+                        <sub>Physical Computing / Fabrication</sub>
+                    </a>
+                </div>
+                <div id="CSL" class="fifty">
+                    <a href="projects/vela" class="projecthome">
+                        <img 
+                            src="images/coming-soon.gif"
+                            alt="Looping gif that reads 'Coming Soon'.">
+                        <span class="small"></span>
+                        <p>Type Design</p>
+                        <span class="small"></span>
+                        <h3>Revivals and otherwise</h3>
+                        <span class="medium"></span>
+                        <sub>Typeface design</sub>
+                    </a>
+                </div>
+            </ul>
+        </ul>
+        <footer>
+            <div class="columns footmenu">
+                <ul class="menu" style="margin-left:4%;">
+                    <li class="menuitems"><a href="pdfs/caleb-sun_resume.pdf" target="_blank"><p>Resume</p></a></li>
+                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><p>LinkedIn</p></a></li>
+                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><p>Email</p></a></li>
+                </ul>
+                <div class="credit">
+                    <p>Updated Oct 2023 | Made using HTML/CSS/JS</p>
+                </div>
             </div>
-            </a>
-        </li>
-        <li class="bodyimg"><!--wnwn-->
-          <a href="html/projects/wnwn.html">
-          <img
-          src="images/thumbnails/wnwn-thumbnail.jpg"
-          alt="Screens from a food tracker app"
-          />
-          <div class="caption">
-              <sub>Coursework</sub>
-              <span class="smallbr"></span>
-              <h2>Waste Not Want Not</h2>
-              <span class="smallbr"></span>
-              <p>Product Design</p>
-              <span class="hugebr"></span>
-          </div>
-        </a>
-      </li>
-        <li class="bodyimg"> <!-- Vela -->     
-            <a href="html/projects/vela.html">
-            <img
-            src="images/thumbnails/vela-thumbnail-3.jpg"
-            alt="Branded presentation slides"
-          />
-            <div class="caption">
-                <sub>Freelance</sub>
-                <span class="smallbr"></span>
-                <h2>Vela Projects</h2>
-                <span class="smallbr"></span>
-                <p>Branding + Design Systems</p>
-                <span class="hugebr"></span>
-            </div>
-          </a>
-        </li>
-        <li class="bodyimg"> <!-- design hero --> 
-            <a href="html/projects/gy.html">
-            <img
-            src="images/thumbnails/gy-thumbnail.jpg"
-            alt="Image of Nod Young and Guang Yu standing in front of a large bush"
-            />
-            <div class="caption">
-                <sub>Coursework</sub>
-                <span class="smallbr"></span>
-                <h2>Guang Yu</h2>
-                <span class="smallbr"></span>
-                <p>Graphic Design + Design Systems</p>
-                <span class="hugebr"></span>
-            </div>
-            </a>
-        </li>
-        
-        <li class="bodyimg"> <!-- hippo -->
-          <a href="html/projects/hippo.html">
-          <img
-          src="images/thumbnails/hippo-thumbnail.jpg"
-          alt="Image of Nod Young and Guang Yu standing in front of a large bush"
-        />
-          <div class="caption">
-              <sub>Freelance</sub>
-              <span class="smallbr"></span>
-              <h2>Hippo Swim</h2>
-              <span class="smallbr"></span>
-              <p>Branding + Web Design + Consulting</p>
-              <span class="hugebr"></span>
-          </div>
-          </a>
-      </li>
-    </li>
-    <!--Spikeli class="bodyimg">
-        <a href="html/projects/spike.html">
-        <img
-        src="images/thumbnails/spike-thumbnail.gif"
-        alt="Image of Nod Young and Guang Yu standing in front of a large bush"
-      />
-        <div class="caption">
-          <span class="mediumbr"></span>
-            <sub>Coursework</sub>
-            <span class="smallbr"></span>
-            <h2>VTC Spike</h2>
-            <span class="smallbr"></span>
-            <p>Motion Design</p>
-            <span class="hugebr"></span>
-        </div>
-        </a>
-    </li -->
-      </ul>
-    </ul>
-    <footer>
-      <sub>
-        Updated September 2023<br>
-        &copy Caleb Sun
-      </sub>
-    </footer>
+        </footer>
     </main>
   </body>
 </html>

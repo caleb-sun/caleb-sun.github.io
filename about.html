@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!--- the doctype declaration tells the file reader that we're using html-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Caleb Sun is a visual designer and student at Carnegie Mellon University. He is currently a UX/UI intern at CSL Behring.">
+    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=">
+    <meta name="robots" content="all">
+    <!---declares what kinds of characters are supportive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!---makes site responsive-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!---makes site work better with microsoft browsers-->
+    <title>Caleb Sun – About</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+    rel="stylesheet" href="https://use.typekit.net/vmy4rbx.css"/>
+  </head>  
+  <body>
+    <main>
+        <header>
+            <h2 class="homenav"><a href="index.html">&#x263C</a></h2>
+            <ul class="menu header">
+                <li class="menuitems"><a href="product.html"><p>Product</p></a></li>
+                <li class="menuitems"><a href="graphic.html"><p>Graphic</p></a></li>
+                <li class="menuitems"><a href="fun.html"><p>Fun</p></a></li>
+                <li class="menuitems">
+                    <a href="about.html">
+                        <p style="text-decoration:underline; text-decoration-style:dotted;">About</p>
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <div class="body" style="z-index:100;">
+            <ul class="columns"> 
+                <li class="thirty">
+                    <h1>Hi.</h1>
+                </li>
+                <li class="thirty">
+                    <p style="margin-top:10%;">
+                        My name is <a onpointerenter='caleb()' onpointerleave='caleb2()'>Caleb</a>, and I study Communications Design at Carnegie Mellon University. 
+                        I am passionate about the role of design in creating bridges between humans and 
+                        the world that surrounds them.
+                        <br><br>In our fast-paced and complicated world, I revel in opportunities to create 
+                        artifacts that feel like a breath of fresh air, that make us excited about 
+                        the brands and systems and environments that we interact with.
+                        <br><br>When I'm not designing, I'm probably <a onpointerenter='food()' onpointerleave='food2()'>making food</a>.
+                    </p>
+                    <script>
+                        function caleb() {
+                            var image = document.getElementById('image');
+                            image.style.display = 'block';
+                        }
+                        function caleb2() {
+                            var image2 = document.getElementById('image');
+                            image2.style.display = 'none';
+                        }
+                        function food() {
+                            var image = document.getElementById('food');
+                            image.style.display = 'flex';
+                        }
+                        function food2() {
+                            var image2 = document.getElementById('food');
+                            image2.style.display = 'none';
+                        }
+                    </script>
+                </li>
+            </ul>
+            <span class="medium"></span>
+            
+            <!-- <ul class="about columns"> 
+                <li class="thirty">
+                    <h2>Experience</h2>
+                </li>
+                <li class="thirty">
+                    <div style="margin-top:5%;">
+                        <h4>CSL Behring</h4>
+                        <span class="small"></span>
+                        <sub>UX/UI Design Contracter | Sept 2023-Present<br>UX/UI Design Intern | May-August 2023</sub>
+                        <span class="small"></span>
+                        <p>Improving the CSL Plasma Donor Experiences through UX/UI design, user research, and designOps projects.</p>
+                    </div>
+                    <span class="medium"></span>
+                    <div style="margin-top:10%;">
+                        <h4>Phantasma X Samsung</h4>
+                        <span class="small"></span>
+                        <sub>Design Contracter | Sept 2023</sub>
+                        <span class="small"></span>
+                        <p>Designing a system of assets for a spatial UX project.</p>
+                    </div>
+                    <span class="medium"></span>
+                    <div style="margin-top:10%;">
+                        <h4>The Nature Conservancy</h4>
+                        <span class="small"></span>
+                        <sub>Design Contracter | July 2023</sub>
+                        <span class="small"></span>
+                        <p>Designing a multi-page proposal for a climate community of practice.</p>
+                    </div>
+                    <span class="medium"></span>
+                    <div style="margin-top:10%;">
+                        <h4>Hippo Swim Club</h4>
+                        <span class="small"></span>
+                        <sub>Design Contracter | May-July 2023</sub>
+                        <span class="small"></span>
+                        <p>Designing and developing a website for a small swim school.</p>
+                    </div>
+                    <span class="medium"></span>
+                    <div style="margin-top:10%;">
+                        <h4>Vela Projects</h4>
+                        <span class="small"></span>
+                        <sub>Design Contracter | Feb-June 2023</sub>
+                        <span class="small"></span>
+                        <p>Re-branding and developing a website for a construction consulting firm.</p>
+                    </div>
+                    <span class="medium"></span>
+                    <div style="margin-top:10%;">
+                        <h4>SparrowUp</h4>
+                        <span class="small"></span>
+                        <sub>Design Intern | August-December 2022</sub>
+                        <span class="small"></span>
+                        <p>Designing marketing materials and app products for a golf technology start-up.</p>
+                    </div>
+                </li>
+            </ul> -->
+        </div>
+        <img id='image' style="position: absolute; left:0; top: 15vh; height: 70vh; width: auto; z-index:0; display: none;" src="images/profile.jpg">
+        <div id='food' style="position: absolute; left:0; top:0; width:100%; z-index:0; display:none; flex-wrap:wrap; justify-content: space-between;">
+            <img class="twentyfive"
+                src="images/food/1.jpg"
+                style="height:33.33%;"
+            >
+            <img class="twentyfive"
+                src="images/food/2.jpg"
+                style="height:33.33%;"
+            >
+            <img class="twentyfive"
+                src="images/food/3.jpg"
+                style="height:33.33%;"
+            >
+            <img class="twentyfive"
+                src="images/food/4.jpg"
+                style="height:33.33%;"
+            >
+            <img class="twentyfive"
+                src="images/food/5.jpg"
+                style="height:33.33%;"
+            >
+            <img class="twentyfive"
+                src="images/food/6.jpg"
+                style="height:33.33%;"
+            >
+            <img class="twentyfive"
+                src="images/food/7.jpg"
+                style="height:33.33%;"
+            >
+            <img class="twentyfive"
+                src="images/food/8.jpg"
+                style="height:33.33%;"
+            >
+            <img class="twentyfive"
+                src="images/food/9.jpg"
+                style="height:33.33%;"
+            >
+            <img class="twentyfive"
+                src="images/food/10.jpg"
+                style="height:33.33%;"
+            >
+            <img class="twentyfive"
+                src="images/food/11.jpg"
+                style="height:33.33%;"
+            >
+            <img class="twentyfive"
+                src="images/food/12.jpg"
+                style="height:33.33%;"
+            >
+        </div>
+        <footer>
+            <div class="columns">
+                <ul class="menu" style="margin-left:4%;">
+                    <li class="menuitems"><a href="pdfs/caleb-sun_resume.pdf" target="_blank"><p>Resume</p></a></li>
+                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><p>LinkedIn</p></a></li>
+                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><p>Email</p></a></li>
+                </ul>
+                <div class="credit">
+                    <p>Updated Oct 2023 | Made using HTML/CSS/JS</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+  </body>
+</html>
