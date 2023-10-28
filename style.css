@@ -224,7 +224,7 @@ a:hover>h3,a:hover>p,a:hover>sub{
     color:lightslategray;
 }
 
-a.projecthome{
+a.project{
     text-decoration:none;
 }
 
@@ -561,13 +561,23 @@ h1{
 
 .credit{
     margin-left:4%;
+    height: 20px;
 }
 
 .footmenu{
     gap:0px !important;
 }
 
+.menu{
+    height: 20px;
+}
+
+
 .quicknav{
     display: none !important;
+}
+
+.home {
+    margin-top:40%;
 }
 }
