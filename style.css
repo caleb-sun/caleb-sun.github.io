@@ -224,8 +224,8 @@ a:hover>h3,a:hover>p,a:hover>sub{
     color:lightslategray;
 }
 
-a.project{
-    text-decoration:none;
+a.projecthome{
+    text-decoration: none !important;
 }
 
 a:hover>img{
@@ -338,6 +338,18 @@ img{
     justify-content:right;
     top:2%;
     right:5%;
+}
+
+footer{
+    position: relative;
+    width: 100vw;
+    bottom:0;
+}
+
+.footerpw{
+    position: fixed;
+    bottom:0;
+    width: 100vw;
 }
 
 .footer{
@@ -465,6 +477,39 @@ img{
     width: 40%;
 }
 
+/*password*/
+
+.password{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+}
+
+input[type='password'] {
+  height: 36px;
+  width: 300px;
+  font-size: 24pt;
+}
+
+input[type='submit'] {
+    height: 40px;
+    width: 164px;
+    background-color: black;
+    color: white;
+    font-family: "ibm-plex-sans", sans-serif;
+    font-weight: 300;
+    box-shadow: none;
+    border: none;
+    border-radius: 20px;
+}
+
+input[type='submit']:hover {
+    background-color: lightslategray;
+}
+
+
 /* buffer */
 
 .tiny{
@@ -577,7 +622,12 @@ h1{
     display: none !important;
 }
 
-.home {
-    margin-top:40%;
+.home,.body,.projecttitle {
+    margin-top:36%;
 }
+
+.password{
+    margin-top: 35% !important;
+}
+
 }

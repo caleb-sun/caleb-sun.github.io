@@ -28,11 +28,22 @@
                 <li class="menuitems"><a href="about.html"><p>About</p></a></li>
             </ul>
         </header>
+        <img id='image' style="position: absolute; left:0; top: 15vh; height: 70vh; width: auto; z-index:0; display: none;" src="images/heroes.gif">
         <ul class="home">
             <div class="hometitle"> 
                 <li class="hundred">
-                    <h1>Hi, I'm Caleb.<br>I design beautiful artifacts that bridge people to the world around them.</h1>
+                    <h1>Hi, I'm Caleb.<br>I design <a style="text-decoration: underline dotted ;" onpointerenter='heroes()' onpointerleave='heroes2()'>beautiful artifacts</a> that bridge people to the world around them.</h1>
                 </li>
+                <script>
+                    function heroes() {
+                        var image = document.getElementById('image');
+                        image.style.display = 'block';
+                    }
+                    function heroes2() {
+                        var image = document.getElementById('image');
+                        image.style.display = 'none';
+                    }
+                </script>
             </div>
             <span class="small"></span>
             <ul class="homedescription">
@@ -97,7 +108,7 @@
             </script>
             <ul id="product" class="columns">
                 <div id="CSL" class="fifty">
-                    <a href="projects/csl.html" class="projecthome">
+                    <a class="projecthome" href="pw.html">
                         <img 
                             src="images/csl/thumb-csl.jpg"
                             alt="A screen from a plasma donation app on a red background 
