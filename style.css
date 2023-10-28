@@ -248,7 +248,7 @@ a:hover>img{
     row-gap:64px;
 }
 
-.eighty,.sixty, .forty,.thirty,.thirtythree, .fifty, .hundred{
+.eighty,.sixty, .forty,.thirty,.thirtythree, .twentyfive, .fifty, .hundred{
     display: flex;
     flex-direction: column;
 }
@@ -558,7 +558,7 @@ h1{
 }
 
 .twentyfive{
-    width:100%;
+    width:50%;
     gap: 18px;
 }
 
@@ -568,7 +568,7 @@ h1{
 }
 
 .thirtythree{
-    width: 100%;
+    width: 50%;
     gap:18px;
 }
 
@@ -629,5 +629,7 @@ h1{
 .password{
     margin-top: 35% !important;
 }
+
+
 
 }
