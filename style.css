@@ -133,7 +133,7 @@ table {
 
 /* colors */
 
-html {
+body {
     background-color: white;
     cursor: url("images/cursor-black.svg"), auto;
 }
