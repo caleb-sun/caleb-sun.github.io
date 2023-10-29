@@ -133,9 +133,9 @@ table {
 
 /* colors */
 
-body {
+html {
     background-color: white;
-    cursor: url("images/cursor-black.svg"), auto;
+    cursor: url("images/cursor-black.svg"), auto !important;
 }
 
 /* type */
