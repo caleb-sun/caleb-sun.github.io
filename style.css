@@ -135,7 +135,7 @@ table {
 
 html {
     background-color: white;
-    cursor: url("images/cursor-black.svg"), auto !important;
+    cursor: url("images/cursor-black.svg"),auto;
 }
 
 /* type */
@@ -499,8 +499,10 @@ input[type='submit'] {
     width: 164px;
     background-color: black;
     color: white;
-    font-family: "ibm-plex-sans", sans-serif;
+    font-family: "freight-text-pro", serif;
+    font-style: italic;
     font-weight: 300;
+    font-size: 18pt;
     box-shadow: none;
     border: none;
     border-radius: 20px;
