@@ -59,10 +59,14 @@
                         <sub>Product Design / UX Design / Brand Design</sub>
                     </a>
                 </div>
-                <div id="vela" class="fifty">
+                <div id="vela" class="fifty"  onpointerenter='vela()' onpointerleave='vela2()'>
                     <a href="projects/vela.html" class="projecthome">
-                        <img 
+                        <img id="velagif"
                             src="images/vela/thumb-vela.gif"
+                            alt="Screens from the TLJ Suite."
+                            style="display: none;">
+                            <img id="velapic"
+                            src="images/vela/thumb-vela.jpg"
                             alt="Screens from the TLJ Suite.">
                         <span class="small"></span>
                         <p>Vela Projects</p>
@@ -72,6 +76,21 @@
                         <sub>Product Design / UX Design / Brand Design</sub>
                     </a>
                 </div>
+                <script>
+                    function vela() {
+                        var gif = document.getElementById('velagif');
+                        var image = document.getElementById('velapic');
+                        gif.style.display = 'block';
+                        image.style.display = 'none'
+
+                    }
+                    function vela2() {
+                        var gif = document.getElementById('velagif');
+                        var image = document.getElementById('velapic');
+                        gif.style.display='none'
+                        image.style.display = 'block';
+                    }
+                </script>
                 <div id="communityofpractice" class="fifty">
                     <a href="projects/conservancy.html" class="projecthome">
                         <img 
@@ -98,8 +117,8 @@
                         <sub>Brand Design / Web Design + Development</sub>
                     </a>
                 </div>
-                <div id="storiesabtfood" class="fifty">
-                    <a  class="projecthome"> <!--href="projects/stories.html"-->
+                <!-- <div id="storiesabtfood" class="fifty">
+                    <a  class="projecthome">
                         <img 
                             src="images/coming-soon.gif"
                             alt="Looping gif that reads 'Coming Soon'.">
@@ -110,6 +129,39 @@
                         <span class="medium"></span>
                         <sub>Book Design / Book Binding</sub>
                     </a>
+                </div> -->
+                <div id="paradox" class="fifty" onpointerenter='para()' onpointerleave='para2()'>
+                    <a  class="projecthome"> <!--href="projects/sonny.html"-->
+                        <img id="paragif"
+                            src="images/paradox/thumb_paradox.gif"
+                            alt="Looping gif that reads 'Coming Soon'."
+                            style="display: none;">
+                        <img id="paraimg"
+                            src="images/paradox/thumb_paradox.jpg"
+                            alt="Looping gif that reads 'Coming Soon'.">
+
+                        <span class="small"></span>
+                        <p>The Paradox of Understanding</p>
+                        <span class="small"></span>
+                        <h3>Life as told through AI</h3>
+                        <span class="medium"></span>
+                        <sub>Book Design / Book Binding</sub>
+                    </a>
+                    <script>
+                        function para() {
+                            var gif = document.getElementById('paragif');
+                            var image = document.getElementById('paraimg');
+                            gif.style.display = 'block';
+                            image.style.display = 'none'
+    
+                        }
+                        function para2() {
+                            var gif = document.getElementById('paragif');
+                            var image = document.getElementById('paraimg');
+                            gif.style.display='none'
+                            image.style.display = 'block';
+                        }
+                    </script>
                 </div>
                 <div id="sonny" class="fifty">
                     <a  class="projecthome"> <!--href="projects/sonny.html"-->

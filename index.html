@@ -29,6 +29,13 @@
             </ul>
         </header>
         <img id='image' style="position: absolute; left:0; top: 15vh; height: 70vh; width: auto; z-index:0; display: none;" src="images/heroes.gif">
+        <a id='arrow'
+            style="width: 2%; position: fixed; left: 49%; bottom:1.5%; z-index: 100;"
+            href="#mininav"
+            >
+            <img src="images/down-arrow-black.svg">
+        </a>
+        <script type = "text/javascript" src="javascript/homearrow.js"></script>
         <ul class="home">
             <div class="hometitle"> 
                 <li class="hundred">
@@ -61,7 +68,7 @@
                     </p>
                 </li>
             </ul>
-            <span class="medium"></span>
+            <span id='mininav'class="medium"></span>
             <ul class="miniprojnav">
                 <h2><a id=producttop onclick='product()' style="text-decoration:underline; text-decoration-style: dotted;">Product,</a></h2>
                 <h2><a id=graphictop onclick='graphic()'>Graphic,</a></h2>
@@ -107,6 +114,7 @@
                     funtop.style.textDecorationStyle = 'dotted';
                 }
             </script>
+            
             <ul id="product" class="columns">
                 <div id="tlj" class="fifty">
                     <a href="projects/tlj.html" class="projecthome">
@@ -177,10 +185,47 @@
                         <sub>Product Design / UX Design / Brand Design</sub>
                     </a>
                 </div>
-                <div id="vela" class="fifty">
+                <div id="paradox" class="fifty" onpointerenter='para()' onpointerleave='para2()'>
+                    <a  class="projecthome"> <!--href="projects/sonny.html"-->
+                        <img id="paragif"
+                            src="images/paradox/thumb_paradox.gif"
+                            alt="Looping gif that reads 'Coming Soon'."
+                            style="display:none;">
+                        <img id="paraimg"
+                            src="images/paradox/thumb_paradox.jpg"
+                            alt="Looping gif that reads 'Coming Soon'.">
+
+                        <span class="small"></span>
+                        <p>The Paradox of Understanding</p>
+                        <span class="small"></span>
+                        <h3>Life as told through AI</h3>
+                        <span class="medium"></span>
+                        <sub>Book Design / Book Binding</sub>
+                    </a>
+                    <script>
+                        function para() {
+                            var gif = document.getElementById('paragif');
+                            var image = document.getElementById('paraimg');
+                            gif.style.display = 'block';
+                            image.style.display = 'none'
+    
+                        }
+                        function para2() {
+                            var gif = document.getElementById('paragif');
+                            var image = document.getElementById('paraimg');
+                            gif.style.display='none'
+                            image.style.display = 'block';
+                        }
+                    </script>
+                </div>
+                <div id="vela" class="fifty"  onpointerenter='vela()' onpointerleave='vela2()'>
                     <a href="projects/vela.html" class="projecthome">
-                        <img 
+                        <img id="velagif"
                             src="images/vela/thumb-vela.gif"
+                            alt="Screens from the TLJ Suite."
+                            style="display: none;">
+                            <img id="velapic"
+                            src="images/vela/thumb-vela.jpg"
                             alt="Screens from the TLJ Suite.">
                         <span class="small"></span>
                         <p>Vela Projects</p>
@@ -190,6 +235,21 @@
                         <sub>Product Design / UX Design / Brand Design</sub>
                     </a>
                 </div>
+                <script>
+                    function vela() {
+                        var gif = document.getElementById('velagif');
+                        var image = document.getElementById('velapic');
+                        gif.style.display = 'block';
+                        image.style.display = 'none'
+
+                    }
+                    function vela2() {
+                        var gif = document.getElementById('velagif');
+                        var image = document.getElementById('velapic');
+                        gif.style.display='none'
+                        image.style.display = 'block';
+                    }
+                </script>
                 <div id="communityofpractice" class="fifty">
                     <a href="projects/conservancy.html" class="projecthome">
                         <img 
@@ -216,8 +276,8 @@
                         <sub>Brand Design / Web Design + Development</sub>
                     </a>
                 </div>
-                <div id="storiesabtfood" class="fifty">
-                    <a  class="projecthome"> <!--href="projects/stories.html"-->
+                <!-- <div id="storiesabtfood" class="fifty">
+                    <a  class="projecthome"> 
                         <img 
                             src="images/coming-soon.gif"
                             alt="Looping gif that reads 'Coming Soon'.">
@@ -228,7 +288,7 @@
                         <span class="medium"></span>
                         <sub>Book Design / Book Binding</sub>
                     </a>
-                </div>
+                </div> -->
                 <div id="sonny" class="fifty">
                     <a  class="projecthome"> <!--href="projects/sonny.html"-->
                         <img 

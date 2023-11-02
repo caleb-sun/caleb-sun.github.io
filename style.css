@@ -136,6 +136,7 @@ table {
 html {
     background-color: white;
     cursor: url("images/cursor-black.svg"),auto;
+    scroll-behavior: smooth;
 }
 
 /* type */
@@ -375,7 +376,7 @@ footer{
     margin:auto;
     display: flex;
     flex-direction: column;
-    margin-top:18%;
+    margin-top:16%;
     margin-bottom:16%;
     width: 92%;
     gap: 48px;
@@ -477,6 +478,8 @@ footer{
     justify-content: center;
     width: 40%;
 }
+
+
 
 /*password*/
 
