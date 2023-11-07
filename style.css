@@ -169,7 +169,7 @@ b{
 }
 
 h1 {
-    font-size:60pt;
+    font-size:44pt;
 }
 
 h2 {
@@ -222,7 +222,7 @@ a:hover{
     cursor: url("images/cursor-gray.svg"), auto;;
 }
 
-a:hover>h3,a:hover>p,a:hover>sub{
+a:hover>div>h3,a:hover>div>p,a:hover>div>sub{
     color:lightslategray;
 }
 
@@ -248,6 +248,12 @@ a:hover>img{
 
 .projecttitle>.columns{
     row-gap:64px;
+}
+
+.projecthome {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .eighty,.sixty, .forty,.thirty,.thirtythree, .twentyfive, .fifty, .hundred{
@@ -376,7 +382,7 @@ footer{
     margin:auto;
     display: flex;
     flex-direction: column;
-    margin-top:16%;
+    margin-top:10%;
     margin-bottom:16%;
     width: 92%;
     gap: 48px;
@@ -520,7 +526,7 @@ input[type='submit']:hover {
 
 .tiny{
     display: block;
-    height: 0px;
+    height: 4px;
     width:100%;
 }
 

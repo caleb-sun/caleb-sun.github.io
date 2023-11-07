@@ -29,18 +29,26 @@
             </ul>
         </header>
         <img id='image' style="position: absolute; left:0; top: 15vh; height: 70vh; width: auto; z-index:0; display: none;" src="images/heroes.gif">
-        <a id='arrow'
-            style="width: 2%; position: fixed; left: 49%; bottom:1.5%; z-index: 100;"
-            href="#mininav"
-            >
-            <img src="images/down-arrow-black.svg">
-        </a>
-        <script type = "text/javascript" src="javascript/homearrow.js"></script>
-        <ul class="home">
-            <div class="hometitle"> 
-                <li class="hundred">
+        <ul class="home columns" >
+            <div class="hometitle" style="position: fixed;"> 
+                <li class="forty">
                     <h1>Hi, I'm Caleb.<br>I design beautiful artifacts that bridge people to the world around them.</h1>
                 </li>
+                <span class="medium"></span>
+                <ul style="width: 50%;">
+                    <li class="thirty">
+                        <p>
+                            Currently:
+                        </p>
+                    </li>
+                    <li class="sixty">
+                        <p>
+                            UX/UI Design @ <a href="https://www.csl.com/we-are-csl/our-businesses-and-products/csl-behring" target="_blank">CSL Behring</a><br>
+                            Design + HCI @ <a href="https://design.cmu.edu/" target="_blank">Carnegie Mellon University</a><br>
+                            Designing a book about food
+                        </p>
+                    </li>
+                </ul>
                 <script>
                     <a style="text-decoration: underline dotted ;" onpointerenter='heroes()' onpointerleave='heroes2()'></a> 
                     function heroes() {
@@ -53,23 +61,8 @@
                     }
                 </script>
             </div>
-            <span class="small"></span>
-            <ul class="homedescription">
-                <li class="thirty">
-                    <p>
-                        Currently:
-                    </p>
-                </li>
-                <li class="sixty">
-                    <p>
-                        UX/UI Design @ <a href="https://www.csl.com/we-are-csl/our-businesses-and-products/csl-behring" target="_blank">CSL Behring</a><br>
-                        Design + HCI @ <a href="https://design.cmu.edu/" target="_blank">Carnegie Mellon University</a><br>
-                        Designing a book about food
-                    </p>
-                </li>
-            </ul>
-            <span id='mininav'class="medium"></span>
-            <ul class="miniprojnav">
+        <div class="columns" style="width: 60%; margin-left: 40%; z-index: 100;">
+            <ul class="miniprojnav" style="position: fixed; z-index:100;">
                 <h2><a id=producttop onclick='product()' style="text-decoration:underline; text-decoration-style: dotted;">Product,</a></h2>
                 <h2><a id=graphictop onclick='graphic()'>Graphic,</a></h2>
                 <h2><a id=funtop onclick='fun()'>Fun</a></h2>
@@ -114,49 +107,58 @@
                     funtop.style.textDecorationStyle = 'dotted';
                 }
             </script>
-            
-            <ul id="product" class="columns">
-                <div id="tlj" class="fifty">
+            <span class="medium"></span>
+            <ul id="product" class="columns" style="z-index: 50;">
+                <div id="tlj" class="hundred">
                     <a href="projects/tlj.html" class="projecthome">
-                        <img 
-                            src="images/tlj/hero1-tlj.jpg"
-                            alt="Screens from the TLJ Suite.">
-                        <span class="small"></span>
-                        <p>TLJ Digital Suite</p>
-                        <span class="small"></span>
-                        <h3>Tools for the modern bakery</h3>
-                        <span class="medium"></span>
-                        <sub>Product Design / UX Design / Brand Design</sub>
+                        <div class="sixty">
+                            <img 
+                                src="images/tlj/hero1-tlj.jpg"
+                                alt="Screens from the TLJ Suite.">
+                        </div>
+                        <div class="forty">
+                            <p>TLJ Digital Suite</p>
+                            <span class="small"></span>
+                            <h3>Tools for the modern bakery</h3>
+                            <span class="small"></span>
+                            <sub>Product Design / UX Design / Brand Design</sub>
+                        </div>
                     </a>
                 </div>
-                <div id="CSL" class="fifty">
+                <div id="CSL" class="hundred">
                     <a class="projecthome" href="pw.html">
-                        <img 
-                            src="images/csl/thumb-csl.jpg"
-                            alt="A screen from a plasma donation app on a red background 
-                            with the words 'CSL Behring, Biotherapies for Life'">
-                        <span class="small"></span>
-                        <p>CSL Behring Internship</p>
-                        <span class="small"></span>
-                        <h3>The new age of plasma donation</h3>
-                        <span class="medium"></span>
-                        <sub>Product Design / UI Design / UX Research</sub>
+                        <div class="sixty">
+                            <img 
+                                src="images/csl/thumb-csl.jpg"
+                                alt="A screen from a plasma donation app on a red background 
+                                with the words 'CSL Behring, Biotherapies for Life'">
+                        </div>
+                        <div class="forty">
+                            <p>CSL Behring Internship</p>
+                            <span class="small"></span>
+                            <h3>The new age of plasma donation</h3>
+                            <span class="small"></span>
+                            <sub>Product Design / UI Design / UX Research</sub>
+                    </div>
                     </a>
                 </div>
-                <div id="wastenot" class="fifty">
+                <div id="wastenot" class="hundred">
                     <a href="projects/wnwn.html" class="projecthome">
-                        <img 
-                            src="images/wastenot/thumb-waste.jpg"
-                            alt="Screens from the TLJ Suite.">
-                        <span class="small"></span>
-                        <p>Waste Not Want Not</p>
-                        <span class="small"></span>
-                        <h3>Gamifying food responsibility</h3>
-                        <span class="medium"></span>
-                        <sub>Product Design / UX Design</sub>
+                        <div class="sixty">
+                            <img 
+                                src="images/wastenot/thumb-waste.jpg"
+                                alt="Screens from the TLJ Suite.">
+                        </div>
+                        <div class="forty">
+                            <p>Waste Not Want Not</p>
+                            <span class="small"></span>
+                            <h3>Gamifying food responsibility</h3>
+                            <span class="small"></span>
+                            <sub>Product Design / UX Design</sub>
+                        </div>
                     </a>   
                 </div>
-                <div id="hash" class="fifty">
+                <!-- <div id="hash" class="hundred">
                     <a class="projecthome">
                         <img 
                             src="images/coming-soon.gif"
@@ -168,39 +170,44 @@
                         <span class="medium"></span>
                         <sub>Product Design / UX Design / Brand Design</sub>
                     </a>
-                </div>
+                </div> -->
                 
             </ul>
-            <ul id="graphic" class="columns" style="display:none;">
-                <div id="guangyu" class="fifty">
+            <ul id="graphic" class="columns" style="display:none; z-index:50;">
+                <div id="guangyu" class="hundred">
                     <a href="projects/guangyu.html" class="projecthome">
-                        <img 
+                        <div class="sixty"> 
+                            <img 
                             src="images/gy/thumb-gy.jpg"
                             alt="Screens from the TLJ Suite.">
-                        <span class="small"></span>
-                        <p>Guang Yu</p>
-                        <span class="small"></span>
-                        <h3>Artifacts for my design hero</h3>
-                        <span class="medium"></span>
-                        <sub>Product Design / UX Design / Brand Design</sub>
+                        </div>
+                        <div class="forty">
+                            <p>Guang Yu</p>
+                            <span class="small"></span>
+                            <h3>Artifacts for my design hero</h3>
+                            <span class="small"></span>
+                            <sub>Brand Design / Graphic Design / Motion Design</sub>
+                        </div>
                     </a>
                 </div>
-                <div id="paradox" class="fifty" onpointerenter='para()' onpointerleave='para2()'>
-                    <a href="projects/paradox.html" class="projecthome"> <!--href="projects/sonny.html"-->
-                        <img id="paragif"
+                <div id="paradox" class="hundred" onpointerenter='para()' onpointerleave='para2()'>
+                    <a href="projects/paradox.html" class="projecthome">
+                        <div class="sixty"> 
+                            <img id="paragif"
                             src="images/paradox/thumb_paradox.gif"
                             alt="Looping gif that reads 'Coming Soon'."
                             style="display:none;">
                         <img id="paraimg"
                             src="images/paradox/thumb_paradox.jpg"
                             alt="Looping gif that reads 'Coming Soon'.">
-
-                        <span class="small"></span>
-                        <p>The Paradox of Understanding</p>
-                        <span class="small"></span>
-                        <h3>Life as told through AI</h3>
-                        <span class="medium"></span>
-                        <sub>Book Design / Book Binding</sub>
+                        </div>
+                        <div class="forty">
+                            <p>The Paradox of Understanding</p>
+                            <span class="small"></span>
+                            <h3>Cultural understanding as told through AI</h3>
+                            <span class="small"></span>
+                            <sub>Book Design / Book Binding</sub>
+                        </div>
                     </a>
                     <script>
                         function para() {
@@ -218,23 +225,25 @@
                         }
                     </script>
                 </div>
-                <div id="vela" class="fifty"  onpointerenter='vela()' onpointerleave='vela2()'>
+                <div id="vela" class="hundred" onpointerenter='vela()' onpointerleave='vela2()'>
                     <a href="projects/vela.html" class="projecthome">
-                        <img id="velagif"
+                        <div class="sixty"> 
+                            <img id="velagif"
                             src="images/vela/thumb-vela.gif"
                             alt="Screens from the TLJ Suite."
                             style="display: none;">
                             <img id="velapic"
                             src="images/vela/thumb-vela.jpg"
                             alt="Screens from the TLJ Suite.">
-                        <span class="small"></span>
-                        <p>Vela Projects</p>
-                        <span class="small"></span>
-                        <h3>Branding for a construction consultancy</h3>
-                        <span class="medium"></span>
-                        <sub>Product Design / UX Design / Brand Design</sub>
+                        </div>
+                        <div class="forty">
+                            <p>Vela Projects</p>
+                            <span class="small"></span>
+                            <h3>Branding for a construction consultancy</h3>
+                            <span class="small"></span>
+                            <sub>Product Design / UX Design / Brand Design</sub>
+                        </div>
                     </a>
-                </div>
                 <script>
                     function vela() {
                         var gif = document.getElementById('velagif');
@@ -250,30 +259,37 @@
                         image.style.display = 'block';
                     }
                 </script>
-                <div id="communityofpractice" class="fifty">
+                </div>
+                <div id="communityofpractice" class="hundred">
                     <a href="projects/conservancy.html" class="projecthome">
-                        <img 
+                        <div class="sixty"> 
+                            <img 
                             src="images/conservancy/thumb-conservancy-1.jpg"
                             alt="Screens from the TLJ Suite.">
-                        <span class="small"></span>
-                        <p>The Nature Conservancy</p>
-                        <span class="small"></span>
-                        <h3>Climate community of practice</h3>
-                        <span class="medium"></span>
-                        <sub>Proposal Design / Systems Thinking / Graphic Design</sub>
+                        </div>
+                        <div class="forty">
+                            <p>The Nature Conservancy</p>
+                            <span class="small"></span>
+                            <h3>Proposing a Climate Community of Practice</h3>
+                            <span class="small"></span>
+                            <sub>Proposal Design / Systems Thinking / Graphic Design</sub>
+                        </div>
                     </a>
                 </div>
-                <div id="hippo" class="fifty">
+                <div id="hippo" class="hundred">
                     <a href="projects/hipposwim.html" class="projecthome">
-                        <img 
+                        <div class="sixty"> 
+                            <img 
                             src="images/hippo/thumb-hippo.jpg"
                             alt="Screens from the TLJ Suite.">
-                        <span class="small"></span>
-                        <p>Hippo Swim</p>
-                        <span class="small"></span>
-                        <h3>Branding for a swim school</h3>
-                        <span class="medium"></span>
-                        <sub>Brand Design / Web Design + Development</sub>
+                        </div>
+                        <div class="forty">
+                            <p>Hippo Swim</p>
+                            <span class="small"></span>
+                            <h3>Branding for a swim school</h3>
+                            <span class="small"></span>
+                            <sub>Brand Design / Web Design + Development</sub>
+                        </div>
                     </a>
                 </div>
                 <!-- <div id="storiesabtfood" class="fifty">
@@ -289,50 +305,59 @@
                         <sub>Book Design / Book Binding</sub>
                     </a>
                 </div> -->
-                <div id="sonny" class="fifty">
-                    <a  class="projecthome"> <!--href="projects/sonny.html"-->
-                        <img 
+                <!-- <div id="sonny" class="hundred">
+                    <a class="projecthome">
+                        <div class="fifty"> 
+                            <img 
                             src="images/coming-soon.gif"
                             alt="Looping gif that reads 'Coming Soon'.">
-                        <span class="small"></span>
-                        <p>Sonny Angel Book</p>
-                        <span class="small"></span>
+                        </div>
+                        <div class="fifty">
+                            <p>Sonny Angel Book</p>
                         <h3>A book about a little angel boy</h3>
-                        <span class="medium"></span>
                         <sub>Book Design / Book Binding</sub>
+                        </div>
                     </a>
-                </div>
+                </div> -->
             </ul>
-            <ul id="fun" class="columns" style="display:none;">
-                <div id="CSL" class="fifty">
+            <ul id="fun" class="columns" style="display:none; z-index:50;">
+                <div id="CSL" class="hundred">
                     <a href="projects/whatshould.html" class="projecthome">
-                        <img 
+                        <div class="sixty"> 
+                            <img 
                             src="images/whatshould/thumb-whatshould.jpg"
                             alt="Screens from the TLJ Suite.">
-                        <span class="small"></span>
-                        <p>What Should We Eat?</p>
-                        <span class="small"></span>
-                        <h3>A device for connection through food</h3>
-                        <span class="medium"></span>
-                        <sub>Physical Computing / Fabrication</sub>
+                        </div>
+                        <div class="forty">
+                            <p>What Should We Eat?</p>
+                            <span class="small"></span>
+                            <h3>A device for connecting through food</h3>
+                            <span class="small"></span>
+                            <sub>Physical Computing / Fabrication</sub>
+                        </div>
                     </a>
                 </div>
-                <div id="CSL" class="fifty">
+                <div id="sigul" class="hundred">
                     <a href="projects/type-design.html" class="projecthome">
-                        <img 
-                            src="images/type/type-thumb-10.jpg"
+                        <div class="sixty"> 
+                            <img 
+                            src="images/type/italics-9.jpg"
                             alt="Looping gif that reads 'Coming Soon'.">
-                        <span class="small"></span>
-                        <p>Type Design</p>
-                        <span class="small"></span>
-                        <h3>Revivals and otherwise</h3>
-                        <span class="medium"></span>
-                        <sub>Typeface design</sub>
+                        </div>
+                        <div class="forty">
+                            <p>Type Design</p>
+                            <span class="small"></span>
+                            <h3>Revivals and otherwise</h3>
+                            <span class="small"></span>
+                            <sub>Typeface design</sub>
+                        </div>
                     </a>
                 </div>
             </ul>
+        </div>
+            
         </ul>
-        <footer>
+        <footer style="position: fixed; bottom: 2%;">
             <div class="columns footmenu">
                 <ul class="menu" style="margin-left:4%;">
                     <li class="menuitems"><a href="pdfs/caleb-sun_resume.pdf" target="_blank"><p>Resume</p></a></li>
