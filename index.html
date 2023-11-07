@@ -174,12 +174,18 @@
                 
             </ul>
             <ul id="graphic" class="columns" style="display:none; z-index:50;">
-                <div id="guangyu" class="hundred">
+                <div id="guangyu" class="hundred" onpointerenter='gy()' onpointerleave='gy2()'>
                     <a href="projects/guangyu.html" class="projecthome">
                         <div class="sixty"> 
                             <img 
-                            src="images/gy/thumb-gy.jpg"
+                            id="gystill"
+                            src="images/gy/thumb-gy-still.jpg"
                             alt="Screens from the TLJ Suite.">
+                            <img 
+                            id="gygif"
+                            src="images/gy/thumb-gy.gif"
+                            alt="Screens from the TLJ Suite."
+                            style="display: none;">
                         </div>
                         <div class="forty">
                             <p>Guang Yu</p>
@@ -189,6 +195,21 @@
                             <sub>Brand Design / Graphic Design / Motion Design</sub>
                         </div>
                     </a>
+                    <script>
+                        function gy() {
+                            var gif = document.getElementById('gygif');
+                            var image = document.getElementById('gystill');
+                            gif.style.display = 'block';
+                            image.style.display = 'none'
+    
+                        }
+                        function gy2() {
+                            var gif = document.getElementById('gygif');
+                            var image = document.getElementById('gystill');
+                            gif.style.display='none'
+                            image.style.display = 'block';
+                        }
+                    </script>
                 </div>
                 <div id="paradox" class="hundred" onpointerenter='para()' onpointerleave='para2()'>
                     <a href="projects/paradox.html" class="projecthome">
