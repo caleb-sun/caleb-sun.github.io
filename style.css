@@ -165,7 +165,6 @@ h4{
 b{
     font-family: "ibm-plex-sans", sans-serif;
     font-weight: 600;
-    font-style: italic;
 }
 
 h1 {
@@ -236,6 +235,7 @@ a:hover>img{
     transition-duration: 0.2s;
 }
 
+
 /* columns */
 
 .columns{
@@ -248,6 +248,16 @@ a:hover>img{
 
 .projecttitle>.columns{
     row-gap:64px;
+}
+
+.homeprojects{
+    width: 60%; 
+    margin-left: 40%; 
+    z-index: 100;
+}
+
+.hometitle{
+    position: fixed;
 }
 
 .projecthome {
@@ -349,9 +359,9 @@ img{
 }
 
 footer{
-    position: relative;
+    position: fixed;
     width: 100vw;
-    bottom:0;
+    bottom:2%;
 }
 
 .footerpw{
@@ -399,6 +409,8 @@ footer{
     display:flex;
     flex-direction: row;
     gap:1%;
+    position: fixed; 
+    z-index:100;
 }
 
 /* about */
@@ -640,6 +652,31 @@ h1{
 
 .password{
     margin-top: 35% !important;
+}
+
+.homeprojects{
+    width: 100%; 
+    margin: auto;
+    z-index: 0;
+}
+
+.hometitle{
+    position: relative;
+}
+
+.projecthome{
+    flex-direction: column;
+    gap: 16px;
+}
+
+.miniprojnav{
+    position: relative; 
+}
+
+footer{
+    position: relative;
+    width: 100vw;
+    margin-bottom:2%;
 }
 
 

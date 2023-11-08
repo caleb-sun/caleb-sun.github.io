@@ -30,12 +30,12 @@
         </header>
         <img id='image' style="position: absolute; left:0; top: 15vh; height: 70vh; width: auto; z-index:0; display: none;" src="images/heroes.gif">
         <ul class="home columns" >
-            <div class="hometitle" style="position: fixed;"> 
+            <div class="hometitle" > 
                 <li class="forty">
                     <h1>Hi, I'm Caleb.<br>I design beautiful artifacts that bridge people to the world around them.</h1>
                 </li>
                 <span class="medium"></span>
-                <ul style="width: 50%;">
+                <ul class="fifty">
                     <li class="thirty">
                         <p>
                             Currently:
@@ -61,8 +61,8 @@
                     }
                 </script>
             </div>
-        <div class="columns" style="width: 60%; margin-left: 40%; z-index: 100;">
-            <ul class="miniprojnav" style="position: fixed; z-index:100;">
+        <div class="columns homeprojects">
+            <ul class="miniprojnav" >
                 <h2><a id=producttop onclick='product()' style="text-decoration:underline; text-decoration-style: dotted;">Product,</a></h2>
                 <h2><a id=graphictop onclick='graphic()'>Graphic,</a></h2>
                 <h2><a id=funtop onclick='fun()'>Fun</a></h2>
@@ -107,7 +107,7 @@
                     funtop.style.textDecorationStyle = 'dotted';
                 }
             </script>
-            <span class="medium"></span>
+            <span class="medium spacer"></span>
             <ul id="product" class="columns" style="z-index: 50;">
                 <div id="tlj" class="hundred">
                     <a href="projects/tlj.html" class="projecthome">
@@ -378,7 +378,7 @@
         </div>
             
         </ul>
-        <footer style="position: fixed; bottom: 2%;">
+        <footer>
             <div class="columns footmenu">
                 <ul class="menu" style="margin-left:4%;">
                     <li class="menuitems"><a href="pdfs/caleb-sun_resume.pdf" target="_blank"><p>Resume</p></a></li>
