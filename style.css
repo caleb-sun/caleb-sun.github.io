@@ -168,15 +168,15 @@ b{
 }
 
 h1 {
-    font-size:44pt;
+    font-size:36pt;
 }
 
 h2 {
-    font-size: 32pt;
+    font-size: 24pt;
 }
 
 h3 {
-    font-size: 28pt;
+    font-size: 24pt;
 }
 
 h4 {
@@ -250,14 +250,9 @@ a:hover>img{
     row-gap:64px;
 }
 
-.homeprojects{
-    width: 60%; 
-    margin-left: 40%; 
-    z-index: 100;
-}
-
 .hometitle{
     position: fixed;
+    width: inherit;
 }
 
 .projecthome {
@@ -324,6 +319,7 @@ img{
     top:2%;
     left: 4%;
     z-index: 100;
+    font-style: initial !important;
 }
 
 .homenav>a{
@@ -347,7 +343,6 @@ img{
     flex-direction: row;
     align-items: center;
     gap: 15%;
-    height: 48px;
     z-index: 100;
 }
 
@@ -359,14 +354,13 @@ img{
 }
 
 footer{
-    position: fixed;
     width: 100vw;
     bottom:2%;
 }
 
 .footerpw{
     position: fixed;
-    bottom:0;
+    bottom:2%;
     width: 100vw;
 }
 
@@ -391,10 +385,11 @@ footer{
     position:relative;
     margin:auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-top:10%;
     margin-bottom:16%;
-    width: 92%;
+    margin-left: 43%;
+    width: 55%;
     gap: 48px;
 }
 
@@ -405,12 +400,21 @@ footer{
 }
 
 .miniprojnav{
-    width: 50%;
+    width: 20%;
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     gap:1%;
-    position: fixed; 
     z-index:100;
+}
+
+.fixed{
+    position:fixed;
+    margin:auto;
+    display: flex;
+    flex-direction: row;
+    margin-left: 4%;
+    width: 35%;
+    gap: 5%;
 }
 
 /* about */
@@ -562,7 +566,33 @@ input[type='submit']:hover {
 }
 
 
-@media screen and (max-width: 1000px) { 
+@media screen and (max-width: 1200px) { 
+    h1 {
+        font-size:28pt;
+    }
+    
+    h2 {
+        font-size: 18pt;
+    }
+    
+    h3 {
+        font-size: 18pt;
+    }
+    
+    h4 {
+        font-size: 14pt;
+        line-height:16pt;
+    }
+    
+    p {
+        font-size: 12pt;
+        line-height: 18pt;
+    }
+    
+    sub {
+        font-size: 10pt;
+        line-height:12pt;
+    }
 
 }
 
@@ -578,6 +608,7 @@ h1{
 }
 
 .twenty{
+    margin:auto;
     width: 100%;
 }
 
@@ -679,6 +710,28 @@ footer{
     margin-bottom:2%;
 }
 
+.fixed{
+    position: relative;
+    width: 96%;
+    flex-direction: column;
+    margin-top: 16%;
+    justify-content: left;
+}
 
+.home {
+    margin-top:10%;
+    margin:auto;
+    margin-bottom: 20%;
+    width: 96%;
+    gap: 48px;
+}
+
+.miniprojnav{
+    width: 100%;
+    margin:auto;
+    flex-direction: row;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
 
 }

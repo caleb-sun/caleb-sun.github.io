@@ -29,26 +29,26 @@
             </ul>
         </header>
         <img id='image' style="position: absolute; left:0; top: 15vh; height: 70vh; width: auto; z-index:0; display: none;" src="images/heroes.gif">
-        <ul class="home columns" >
-            <div class="hometitle" > 
-                <li class="forty">
+        <ul class="fixed">
+            <div class="eighty"> 
+                <div>
                     <h1>Hi, I'm Caleb.<br>I design beautiful artifacts that bridge people to the world around them.</h1>
-                </li>
-                <span class="medium"></span>
-                <ul class="fifty">
-                    <li class="thirty">
-                        <p>
-                            Currently:
-                        </p>
-                    </li>
-                    <li class="sixty">
-                        <p>
-                            UX/UI Design @ <a href="https://www.csl.com/we-are-csl/our-businesses-and-products/csl-behring" target="_blank">CSL Behring</a><br>
-                            Design + HCI @ <a href="https://design.cmu.edu/" target="_blank">Carnegie Mellon University</a><br>
-                            Designing a book about food
-                        </p>
-                    </li>
-                </ul>
+                    <span class="medium"></span>
+                    <ul class="hundred">
+                        <li class="twenty">
+                            <p>
+                                Currently:
+                            </p>
+                        </li>
+                        <li class="hundred">
+                            <p>
+                                UX/UI Design @ <a href="https://www.csl.com/we-are-csl/our-businesses-and-products/csl-behring" target="_blank">CSL Behring</a><br>
+                                Design + HCI @ <a href="https://design.cmu.edu/" target="_blank">Carnegie Mellon University</a><br>
+                                Designing a book about food
+                            </p>
+                        </li>
+                    </ul>
+                </div>
                 <script>
                     <a style="text-decoration: underline dotted ;" onpointerenter='heroes()' onpointerleave='heroes2()'></a> 
                     function heroes() {
@@ -61,332 +61,344 @@
                     }
                 </script>
             </div>
-        <div class="columns homeprojects">
-            <ul class="miniprojnav" >
-                <h2><a id=producttop onclick='product()' style="text-decoration:underline; text-decoration-style: dotted;">Product,</a></h2>
-                <h2><a id=graphictop onclick='graphic()'>Graphic,</a></h2>
-                <h2><a id=funtop onclick='fun()'>Fun</a></h2>
-            </ul>
-            <script> <!--hide groups-->
-                function product() {
-                    var product = document.getElementById('product');
-                    var graphic = document.getElementById('graphic');
-                    var fun = document.getElementById('fun');
-                    product.style.display = 'flex';
-                    producttop.style.textDecoration = 'underline';
-                    producttop.style.textDecorationStyle = 'dotted';
-                    graphic.style.display = 'none';
-                    graphictop.style.textDecoration = 'none';
-                    fun.style.display = 'none';
-                    funtop.style.textDecoration = 'none';
-                }
-
-                function graphic() {
-                    var product = document.getElementById('product');
-                    var graphic = document.getElementById('graphic');
-                    var fun = document.getElementById('fun');
-                    product.style.display = 'none';
-                    producttop.style.textDecoration = 'none';
-                    graphic.style.display = 'flex';
-                    graphictop.style.textDecoration = 'underline';
-                    graphictop.style.textDecorationStyle = 'dotted';
-                    fun.style.display = 'none';
-                    funtop.style.textDecoration = 'none';
-                }
-
-                function fun() {
-                    var product = document.getElementById('product');
-                    var graphic = document.getElementById('graphic');
-                    var fun = document.getElementById('fun');
-                    product.style.display = 'none';
-                    producttop.style.textDecoration = 'none';
-                    graphic.style.display = 'none';
-                    graphictop.style.textDecoration = 'none';
-                    fun.style.display = 'flex';
-                    funtop.style.textDecoration = 'underline';
-                    funtop.style.textDecorationStyle = 'dotted';
-                }
-            </script>
-            <span class="medium spacer"></span>
-            <ul id="product" class="columns" style="z-index: 50;">
-                <div id="tlj" class="hundred">
-                    <a href="projects/tlj.html" class="projecthome">
-                        <div class="sixty">
-                            <img 
-                                src="images/tlj/hero1-tlj.jpg"
-                                alt="Screens from the TLJ Suite.">
-                        </div>
-                        <div class="forty">
-                            <p>TLJ Digital Suite</p>
-                            <span class="small"></span>
-                            <h3>Tools for the modern bakery</h3>
-                            <span class="small"></span>
-                            <sub>Product Design / UX Design / Brand Design</sub>
-                        </div>
-                    </a>
-                </div>
-                <div id="CSL" class="hundred">
-                    <a class="projecthome" href="pw.html">
-                        <div class="sixty">
-                            <img 
-                                src="images/csl/thumb-csl.jpg"
-                                alt="A screen from a plasma donation app on a red background 
-                                with the words 'CSL Behring, Biotherapies for Life'">
-                        </div>
-                        <div class="forty">
-                            <p>CSL Behring Internship</p>
-                            <span class="small"></span>
-                            <h3>The new age of plasma donation</h3>
-                            <span class="small"></span>
-                            <sub>Product Design / UI Design / UX Research</sub>
-                    </div>
-                    </a>
-                </div>
-                <div id="wastenot" class="hundred">
-                    <a href="projects/wnwn.html" class="projecthome">
-                        <div class="sixty">
-                            <img 
-                                src="images/wastenot/thumb-waste.jpg"
-                                alt="Screens from the TLJ Suite.">
-                        </div>
-                        <div class="forty">
-                            <p>Waste Not Want Not</p>
-                            <span class="small"></span>
-                            <h3>Gamifying food responsibility</h3>
-                            <span class="small"></span>
-                            <sub>Product Design / UX Design</sub>
-                        </div>
-                    </a>   
-                </div>
-                <!-- <div id="hash" class="hundred">
-                    <a class="projecthome">
-                        <img 
-                            src="images/coming-soon.gif"
-                            alt="Screens from the TLJ Suite.">
-                        <span class="small"></span>
-                        <p>Hash</p>
-                        <span class="small"></span>
-                        <h3>Collaborating in the virtual age</h3>
-                        <span class="medium"></span>
-                        <sub>Product Design / UX Design / Brand Design</sub>
-                    </a>
-                </div> -->
-                
-            </ul>
-            <ul id="graphic" class="columns" style="display:none; z-index:50;">
-                <div id="guangyu" class="hundred" onpointerenter='gy()' onpointerleave='gy2()'>
-                    <a href="projects/guangyu.html" class="projecthome">
-                        <div class="sixty"> 
-                            <img 
-                            id="gystill"
-                            src="images/gy/thumb-gy-still.jpg"
-                            alt="Screens from the TLJ Suite.">
-                            <img 
-                            id="gygif"
-                            src="images/gy/thumb-gy.gif"
-                            alt="Screens from the TLJ Suite."
-                            style="display: none;">
-                        </div>
-                        <div class="forty">
-                            <p>Guang Yu</p>
-                            <span class="small"></span>
-                            <h3>Artifacts for my design hero</h3>
-                            <span class="small"></span>
-                            <sub>Brand Design / Graphic Design / Motion Design</sub>
-                        </div>
-                    </a>
-                    <script>
-                        function gy() {
-                            var gif = document.getElementById('gygif');
-                            var image = document.getElementById('gystill');
-                            gif.style.display = 'block';
-                            image.style.display = 'none'
-    
-                        }
-                        function gy2() {
-                            var gif = document.getElementById('gygif');
-                            var image = document.getElementById('gystill');
-                            gif.style.display='none'
-                            image.style.display = 'block';
-                        }
-                    </script>
-                </div>
-                <div id="paradox" class="hundred" onpointerenter='para()' onpointerleave='para2()'>
-                    <a href="projects/paradox.html" class="projecthome">
-                        <div class="sixty"> 
-                            <img id="paragif"
-                            src="images/paradox/thumb_paradox.gif"
-                            alt="Looping gif that reads 'Coming Soon'."
-                            style="display:none;">
-                        <img id="paraimg"
-                            src="images/paradox/thumb_paradox.jpg"
-                            alt="Looping gif that reads 'Coming Soon'.">
-                        </div>
-                        <div class="forty">
-                            <p>The Paradox of Understanding</p>
-                            <span class="small"></span>
-                            <h3>Cultural understanding as told through AI</h3>
-                            <span class="small"></span>
-                            <sub>Book Design / Book Binding</sub>
-                        </div>
-                    </a>
-                    <script>
-                        function para() {
-                            var gif = document.getElementById('paragif');
-                            var image = document.getElementById('paraimg');
-                            gif.style.display = 'block';
-                            image.style.display = 'none'
-    
-                        }
-                        function para2() {
-                            var gif = document.getElementById('paragif');
-                            var image = document.getElementById('paraimg');
-                            gif.style.display='none'
-                            image.style.display = 'block';
-                        }
-                    </script>
-                </div>
-                <div id="vela" class="hundred" onpointerenter='vela()' onpointerleave='vela2()'>
-                    <a href="projects/vela.html" class="projecthome">
-                        <div class="sixty"> 
-                            <img id="velagif"
-                            src="images/vela/thumb-vela.gif"
-                            alt="Screens from the TLJ Suite."
-                            style="display: none;">
-                            <img id="velapic"
-                            src="images/vela/thumb-vela.jpg"
-                            alt="Screens from the TLJ Suite.">
-                        </div>
-                        <div class="forty">
-                            <p>Vela Projects</p>
-                            <span class="small"></span>
-                            <h3>Branding for a construction consultancy</h3>
-                            <span class="small"></span>
-                            <sub>Product Design / UX Design / Brand Design</sub>
-                        </div>
-                    </a>
-                <script>
-                    function vela() {
-                        var gif = document.getElementById('velagif');
-                        var image = document.getElementById('velapic');
-                        gif.style.display = 'block';
-                        image.style.display = 'none'
-
+            <div class="twenty">
+                <ul class="miniprojnav" >
+                    <h2><a id=graphictop onclick='graphic()' style="text-decoration:underline; text-decoration-style: dotted; color: lightslategray;">Graphic,</a></h2>
+                    <h2><a id=producttop onclick='product()' >Product,</a></h2>
+                    <h2><a id=funtop onclick='fun()'>Fun</a></h2>
+                </ul>
+                <script> <!--hide groups-->
+                    function product() {
+                        var product = document.getElementById('product');
+                        var graphic = document.getElementById('graphic');
+                        var fun = document.getElementById('fun');
+                        product.style.display = 'flex';
+                        producttop.style.textDecoration = 'underline';
+                        producttop.style.textDecorationStyle = 'dotted';
+                        producttop.style.color = 'lightslategray';
+                        graphic.style.display = 'none';
+                        graphictop.style.textDecoration = 'none';
+                        graphictop.style.color = 'black';
+                        fun.style.display = 'none';
+                        funtop.style.textDecoration = 'none';
+                        funtop.style.color = 'black';
                     }
-                    function vela2() {
-                        var gif = document.getElementById('velagif');
-                        var image = document.getElementById('velapic');
-                        gif.style.display='none'
-                        image.style.display = 'block';
+    
+                    function graphic() {
+                        var product = document.getElementById('product');
+                        var graphic = document.getElementById('graphic');
+                        var fun = document.getElementById('fun');
+                        product.style.display = 'none';
+                        producttop.style.textDecoration = 'none';
+                        producttop.style.color = 'black';
+                        graphic.style.display = 'flex';
+                        graphictop.style.textDecoration = 'underline';
+                        graphictop.style.textDecorationStyle = 'dotted';
+                        graphictop.style.color = 'lightslategray';
+                        fun.style.display = 'none';
+                        funtop.style.textDecoration = 'none';
+                        funtop.style.color = 'black';
+                    }
+    
+                    function fun() {
+                        var product = document.getElementById('product');
+                        var graphic = document.getElementById('graphic');
+                        var fun = document.getElementById('fun');
+                        product.style.display = 'none';
+                        producttop.style.textDecoration = 'none';
+                        producttop.style.color = 'black';
+                        graphic.style.display = 'none';
+                        graphictop.style.textDecoration = 'none';
+                        graphictop.style.color = 'black';
+                        fun.style.display = 'flex';
+                        funtop.style.textDecoration = 'underline';
+                        funtop.style.textDecorationStyle = 'dotted';
+                        funtop.style.color = 'lightslategray';
                     }
                 </script>
-                </div>
-                <div id="communityofpractice" class="hundred">
-                    <a href="projects/conservancy.html" class="projecthome">
-                        <div class="sixty"> 
+            </div>
+        </ul>
+        <ul class="home" >
+            <div class="columns hundred">
+                <ul id="product" class="columns" style="display:none; z-index: 50;">
+                    <div id="tlj" class="hundred">
+                        <a href="projects/tlj.html" class="projecthome">
+                            <div class="sixty">
+                                <img 
+                                    src="images/tlj/hero1-tlj.jpg"
+                                    alt="Screens from the TLJ Suite.">
+                            </div>
+                            <div class="forty">
+                                <p>TLJ Digital Suite</p>
+                                <span class="small"></span>
+                                <h3>Tools for the modern bakery</h3>
+                                <span class="small"></span>
+                                <sub>Product Design / UX Design / Brand Design</sub>
+                            </div>
+                        </a>
+                    </div>
+                    <div id="CSL" class="hundred">
+                        <a class="projecthome" href="pw.html">
+                            <div class="sixty">
+                                <img 
+                                    src="images/csl/thumb-csl.jpg"
+                                    alt="A screen from a plasma donation app on a red background 
+                                    with the words 'CSL Behring, Biotherapies for Life'">
+                            </div>
+                            <div class="forty">
+                                <p>CSL Behring Internship</p>
+                                <span class="small"></span>
+                                <h3>The new age of plasma donation</h3>
+                                <span class="small"></span>
+                                <sub>Product Design / UI Design / UX Research</sub>
+                        </div>
+                        </a>
+                    </div>
+                    <div id="wastenot" class="hundred">
+                        <a href="projects/wnwn.html" class="projecthome">
+                            <div class="sixty">
+                                <img 
+                                    src="images/wastenot/thumb-waste.jpg"
+                                    alt="Screens from the TLJ Suite.">
+                            </div>
+                            <div class="forty">
+                                <p>Waste Not Want Not</p>
+                                <span class="small"></span>
+                                <h3>Gamifying food responsibility</h3>
+                                <span class="small"></span>
+                                <sub>Product Design / UX Design</sub>
+                            </div>
+                        </a>   
+                    </div>
+                    <!-- <div id="hash" class="hundred">
+                        <a class="projecthome">
                             <img 
-                            src="images/conservancy/thumb-conservancy-1.jpg"
-                            alt="Screens from the TLJ Suite.">
-                        </div>
-                        <div class="forty">
-                            <p>The Nature Conservancy</p>
+                                src="images/coming-soon.gif"
+                                alt="Screens from the TLJ Suite.">
                             <span class="small"></span>
-                            <h3>Proposing a Climate Community of Practice</h3>
+                            <p>Hash</p>
                             <span class="small"></span>
-                            <sub>Proposal Design / Systems Thinking / Graphic Design</sub>
-                        </div>
-                    </a>
-                </div>
-                <div id="hippo" class="hundred">
-                    <a href="projects/hipposwim.html" class="projecthome">
-                        <div class="sixty"> 
+                            <h3>Collaborating in the virtual age</h3>
+                            <span class="medium"></span>
+                            <sub>Product Design / UX Design / Brand Design</sub>
+                        </a>
+                    </div> -->
+                    
+                </ul>
+                <ul id="graphic" class="columns" style="z-index:50;">
+                    <div id="guangyu" class="hundred" onpointerenter='gy()' onpointerleave='gy2()'>
+                        <a href="projects/guangyu.html" class="projecthome">
+                            <div class="sixty"> 
+                                <img 
+                                id="gystill"
+                                src="images/gy/thumb-gy-still.jpg"
+                                alt="Screens from the TLJ Suite.">
+                                <img 
+                                id="gygif"
+                                src="images/gy/thumb-gy.gif"
+                                alt="Screens from the TLJ Suite."
+                                style="display: none;">
+                            </div>
+                            <div class="forty">
+                                <p>Guang Yu</p>
+                                <span class="small"></span>
+                                <h3>Artifacts for my design hero</h3>
+                                <span class="small"></span>
+                                <sub>Brand Design / Graphic Design / Motion Design</sub>
+                            </div>
+                        </a>
+                        <script>
+                            function gy() {
+                                var gif = document.getElementById('gygif');
+                                var image = document.getElementById('gystill');
+                                gif.style.display = 'block';
+                                image.style.display = 'none'
+        
+                            }
+                            function gy2() {
+                                var gif = document.getElementById('gygif');
+                                var image = document.getElementById('gystill');
+                                gif.style.display='none'
+                                image.style.display = 'block';
+                            }
+                        </script>
+                    </div>
+                    <div id="paradox" class="hundred" onpointerenter='para()' onpointerleave='para2()'>
+                        <a href="projects/paradox.html" class="projecthome">
+                            <div class="sixty"> 
+                                <img id="paragif"
+                                src="images/paradox/thumb_paradox.gif"
+                                alt="Looping gif that reads 'Coming Soon'."
+                                style="display:none;">
+                            <img id="paraimg"
+                                src="images/paradox/thumb_paradox.jpg"
+                                alt="Looping gif that reads 'Coming Soon'.">
+                            </div>
+                            <div class="forty">
+                                <p>The Paradox of Understanding</p>
+                                <span class="small"></span>
+                                <h3>Cultural understanding as told through AI</h3>
+                                <span class="small"></span>
+                                <sub>Book Design / Book Binding</sub>
+                            </div>
+                        </a>
+                        <script>
+                            function para() {
+                                var gif = document.getElementById('paragif');
+                                var image = document.getElementById('paraimg');
+                                gif.style.display = 'block';
+                                image.style.display = 'none'
+        
+                            }
+                            function para2() {
+                                var gif = document.getElementById('paragif');
+                                var image = document.getElementById('paraimg');
+                                gif.style.display='none'
+                                image.style.display = 'block';
+                            }
+                        </script>
+                    </div>
+                    <div id="vela" class="hundred" onpointerenter='vela()' onpointerleave='vela2()'>
+                        <a href="projects/vela.html" class="projecthome">
+                            <div class="sixty"> 
+                                <img id="velagif"
+                                src="images/vela/thumb-vela.gif"
+                                alt="Screens from the TLJ Suite."
+                                style="display: none;">
+                                <img id="velapic"
+                                src="images/vela/thumb-vela.jpg"
+                                alt="Screens from the TLJ Suite.">
+                            </div>
+                            <div class="forty">
+                                <p>Vela Projects</p>
+                                <span class="small"></span>
+                                <h3>Branding for a construction consultancy</h3>
+                                <span class="small"></span>
+                                <sub>Product Design / UX Design / Brand Design</sub>
+                            </div>
+                        </a>
+                    <script>
+                        function vela() {
+                            var gif = document.getElementById('velagif');
+                            var image = document.getElementById('velapic');
+                            gif.style.display = 'block';
+                            image.style.display = 'none'
+
+                        }
+                        function vela2() {
+                            var gif = document.getElementById('velagif');
+                            var image = document.getElementById('velapic');
+                            gif.style.display='none'
+                            image.style.display = 'block';
+                        }
+                    </script>
+                    </div>
+                    <div id="communityofpractice" class="hundred">
+                        <a href="projects/conservancy.html" class="projecthome">
+                            <div class="sixty"> 
+                                <img 
+                                src="images/conservancy/thumb-conservancy-1.jpg"
+                                alt="Screens from the TLJ Suite.">
+                            </div>
+                            <div class="forty">
+                                <p>The Nature Conservancy</p>
+                                <span class="small"></span>
+                                <h3>Proposing a Climate Community of Practice</h3>
+                                <span class="small"></span>
+                                <sub>Proposal Design / Systems Thinking / Graphic Design</sub>
+                            </div>
+                        </a>
+                    </div>
+                    <div id="hippo" class="hundred">
+                        <a href="projects/hipposwim.html" class="projecthome">
+                            <div class="sixty"> 
+                                <img 
+                                src="images/hippo/thumb-hippo.jpg"
+                                alt="Screens from the TLJ Suite.">
+                            </div>
+                            <div class="forty">
+                                <p>Hippo Swim</p>
+                                <span class="small"></span>
+                                <h3>Branding for a swim school</h3>
+                                <span class="small"></span>
+                                <sub>Brand Design / Web Design + Development</sub>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- <div id="storiesabtfood" class="fifty">
+                        <a  class="projecthome"> 
                             <img 
-                            src="images/hippo/thumb-hippo.jpg"
-                            alt="Screens from the TLJ Suite.">
-                        </div>
-                        <div class="forty">
-                            <p>Hippo Swim</p>
+                                src="images/coming-soon.gif"
+                                alt="Looping gif that reads 'Coming Soon'.">
                             <span class="small"></span>
-                            <h3>Branding for a swim school</h3>
+                            <p>10 Memories of Food</p>
                             <span class="small"></span>
-                            <sub>Brand Design / Web Design + Development</sub>
-                        </div>
-                    </a>
-                </div>
-                <!-- <div id="storiesabtfood" class="fifty">
-                    <a  class="projecthome"> 
-                        <img 
-                            src="images/coming-soon.gif"
-                            alt="Looping gif that reads 'Coming Soon'.">
-                        <span class="small"></span>
-                        <p>10 Memories of Food</p>
-                        <span class="small"></span>
-                        <h3>A book about food and love</h3>
-                        <span class="medium"></span>
-                        <sub>Book Design / Book Binding</sub>
-                    </a>
-                </div> -->
-                <!-- <div id="sonny" class="hundred">
-                    <a class="projecthome">
-                        <div class="fifty"> 
-                            <img 
-                            src="images/coming-soon.gif"
-                            alt="Looping gif that reads 'Coming Soon'.">
-                        </div>
-                        <div class="fifty">
-                            <p>Sonny Angel Book</p>
-                        <h3>A book about a little angel boy</h3>
-                        <sub>Book Design / Book Binding</sub>
-                        </div>
-                    </a>
-                </div> -->
-            </ul>
-            <ul id="fun" class="columns" style="display:none; z-index:50;">
-                <div id="CSL" class="hundred">
-                    <a href="projects/whatshould.html" class="projecthome">
-                        <div class="sixty"> 
-                            <img 
-                            src="images/whatshould/thumb-whatshould.jpg"
-                            alt="Screens from the TLJ Suite.">
-                        </div>
-                        <div class="forty">
-                            <p>What Should We Eat?</p>
-                            <span class="small"></span>
-                            <h3>A device for connecting through food</h3>
-                            <span class="small"></span>
-                            <sub>Physical Computing / Fabrication</sub>
-                        </div>
-                    </a>
-                </div>
-                <div id="sigul" class="hundred">
-                    <a href="projects/type-design.html" class="projecthome">
-                        <div class="sixty"> 
-                            <img 
-                            src="images/type/italics-9.jpg"
-                            alt="Looping gif that reads 'Coming Soon'.">
-                        </div>
-                        <div class="forty">
-                            <p>Type Design</p>
-                            <span class="small"></span>
-                            <h3>Revivals and otherwise</h3>
-                            <span class="small"></span>
-                            <sub>Typeface design</sub>
-                        </div>
-                    </a>
-                </div>
-            </ul>
-        </div>
+                            <h3>A book about food and love</h3>
+                            <span class="medium"></span>
+                            <sub>Book Design / Book Binding</sub>
+                        </a>
+                    </div> -->
+                    <!-- <div id="sonny" class="hundred">
+                        <a class="projecthome">
+                            <div class="fifty"> 
+                                <img 
+                                src="images/coming-soon.gif"
+                                alt="Looping gif that reads 'Coming Soon'.">
+                            </div>
+                            <div class="fifty">
+                                <p>Sonny Angel Book</p>
+                            <h3>A book about a little angel boy</h3>
+                            <sub>Book Design / Book Binding</sub>
+                            </div>
+                        </a>
+                    </div> -->
+                </ul>
+                <ul id="fun" class="columns" style="display:none; z-index:50;">
+                    <div id="CSL" class="hundred">
+                        <a href="projects/whatshould.html" class="projecthome">
+                            <div class="sixty"> 
+                                <img 
+                                src="images/whatshould/thumb-whatshould.jpg"
+                                alt="Screens from the TLJ Suite.">
+                            </div>
+                            <div class="forty">
+                                <p>What Should We Eat?</p>
+                                <span class="small"></span>
+                                <h3>A device for connecting through food</h3>
+                                <span class="small"></span>
+                                <sub>Physical Computing / Fabrication</sub>
+                            </div>
+                        </a>
+                    </div>
+                    <div id="sigul" class="hundred">
+                        <a href="projects/type-design.html" class="projecthome">
+                            <div class="sixty"> 
+                                <img 
+                                src="images/type/italics-9.jpg"
+                                alt="Looping gif that reads 'Coming Soon'.">
+                            </div>
+                            <div class="forty">
+                                <p>Type Design</p>
+                                <span class="small"></span>
+                                <h3>Revivals and otherwise</h3>
+                                <span class="small"></span>
+                                <sub>Typeface design</sub>
+                            </div>
+                        </a>
+                    </div>
+                </ul>
+            </div>
             
         </ul>
         <footer>
             <div class="columns footmenu">
                 <ul class="menu" style="margin-left:4%;">
-                    <li class="menuitems"><a href="pdfs/caleb-sun_resume.pdf" target="_blank"><p>Resume</p></a></li>
-                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><p>LinkedIn</p></a></li>
-                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><p>Email</p></a></li>
+                    <li class="menuitems"><a href="pdfs/caleb-sun_resume.pdf" target="_blank"><sub>Resume</sub></a></li>
+                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><sub>LinkedIn</sub></a></li>
+                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub>Email</sub></a></li>
                 </ul>
                 <div class="credit">
-                    <p>Updated Oct 2023 | Made using HTML/CSS/JS</p>
+                    <sub>Updated Oct 2023 | Made using HTML/CSS/JS</sub>
                 </div>
             </div>
         </footer>
