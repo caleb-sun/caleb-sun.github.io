@@ -141,14 +141,18 @@ html {
 
 /* type */
 
+@font-face{
+    font-family: pp-editorial;
+    src: url("PPEditorialOld-Ultralight.otf");
+}
+
 h1,h2,h3,h4,p{
     color:black;
 }
 
 h1,h2,h3 {
-    font-family: "freight-text-pro", serif;
-    font-weight: 300;
-    font-style: italic;
+    font-family: "freightbigcmp-pro", serif;
+    font-weight: 100;
 }
 
 p, sub{
@@ -168,19 +172,22 @@ b{
 }
 
 h1 {
-    font-size:32pt;
+    font-size:30pt;
+    line-height: 34pt;
 }
 
 h2 {
-    font-size: 24pt;
+    font-size: 28pt;
+    line-height: 34pt;
 }
 
 h3 {
     font-size: 20pt;
+    line-height: 22pt;
 }
 
 h4 {
-    font-size: 14pt;
+    font-size: 12pt;
     line-height:16pt;
 }
 
@@ -191,7 +198,7 @@ p {
 
 sub {
     font-size: 10pt;
-    line-height:12pt;
+    line-height:14pt;
 }
 
 a:link{
@@ -356,6 +363,7 @@ img{
 footer{
     width: 100vw;
     bottom:2%;
+    position: fixed;
 }
 
 .footerpw{
@@ -403,7 +411,7 @@ footer{
     width: 20%;
     display:flex;
     flex-direction: column;
-    gap:1%;
+    gap:8px;
     z-index:100;
 }
 
@@ -414,7 +422,7 @@ footer{
     flex-direction: row;
     margin-left: 4%;
     width: 35%;
-    gap: 5%;
+    gap: 15%;
 }
 
 /* about */
