@@ -134,7 +134,7 @@ table {
 /* colors */
 
 html {
-    background-color: white;
+    background-color: #F0F0f0;
     cursor: url("images/cursor-black.svg"),auto;
     scroll-behavior: smooth;
 }
