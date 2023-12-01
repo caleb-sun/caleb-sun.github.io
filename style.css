@@ -142,8 +142,8 @@ html {
 /* type */
 
 @font-face{
-    font-family: pp-editorial;
-    src: url("PPEditorialOld-Ultralight.otf");
+    font-family: "acma";
+    src: url("PPHatton-Ultralight.otf");
 }
 
 h1,h2,h3,h4,p{
@@ -151,7 +151,7 @@ h1,h2,h3,h4,p{
 }
 
 h1,h2,h3 {
-    font-family: "freightbigcmp-pro", serif;
+    font-family: "acma", serif;
     font-weight: 100;
 }
 
@@ -172,18 +172,18 @@ b{
 }
 
 h1 {
-    font-size:30pt;
+    font-size:32pt;
     line-height: 34pt;
 }
 
 h2 {
-    font-size: 28pt;
+    font-size: 32pt;
     line-height: 34pt;
 }
 
 h3 {
     font-size: 20pt;
-    line-height: 22pt;
+    line-height: 24pt;
 }
 
 h4 {
@@ -422,7 +422,7 @@ footer{
     flex-direction: row;
     margin-left: 4%;
     width: 35%;
-    gap: 15%;
+    gap: 10%;
 }
 
 /* about */
@@ -507,6 +507,10 @@ footer{
     vertical-align: center;
     justify-content: center;
     width: 40%;
+}
+
+.colproj{
+    gap: 8px;
 }
 
 
@@ -616,7 +620,6 @@ h1{
 }
 
 .twenty{
-    margin:auto;
     width: 100%;
 }
 
@@ -704,12 +707,10 @@ h1{
 }
 
 .projecthome{
+    display: flex;
     flex-direction: column;
     gap: 16px;
-}
-
-.miniprojnav{
-    position: relative; 
+    justify-content: bottom;
 }
 
 footer{
@@ -722,7 +723,9 @@ footer{
     position: relative;
     width: 96%;
     flex-direction: column;
-    margin-top: 16%;
+    margin-top: 24%;
+    margin-bottom: 10%;
+    gap: 36px;
     justify-content: left;
 }
 
@@ -735,11 +738,16 @@ footer{
 }
 
 .miniprojnav{
+    position: relative; 
     width: 100%;
     margin:auto;
     flex-direction: row;
     margin-bottom: 10%;
     margin-top: 10%;
+}
+
+.colproj{
+    gap: 48px;
 }
 
 }
