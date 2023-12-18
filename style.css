@@ -142,8 +142,13 @@ html {
 /* type */
 
 @font-face{
-    font-family: "acma";
-    src: url("PPHatton-Ultralight.otf");
+    font-family: "romie";
+    src: url("RomieTrial-Regular.otf");
+}
+
+@font-face{
+    font-family: "helvetica";
+    src: url("HelveticaNeueLight.otf");
 }
 
 h1,h2,h3,h4,p{
@@ -151,39 +156,39 @@ h1,h2,h3,h4,p{
 }
 
 h1,h2,h3 {
-    font-family: "acma", serif;
+    font-family: "romie", serif;
     font-weight: 100;
 }
 
 p, sub{
-    font-family: "ibm-plex-sans", sans-serif;
+    font-family: "helvetica", sans-serif;
     font-weight: 300;
 }
 
 h4{
-    font-family: "ibm-plex-sans", sans-serif;
+    font-family: "helvetica", sans-serif;
     font-weight: 600;
     font-style: italic;
 }
 
 b{
-    font-family: "ibm-plex-sans", sans-serif;
+    font-family: "helvetica", sans-serif;
     font-weight: 600;
 }
 
 h1 {
-    font-size:32pt;
+    font-size:30pt;
     line-height: 34pt;
 }
 
 h2 {
-    font-size: 32pt;
-    line-height: 34pt;
+    font-size: 28pt;
+    line-height: 32pt;
 }
 
 h3 {
-    font-size: 20pt;
-    line-height: 24pt;
+    font-size: 18pt;
+    line-height: 20pt;
 }
 
 h4 {
@@ -192,8 +197,8 @@ h4 {
 }
 
 p {
-    font-size: 12pt;
-    line-height: 18pt;
+    font-size: 11pt;
+    line-height: 15pt;
 }
 
 sub {
