@@ -20,28 +20,9 @@
   <body>
     <main>
         <header>
-            <p class="homenav"><a href="../index.html">< Back</a></p>
+            <a href="../index.html"> <img class="homenav" src="../images/arrow-04.svg" style="width: 24px;"></img></a>
             <ul class="menu header">
-                <!-- <li class="menuitems">
-                    <a href="../product.html">
-                        <p style="text-decoration:underline; text-decoration-style:dotted;">Product</p>
-                    </a>
-                </li>
-                <li class="menuitems">
-                    <a href="../graphic.html">
-                        <p>Graphic</p>
-                    </a>
-                </li>
-                <li class="menuitems">
-                    <a href="../fun.html">
-                        <p>Fun</p>
-                    </a>
-                </li> -->
-                <li class="menuitems">
-                    <a href="../about.html">
-                        <p>About</p>
-                    </a>
-                </li>
+                <li class="menuitems"><p><a href="../about.html">About</a></p></li>
             </ul>
         </header>
         <div id="tlj" style="display: none; flex-direction: column; position: fixed; top:18%; margin-left:4%; z-index: 100;" class="quicknav">
@@ -59,16 +40,28 @@
         </div>
         <script type = "text/javascript" src="../javascript/tlj.js"></script>
         <div class="project">
-            <img
-                src="../images/tlj/thumb-tlj.jpg">
+            <ul>
+                <img
+                    src="../images/tlj/thumb-tlj.jpg">
+                <img
+                    src="../images/tlj/hero1-tlj.jpg"
+                >
+                <img
+                    src="../images/tlj/phone-mockup.jpg"
+                >
+                <img
+                    src="../images/tlj/kiosk-mockup.jpg"
+                >
+            </ul>
             <div class="projectbody">
                 <ul class="columns"> <!--title-->
                     <li class="eighty">
-                        <sub>Independent Project</sub>
+                        <h4>Independent Project</h4>
                         <h2>Reimagining the customer and associate experience at a bakery.</h2>
                     </li>
                     <li class="thirty">
-                        <p><b>Skills</b><br>
+                        <h4>Skills</h4>
+                        <p>
                             UX Design<br>
                             Product Design<br>
                             Systems Thinking<br>
@@ -76,28 +69,18 @@
                         </p>
                     </li>
                     <li class="thirty">
-                        <p><b>Duration</b><br>
+                        <h4>Duration</h4>
+                        <p>
                             Two weeks<br>
                             Winter 2022
                         </p>
                     </li>
                     <li class="thirty">
-                        <p><b>Tools</b>
-                            <br>
+                        <h4>Tools</h4>
+                            <p>
                             Figma<br>
                            Figjam
                         </p>
-                    </li>
-                    <li class="hundred"> <!--img-->
-                        <img
-                            src="../images/tlj/hero1-tlj.jpg"
-                        >
-                        <img
-                            src="../images/tlj/phone-mockup.jpg"
-                        >
-                        <img
-                            src="../images/tlj/kiosk-mockup.jpg"
-                        >
                     </li>
                     <li class="fifty spacer"></li>
                     <li class="fifty"> <!--description-->
@@ -114,9 +97,9 @@
                         >
                     </li>
                     <li id="context" class="hundred" style="gap:8px;">
-                        <sub>&#x2022; Context</sub>
+                        <h4>&#x2022; Context</h4>
                         <span class="small"></span>
-                        <h3>An antequated system can't serve a modernizing store.</h3>
+                        <h2>An antequated system can't serve a modernizing store.</h2>
                     </li>
                     <li class="fifty spacer"></li>
                     <li class="fifty">
@@ -142,9 +125,9 @@
                     </li>
                     <span class="medium" style="width: 100%;"></span>
                     <li id='problem' class="hundred" style="gap:8px;">
-                        <sub>&#x2022; Problem</sub>
+                        <h4>&#x2022; Problem</h4>
                         <span class="small"></span>
-                        <h3>An app isn't going to fix an entire failing system</h3>
+                        <h2>An app isn't going to fix an entire bad system</h2>
                     </li>
                     <li class="fifty spacer"></li>
                     <li class="fifty">
@@ -173,9 +156,9 @@
                     </li>
                     <span class="medium" style="width: 100%;"></span>
                     <li id="research" class="hundred" style="gap:8px;">
-                        <sub>&#x2022; Research</sub>
+                        <h4>&#x2022; Research</h4>
                         <span class="small"></span>
-                        <h3>Understanding multiple user groups and how their different needs intersect.</h3>
+                        <h2>Understanding multiple user groups and how their different needs intersect.</h2>
                     </li>
                     <li class="fifty spacer"></li>
                     <li class="fifty">
@@ -203,7 +186,7 @@
                         <img
                             src="../images/tlj/user1.jpg"
                         >
-                        <p><b>The Working Family-person</b></p>
+                        <h4>The Working Family-person</h4>
                         <p>A busy professional responsible for keeping everyone in the family 
                             happy while balancing a full-time job.</p>
                         <p><b>Jobs-To-Be-Done</b></p>
@@ -213,7 +196,7 @@
                         <img
                             src="../images/tlj/user2.jpg"
                         >
-                        <p><b>The Bumbling Teen</b></p>
+                        <h4>The Bumbling Teen</h4>
                         <p>A proxy picking up a cake that they did not take part in ordering. 
                             Very confused and hopes they don't look awkward.</p>
                         <p><b>Jobs-To-Be-Done</b></p>
@@ -224,7 +207,7 @@
                         <img
                             src="../images/tlj/user3.jpg"
                         >
-                        <p><b>The Earnest Associate</b></p>
+                        <h4>The Earnest Associate</h4>
                         <p>A part-time bakery worker responsible for maintaining the store, ringing up 
                             customers, and fulfilling orders.</p>
                         <p><b>Jobs-To-Be-Done</b></p>
@@ -233,10 +216,10 @@
                     </li>
                     <span class="medium" style="width: 100%;"></span>
                     <li id= "contextual" class="hundred" style="gap:8px;">
-                        <sub>&#x2022; Contextualizing</sub>
+                        <h4>&#x2022; Contextualizing</h4>
                         <span class="small"></span>
-                        <h3>Fleshing out existing user group interactions, and identifying where pain 
-                            points are congregating.</h3>
+                        <h2>Fleshing out existing user group interactions, and identifying where pain 
+                            points are congregating.</h2>
                     </li>
                     <li class="fifty spacer"></li>
                     <li class="fifty">
@@ -269,10 +252,10 @@
                     </li>
                     <span class="small" style="width: 100%;"></span>
                     <li id="concept" class="eighty" style="gap:8px;">
-                        <sub>&#x2022; Concepting</sub>
+                        <h4>&#x2022; Concepting</h4>
                         <span class="small"></span>
-                        <h3>A pair of sister apps: one for
-                            customers, and one for employees</h3>
+                        <h2>A pair of sister apps: one for
+                            customers, and one for employees</h2>
                     </li>
                     <li class="fifty spacer"></li>
                     <li class="fifty">
@@ -284,7 +267,8 @@
                         <img
                             src="../images/tlj/phone-blank.jpg"
                         >
-                        <p><b>Customer Mobile App</b> <br>
+                        <h4>Customer Mobile App</h4> 
+                        <p>
                             Mobile ordering, order tracking and sharing, secure payments, and 
                             customizability for return customers. Modeled after common food and 
                             cafe apps like Chipotle or Doordash.</p>
@@ -293,7 +277,8 @@
                         <img
                             src="../images/tlj/tablet-blank.jpg"
                         >
-                        <p><b>Associate Tablet App</b> <br>
+                        <h4>Associate Tablet App</h4> 
+                        <p>
                             Overview of all orders, in-store ordering support, order pick-up 
                             confirmation, menu information. A more practical tool for tracking 
                             and organizing without the fluff of a consumer-facing app.</p>
@@ -333,7 +318,7 @@
                     <li id="visual" class="eighty" style="gap:8px;">
                         <sub>&#x2022; Visual Guide</sub>
                         <span class="small"></span>
-                        <h3>Establishing a style and component library.</h3>
+                        <h2>Establishing a style and component library.</h2>
                     </li>
                     <li class="fifty spacer"></li>
                     <li class="fifty">
@@ -349,9 +334,9 @@
                     </li>
                     <span class="small"></span>
                     <li id="demo" class="eighty" style="gap:8px;">
-                        <sub>&#x2022; Demo</sub>
+                        <h4>&#x2022; Demo</h4>
                         <span class="small"></span>
-                        <h3>Key features addressing user needs.</h3>
+                        <h2>Key features addressing user needs.</h2>
                     </li>
                     <li class="fifty spacer"></li>
                     <li class="fifty">
@@ -369,13 +354,13 @@
                                 >
                             </div>
                             <div class="demotext">
-                                <h3>Mobile Menu</h3>
+                                <h2>Mobile Menu</h2>
                                 <span class="small"></span>
                                 <p>Comprehensive and up-to-date mobile menu that reflects store-specific 
                                     cake styles, prices, and flavors.</p>
                             </div>
                             <div class="demotext">
-                                <h3>Online Ordering and Tracking</h3>
+                                <h2>Online Ordering and Tracking</h2>
                                 <span class="small"></span>
                                 <p>Secure online ordering without compromising on specificity. 
                                     Order confirmation and tracking through pickup.</p>
@@ -392,7 +377,7 @@
                                 >
                             </div>
                             <div class="demotext">
-                                <h3>Associate View</h3>
+                                <h2>Associate View</h2>
                                 <span class="small"></span>
                                 <p>Centralized spreadsheet-style database supporting in-store 
                                     pickups and orders.</p>
@@ -402,9 +387,9 @@
                     </div>
                     <span class="small" style="width: 100%;"></span>
                     <li id="concept" class="eighty" style="gap:8px;">
-                        <sub>&#x2022; Reflections</sub>
+                        <h4>&#x2022; Reflections</h4>
                         <span class="small"></span>
-                        <h3>A challenge, but a fun challenge</h3>
+                        <h2>More than I could bake?</h2>
                     </li>
                     <li class="fifty spacer"></li>
                     <li class="fifty">
@@ -423,9 +408,9 @@
                         </p>
                     </li>
                     <li id="concept" class="eighty" style="gap:8px;">
-                        <sub>&#x2022; Response</sub>
+                        <h4>&#x2022; Response</h4>
                         <span class="small"></span>
-                        <h3>"When can you make it?"</h3>
+                        <h2>"When can you make it?"</h2>
                     </li>
                     <li class="fifty spacer"></li>
                     <li class="fifty">
@@ -440,14 +425,14 @@
             </div>
         </div>
         <footer>
-            <div class="columns footmenu" style="margin-bottom:2%;">
+            <div class="columns footmenu">
                 <ul class="menu" style="margin-left:4%;">
-                    <li class="menuitems"><a href="../pdfs/caleb-sun_resume.pdf" target="_blank"><p>Resume</p></a></li>
-                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><p>LinkedIn</p></a></li>
-                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><p>Email</p></a></li>
+                    <li class="menuitems"><a href="../pdfs/caleb-sun_resume.pdf" target="_blank"><sub>Resume</sub></a></li>
+                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><sub>LinkedIn</sub></a></li>
+                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub>Email</sub></a></li>
                 </ul>
                 <div class="credit">
-                    <p>Updated Oct 2023 | Made using HTML/CSS/JS</p>
+                    <sub>Updated Nov 2023 | Made using HTML/CSS/JS</sub>
                 </div>
             </div>
         </footer>

@@ -134,11 +134,11 @@ table {
 /* colors */
 
 html {
-    background-color: #FCFBF9;
-    cursor: url("images/cursor-black.svg"),auto;
+    background-color: #141315;
+    /* cursor: url("images/cursor-black.svg"),auto; */
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
-
 /* type */
 
 @font-face{
@@ -151,24 +151,16 @@ html {
     src: url("HelveticaNeueLight.otf");
 }
 
-h1,h2,h3,h4,p{
-    color:black;
-}
-
 h1,h2,h3 {
     font-family: "romie", serif;
     font-weight: 100;
+    color: white;
 }
 
-p, sub{
+h4, p, sub{
     font-family: "helvetica", sans-serif;
     font-weight: 300;
-}
-
-h4{
-    font-family: "helvetica", sans-serif;
-    font-weight: 600;
-    font-style: italic;
+    color: white;
 }
 
 b{
@@ -177,23 +169,22 @@ b{
 }
 
 h1 {
-    font-size:30pt;
+    font-size:32pt;
     line-height: 34pt;
 }
 
 h2 {
-    font-size: 28pt;
+    font-size: 30pt;
     line-height: 32pt;
 }
 
 h3 {
-    font-size: 18pt;
-    line-height: 20pt;
+    font-size: 20pt;
+    line-height: 26pt;
 }
 
 h4 {
-    font-size: 12pt;
-    line-height:16pt;
+    color: #f4ff56;
 }
 
 p {
@@ -201,7 +192,7 @@ p {
     line-height: 15pt;
 }
 
-sub {
+sub, h4 {
     font-size: 10pt;
     line-height:14pt;
 }
@@ -209,13 +200,13 @@ sub {
 a:link{
     text-decoration: underline;
     text-decoration-style:dotted;
-    color:black;
+    color:#FFFFFF;
 }
 
 p>a{
     text-decoration: underline;
     text-decoration-style:dotted;
-    color: lightslategray;
+    color: #f4ff56;
 }
 
 a:active{
@@ -225,26 +216,31 @@ a:active{
 
 a:visited {
     text-decoration: none;
-    color:black;
+    color:#FFFFFF;
   }
 
 a:hover{
-    color: lightslategray !important;
-    cursor: url("images/cursor-gray.svg"), auto;;
+    color: #f4ff56 !important;
+    cursor: pointer, auto;
 }
 
-a:hover>div>h3,a:hover>div>p,a:hover>div>sub{
-    color:lightslategray;
-}
 
-a.projecthome{
+a>div>.fifty>p{
     text-decoration: none !important;
 }
 
-a:hover>img{
+a:hover>div>img{
     transform: scale(1.02,1.02);
     transition-property: transform;
-    transition-duration: 0.2s;
+    transition-duration: 0.3s;
+}
+
+.projecthome>a:link{
+    text-decoration: none !important;
+}
+
+a:hover>div>div>p,a:hover>div>div>h3,a:hover>div>div>sub{
+    color: #f4ff56 !important;
 }
 
 
@@ -258,6 +254,10 @@ a:hover>img{
     flex-direction: row; 
 }
 
+.proj{
+    row-gap: 16px;
+}
+
 .projecttitle>.columns{
     row-gap:64px;
 }
@@ -269,8 +269,9 @@ a:hover>img{
 
 .projecthome {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    width: 49%;
+    /* justify-content: space-between; */
 }
 
 .eighty,.sixty, .forty,.thirty,.thirtythree, .twentyfive, .fifty, .hundred{
@@ -317,7 +318,7 @@ a:hover>img{
 
 .hundred{
     width: 100%;
-    gap: 36px;
+    gap: 18px;
 }
 
 img{
@@ -332,6 +333,7 @@ img{
     left: 4%;
     z-index: 100;
     font-style: initial !important;
+    vertical-align: auto;
 }
 
 .homenav>a{
@@ -361,25 +363,23 @@ img{
 .header{
     position: fixed;
     justify-content:right;
-    top:2%;
+    top:3%;
     right:5%;
 }
 
 footer{
     width: 100vw;
-    bottom:2%;
-    position: fixed;
+    bottom:1%;
 }
 
 .footerpw{
     position: fixed;
-    bottom:2%;
+    bottom:1%;
     width: 100vw;
 }
 
 .footer{
     justify-content:left;
-    bottom:3%;
     margin-left:4%;
     width:130px;
 }
@@ -398,12 +398,11 @@ footer{
     position:relative;
     margin:auto;
     display: flex;
-    flex-direction: row;
-    margin-top:10%;
+    flex-direction: column;
+    margin-top:12%;
     margin-bottom:16%;
-    margin-left: 43%;
-    width: 55%;
-    gap: 48px;
+    margin-left: 4%;
+    width: 100%;
 }
 
 .homedescription{
@@ -415,19 +414,18 @@ footer{
 .miniprojnav{
     width: 20%;
     display:flex;
-    flex-direction: column;
-    gap:8px;
+    flex-direction: row;
+    gap:4px;
     z-index:100;
 }
 
 .fixed{
-    position:fixed;
+    overflow-x:hidden;
     margin:auto;
     display: flex;
-    flex-direction: row;
-    margin-left: 4%;
-    width: 35%;
-    gap: 10%;
+    flex-direction: column;
+    width: 100vw;
+    gap: 48px;
 }
 
 /* about */
@@ -450,7 +448,6 @@ footer{
     display: flex;
     flex-direction: column;
     margin-top:0;
-    margin-bottom:18%;
     width: 100%;
     gap: 48px;
 }
@@ -515,7 +512,12 @@ footer{
 }
 
 .colproj{
+    width: 92.5vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 8px;
+    row-gap: 80px;
 }
 
 
@@ -539,10 +541,9 @@ input[type='password'] {
 input[type='submit'] {
     height: 40px;
     width: 164px;
-    background-color: black;
-    color: white;
-    font-family: "freight-text-pro", serif;
-    font-style: italic;
+    background-color: #f4ff56;
+    color: black;
+    font-family: "romie", serif;
     font-weight: 300;
     font-size: 18pt;
     box-shadow: none;
@@ -552,6 +553,14 @@ input[type='submit'] {
 
 input[type='submit']:hover {
     background-color: lightslategray;
+}
+
+.cat{
+    position: absolute; 
+    width: 20%; 
+    height: auto; 
+    left: 36px; 
+    top: 40vh;
 }
 
 
@@ -589,25 +598,20 @@ input[type='submit']:hover {
     }
     
     h2 {
-        font-size: 18pt;
+        font-size: 28pt;
     }
     
     h3 {
-        font-size: 18pt;
+        font-size: 24pt;
     }
     
-    h4 {
-        font-size: 14pt;
-        line-height:16pt;
-    }
-    
-    p {
-        font-size: 12pt;
-        line-height: 18pt;
+    h4, p {
+        font-size: 11pt;
+        line-height: 14pt;
     }
     
     sub {
-        font-size: 10pt;
+        font-size: 9pt;
         line-height:12pt;
     }
 
@@ -615,144 +619,206 @@ input[type='submit']:hover {
 
 @media screen and (max-width: 800px) {
 
-h1{
-    font-size: 36pt;
-}
+    h1{
+        font-size: 36pt;
+    }
 
-.eighty{
-    width:100%;
-    gap:36px;
-}
+    .homemain{
+        overflow-y:auto;
+    }
 
-.twenty{
-    width: 100%;
-}
+    .eighty{
+        width:100%;
+        gap:36px;
+    }
 
-.twentyfive{
-    width:50%;
-    gap: 18px;
-}
+    .twenty{
+        width: 100%;
+    }
 
-.thirty{
-    width: 28%;
-    gap: 18px;
-}
+    .twentyfive{
+        width:50%;
+        gap: 18px;
+    }
 
-.thirtythree{
-    width: 50%;
-    gap:18px;
-}
+    .thirty{
+        width: 100%;
+        gap: 18px;
+    }
 
-.forty{
-    width:100%;
-}
+    .thirtythree{
+        width: 49%;
+        gap:18px;
+    }
 
-.fifty{
-    width:100%;
-    gap:18px;
-}
+    .forty{
+        width:100%;
+    }
 
-.sixty{
-    width: 100%;
-}
+    .fifty{
+        width:100%;
+        gap:18px;
+    }
 
-.hundred{
-    width: 100%;
-    gap: 36px;
-}
+    .sixty{
+        width: 100%;
+    }
 
-.projectbody{
-    width: 92%;
-}
+    .eighty{
+        width: 100%;
+        gap: 12px;
+    }
 
-.spacer{
-    display: none;
-}
+    .hundred{
+        width: 100%;
+        gap: 36px;
+    }
 
-.homedescription{
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-}
+    .projectbody{
+        width: 92%;
+    }
 
-.credit{
-    margin-left:4%;
-    height: 20px;
-}
+    .spacer{
+        display: none;
+    }
 
-.footmenu{
-    gap:0px !important;
-}
+    .homedescription{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+    }
 
-.menu{
-    height: 20px;
-}
+    .credit{
+        margin-left:4%;
+        height: 20px;
+    }
 
+    .footmenu{
+        gap:0px !important;
+    }
 
-.quicknav{
-    display: none !important;
-}
+    .menu{
+        height: 20px;
+    }
 
-.home,.body,.projecttitle {
-    margin-top:36%;
-}
+    .home{
+        gap:8px;
+    }
 
-.password{
-    margin-top: 35% !important;
-}
+    .quicknav{
+        display: none !important;
+    }
 
-.homeprojects{
-    width: 100%; 
-    margin: auto;
-    z-index: 0;
-}
+    .home,.body,.projecttitle {
+        margin-top:36%;
+    }
 
-.hometitle{
-    position: relative;
-}
+    .password{
+        margin-top: 35% !important;
+    }
 
-.projecthome{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    justify-content: bottom;
-}
+    .homeprojects{
+        width: 100%; 
+        margin: auto;
+        z-index: 0;
+    }
 
-footer{
-    position: relative;
-    width: 100vw;
-    margin-bottom:2%;
-}
+    .hometitle{
+        position: relative;
+    }
 
-.fixed{
-    position: relative;
-    width: 96%;
-    flex-direction: column;
-    margin-top: 24%;
-    margin-bottom: 10%;
-    gap: 36px;
-    justify-content: left;
-}
+    .projecthome{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        justify-content: bottom;
+    }
 
-.home {
-    margin-top:10%;
-    margin:auto;
-    margin-bottom: 20%;
-    width: 96%;
-    gap: 48px;
-}
+    footer{
+        position: relative;
+        width: 100vw;
+        margin-bottom:2%;
+    }
 
-.miniprojnav{
-    position: relative; 
-    width: 100%;
-    margin:auto;
-    flex-direction: row;
-    margin-bottom: 10%;
-    margin-top: 10%;
-}
+    .header{
+        right:12%;
+    }
 
-.colproj{
-    gap: 48px;
-}
+    .fixed{
+        position: relative;
+        width: 96%;
+        flex-direction: column;
+        margin-top: 24%;
+        margin-bottom: 0%;
+        gap: 36px;
+        justify-content: left;
+    }
+
+    .home {
+        margin-top:10%;
+        margin:auto;
+        margin-bottom: 20%;
+        width: 96%;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .miniprojnav{
+        position: relative; 
+        width: 100%;
+        margin:auto;
+        flex-direction: row;
+        margin-bottom: 2%;
+        margin-top: 10%;
+    }
+
+    .colproj{
+        gap: 56px;
+    }
+    .columns{
+        gap:24px;
+    }
+
+    .demo{
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        width: 100vw !important;
+    }
+    .demobody{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        vertical-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        row-gap: 84px;
+    }
+    
+    .demogif{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 40%;
+    }
+    
+    .demogif>img{
+        margin-top:8%;
+        margin-bottom:8%;
+        width: 100%;
+    }
+    
+    .demotext{
+        width: 50%;
+    }
+
+    .cat{
+        width: 30%; 
+        height: auto; 
+        left: auto; 
+        right:30px;
+        top: 15vh;
+    }
 
 }
