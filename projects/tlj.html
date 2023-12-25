@@ -20,7 +20,20 @@
   <body>
     <main>
         <header>
-            <a href="../index.html"> <img class="homenav" src="../images/arrow-04.svg" style="width: 24px;"></img></a>
+            <a href="../index.html" onpointerenter='arrow()' onpointerleave='arrow2()'> 
+                <img id="white" class="homenav" src="../images/arrow-04.svg" style="width: 24px; display: block;"></img>
+                <img id="yellow" class="homenav" src="../images/arrow-yellow.svg" style="width: 24px; display: none;"></img>
+            </a>
+            <script>
+                function arrow() {
+                    document.getElementById('white').style.display='none';
+                    document.getElementById('yellow').style.display='block';
+                }
+                function arrow2() {
+                    document.getElementById('white').style.display='block';
+                    document.getElementById('yellow').style.display='none';
+                }
+            </script>
             <ul class="menu header">
                 <li class="menuitems"><p><a href="../about.html">About</a></p></li>
             </ul>
@@ -354,15 +367,15 @@
                                 >
                             </div>
                             <div class="demotext">
-                                <h2>Mobile Menu</h2>
+                                <h2 style="color:black;">Mobile Menu</h2>
                                 <span class="small"></span>
-                                <p>Comprehensive and up-to-date mobile menu that reflects store-specific 
+                                <p style="color:black;">Comprehensive and up-to-date mobile menu that reflects store-specific 
                                     cake styles, prices, and flavors.</p>
                             </div>
-                            <div class="demotext">
-                                <h2>Online Ordering and Tracking</h2>
+                            <div class="demotext" >
+                                <h2 style="color:black;">Online Ordering and Tracking</h2>
                                 <span class="small"></span>
-                                <p>Secure online ordering without compromising on specificity. 
+                                <p style="color:black;">Secure online ordering without compromising on specificity. 
                                     Order confirmation and tracking through pickup.</p>
                             </div>
                             <div class="demogif">
@@ -376,10 +389,10 @@
                                     style="width:90%"
                                 >
                             </div>
-                            <div class="demotext">
-                                <h2>Associate View</h2>
+                            <div class="demotext" >
+                                <h2 style="color:black;">Associate View</h2>
                                 <span class="small"></span>
-                                <p>Centralized spreadsheet-style database supporting in-store 
+                                <p style="color:black;">Centralized spreadsheet-style database supporting in-store 
                                     pickups and orders.</p>
                             </div>
                             <span class="medium"></span>

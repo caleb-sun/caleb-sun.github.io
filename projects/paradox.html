@@ -20,7 +20,20 @@
   <body>
     <main>
         <header>
-            <a href="../index.html"> <img class="homenav" src="../images/arrow-04.svg" style="width: 24px;"></img></a>
+            <a href="../index.html" onpointerenter='arrow()' onpointerleave='arrow2()'> 
+                <img id="white" class="homenav" src="../images/arrow-04.svg" style="width: 24px; display: block;"></img>
+                <img id="yellow" class="homenav" src="../images/arrow-yellow.svg" style="width: 24px; display: none;"></img>
+            </a>
+            <script>
+                function arrow() {
+                    document.getElementById('white').style.display='none';
+                    document.getElementById('yellow').style.display='block';
+                }
+                function arrow2() {
+                    document.getElementById('white').style.display='block';
+                    document.getElementById('yellow').style.display='none';
+                }
+            </script>
             <ul class="menu header">
                 <li class="menuitems"><p><a href="../about.html">About</a></p></li>
             </ul>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--- the doctype declaration tells the file reader that we're using html-->
-<html lang="en">
+<html lang="en" style="overflow-y: hidden;">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Caleb Sun is a visual designer and student at Carnegie Mellon University. He is currently a UX/UI intern at CSL Behring.">
@@ -20,7 +20,20 @@
   <body style="overflow: hidden;">
     <main>
         <header>
-            <a href="index.html"> <img class="homenav" src="images/arrow-04.svg" style="width: 24px;"></img></a>
+            <a href="index.html" onpointerenter='arrow()' onpointerleave='arrow2()'> 
+                <img id="white" class="homenav" src="images/arrow-04.svg" style="width: 24px; display: block;"></img>
+                <img id="yellow" class="homenav" src="images/arrow-yellow.svg" style="width: 24px; display: none;"></img>
+            </a>
+            <script>
+                function arrow() {
+                    document.getElementById('white').style.display='none';
+                    document.getElementById('yellow').style.display='block';
+                }
+                function arrow2() {
+                    document.getElementById('white').style.display='block';
+                    document.getElementById('yellow').style.display='none';
+                }
+            </script>
         </header>
         <div class="body" style="z-index:100;">
             <ul class="columns"> 
@@ -28,7 +41,7 @@
                     <h1>Hi.</h1>
                 </li>
                 <li class="forty">
-                    <p style="margin-top:10%;">
+                    <p style="margin-top:4.5%;">
                         My name is <a style="cursor: help;" onpointerenter='caleb()' onpointerleave='caleb2()'>Caleb</a>, and I am a designer studying Communications Design at Carnegie Mellon University. 
                         I'm a firm believer that designed brands can create moments of joy and connection that 
                         enrich existing products. But, as time goes on brands can become limited or unimaginative, 
@@ -116,7 +129,7 @@
                 </li>
             </ul> -->
         </div>
-        <img id='image' style="position: absolute; left:0; top: 15vh; height: 70vh; width: auto; z-index:0; display: none;" src="images/profile.jpg">
+        <img id='image' style="position: absolute; left:0; top: 15vh; height: auto; width: 100vw; z-index:0; display: none;" src="images/profile.jpg">
         <div id='food' class= "food" style="position: absolute; left:0; top:0; width:100%; z-index:0; display:none; flex-wrap:wrap; justify-content: space-between;">
             <img
                 src="images/food.gif"
