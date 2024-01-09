@@ -134,7 +134,7 @@ table {
 /* colors */
 
 html {
-    background-color: #141315;
+    background-color: #111112;
     /* cursor: url("images/cursor-black.svg"),auto; */
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -142,58 +142,74 @@ html {
 /* type */
 
 @font-face{
-    font-family: "romie";
-    src: url("RomieTrial-Regular.otf");
+    font-family: "helveticaneuethin";
+    src: url("HelveticaNeueThin.otf");
+    font-weight:500;
 }
 
 @font-face{
-    font-family: "helvetica";
-    src: url("HelveticaNeueLight.otf");
+    font-family:"editorial-italic";
+    src:url("PPEditorialOld-UltralightItalic.otf");
+    font-style:italic;
 }
 
+@font-face{
+    font-family: "helveticabold";
+    src: url("HelveticaNeueBold.otf");
+}
+
+
 h1,h2,h3 {
-    font-family: "romie", serif;
+    font-family: "helveticaneuethin", serif;
     font-weight: 100;
     color: white;
+    /* letter-spacing: 1px; */
 }
 
 h4, p, sub{
-    font-family: "helvetica", sans-serif;
+    font-family: "helveticaneuethin", sans-serif;
     font-weight: 300;
     color: white;
 }
 
-b{
-    font-family: "helvetica", sans-serif;
-    font-weight: 600;
+strong{
+    font-family:"editorial-italic",serif !important;
+    font-style: italic;
+    color: white;
+    line-height:28pt;
 }
 
-h1 {
+h1,h5 {
     font-size:32pt;
-    line-height: 34pt;
+    line-height: 40pt;
 }
 
 h2 {
-    font-size: 30pt;
+    font-size: 28pt;
     line-height: 32pt;
 }
 
 h3 {
-    font-size: 24pt;
-    line-height: 26pt;
+    font-size: 28pt;
+    line-height: 32pt;
 }
 
 h4 {
-    color: #f4ff56;
+    color: #c9ff56;
 }
 
 p {
-    font-size: 11pt;
-    line-height: 15pt;
+    font-size: 12pt;
+    line-height: 16pt;
+}
+
+b{
+    font-family: "helveticaneuebold",sans-serif !important;
+    font-weight: 500;
 }
 
 sub, h4 {
-    font-size: 10pt;
+    font-size: 11pt;
     line-height:14pt;
 }
 
@@ -206,7 +222,7 @@ a:link{
 p>a{
     text-decoration: underline;
     text-decoration-style:dotted;
-    color: #f4ff56;
+    color: #c9ff56;
 }
 
 a:active{
@@ -219,11 +235,16 @@ a:visited {
     color:#FFFFFF;
   }
 
+sub,sub>a {
+    color:#74747a !important;
+}
+
 a:hover, a:hover>sub{
     text-decoration: underline;
     text-decoration-style: dotted;
-    color: #f4ff56 !important;
+    color: #c9ff56 !important;
     cursor: pointer, auto;
+    
 }
 
 
@@ -241,12 +262,42 @@ a:hover>div>img{
     text-decoration: none !important;
 }
 
-a:hover>div>div>p,a:hover>div>div>h3,a:hover>div>div>sub{
-    color: #f4ff56 !important;
+a:hover>div>div>p,a:hover>div>div>h3{
+    color: #c9ff56 !important;
+}
+
+a:hover>div>div>sub{
+    color: #738b40 !important;
 }
 
 a:hover>img{
     cursor:pointer, auto;
+}
+
+.tag{
+    border-color:#c9ff56;
+    border-radius: 12pt;
+    border-width: 1.5px;
+    border-style: solid;
+    height: 12pt;
+    display: flex;
+    align-items: center;
+    margin-top: 8pt;
+    width: fit-content;
+    padding: 2px;
+    padding-left:8px;
+    padding-right: 8px;
+    padding-top:5px;
+}
+
+.tag>p{
+    line-height: 10pt;
+}
+
+hr.dotted{
+    border-style: 3px solid #FFFFFF;
+    width: 100%;
+    
 }
 
 
@@ -412,8 +463,9 @@ footer{
     flex-direction: column;
     margin-top:12%;
     margin-bottom:16%;
-    margin-left: 4%;
-    width: 100%;
+    margin-left: 3.75vw;
+    margin-right: 3.75vw;
+    width: 92.5vw;
 }
 
 .homedescription{
@@ -435,8 +487,8 @@ footer{
     margin:auto;
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    gap: 48px;
+    /* width: 100vw;
+    gap: 48px; */
 }
 
 /* about */
@@ -523,11 +575,11 @@ footer{
 }
 
 .colproj{
-    width: 92.5vw;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 8px;
+    justify-content: space-between;
     row-gap: 80px;
 }
 
@@ -552,7 +604,7 @@ input[type='password'] {
 input[type='submit'] {
     height: 40px;
     width: 164px;
-    background-color: #f4ff56;
+    background-color: #c9ff56;
     color: black;
     font-family: "romie", serif;
     font-weight: 300;

@@ -27,28 +27,36 @@
         </header>
         <img id='image' style="position: absolute; left:0; top: 15vh; height: 70vh; width: auto; z-index:0; display: none;" src="images/heroes.gif">
         <ul class="home">
-            <ul class="fixed">
-                <div class="eighty"> 
-                    <div class="columns" style="align-items: flex-end;">
-                        <div class="sixty">
-                            <h1>Hi, I'm Caleb.<br>I design beautiful artifacts that bridge brands to people.</h1>
-                        </div>
-                        <ul class="thirty">
-                                <p>
-                                    Currently:<br><br>
-                                    UX/UI Design @ <a href="https://www.csl.com/we-are-csl/our-businesses-and-products/csl-behring" target="_blank">CSL Behring</a><br>
-                                    Design + HCI @ <a href="https://design.cmu.edu/" target="_blank">Carnegie Mellon University</a><br>
-                                    Designing a book about food
-                                </p>
-                        </ul>
+            <div class="hundred"> 
+                <div class="columns" style="align-items: flex-start; row-gap:0px !important;" >
+                    <div class="twenty">
+                        <h1>Hi, I'm Caleb.</h1>
                     </div>
-                    <span class="small spacer"></span>
+                    <div class="thirty spacer"><hr class="dotted" style="margin-top: 20pt;"></div>
+                    <div class="fifty">
+                        <h1>I design beautiful <strong>systems</strong> and <strong>artifacts </strong>that bridge brands to people.</h1>
+                    </div>
+                    <div class="fifty"></div>
+                    <div class="fifty">
+                        <span class="small"></span>
+                        <sub>
+                            UX/UI Design @ <a href="https://www.csl.com/we-are-csl/our-businesses-and-products/csl-behring" target="_blank">CSL Behring</a><br> 
+                            Design + HCI @ <a href="https://design.cmu.edu/" target="_blank">Carnegie Mellon University</a><br>
+                            Designing, writing, cooking, and shooting a book about food and memory
+                        </sub>
+                        <span class="large spacer"></span>
+                    </div>
+                </div>
+                <!-- <hr class="dotted"> -->
+                <div class="fifty">
                     <ul class="miniprojnav" style="z-index: 100;">
                         <img src="images/eye.svg" style="width: 24px;">
                         <div style="width: 8px;"></div>
-                        <p style="cursor: pointer;"><a id=graphictop onclick='graphic()' style="text-decoration:underline; text-decoration-style: dotted; color: #f4ff56;">Visual,</a></p>
-                        <p style="cursor: pointer;"><a id=producttop onclick='product()' style="text-decoration:none; color: white;">Product,</a></p>
-                        <p style="cursor: pointer;"><a id=funtop onclick='fun()' style="text-decoration:none; color: white;">Experiments</a></p>
+                        <p style="cursor: pointer;"><a id=graphictop onclick='graphic()' style="text-decoration:underline; text-decoration-style: dotted; color: #c9ff56;">VISUAL</a></p>
+                        <p> / </p>
+                        <p style="cursor: pointer;"><a id=producttop onclick='product()' style="text-decoration:none; color: white;">PRODUCT</a></p>
+                        <p> / </p>
+                        <p style="cursor: pointer;"><a id=funtop onclick='fun()' style="text-decoration:none; color: white;">EXPERIMENTS</a></p>
                     </ul>
                     <script> <!--hide groups-->
                         function product() {
@@ -58,7 +66,7 @@
                             product.style.display = 'flex';
                             producttop.style.textDecoration = 'underline';
                             producttop.style.textDecorationStyle = 'dotted';
-                            producttop.style.color = '#f4ff56';
+                            producttop.style.color = '#c9ff56';
                             graphic.style.display = 'none';
                             graphictop.style.textDecoration = 'none';
                             graphictop.style.color = 'white';
@@ -77,7 +85,7 @@
                             graphic.style.display = 'flex';
                             graphictop.style.textDecoration = 'underline';
                             graphictop.style.textDecorationStyle = 'dotted';
-                            graphictop.style.color = '#f4ff56';
+                            graphictop.style.color = '#c9ff56';
                             fun.style.display = 'none';
                             funtop.style.textDecoration = 'none';
                             funtop.style.color = 'white';
@@ -96,23 +104,25 @@
                             fun.style.display = 'flex';
                             funtop.style.textDecoration = 'underline';
                             funtop.style.textDecorationStyle = 'dotted';
-                            funtop.style.color = '#f4ff56';
-                        }
-                    </script>
-                    </div>
-                    <script>
-                        <a style="text-decoration: underline dotted ;" onpointerenter='heroes()' onpointerleave='heroes2()'></a> 
-                        function heroes() {
-                            var image = document.getElementById('image');
-                            image.style.display = 'block';
-                        }
-                        function heroes2() {
-                            var image = document.getElementById('image');
-                            image.style.display = 'none';
+                            funtop.style.color = '#c9ff56';
                         }
                     </script>
                 </div>
-            </ul>
+                
+                
+                </div>
+                <script>
+                    <a style="text-decoration: underline dotted ;" onpointerenter='heroes()' onpointerleave='heroes2()'></a> 
+                    function heroes() {
+                        var image = document.getElementById('image');
+                        image.style.display = 'block';
+                    }
+                    function heroes2() {
+                        var image = document.getElementById('image');
+                        image.style.display = 'none';
+                    }
+                </script>
+            </div>
             <ul>
                 <div class="hundred">
                     <span class="small spacer"></span>
@@ -121,15 +131,14 @@
                             <a href="projects/tlj.html" class="columns proj">
                                 <div class="hundred">
                                     <img 
-                                        src="images/tlj/hero1-tlj.jpg"
-                                        alt="Screens from the TLJ Suite.">
+                                    src="images/tlj/kiosk-mockup.jpg"
+                                    alt="Screens from the TLJ Suite.">
                                 </div>
                                 <div class="columns" style="width: 98%; margin:auto;">
-                                    <div class="twenty">
-                                        <p style="text-decoration: none !important; line-height: 30pt;">[01]</p>
+                                    <div class="twenty spacer">
                                     </div>
                                     <div class="eighty">
-                                        <h3>Tools for the modern bakery.</h3>
+                                        <h3>Tools for a modernizing bakery.</h3>
                                         <sub>Product Design / UX Design / Brand Design</sub>
                                     </div>
                                 </div>
@@ -139,17 +148,17 @@
                             <a class="columns proj" href="pw.html">
                                 <div class="hundred">
                                     <img 
-                                        src="images/csl/thumb-csl.jpg"
+                                        src="images/csl/hero1.jpg"
                                         alt="A screen from a plasma donation app on a red background 
                                         with the words 'CSL Behring, Biotherapies for Life'">
                                 </div>
                                 <div class="columns" style="width: 98%; margin:auto;">
-                                    <div class="twenty">
-                                        <p style="text-decoration: none !important; line-height: 30pt;">[02]</p>
+                                    <div class="twenty spacer">
+                                       
                                     </div>
                                     <div class="eighty">
                                         <h3>Designing for the future of plasma donation.</h3>
-                                        <sub>Product Design / UI Design / UX Research</sub>
+                                        <sub>PRODUCT DESIGN / UI DESIGN / UX RESEARCH</sub>
                                     </div>
                                 </div>
                             </a>
@@ -158,33 +167,20 @@
                             <a href="projects/wnwn.html" class="columns proj">
                                 <div class="hundred">
                                     <img 
-                                        src="images/wastenot/thumb-waste.jpg"
+                                        src="images/wastenot/hero-waste.jpg"
                                         alt="Screens from the TLJ Suite.">
                                 </div>
                                 <div class="columns" style="width: 98%; margin:auto;">
-                                    <div class="twenty">
-                                        <p style="text-decoration: none !important; line-height: 30pt;">[03]</p>
+                                    <div class="twenty spacer">
+                                        
                                     </div>
                                     <div class="eighty">
                                         <h3>Making food responsibility fun.</h3>
-                                        <sub>Product Design / UI Design / UX Design</sub>
+                                        <sub>PRODUCT DESIGN / UI DESIGN / UX DESIGN</sub>
                                     </div>
                                 </div>
                             </a>   
                         </div>
-                        <!-- <div id="hash" class="hundred">
-                            <a class="projecthome">
-                                <img 
-                                    src="images/coming-soon.gif"
-                                    alt="Screens from the TLJ Suite.">
-                                <span class="small"></span>
-                                <p>Hash</p>
-                                <span class="small"></span>
-                                <h3>Collaborating in the virtual age</h3>
-                                <span class="medium"></span>
-                                <sub>Product Design / UX Design / Brand Design</sub>
-                            </a>
-                        </div> -->
                         
                     </ul>
                     <ul id="graphic" class="colproj" style="z-index:50; ">
@@ -202,12 +198,12 @@
                                     style="display: none;">
                                 </div>
                                 <div class="columns" style="width: 98%; margin:auto;">
-                                    <div class="twenty">
-                                        <p style="text-decoration: none !important; line-height: 30pt;">[01]</p>
+                                    <div class="twenty spacer">
+                                        
                                     </div>
                                     <div class="eighty">
                                         <h3>Artifacts for my design hero, Guang Yu.</h3>
-                                        <sub>Brand Design / Graphic Design / Motion Design</sub>
+                                        <sub>BRAND DESIGN / GRAPHIC DESIGN / MOTION DESIGN</sub>
                                     </div>
                                 </div>
                             </a>
@@ -237,12 +233,15 @@
                                     src="images/broadband/psa-thumb0.jpg">
                                 </div>
                                 <div class="columns" style="width: 98%; margin:auto;">
-                                    <div class="twenty">
-                                        <p style="text-decoration: none !important; line-height: 30pt;">[02]</p>
+                                    <div class="twenty spacer">
+                                        <div class="tag">
+                                            <p style="text-decoration: none !important;">NEW</p>
+                                        </div>
                                     </div>
+                                    
                                     <div class="eighty">
                                         <h3>Convincing middle America to care about their internet</h3>
-                                        <sub>Brand Design / Motion / Design Systems</sub>
+                                        <sub>BRAND DESIGN / MOTION / DESIGN STRATEGY</sub>
                                     </div>
                                 </div>
                             </a>
@@ -272,12 +271,12 @@
                                     src="images/paradox/thumb_paradox.jpg">
                                 </div>
                                 <div class="columns" style="width: 98%; margin:auto;">
-                                    <div class="twenty">
-                                        <p style="text-decoration: none !important; line-height: 30pt;">[03]</p>
+                                    <div class="twenty spacer">
+                                        
                                     </div>
                                     <div class="eighty">
-                                        <h3>Artificial intelligence on cultural competence.</h3>
-                                        <sub>Spatial Design / Graphic Design / Design Systems</sub>
+                                        <h3>Visualizing artificial intelligence and cultural competence.</h3>
+                                        <sub>SPATIAL DESIGN / GRAPHIC DESIGN / DESIGN SYSTEMS</sub>
                                     </div>
                                 </div>
                             </a>
@@ -308,12 +307,12 @@
                                     alt="Screens from the TLJ Suite.">
                                 </div>
                                 <div class="columns" style="width: 98%; margin:auto;">
-                                    <div class="twenty">
-                                        <p style="text-decoration: none !important; line-height: 30pt;">[04]</p>
+                                    <div class="twenty spacer">
+                                        
                                     </div>
                                     <div class="eighty">
-                                        <h3>Branding for a construction consultancy.</h3>
-                                        <sub>Brand Design / Web Design</sub>
+                                        <h3>Culturally sensitive branding for a construction consultancy.</h3>
+                                        <sub>BRAND DESIGN / WEB DESIGN</sub>
                                     </div>
                                 </div>
                             </a>
@@ -344,12 +343,12 @@
                                     alt="A little orange clothbound book on grass">
                                 </div>
                                 <div class="columns" style="width: 98%; margin:auto;">
-                                    <div class="twenty">
-                                        <p style="text-decoration: none !important; line-height: 30pt;">[01]</p>
+                                    <div class="tag spacer">
+                                        <p style="text-decoration: none !important;">NEW</p>
                                     </div>
                                     <div class="eighty">
                                         <h3>A book about a little angel boy.</h3>
-                                        <sub>Book Design / Bookbinding</sub>
+                                        <sub>BOOK DESIGN / BOOKBINDING</sub>
                                     </div>
                                 </div>
                                 
@@ -363,12 +362,12 @@
                                     alt="A little orange clothbound book on grass">
                                 </div>
                                 <div class="columns" style="width: 98%; margin:auto;">
-                                    <div class="twenty">
-                                        <p style="text-decoration: none !important; line-height: 30pt;">[02]</p>
+                                    <div class="tag spacer">
+                                        <p style="text-decoration: none !important;">NEW</p>
                                     </div>
                                     <div class="eighty">
-                                        <h3>A letter to a past self that deserved better.</h3>
-                                        <sub>Experimental typography</sub>
+                                        <h3>A letter to a past self.</h3>
+                                        <sub>EXPERIMENTAL TYPOGRAPHY</sub>
                                     </div>
                                 </div>
                                 
@@ -382,12 +381,12 @@
                                     alt="Screens from the TLJ Suite.">
                                 </div>
                                 <div class="columns" style="width: 98%; margin:auto;">
-                                    <div class="twenty">
-                                        <p style="text-decoration: none !important; line-height: 30pt;">[03]</p>
+                                    <div class="tag spacer">
+                                        <p style="text-decoration: none !important;">NEW</p>
                                     </div>
                                     <div class="eighty">
-                                        <h3>A device for connecting through food.</h3>
-                                        <sub>Physical Computing / Fabrication / Creative Direction</sub>
+                                        <h3>A device connecting people through food.</h3>
+                                        <sub>PHYSICAL COMPUTING / FABRICATION / CREATIVE DIRECTION</sub>
                                     </div>
                                 </div>
                             </a>
@@ -400,12 +399,12 @@
                                     alt="Looping gif that reads 'Coming Soon'.">
                                 </div>
                                 <div class="columns" style="width: 98%; margin:auto;">
-                                    <div class="twenty">
-                                        <p style="text-decoration: none !important; line-height: 30pt;">[04]</p>
-                                    </div>
+                                    <!-- <div class="twenty">
+                                        <p style="text-decoration: none !important; line-height: 30pt;">&#x2022; 4</p>
+                                    </div> -->
                                     <div class="eighty">
                                         <h3>Revivals and otherwise.</h3>
-                                        <sub>Typeface design</sub>
+                                        <sub>TYPE DESIGN</sub>
                                     </div>
                                 </div>
                             </a>
