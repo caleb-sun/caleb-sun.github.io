@@ -166,17 +166,24 @@ h1,h2,h3 {
     /* letter-spacing: 1px; */
 }
 
-h4, p, sub{
+h4, p, sub {
     font-family: "helveticaneuethin", sans-serif;
     font-weight: 300;
+    
+}
+
+h4,p{
     color: white;
+}
+
+sub,sub>a{
+    color: rgb(111, 111, 111) !important;
 }
 
 strong{
     font-family:"editorial-italic",serif !important;
     font-style: italic;
     color: white;
-    line-height:28pt;
 }
 
 h1,h5 {
@@ -190,8 +197,8 @@ h2 {
 }
 
 h3 {
-    font-size: 28pt;
-    line-height: 32pt;
+    font-size: 12pt;
+    line-height: 16pt;
 }
 
 h4 {
@@ -235,9 +242,6 @@ a:visited {
     color:#FFFFFF;
   }
 
-sub,sub>a {
-    color:#74747a !important;
-}
 
 a:hover, a:hover>sub{
     text-decoration: underline;
@@ -279,10 +283,9 @@ a:hover>img{
     border-radius: 12pt;
     border-width: 1.5px;
     border-style: solid;
-    height: 12pt;
+    height: 10pt;
     display: flex;
     align-items: center;
-    margin-top: 8pt;
     width: fit-content;
     padding: 2px;
     padding-left:8px;
@@ -291,7 +294,8 @@ a:hover>img{
 }
 
 .tag>p{
-    line-height: 10pt;
+    font-size:small;
+    color:#c9ff56
 }
 
 hr.dotted{
@@ -327,9 +331,10 @@ hr.dotted{
 .projecthome {
     display: flex;
     flex-direction: column;
-    width: 49%;
     /* justify-content: space-between; */
 }
+
+
 
 .eighty,.sixty, .forty,.thirty,.thirtythree, .twentyfive, .fifty, .hundred{
     display: flex;
@@ -338,7 +343,7 @@ hr.dotted{
 
 .eighty{
     width:78%;
-    gap:36px;
+    gap:16px;
 }
 
 .twenty{
@@ -346,7 +351,7 @@ hr.dotted{
 }
 
 .twentyfive{
-    width:25%;
+    width:23%;
     gap: 18px;
 }
 
@@ -356,7 +361,7 @@ hr.dotted{
 }
 
 .thirtythree{
-    width: 32%;
+    width: 33%;
     gap:18px;
 }
 
@@ -373,9 +378,15 @@ hr.dotted{
     width: 58%;
 }
 
+.sixtysix{
+    width: 66%;
+    gap:18px;
+}
+
 .hundred{
     width: 100%;
     gap: 18px;
+    row-gap: 48px;
 }
 
 img{
@@ -412,16 +423,22 @@ img{
     width: auto;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    gap: 15%;
+    /* align-items: center; */
+    /* gap: 15%; */
     z-index: 100;
+}
+
+.footmenu>.menu{
+    gap: 15%;
 }
 
 .header{
     position: fixed;
-    justify-content:right;
+    justify-content: right;
     top:3%;
     right:5%;
+    display: flex;
+    gap: 30px;
 }
 
 footer{
@@ -442,7 +459,13 @@ footer{
 }
 
 .menuitems{
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
+}
+
+.menuitems>p{
+    height: 20px;
 }
 
 .menuitems>p>a, .menuitems>a{
@@ -461,7 +484,7 @@ footer{
     margin:auto;
     display: flex;
     flex-direction: column;
-    margin-top:12%;
+    margin-top:8%;
     margin-bottom:16%;
     margin-left: 3.75vw;
     margin-right: 3.75vw;
@@ -827,8 +850,8 @@ input[type='submit']:hover {
     }
 
     .home {
-        margin-top:10%;
         margin:auto;
+        margin-top:20%;
         margin-bottom: 20%;
         width: 96%;
         gap: 10px;

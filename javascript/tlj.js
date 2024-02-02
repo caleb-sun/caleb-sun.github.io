@@ -59,6 +59,33 @@ var myScrollFunc = function () {
         demo.style.textDecoration = "underline";
         demo.style.textDecorationStyle = "dotted";
     }
+    if(y<14200){
+        context.style.color= 'white';
+        problem.style.color= 'white';
+        research.style.color= 'white';
+        contextual.style.color= 'white';
+        concept.style.color= 'white';
+        visual.style.color= 'white';
+        demo.style.color= 'white';
+    }
+    if(y>=14200){
+        context.style.color= 'black';
+        problem.style.color= 'black';
+        research.style.color= 'black';
+        contextual.style.color= 'black';
+        concept.style.color= 'black';
+        visual.style.color= 'black';
+        demo.style.color= 'black';
+    }
+    if(y>=16400){
+        context.style.color= 'white';
+        problem.style.color= 'white';
+        research.style.color= 'white';
+        contextual.style.color= 'white';
+        concept.style.color= 'white';
+        visual.style.color= 'white';
+        demo.style.color= 'white';
+    }
 };
 
 window.addEventListener("scroll", myScrollFunc);

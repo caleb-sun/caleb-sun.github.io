@@ -20,171 +20,146 @@
   <body>
     <main>
         <header>
-            <img class="homenav" src="images/sun.svg" style="width: 36px;"></img>
+            <img class="homenav" src="images/sun.svg" style="width: 24px;"></img>
             <ul class="menu header">
-                <li class="menuitems"><p><a href="about.html">About</a></p></li>
-            </ul>
-        </header>
-        <img id='image' style="position: absolute; left:0; top: 15vh; height: 70vh; width: auto; z-index:0; display: none;" src="images/heroes.gif">
-        <ul class="home">
-            <div class="hundred"> 
-                <div class="columns" style="align-items: flex-start; row-gap:0px !important;" >
-                    <div class="twenty">
-                        <h1>Hi, I'm Caleb.</h1>
-                    </div>
-                    <div class="thirty spacer"><hr class="dotted" style="margin-top: 20pt;"></div>
-                    <div class="fifty">
-                        <h1>I design beautiful <strong>systems</strong> and <strong>artifacts </strong>that bridge brands to people.</h1>
-                    </div>
-                    <div class="fifty"></div>
-                    <div class="fifty">
-                        <span class="small"></span>
-                        <sub>
-                            UX/UI Design @ <a href="https://www.csl.com/we-are-csl/our-businesses-and-products/csl-behring" target="_blank">CSL Behring</a><br> 
-                            Design + HCI @ <a href="https://design.cmu.edu/" target="_blank">Carnegie Mellon University</a><br>
-                            Designing, writing, cooking, and shooting a book about food and memory
-                        </sub>
-                        <span class="large spacer"></span>
-                    </div>
-                </div>
-                <!-- <hr class="dotted"> -->
-                <div class="fifty">
+                <div class="menuitems">
                     <ul class="miniprojnav" style="z-index: 100;">
                         <img src="images/eye.svg" style="width: 24px;">
                         <div style="width: 8px;"></div>
-                        <p style="cursor: pointer;"><a id=graphictop onclick='graphic()' style="text-decoration:underline; text-decoration-style: dotted; color: #c9ff56;">VISUAL</a></p>
+                        <p style="cursor: pointer;"><a id=alltop onclick='allitems()' style="text-decoration:underline; text-decoration-style: dotted; color: #c9ff56;">ALL</a></p>
+                        <p> / </p>
+                        <p style="cursor: pointer;"><a id=graphictop onclick='graphic()' style="text-decoration:none; text-decoration-style: none; color: white;">VISUAL</a></p>
                         <p> / </p>
                         <p style="cursor: pointer;"><a id=producttop onclick='product()' style="text-decoration:none; color: white;">PRODUCT</a></p>
                         <p> / </p>
                         <p style="cursor: pointer;"><a id=funtop onclick='fun()' style="text-decoration:none; color: white;">EXPERIMENTS</a></p>
                     </ul>
                     <script> <!--hide groups-->
-                        function product() {
+                        function allitems() {
+                            var allitems = document.getElementById('allitems');
                             var product = document.getElementById('product');
-                            var graphic = document.getElementById('graphic');
-                            var fun = document.getElementById('fun');
+                            var graphic = document.getElementById('visual');
+                            var fun = document.getElementById('experiments');
+
+                            allitems.style.display = 'flex';
+                            alltop.style.textDecoration = 'underline';
+                            alltop.style.textDecorationStyle = 'dotted';
+                            alltop.style.color = '#c9ff56';
+
+                            product.style.display = 'none';
+                            producttop.style.textDecoration = 'none';
+                            producttop.style.color = 'white';
+
+                            graphic.style.display = 'none';
+                            graphictop.style.textDecoration = 'none';
+                            graphictop.style.color = 'white';
+
+                            fun.style.display = 'none';
+                            funtop.style.textDecoration = 'none';
+                            funtop.style.color = 'white';
+
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                        
+                        function product() {
+                            var allitems = document.getElementById('allitems');
+                            var product = document.getElementById('product');
+                            var graphic = document.getElementById('visual');
+                            var fun = document.getElementById('experiments');
                             product.style.display = 'flex';
                             producttop.style.textDecoration = 'underline';
                             producttop.style.textDecorationStyle = 'dotted';
                             producttop.style.color = '#c9ff56';
+
+                            allitems.style.display = 'none';
+                            alltop.style.textDecoration = 'none';
+                            alltop.style.color = 'white';
+
                             graphic.style.display = 'none';
                             graphictop.style.textDecoration = 'none';
                             graphictop.style.color = 'white';
+
                             fun.style.display = 'none';
                             funtop.style.textDecoration = 'none';
                             funtop.style.color = 'white';
+
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
                         }
         
                         function graphic() {
+                            var allitems = document.getElementById('allitems');
                             var product = document.getElementById('product');
-                            var graphic = document.getElementById('graphic');
-                            var fun = document.getElementById('fun');
+                            var graphic = document.getElementById('visual');
+                            var fun = document.getElementById('experiments');
+                            allitems.style.display = 'none';
+                            alltop.style.color = 'white';
+                            alltop.style.textDecoration = 'none';
+
                             product.style.display = 'none';
                             producttop.style.textDecoration = 'none';
                             producttop.style.color = 'white';
+
                             graphic.style.display = 'flex';
                             graphictop.style.textDecoration = 'underline';
                             graphictop.style.textDecorationStyle = 'dotted';
                             graphictop.style.color = '#c9ff56';
+
                             fun.style.display = 'none';
                             funtop.style.textDecoration = 'none';
                             funtop.style.color = 'white';
+
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
                         }
         
                         function fun() {
+                            var allitems = document.getElementById('allitems');
                             var product = document.getElementById('product');
-                            var graphic = document.getElementById('graphic');
-                            var fun = document.getElementById('fun');
+                            var graphic = document.getElementById('visual');
+                            var fun = document.getElementById('experiments');
+                            allitems.style.display = 'none';
+                            alltop.textDecoration = 'none';
+                            alltop.style.color = 'white';
+
                             product.style.display = 'none';
                             producttop.style.textDecoration = 'none';
                             producttop.style.color = 'white';
+
                             graphic.style.display = 'none';
                             graphictop.style.textDecoration = 'none';
                             graphictop.style.color = 'white';
+
                             fun.style.display = 'flex';
                             funtop.style.textDecoration = 'underline';
                             funtop.style.textDecorationStyle = 'dotted';
                             funtop.style.color = '#c9ff56';
+
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
                         }
                     </script>
                 </div>
-                
-                
-                </div>
-                <script>
-                    <a style="text-decoration: underline dotted ;" onpointerenter='heroes()' onpointerleave='heroes2()'></a> 
-                    function heroes() {
-                        var image = document.getElementById('image');
-                        image.style.display = 'block';
-                    }
-                    function heroes2() {
-                        var image = document.getElementById('image');
-                        image.style.display = 'none';
-                    }
-                </script>
-            </div>
-            <ul>
-                <div class="hundred">
-                    <span class="small spacer"></span>
-                    <ul id="product" class="colproj" style="display:none; z-index: 50;">
-                        <div id="tlj" class="projecthome">
-                            <a href="projects/tlj.html" class="columns proj">
-                                <div class="hundred">
-                                    <img 
-                                    src="images/tlj/kiosk-mockup.jpg"
-                                    alt="Screens from the TLJ Suite.">
+                <li class="menuitems">
+                    <img src="images/question-01.svg" style="width: 24px;">
+                    <!-- <div style="width: 8px;"></div> -->
+                    <p><a href="about.html">ABOUT</a></p>
+                </li>
+            </ul>
+        </header>
+        <img id='image' style="position: absolute; left:0; top: 15vh; height: 70vh; width: auto; z-index:0; display: none;" src="images/heroes.gif">
+        <ul class="home">
+            <div class="hundred"> 
+                <div class="columns">
+                    <li id="allitems" class="columns">
+                        <div class="thirtythree">
+                            <div class="eighty">
+                                <p>Hi, I'm Caleb. I design beautiful <strong>systems</strong> and <strong>artifacts </strong>that bridge brands to people. <br><br>
+                                    Currently: Design + HCI @ <a href="https://design.cmu.edu/" target="_blank">Carnegie Mellon University</a> and
+                                    designing, writing, cooking, and shooting a book about food and memory<br><br>
+                                    Previously: UX/UI Design @ <a href="https://www.csl.com/we-are-csl/our-businesses-and-products/csl-behring" target="_blank">CSL Behring</a></p>
+                                    <sub><a href="pdfs/caleb-sun_resume.pdf" target="_blank">Resume</a>, <a href="https://www.linkedin.com/in/calebsun/" target="_blank">LinkedIn</a>, 
+                                    <a href="https://read.cv/calebsun" target="_blank">ReadCV</a>, <a href=mailto:sun.cs0327@gmail.com target="_blank">Email</a></sub>
                                 </div>
-                                <div class="columns" style="width: 98%; margin:auto;">
-                                    <div class="twenty spacer">
-                                    </div>
-                                    <div class="eighty">
-                                        <h3>Tools for a modernizing bakery.</h3>
-                                        <sub>PRODUCT DESIGN / UX DESIGN / BRAND DESIGN</sub>
-                                    </div>
-                                </div>
-                            </a>
                         </div>
-                        <div id="CSL" class="projecthome">
-                            <a class="columns proj" href="pw.html">
-                                <div class="hundred">
-                                    <img 
-                                        src="images/csl/hero1.jpg"
-                                        alt="A screen from a plasma donation app on a red background 
-                                        with the words 'CSL Behring, Biotherapies for Life'">
-                                </div>
-                                <div class="columns" style="width: 98%; margin:auto;">
-                                    <div class="twenty spacer">
-                                       
-                                    </div>
-                                    <div class="eighty">
-                                        <h3>Designing for the future of plasma donation.</h3>
-                                        <sub>PRODUCT DESIGN / UI DESIGN / UX RESEARCH</sub>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div id="wastenot" class="projecthome">
-                            <a href="projects/wnwn.html" class="columns proj">
-                                <div class="hundred">
-                                    <img 
-                                        src="images/wastenot/hero-waste.jpg"
-                                        alt="Screens from the TLJ Suite.">
-                                </div>
-                                <div class="columns" style="width: 98%; margin:auto;">
-                                    <div class="twenty spacer">
-                                        
-                                    </div>
-                                    <div class="eighty">
-                                        <h3>Making food responsibility fun.</h3>
-                                        <sub>PRODUCT DESIGN / UI DESIGN / UX DESIGN</sub>
-                                    </div>
-                                </div>
-                            </a>   
-                        </div>
-                        
-                    </ul>
-                    <ul id="graphic" class="colproj" style="z-index:50; ">
-                        <div id="guangyu" class="projecthome" onpointerenter='gy()' onpointerleave='gy2()'>
+                        <div id="guangyu" class="projecthome thirtythree" onpointerenter='gy()' onpointerleave='gy2()'>
                             <a href="projects/guangyu.html" class="columns proj">
                                 <div class="hundred"> 
                                     <img 
@@ -202,7 +177,7 @@
                                         
                                     </div>
                                     <div class="eighty">
-                                        <h3>Artifacts for my design hero, Guang Yu.</h3>
+                                        <p>Artifacts for my design hero, Guang Yu.</p>
                                         <sub>BRAND DESIGN / GRAPHIC DESIGN / MOTION DESIGN</sub>
                                     </div>
                                 </div>
@@ -222,7 +197,7 @@
                                 }
                             </script>
                         </div>
-                        <div id="psa" class="projecthome" onpointerenter='psa1()' onpointerleave='psa2()'>
+                        <div id="psa" class="projecthome thirtythree" onpointerenter='psa1()' onpointerleave='psa2()'>
                             <a href="projects/psa.html" class="columns proj">
                                 <div class="hundred"> 
                                     <img id="psagif"
@@ -238,9 +213,8 @@
                                             <p style="text-decoration: none !important;">NEW</p>
                                         </div>
                                     </div>
-                                    
                                     <div class="eighty">
-                                        <h3>Convincing middle America to care about their internet</h3>
+                                        <p>Convincing middle America to care about their internet</p>
                                         <sub>BRAND DESIGN / MOTION / DESIGN STRATEGY</sub>
                                     </div>
                                 </div>
@@ -260,42 +234,7 @@
                                 }
                             </script>
                         </div>
-                        <div id="paradox" class="projecthome" onpointerenter='paradox()' onpointerleave='para2()'>
-                            <a href="projects/paradox.html" class="columns proj">
-                                <div class="hundred"> 
-                                    <img id="paragif"
-                                    src="images/paradox/thumb_paradox.gif"
-                                    alt="Looping gif that reads 'Coming Soon'."
-                                    style="display:none;">
-                                <img id="paraimg"
-                                    src="images/paradox/thumb_paradox.jpg">
-                                </div>
-                                <div class="columns" style="width: 98%; margin:auto;">
-                                    <div class="twenty spacer">
-                                        
-                                    </div>
-                                    <div class="eighty">
-                                        <h3>Visualizing artificial intelligence and cultural competence.</h3>
-                                        <sub>SPATIAL DESIGN / GRAPHIC DESIGN / DESIGN SYSTEMS</sub>
-                                    </div>
-                                </div>
-                            </a>
-                            <script>
-                                function paradox() {
-                                    var gif = document.getElementById('paragif');
-                                    var image = document.getElementById('paraimg');
-                                    gif.style.display = 'block';
-                                    image.style.display = 'none'
-                                }
-                                function para2() {
-                                    var gif = document.getElementById('paragif');
-                                    var image = document.getElementById('paraimg');
-                                    gif.style.display='none'
-                                    image.style.display = 'block';
-                                }
-                            </script>
-                        </div>
-                        <div id="vela" class="projecthome" onpointerenter='vela()' onpointerleave='vela2()'>
+                        <div id="vela" class="projecthome thirtythree" onpointerenter='vela()' onpointerleave='vela2()'>
                             <a href="projects/vela.html" class="columns proj">
                                 <div class="hundred"> 
                                     <img id="velagif"
@@ -311,7 +250,7 @@
                                         
                                     </div>
                                     <div class="eighty">
-                                        <h3>Culturally sensitive branding for a construction consultancy.</h3>
+                                        <p>Culturally sensitive branding for a construction consultancy.</p>
                                         <sub>BRAND DESIGN / WEB DESIGN</sub>
                                     </div>
                                 </div>
@@ -332,10 +271,7 @@
                             }
                         </script>
                         </div>
-                        
-                    </ul>
-                    <ul id="fun" class="colproj" style="display:none; z-index:50;">
-                        <div id="sonny" class="projecthome">
+                        <div id="sonny" class="projecthome sixtysix">
                             <a href="projects/sonny.html" class="columns proj">
                                 <div class="hundred"> 
                                     <img 
@@ -347,33 +283,100 @@
                                         <p style="text-decoration: none !important;">NEW</p>
                                     </div>
                                     <div class="eighty">
-                                        <h3>A book about a little angel boy.</h3>
+                                        <p>A book about a little angel boy.</p>
                                         <sub>BOOK DESIGN / BOOKBINDING</sub>
                                     </div>
                                 </div>
-                                
                             </a>
-                        </div>
-                        <div id="sonny" class="projecthome">
+                        </div>   
+                        <div id="letter" class="projecthome sixtysix">
                             <a href="projects/letter.html" class="columns proj">
                                 <div class="hundred"> 
                                     <img 
                                     src="images/letter/letter-1.jpg"
-                                    alt="A little orange clothbound book on grass">
+                                    alt="A book with ascii art on it">
                                 </div>
                                 <div class="columns" style="width: 98%; margin:auto;">
                                     <div class="tag spacer">
                                         <p style="text-decoration: none !important;">NEW</p>
                                     </div>
                                     <div class="eighty">
-                                        <h3>A letter to a past self.</h3>
+                                        <p>Letter to a past self.</p>
                                         <sub>EXPERIMENTAL TYPOGRAPHY</sub>
                                     </div>
                                 </div>
-                                
                             </a>
+                        </div> 
+                        <div id="ascii" class="projecthome thirtythree">
+                            <a href="projects/ascii.html" class="columns proj">
+                                <div class="hundred"> 
+                                    <img 
+                                    src="images/ascii/IMG_5129.jpg"
+                                    alt="A book with ascii art on it">
+                                </div>
+                                <div class="columns" style="width: 98%; margin:auto;">
+                                    <div class="tag spacer">
+                                        <p style="text-decoration: none !important;">NEW</p>
+                                    </div>
+                                    <div class="eighty">
+                                        <p>ChatGPT drawing ASCII representations of human experience.</p>
+                                        <sub>BOOK DESIGN / BOOKBINDING</sub>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>   
+                        <div id="tlj" class="projecthome sixtysix">
+                            <a href="projects/tlj.html" class="columns proj">
+                                <div class="hundred">
+                                    <img 
+                                    src="images/tlj/kiosk-mockup.jpg"
+                                    alt="Screens from the TLJ Suite.">
+                                </div>
+                                <div class="columns" style="width: 98%; margin:auto;">
+                                    <div class="twenty spacer">
+                                    </div>
+                                    <div class="eighty">
+                                        <p>Tools for a modernizing bakery.</p>
+                                        <sub>PRODUCT DESIGN / UX DESIGN / BRAND DESIGN</sub>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>           
+                        <div id="paradox" class="projecthome thirtythree" onpointerenter='paradox()' onpointerleave='para2()'>
+                            <a href="projects/paradox.html" class="columns proj">
+                                <div class="hundred"> 
+                                    <img id="paragif"
+                                    src="images/paradox/thumb_paradox.gif"
+                                    alt="Looping gif that reads 'Coming Soon'."
+                                    style="display:none;">
+                                <img id="paraimg"
+                                    src="images/paradox/thumb_paradox.jpg">
+                                </div>
+                                <div class="columns" style="width: 98%; margin:auto;">
+                                    <div class="twenty spacer">  
+                                    </div>
+                                    <div class="eighty">
+                                        <p>Visualizing artificial intelligence and cultural competence.</p>
+                                        <sub>SPATIAL DESIGN / GRAPHIC DESIGN / DESIGN SYSTEMS</sub>
+                                    </div>
+                                </div>
+                            </a>
+                            <script>
+                                function paradox() {
+                                    var gif = document.getElementById('paragif');
+                                    var image = document.getElementById('paraimg');
+                                    gif.style.display = 'block';
+                                    image.style.display = 'none'
+                                }
+                                function para2() {
+                                    var gif = document.getElementById('paragif');
+                                    var image = document.getElementById('paraimg');
+                                    gif.style.display='none'
+                                    image.style.display = 'block';
+                                }
+                            </script>
                         </div>
-                        <div id="CSL" class="projecthome">
+                        <div id="whatshould" class="projecthome fifty">
                             <a href="projects/whatshould.html" class="columns proj">
                                 <div class="hundred"> 
                                     <img 
@@ -385,34 +388,390 @@
                                         <p style="text-decoration: none !important;">NEW</p>
                                     </div>
                                     <div class="eighty">
-                                        <h3>A device connecting people through food.</h3>
+                                        <p>A device connecting people through food.</p>
                                         <sub>PHYSICAL COMPUTING / FABRICATION / CREATIVE DIRECTION</sub>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        <div id="sigul" class="projecthome">
+                        <div id="csl" class="projecthome fifty">
+                            <a class="columns proj" href="pw.html">
+                                <div class="hundred">
+                                    <img 
+                                        src="images/csl/hero1.jpg"
+                                        alt="A screen from a plasma donation app on a red background 
+                                        with the words 'CSL Behring, Biotherapies for Life'">
+                                </div>
+                                <div class="columns" style="width: 98%; margin:auto;">
+                                    <div class="twenty spacer">
+                                        
+                                    </div>
+                                    <div class="eighty">
+                                        <p>Designing for the future of plasma donation.</p>
+                                        <sub>PRODUCT DESIGN / UI DESIGN / UX RESEARCH</sub>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div id="wnwn" class="projecthome sixtysix">
+                            <a href="projects/wnwn.html" class="columns proj">
+                                <div class="hundred">
+                                    <img 
+                                        src="images/wastenot/hero-waste.jpg"
+                                        alt="Screens from the TLJ Suite.">
+                                </div>
+                                <div class="columns" style="width: 98%; margin:auto;">
+                                    <div class="twenty spacer">
+                                        
+                                    </div>
+                                    <div class="eighty">
+                                        <p>Making food responsibility fun.</p>
+                                        <sub>PRODUCT DESIGN / UI DESIGN / UX DESIGN</sub>
+                                    </div>
+                                </div>
+                            </a>   
+                        </div>
+                        <div id="sigul" class="projecthome thirtythree">
                             <a href="projects/type-design.html" class="columns proj">
                                 <div class="hundred"> 
                                     <img 
-                                    src="images/type/italics-6.jpg"
+                                    src="images/type/italics-7.jpg"
                                     alt="Looping gif that reads 'Coming Soon'.">
                                 </div>
                                 <div class="columns" style="width: 98%; margin:auto;">
-                                    <!-- <div class="twenty">
-                                        <p style="text-decoration: none !important; line-height: 30pt;">&#x2022; 4</p>
-                                    </div> -->
+                                    <div class="twenty spacer"></div>
                                     <div class="eighty">
-                                        <h3>Revivals and otherwise.</h3>
+                                        <p>Sigul</p>
                                         <sub>TYPE DESIGN</sub>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                    </ul>
+                        
+                    </li>
+                    <li id="visual" style="display: none;" class="columns">
+                        <div class="thirtythree">
+                            <div class="eighty">
+                                <p>Hi, I'm Caleb. I design beautiful <strong>systems</strong> and <strong>artifacts </strong>that bridge brands to people. <br><br>
+                                    Currently: Design + HCI @ <a href="https://design.cmu.edu/" target="_blank">Carnegie Mellon University</a> and
+                                    designing, writing, cooking, and shooting a book about food and memory<br><br>
+                                    Previously: UX/UI Design @ <a href="https://www.csl.com/we-are-csl/our-businesses-and-products/csl-behring" target="_blank">CSL Behring</a></p>
+                                    <sub><a href="pdfs/caleb-sun_resume.pdf" target="_blank">Resume</a>, <a href="https://www.linkedin.com/in/calebsun/" target="_blank">LinkedIn</a>, 
+                                    <a href="https://read.cv/calebsun" target="_blank">ReadCV</a>, <a href=mailto:sun.cs0327@gmail.com target="_blank">Email</a></sub>
+                                </div>
+                        </div>
+                        <div id="guangyu" class="projecthome thirtythree" onpointerenter='gy()' onpointerleave='gy2()'>
+                            <a href="projects/guangyu.html" class="columns proj">
+                                <div class="hundred"> 
+                                    <img 
+                                    id="gystill"
+                                    src="images/gy/thumb-gy-still.jpg"
+                                    alt="Screens from the TLJ Suite.">
+                                    <img 
+                                    id="gygif"
+                                    src="images/gy/thumb-gy.gif"
+                                    alt="Screens from the TLJ Suite."
+                                    style="display: none;">
+                                </div>
+                                <div class="columns" style="width: 98%; margin:auto;">
+                                    <div class="twenty spacer">
+                                        
+                                    </div>
+                                    <div class="eighty">
+                                        <p>Artifacts for my design hero, Guang Yu.</p>
+                                        <sub>BRAND DESIGN / GRAPHIC DESIGN / MOTION DESIGN</sub>
+                                    </div>
+                                </div>
+                            </a>
+                            <script>
+                                function gy() {
+                                    var gif = document.getElementById('gygif');
+                                    var image = document.getElementById('gystill');
+                                    gif.style.display = 'block';
+                                    image.style.display = 'none'
+                                }
+                                function gy2() {
+                                    var gif = document.getElementById('gygif');
+                                    var image = document.getElementById('gystill');
+                                    gif.style.display='none'
+                                    image.style.display = 'block';
+                                }
+                            </script>
+                        </div>
+                        <div id="psa" class="projecthome thirtythree" onpointerenter='psa1()' onpointerleave='psa2()'>
+                            <a href="projects/psa.html" class="columns proj">
+                                <div class="hundred"> 
+                                    <img id="psagif"
+                                    src="images/broadband/psa-thumb.gif"
+                                    alt="Looping gif that reads 'Coming Soon'."
+                                    style="display:none;">
+                                <img id="psaimg"
+                                    src="images/broadband/psa-thumb0.jpg">
+                                </div>
+                                <div class="columns" style="width: 98%; margin:auto;">
+                                    <div class="twenty spacer">
+                                        <div class="tag">
+                                            <p style="text-decoration: none !important;">NEW</p>
+                                        </div>
+                                    </div>
+                                    <div class="eighty">
+                                        <p>Convincing middle America to care about their internet</p>
+                                        <sub>BRAND DESIGN / MOTION / DESIGN STRATEGY</sub>
+                                    </div>
+                                </div>
+                            </a>
+                            <script>
+                                function psa1() {
+                                    var gif = document.getElementById('psagif');
+                                    var image = document.getElementById('psaimg');
+                                    gif.style.display = 'block';
+                                    image.style.display = 'none'
+                                }
+                                function psa2() {
+                                    var gif = document.getElementById('psagif');
+                                    var image = document.getElementById('psaimg');
+                                    gif.style.display='none'
+                                    image.style.display = 'block';
+                                }
+                            </script>
+                        </div>
+                        <div id="vela" class="projecthome sixtysix" onpointerenter='vela()' onpointerleave='vela2()'>
+                            <a href="projects/vela.html" class="columns proj">
+                                <div class="hundred"> 
+                                    <img id="velagif"
+                                    src="images/vela/thumb-vela.gif"
+                                    alt="Screens from the TLJ Suite."
+                                    style="display: none;">
+                                    <img id="velapic"
+                                    src="images/vela/thumb-vela.jpg"
+                                    alt="Screens from the TLJ Suite.">
+                                </div>
+                                <div class="columns" style="width: 98%; margin:auto;">
+                                    <div class="twenty spacer">
+                                        
+                                    </div>
+                                    <div class="eighty">
+                                        <p>Culturally sensitive branding for a construction consultancy.</p>
+                                        <sub>BRAND DESIGN / WEB DESIGN</sub>
+                                    </div>
+                                </div>
+                            </a>
+                        <script>
+                            function vela() {
+                                var gif = document.getElementById('velagif');
+                                var image = document.getElementById('velapic');
+                                gif.style.display = 'block';
+                                image.style.display = 'none'
+    
+                            }
+                            function vela2() {
+                                var gif = document.getElementById('velagif');
+                                var image = document.getElementById('velapic');
+                                gif.style.display='none'
+                                image.style.display = 'block';
+                            }
+                        </script>
+                        </div>            
+                        <div id="/" class="projecthome thirtythree" onpointerenter='paradox()' onpointerleave='para2()'>
+                            <a href="projects/paradox.html" class="columns proj">
+                                <div class="hundred"> 
+                                    <img id="paragif"
+                                    src="images/paradox/thumb_paradox.gif"
+                                    alt="Looping gif that reads 'Coming Soon'."
+                                    style="display:none;">
+                                <img id="paraimg"
+                                    src="images/paradox/thumb_paradox.jpg">
+                                </div>
+                                <div class="columns" style="width: 98%; margin:auto;">
+                                    <div class="twenty spacer">  
+                                    </div>
+                                    <div class="eighty">
+                                        <p>Visualizing artificial intelligence and cultural competence.</p>
+                                        <sub>SPATIAL DESIGN / GRAPHIC DESIGN / DESIGN SYSTEMS</sub>
+                                    </div>
+                                </div>
+                            </a>
+                            <script>
+                                function paradox() {
+                                    var gif = document.getElementById('paragif');
+                                    var image = document.getElementById('paraimg');
+                                    gif.style.display = 'block';
+                                    image.style.display = 'none'
+                                }
+                                function para2() {
+                                    var gif = document.getElementById('paragif');
+                                    var image = document.getElementById('paraimg');
+                                    gif.style.display='none'
+                                    image.style.display = 'block';
+                                }
+                            </script>
+                        </div>
+                    </li>
+                    <li id="product" style="display: none;" class="columns">
+                        <div class="thirtythree">
+                            <div class="eighty">
+                                <p>Hi, I'm Caleb. I design beautiful <strong>systems</strong> and <strong>artifacts </strong>that bridge brands to people. <br><br>
+                                    Currently: Design + HCI @ <a href="https://design.cmu.edu/" target="_blank">Carnegie Mellon University</a> and
+                                    designing, writing, cooking, and shooting a book about food and memory<br><br>
+                                    Previously: UX/UI Design @ <a href="https://www.csl.com/we-are-csl/our-businesses-and-products/csl-behring" target="_blank">CSL Behring</a></p>
+                                    <sub><a href="pdfs/caleb-sun_resume.pdf" target="_blank">Resume</a>, <a href="https://www.linkedin.com/in/calebsun/" target="_blank">LinkedIn</a>, 
+                                    <a href="https://read.cv/calebsun" target="_blank">ReadCV</a>, <a href=mailto:sun.cs0327@gmail.com target="_blank">Email</a></sub>
+                                </div>
+                        </div>
+                        <div class="projecthome sixtysix">
+                            <a href="projects/tlj.html" class="columns proj">
+                                <div class="hundred">
+                                    <img 
+                                    src="images/tlj/kiosk-mockup.jpg"
+                                    alt="Screens from the TLJ Suite.">
+                                </div>
+                                <div class="columns" style="width: 98%; margin:auto;">
+                                    <div class="twenty spacer">
+                                    </div>
+                                    <div class="eighty">
+                                        <p>Tools for a modernizing bakery.</p>
+                                        <sub>PRODUCT DESIGN / UX DESIGN / BRAND DESIGN</sub>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="projecthome sixtysix">
+                            <a class="columns proj" href="pw.html">
+                                <div class="hundred">
+                                    <img 
+                                        src="images/csl/hero1.jpg"
+                                        alt="A screen from a plasma donation app on a red background 
+                                        with the words 'CSL Behring, Biotherapies for Life'">
+                                </div>
+                                <div class="columns" style="width: 98%; margin:auto;">
+                                    <div class="twenty spacer">
+                                        
+                                    </div>
+                                    <div class="eighty">
+                                        <p>Designing for the future of plasma donation.</p>
+                                        <sub>PRODUCT DESIGN / UI DESIGN / UX RESEARCH</sub>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="projecthome thirtythree">
+                            <a href="projects/wnwn.html" class="columns proj">
+                                <div class="hundred">
+                                    <img 
+                                        src="images/wastenot/hero-waste.jpg"
+                                        alt="Screens from the TLJ Suite.">
+                                </div>
+                                <div class="columns" style="width: 98%; margin:auto;">
+                                    <div class="twenty spacer">
+                                        
+                                    </div>
+                                    <div class="eighty">
+                                        <p>Making food responsibility fun.</p>
+                                        <sub>PRODUCT DESIGN / UI DESIGN / UX DESIGN</sub>
+                                    </div>
+                                </div>
+                            </a>   
+                        </div>
+                    </li>
+                    <li id="experiments" style="display: none;" class="columns">
+                        <div class="thirtythree">
+                            <div class="eighty">
+                            <p>Hi, I'm Caleb. I design beautiful <strong>systems</strong> and <strong>artifacts </strong>that bridge brands to people. <br><br>
+                                Currently: Design + HCI @ <a href="https://design.cmu.edu/" target="_blank">Carnegie Mellon University</a> and
+                                designing, writing, cooking, and shooting a book about food and memory<br><br>
+                                Previously: UX/UI Design @ <a href="https://www.csl.com/we-are-csl/our-businesses-and-products/csl-behring" target="_blank">CSL Behring</a></p>
+                                <sub><a href="pdfs/caleb-sun_resume.pdf" target="_blank">Resume</a>, <a href="https://www.linkedin.com/in/calebsun/" target="_blank">LinkedIn</a>, 
+                                <a href="https://read.cv/calebsun" target="_blank">ReadCV</a>, <a href=mailto:sun.cs0327@gmail.com target="_blank">Email</a></sub>
+                            </div>
+                        </div>
+                        <div class="projecthome sixtysix">
+                            <a href="projects/sonny.html" class="columns proj">
+                                <div class="hundred"> 
+                                    <img 
+                                    src="images/sonny/sonny-1.jpg"
+                                    alt="A little orange clothbound book on grass">
+                                </div>
+                                <div class="columns" style="width: 98%; margin:auto;">
+                                    <div class="tag spacer">
+                                        <p style="text-decoration: none !important;">NEW</p>
+                                    </div>
+                                    <div class="eighty">
+                                        <p>A book about a little angel boy.</p>
+                                        <sub>BOOK DESIGN / BOOKBINDING</sub>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>                
+                        <div class="projecthome fifty">
+                            <a href="projects/whatshould.html" class="columns proj">
+                                <div class="hundred"> 
+                                    <img 
+                                    src="images/whatshould/what-should-4.jpg"
+                                    alt="Screens from the TLJ Suite.">
+                                </div>
+                                <div class="columns" style="width: 98%; margin:auto;">
+                                    <div class="tag spacer">
+                                        <p style="text-decoration: none !important;">NEW</p>
+                                    </div>
+                                    <div class="eighty">
+                                        <p>A device connecting people through food.</p>
+                                        <sub>PHYSICAL COMPUTING / FABRICATION / CREATIVE DIRECTION</sub>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div id="letter" class="projecthome fifty">
+                            <a href="projects/letter.html" class="columns proj">
+                                <div class="hundred"> 
+                                    <img 
+                                    src="images/letter/letter-1.jpg"
+                                    alt="A book with ascii art on it">
+                                </div>
+                                <div class="columns" style="width: 98%; margin:auto;">
+                                    <div class="tag spacer">
+                                        <p style="text-decoration: none !important;">NEW</p>
+                                    </div>
+                                    <div class="eighty">
+                                        <p>Letter to a past self.</p>
+                                        <sub>EXPERIMENTAL TYPOGRAPHY</sub>
+                                    </div>
+                                </div>
+                            </a>
+                        </div> 
+                        <div class="projecthome thirtythree">
+                            <a href="projects/type-design.html" class="columns proj">
+                                <div class="hundred"> 
+                                    <img 
+                                    src="images/type/italics-7.jpg"
+                                    alt="Looping gif that reads 'Coming Soon'.">
+                                </div>
+                                <div class="columns" style="width: 98%; margin:auto;">
+                                    <div class="twenty spacer"></div>
+                                    <div class="eighty">
+                                        <p>Sigul</p>
+                                        <sub>TYPE DESIGN</sub>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    
                 </div>
                 
-            </ul>
+                </div>
+                <script>
+                    <a style="text-decoration: underline dotted ;" onpointerenter='heroes()' onpointerleave='heroes2()'></a> 
+                    function heroes() {
+                        var image = document.getElementById('image');
+                        image.style.display = 'block';
+                    }
+                    function heroes2() {
+                        var image = document.getElementById('image');
+                        image.style.display = 'none';
+                    }
+                </script>
+            </div>
+           
         </ul>
         <img src="images/cat-01.png" class="cat2" >
         <footer>
@@ -420,6 +779,7 @@
                 <ul class="menu" style="margin-left:4%;">
                     <li class="menuitems"><a href="pdfs/caleb-sun_resume.pdf" target="_blank"><sub>Resume</sub></a></li>
                     <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><sub>LinkedIn</sub></a></li>
+                    <li class="menuitems"><a href="https://read.cv/calebsun" target="_blank"><sub>ReadCV</sub></a></li>
                     <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub>Email</sub></a></li>
                 </ul>
                 <div class="credit">
