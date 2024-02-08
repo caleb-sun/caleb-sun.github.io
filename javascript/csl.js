@@ -27,19 +27,19 @@ var myScrollFunc = function () {
         sprint.style.textDecorationStyle = "dotted";
         doc.style.textDecoration = "none";
     }
-    if (y>=4000){
+    if (y>=6700){
         sprint.style.textDecoration = "none";
         doc.style.textDecoration = "underline";
         doc.style.textDecorationStyle = "dotted";
         workflow.style.textDecoration="none";
     }
-    if (y>=7100){
+    if (y>=13820){
         doc.style.textDecoration = "none";
         workflow.style.textDecoration = "underline";
         workflow.style.textDecorationStyle = "dotted";
         proj.style.textDecoration="none";
     }
-    if (y>=8880){
+    if (y>=16880){
         workflow.style.textDecoration = "none";
         proj.style.textDecoration = "underline";
         proj.style.textDecorationStyle = "dotted";
