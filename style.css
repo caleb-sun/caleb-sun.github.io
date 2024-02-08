@@ -331,7 +331,11 @@ hr.dotted{
 .projecthome {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
+    
+}
+
+.projgroup{
+    transition: all 0.5s ease-in-out;
 }
 
 
@@ -741,7 +745,7 @@ input[type='submit']:hover {
     }
 
     .thirtythree{
-        width: 49%;
+        width: 100%;
         gap:18px;
     }
 
@@ -793,6 +797,10 @@ input[type='submit']:hover {
 
     .menu{
         height: 20px;
+    }
+
+    .homenav{
+        display: none;
     }
 
     .home{
@@ -864,7 +872,6 @@ input[type='submit']:hover {
         margin:auto;
         flex-direction: row;
         margin-bottom: 2%;
-        margin-top: 10%;
     }
 
     .colproj{
