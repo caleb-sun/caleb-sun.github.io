@@ -10,65 +10,41 @@ reflection = document.getElementById("wnwn-reflection-marker");
 
 var myScrollFunc = function () {
     var y = window.scrollY;
-    if (y >= 300) {
+    if (y >= 2200) {
         wnwn.style.display = "flex";
     } else {
         wnwn.style.display = "none";
     }
-    if (y<=2420) {
+    if (y<=2620) {
         context.style.textDecoration="none";
     }
-    if (y>=2421) {
+    if (y>=2621) {
         context.style.textDecoration = "underline";
         context.style.textDecorationStyle = "dotted";
         concept.style.textDecoration = "none";
     }
-    if (y>=3400){
+    if (y>=3800){
         context.style.textDecoration = "none";
         concept.style.textDecoration = "underline";
         concept.style.textDecorationStyle = "dotted";
         visual.style.textDecoration = "none";
     }
-    if (y>=4760){
+    if (y>=5160){
         concept.style.textDecoration = "none";
         visual.style.textDecoration = "underline";
         visual.style.textDecorationStyle = "dotted";
         demo.style.textDecoration="none";
     }
-    if (y>=6780){
+    if (y>=7180){
         visual.style.textDecoration = "none";
         demo.style.textDecoration = "underline";
         demo.style.textDecorationStyle = "dotted";
         reflection.style.textDecoration="none";
     }
-    if (y>=9600){
+    if (y>=10000){
         demo.style.textDecoration = "none";
         reflection.style.textDecoration = "underline";
         reflection.style.textDecorationStyle = "dotted";
-    }
-    if(y>=0){
-        title.style.color="black";
-        context.style.color="black";
-        concept.style.color="black";
-        visual.style.color="black";
-        demo.style.color="black";
-        reflection.style.color="black";
-    }
-    if(y>=7200){
-        title.style.color="white";
-        context.style.color="white";
-        concept.style.color="white";
-        visual.style.color="white";
-        demo.style.color="white";
-        reflection.style.color="white";
-    }
-    if(y>=9600){
-        title.style.color="black";
-        context.style.color="black";
-        concept.style.color="black";
-        visual.style.color="black";
-        demo.style.color="black";
-        reflection.style.color="black";
     }
 };
 
