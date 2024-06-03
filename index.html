@@ -14,6 +14,7 @@
     <title>Caleb Sun – Home</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/hwg7btx.css">
     <link
     rel="stylesheet" href="https://use.typekit.net/vmy4rbx.css"/>
   </head>  
@@ -27,114 +28,131 @@
                         <img src="images/eye.svg" style="width: 24px;">
                         <div style="width: 8px;" ></div>
                         <p style="cursor: pointer;"><a id=alltop onclick='allitems()' style="text-decoration:underline; text-decoration-style: dotted; color: #c9ff56;">ALL</a></p>
-                        <p> / </p>
+                        <p> &nbsp;&#x2758;&nbsp; </p>
                         <p style="cursor: pointer;"><a id=graphictop onclick='graphic()' style="text-decoration:none; text-decoration-style: none; color: white;">VISUAL</a></p>
-                        <p> / </p>
+                        <p> &nbsp;&#x2758;&nbsp; </p>
                         <p style="cursor: pointer;"><a id=producttop onclick='product()' style="text-decoration:none; color: white;">PRODUCT</a></p>
-                        <p> / </p>
+                        <p> &nbsp;&#x2758;&nbsp; </p>
                         <p style="cursor: pointer;"><a id=funtop onclick='fun()' style="text-decoration:none; color: white;">EXPERIMENTS</a></p>
                     </ul>
-                    <script> <!--hide groups-->
+                    <script> 
                         function allitems() {
                             var allitems = document.getElementById('allitems');
                             var product = document.getElementById('product');
                             var graphic = document.getElementById('visual');
                             var fun = document.getElementById('experiments');
 
-                            allitems.style.display = 'flex';
+                            product.classList.remove('up');
+                            product.classList.add('down'); 
+                            producttop.style.textDecoration = 'none';
+                            producttop.style.color = 'white';
+
+                            graphic.classList.remove('up');
+                            graphic.classList.add('down'); 
+                            graphictop.style.textDecoration = 'none';
+                            graphictop.style.color = 'white';
+
+                            fun.classList.remove('up')
+                            fun.classList.add('down'); 
+                            funtop.style.textDecoration = 'none';
+                            funtop.style.color = 'white';
+
+                            allitems.classList.remove('down');
+                            allitems.classList.add('up');
+                            
                             alltop.style.textDecoration = 'underline';
                             alltop.style.textDecorationStyle = 'dotted';
                             alltop.style.color = '#c9ff56';
 
-                            product.style.display = 'none'; 
-                            producttop.style.textDecoration = 'none';
-                            producttop.style.color = 'white';
-
-                            graphic.style.display = 'none';
-                            graphictop.style.textDecoration = 'none';
-                            graphictop.style.color = 'white';
-                            
-                            fun.style.display = 'none';
-                            funtop.style.textDecoration = 'none';
-                            funtop.style.color = 'white';
-
                             window.scrollTo({ top: 0, behavior: 'smooth' });
                         }
-                        
                         function product() {
                             var allitems = document.getElementById('allitems');
                             var product = document.getElementById('product');
                             var graphic = document.getElementById('visual');
                             var fun = document.getElementById('experiments');
-                            product.style.display = 'flex';
+
+                            allitems.classList.remove('up');
+                            allitems.classList.add('down'); 
+                            alltop.style.textDecoration = 'none';
+                            alltop.style.color = 'white';
+
+                            graphic.classList.remove('up');
+                            graphic.classList.add('down'); 
+                            graphictop.style.textDecoration = 'none';
+                            graphictop.style.color = 'white';
+
+                            fun.classList.remove('up')
+                            fun.classList.add('down'); 
+                            funtop.style.textDecoration = 'none';
+                            funtop.style.color = 'white';
+
+                            product.classList.remove('down');
+                            product.classList.add('up');
+                            
                             producttop.style.textDecoration = 'underline';
                             producttop.style.textDecorationStyle = 'dotted';
                             producttop.style.color = '#c9ff56';
 
-                            allitems.style.display = 'none';
-                            alltop.style.textDecoration = 'none';
-                            alltop.style.color = 'white';
-
-                            graphic.style.display = 'none';
-                            graphictop.style.textDecoration = 'none';
-                            graphictop.style.color = 'white';
-
-                            fun.style.display = 'none';
-                            funtop.style.textDecoration = 'none';
-                            funtop.style.color = 'white';
-
                             window.scrollTo({ top: 0, behavior: 'smooth' });
                         }
-        
                         function graphic() {
                             var allitems = document.getElementById('allitems');
                             var product = document.getElementById('product');
                             var graphic = document.getElementById('visual');
                             var fun = document.getElementById('experiments');
-                           
-                            allitems.style.display = 'none';
-                            alltop.style.color = 'white';
-                            alltop.style.textDecoration = 'none';
 
-                            product.style.display = 'none';
+                            product.classList.remove('up');
+                            product.classList.add('down'); 
                             producttop.style.textDecoration = 'none';
                             producttop.style.color = 'white';
 
-                            graphic.style.display = 'flex';
+                            fun.classList.remove('up');
+                            fun.classList.add('down'); 
+                            funtop.style.textDecoration = 'none';
+                            funtop.style.color = 'white';
+                            
+                            allitems.classList.remove('up');
+                            allitems.classList.add('down'); 
+                            alltop.style.textDecoration = 'none';
+                            alltop.style.color = 'white';
+
+                            graphic.classList.remove('down');
+                            graphic.classList.add('up');
+                            
                             graphictop.style.textDecoration = 'underline';
                             graphictop.style.textDecorationStyle = 'dotted';
                             graphictop.style.color = '#c9ff56';
 
-                            fun.style.display = 'none';
-                            funtop.style.textDecoration = 'none';
-                            funtop.style.color = 'white';
-
                             window.scrollTo({ top: 0, behavior: 'smooth' });
                         }
-        
                         function fun() {
                             var allitems = document.getElementById('allitems');
                             var product = document.getElementById('product');
                             var graphic = document.getElementById('visual');
                             var fun = document.getElementById('experiments');
-                            
-                            alltop.style.textDecoration = 'none';
-                            alltop.style.color = 'white';
 
+                            product.classList.remove('up');
+                            product.classList.add('down'); 
                             producttop.style.textDecoration = 'none';
                             producttop.style.color = 'white';
 
+                            graphic.classList.remove('up');
+                            graphic.classList.add('down'); 
                             graphictop.style.textDecoration = 'none';
                             graphictop.style.color = 'white';
+                            
+                            allitems.classList.remove('up');
+                            allitems.classList.add('down'); 
+                            alltop.style.textDecoration = 'none';
+                            alltop.style.color = 'white';
 
-                            fun.style.display = 'flex';
+                            fun.classList.remove('down');
+                            fun.classList.add('up');
+                            
                             funtop.style.textDecoration = 'underline';
                             funtop.style.textDecorationStyle = 'dotted';
                             funtop.style.color = '#c9ff56';
-
-                            allitems.style.display = 'none';
-                            product.style.display = 'none';
-                            graphic.style.display = 'none';
 
                             window.scrollTo({ top: 0, behavior: 'smooth' });
                         }
@@ -474,7 +492,7 @@
                             </a>
                         </div>
                     </li>
-                    <li id="visual" style="display: none;" class="columns projgroup">
+                    <li id="visual" class="columns projgroup down">
                         <div class="thirtythree">
                             <div class="hundred">
                                 <p>Hi, I'm Caleb. I design beautiful <strong>systems</strong> and <strong>artifacts </strong>that bridge brands to people. <br><br>
@@ -619,7 +637,7 @@
                         </div>            
                         
                     </li>
-                    <li id="product" style="display: none;" class="columns projgroup">
+                    <li id="product" class="columns projgroup down">
                         <div class="thirtythree">
                             <div class="hundred">
                                 <p>Hi, I'm Caleb. I design beautiful <strong>systems</strong> and <strong>artifacts </strong>that bridge brands to people. <br><br>
@@ -686,7 +704,7 @@
                             </a>   
                         </div>
                     </li>
-                    <li id="experiments" style="display: none;" class="columns projgroup">
+                    <li id="experiments" class="columns projgroup down">
                         <div class="thirtythree">
                             <div class="hundred">
                                 <p>Hi, I'm Caleb. I design beautiful <strong>systems</strong> and <strong>artifacts </strong>that bridge brands to people. <br><br>
@@ -831,7 +849,7 @@
                     <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub>Email</sub></a></li>
                 </ul>
                 <div class="credit">
-                    <sub>Updated Feb 2024 | Custom coded using HTML/CSS/JS</sub>
+                    <sub>Updated June 2024 | Custom coded using HTML/CSS/JS</sub>
                 </div>
             </div>
         </footer>

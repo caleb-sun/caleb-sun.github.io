@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--- the doctype declaration tells the file reader that we're using html-->
-<html lang="en" style="overflow-y: hidden;">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Caleb Sun is a visual designer and student at Carnegie Mellon University. He is currently a UX/UI intern at CSL Behring.">
@@ -17,9 +17,9 @@
     <link
     rel="stylesheet" href="https://use.typekit.net/vmy4rbx.css"/>
   </head>  
-  <body style="overflow: hidden;">
+  <body >
     <main>
-        <header>
+        <header style="z-index: 100;">
             <a href="index.html" onpointerenter='arrow()' onpointerleave='arrow2()'> 
                 <img id="white" class="homenav" src="images/arrow-04.svg" style="width: 24px; display: block;"></img>
                 <img id="yellow" class="homenav" src="images/arrow-yellow.svg" style="width: 24px; display: none;"></img>
@@ -34,31 +34,16 @@
                     document.getElementById('yellow').style.display='none';
                 }
             </script>
-            <!-- <ul class="menu header">
-                <li class="menuitems">
-                    <a href="../about.html">
-                        <img id="white" src="images/arrow-04.svg" style="width: 24px; display: block;"></img>
-                    </a>
-                </li>
-            </ul> -->
         </header>
-        <div class="body" style="z-index:100;">
+        <img src="images/cat-01.png" class="cat3" >
+        <div class="body" style="z-index:90; margin-top: 8em;">
             <ul class="columns"> 
-                <li class="thirty">
-                    <h1>Hi.</h1>
-                </li>
-                <li class="forty">
-                    <p style="margin-top:4.5%;">
-                        My name is <a style="cursor: help;" onpointerenter='caleb()' onpointerleave='caleb2()'>Caleb</a>, and I am a designer studying Communications Design at Carnegie Mellon University. 
-                        I'm a firm believer that <b>designed brands create moments of joy and connection</b> that 
-                        enrich existing products. But, as time goes on brands can become limited or unimaginative, 
-                        and lose consistency. My work involves <b>nurturing brands through change</b> without losing 
-                        the energy and joy that they inspire.
-                        <br><br>In our fast-paced and complicated world, I revel in opportunities to create 
-                        artifacts that feel like a breath of fresh air, that make us excited about 
-                        the brands and systems and environments that we interact with.
-                        <br><br>When I'm not designing, I'm probably <a style="cursor: help;" onpointerenter='food()' onpointerleave='food2()'>making food</a>.
-                    </p>
+                <li class="hundred">
+                    <h2>
+                        Hi!<br><br>
+                        My name is <a style="cursor: help; color: #c9ff56; text-decoration: underline dotted;" onpointerenter='caleb()' onpointerleave='caleb2()'>Caleb</a>. I am a designer studying Communications Design at Carnegie Mellon University and a brand design intern at Dropbox.<br><br>I'm a firm believer that designed brands create moments of <strong style="color: #c9ff56;">joy and connection</strong> that enrich existing products. But as time goes on and companies grow, brands can become limited or unimaginative, and lose consistency. My work involves <strong style="color: #c9ff56;">nurturing brands through change</strong> without losing the energy and joy that they inspire.
+                        <br><br>When I'm not designing, I'm probably <a style="cursor: help; color: #c9ff56; text-decoration: underline dotted;" onpointerenter='food()' onpointerleave='food2()'>making food</a>.
+                    </h2>
                     <script>
                         function caleb() {
                             var image = document.getElementById('image');
@@ -79,68 +64,66 @@
                     </script>
                 </li>
             </ul>
-            <span class="medium"></span>
-            
-            <!-- <ul class="about columns"> 
-                <li class="thirty">
-                    <h2>Experience</h2>
+            <span class="large"></span>
+            <ul class="about columns" style="row-gap: 1em; margin-bottom: 10em; "> 
+                <li class="twenty">
+                    <h2>Expertise</h2>
                 </li>
-                <li class="thirty">
-                    <div style="margin-top:5%;">
-                        <h4>CSL Behring</h4>
+                <li class="forty">
+                    <div style="margin-top:2%;">
+                        <h4>Brand</h4>
                         <span class="small"></span>
-                        <sub>UX/UI Design Contracter | Sept 2023-Present<br>UX/UI Design Intern | May-August 2023</sub>
-                        <span class="small"></span>
-                        <p>Improving the CSL Plasma Donor Experiences through UX/UI design, user research, and designOps projects.</p>
-                    </div>
-                    <span class="medium"></span>
-                    <div style="margin-top:10%;">
-                        <h4>Phantasma X Samsung</h4>
-                        <span class="small"></span>
-                        <sub>Design Contracter | Sept 2023</sub>
-                        <span class="small"></span>
-                        <p>Designing a system of assets for a spatial UX project.</p>
-                    </div>
-                    <span class="medium"></span>
-                    <div style="margin-top:10%;">
-                        <h4>The Nature Conservancy</h4>
-                        <span class="small"></span>
-                        <sub>Design Contracter | July 2023</sub>
-                        <span class="small"></span>
-                        <p>Designing a multi-page proposal for a climate community of practice.</p>
-                    </div>
-                    <span class="medium"></span>
-                    <div style="margin-top:10%;">
-                        <h4>Hippo Swim Club</h4>
-                        <span class="small"></span>
-                        <sub>Design Contracter | May-July 2023</sub>
-                        <span class="small"></span>
-                        <p>Designing and developing a website for a small swim school.</p>
-                    </div>
-                    <span class="medium"></span>
-                    <div style="margin-top:10%;">
-                        <h4>Vela Projects</h4>
-                        <span class="small"></span>
-                        <sub>Design Contracter | Feb-June 2023</sub>
-                        <span class="small"></span>
-                        <p>Re-branding and developing a website for a construction consulting firm.</p>
-                    </div>
-                    <span class="medium"></span>
-                    <div style="margin-top:10%;">
-                        <h4>SparrowUp</h4>
-                        <span class="small"></span>
-                        <sub>Design Intern | August-December 2022</sub>
-                        <span class="small"></span>
-                        <p>Designing marketing materials and app products for a golf technology start-up.</p>
+                        <p>Logo Design &nbsp;&#x2758;&nbsp; Brand Refresh/Update &nbsp;&#x2758;&nbsp; Branded Web Design &nbsp;&#x2758;&nbsp; Branded Asset Design</p>
                     </div>
                 </li>
+                <li class="forty">
+                    <div style="margin-top:2%;">
+                        <h4>Web</h4>
+                        <span class="small"></span>
+                        <p>Web Strategy and Organization &nbsp;&#x2758;&nbsp; Small Business Sites &nbsp;&#x2758;&nbsp; Portfolios &nbsp;&#x2758;&nbsp; Event Sites</p>
+                        <span class="small"></span>
+                        <p>HTML/CSS/JS &nbsp;&#x2758;&nbsp; Webflow &nbsp;&#x2758;&nbsp; Wix &nbsp;&#x2758;&nbsp; Cargo</p>
+                    </div>
+                </li>
+                <li class="twenty"></li>
+                <li class="forty">
+                    <div style="margin-top:2%;">
+                        <h4>Miscellaneous</h4>
+                        <span class="small"></span>
+                        <p>Book Design &nbsp;&#x2758;&nbsp; Digital Motion Assets &nbsp;&#x2758;&nbsp; Graphic Art and Illustration</p>
+                    </div>
+                    
+                </li>
+                <li class="forty">
+                        <div style="margin-top:2%;">
+                        <h4>Software</h4>
+                        <span class="small"></span>
+                        <p>Adobe Suite (After Effects, Illustrator, InDesign, Photoshop) &nbsp;&#x2758;&nbsp; Figma &nbsp;&#x2758;&nbsp; Microsoft Office &nbsp;&#x2758;&nbsp; Google Suite</p>
+                    </div>
+                </li>
+            </ul>
+            <!-- <ul class="about columns" style="row-gap: 1em; margin-bottom: 10em; "> 
+                <li class="twenty">
+                    <h2>Clients +<br>Employers</h2>
+                </li>
+                <li class="eighty" style="display: flex; flex-direction: row; justify-content: space-between; flex-wrap: wrap;">
+                    <img style="height: 2.5em; width: auto;"src="images/partners/dropbox.png">
+                    <img style="height: 2.5em; width: auto;" src="images/partners/csl.png">
+                    <img style="height: 2.5em; width: auto;" src="images/partners/vela-logo.png">
+                    <img style="height: 2.5em; width: auto;"src="images/partners/tnc.png">
+                    <img style="height: 2.5em; width: auto;"src="images/partners/hipposwim.png">
+                </li>
+                
+                
             </ul> -->
+            <ul style="width: 100%; justify-content: center; margin-bottom: 10em;">
+                <h1 style="text-align: center; color:#c9ff56"> <a href=mailto:sun.cs0327@gmail.com>Let's work together!</a></h1>
+                <h3 style="text-align: center;">Currently seeking brand and long-form print projects</h3>
+            </ul>
         </div>
-        <img id='image' style="position: absolute; left:0; top: 15vh; height: auto; width: 30vw; z-index:0; display: none;" src="images/profile.jpg">
-        <div id='food' class= "food" style="position: absolute; left:0; top:0; width:100%; z-index:0; display:none; flex-wrap:wrap; justify-content: space-between;">
-            <img
-                src="images/food.gif"
-            >
+        <img id='image' style="position: absolute; left:15vw; top: 12vh; height: auto; width: 15vw; z-index:0; display: none;" src="images/Subject.png">
+        <div id='food' class= "food" style="position: absolute; right:35vw; top:60vh; width:25vw; height: 15vw; object-fit: contain; z-index:0; display:none;">
+            <img src="images/food.gif">
         </div>
         <img src="images/phone-02.png" class= "cat1">
         <footer style="position: fixed; bottom: 1%;">
@@ -152,7 +135,7 @@
                     <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub>Email</sub></a></li>
                 </ul>
                 <div class="credit">
-                    <sub>Updated Feb 2024 | Custom coded using HTML/CSS/JS</sub>
+                    <sub>Updated June 2024 | Custom coded using HTML/CSS/JS</sub>
                 </div>
             </div>
         </footer>
