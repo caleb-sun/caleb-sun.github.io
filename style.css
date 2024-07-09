@@ -179,6 +179,11 @@ h4,p{
 
 sub,sub>a{
     color: rgb(111, 111, 111) !important;
+    text-decoration: none !important;
+}
+
+sub>a:hover{
+    text-decoration: underline dotted !important;
 }
 
 strong{
@@ -187,14 +192,18 @@ strong{
     color: white;
 }
 
-h1,h5 {
+h1,h5, h1>strong {
     font-size:32pt;
     line-height: 40pt;
 }
 
-h2 {
+h2{
     font-size: 28pt;
     line-height: 32pt;
+}
+
+h2>strong {
+    line-height: 20pt;
 }
 
 h3 {
@@ -250,6 +259,19 @@ a:hover, a:hover>sub{
     color: #c9ff56 !important;
     cursor: pointer, auto;
     
+}
+
+.menu-active{
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    color: #c9ff56 !important;
+    cursor: pointer, auto;
+}
+
+.menu-inactive{
+    text-decoration: none !important;
+    color: white;
+    cursor: pointer, auto;
 }
 
 
@@ -403,7 +425,7 @@ img{
 .homenav{
     position: fixed;
     top:2%;
-    left: 4%;
+    left: 3.5%;
     z-index: 100;
     font-style: initial !important;
     vertical-align: auto;
@@ -466,7 +488,7 @@ footer{
 .menuitems{
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
+    align-items: center;
 }
 
 

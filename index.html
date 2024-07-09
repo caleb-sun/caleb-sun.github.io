@@ -21,19 +21,26 @@
   <body>
     <main>
         <header>
-            <img class="homenav" src="images/sun.svg" style="width: 24px;"></img>
+            <img id='sun' class="homenav" src="images/sun.svg" style="width: 24px;"></img>
+            <script>
+                var elem = document.getElementById('sun');
+                window.addEventListener('scroll', function() {
+                    var value = window.scrollY * 0.1;
+                    elem.style.transform = `rotate(${value}deg)`; 
+                });
+            </script>
             <ul class="menu header">
                 <div class="menuitems">
                     <ul class="miniprojnav" style="z-index: 100;">
-                        <img src="images/eye.svg" style="width: 24px;">
-                        <div style="width: 8px;" ></div>
-                        <p style="cursor: pointer;"><a id=alltop onclick='allitems()' style="text-decoration:underline; text-decoration-style: dotted; color: #c9ff56;">ALL</a></p>
+                        <img src="images/eye.svg" style="width: 24px;margin-right: 12px;">
+                        
+                        <p style="cursor: pointer;"><a id=alltop onclick='allitems()' class="menu-active">ALL</a></p>
                         <p> &nbsp;&#x2758;&nbsp; </p>
-                        <p style="cursor: pointer;"><a id=graphictop onclick='graphic()' style="text-decoration:none; text-decoration-style: none; color: white;">VISUAL</a></p>
+                        <p style="cursor: pointer;"><a id=graphictop onclick='graphic()' class="menu-inactive">VISUAL</a></p>
                         <p> &nbsp;&#x2758;&nbsp; </p>
-                        <p style="cursor: pointer;"><a id=producttop onclick='product()' style="text-decoration:none; color: white;">PRODUCT</a></p>
+                        <p style="cursor: pointer;"><a id=producttop onclick='product()' class="menu-inactive">PRODUCT</a></p>
                         <p> &nbsp;&#x2758;&nbsp; </p>
-                        <p style="cursor: pointer;"><a id=funtop onclick='fun()' style="text-decoration:none; color: white;">EXPERIMENTS</a></p>
+                        <p style="cursor: pointer;"><a id=funtop onclick='fun()' class="menu-inactive">EXPERIMENTS</a></p>
                     </ul>
                     <script> 
                         function allitems() {
@@ -44,25 +51,24 @@
 
                             product.classList.remove('up');
                             product.classList.add('down'); 
-                            producttop.style.textDecoration = 'none';
-                            producttop.style.color = 'white';
+                            producttop.classList.remove('menu-active');
+                            producttop.classList.add('menu-inactive');
 
                             graphic.classList.remove('up');
                             graphic.classList.add('down'); 
-                            graphictop.style.textDecoration = 'none';
-                            graphictop.style.color = 'white';
+                            graphictop.classList.remove('menu-active');
+                            graphictop.classList.add('menu-inactive');
 
                             fun.classList.remove('up')
                             fun.classList.add('down'); 
-                            funtop.style.textDecoration = 'none';
-                            funtop.style.color = 'white';
+                            funtop.classList.remove('menu-active');
+                            funtop.classList.add('menu-inactive');
 
                             allitems.classList.remove('down');
                             allitems.classList.add('up');
                             
-                            alltop.style.textDecoration = 'underline';
-                            alltop.style.textDecorationStyle = 'dotted';
-                            alltop.style.color = '#c9ff56';
+                            alltop.classList.remove('menu-inactive');
+                            alltop.classList.add('menu-active');
 
                             window.scrollTo({ top: 0, behavior: 'smooth' });
                         }
@@ -74,25 +80,24 @@
 
                             allitems.classList.remove('up');
                             allitems.classList.add('down'); 
-                            alltop.style.textDecoration = 'none';
-                            alltop.style.color = 'white';
+                            alltop.classList.remove('menu-active');
+                            alltop.classList.add('menu-inactive');
 
                             graphic.classList.remove('up');
                             graphic.classList.add('down'); 
-                            graphictop.style.textDecoration = 'none';
-                            graphictop.style.color = 'white';
+                            graphictop.classList.remove('menu-active');
+                            graphictop.classList.add('menu-inactive');
 
                             fun.classList.remove('up')
                             fun.classList.add('down'); 
-                            funtop.style.textDecoration = 'none';
-                            funtop.style.color = 'white';
+                            funtop.classList.remove('menu-active');
+                            funtop.classList.add('menu-inactive');
 
                             product.classList.remove('down');
                             product.classList.add('up');
                             
-                            producttop.style.textDecoration = 'underline';
-                            producttop.style.textDecorationStyle = 'dotted';
-                            producttop.style.color = '#c9ff56';
+                            producttop.classList.remove('menu-inactive');
+                            producttop.classList.add('menu-active');
 
                             window.scrollTo({ top: 0, behavior: 'smooth' });
                         }
@@ -104,25 +109,24 @@
 
                             product.classList.remove('up');
                             product.classList.add('down'); 
-                            producttop.style.textDecoration = 'none';
-                            producttop.style.color = 'white';
+                            producttop.classList.remove('menu-active');
+                            producttop.classList.add('menu-inactive');
 
                             fun.classList.remove('up');
                             fun.classList.add('down'); 
-                            funtop.style.textDecoration = 'none';
-                            funtop.style.color = 'white';
+                            funtop.classList.remove('menu-active');
+                            funtop.classList.add('menu-inactive');
                             
                             allitems.classList.remove('up');
                             allitems.classList.add('down'); 
-                            alltop.style.textDecoration = 'none';
-                            alltop.style.color = 'white';
+                            alltop.classList.remove('menu-active');
+                            alltop.classList.add('menu-inactive');
 
                             graphic.classList.remove('down');
                             graphic.classList.add('up');
                             
-                            graphictop.style.textDecoration = 'underline';
-                            graphictop.style.textDecorationStyle = 'dotted';
-                            graphictop.style.color = '#c9ff56';
+                            graphictop.classList.remove('menu-inactive');
+                            graphictop.classList.add('menu-active');
 
                             window.scrollTo({ top: 0, behavior: 'smooth' });
                         }
@@ -134,32 +138,31 @@
 
                             product.classList.remove('up');
                             product.classList.add('down'); 
-                            producttop.style.textDecoration = 'none';
-                            producttop.style.color = 'white';
+                            producttop.classList.remove('menu-active');
+                            producttop.classList.add('menu-inactive');
 
                             graphic.classList.remove('up');
-                            graphic.classList.add('down'); 
-                            graphictop.style.textDecoration = 'none';
-                            graphictop.style.color = 'white';
+                            graphic.classList.add('down');
+                            graphictop.classList.remove('menu-active');
+                            graphictop.classList.add('menu-inactive');
                             
                             allitems.classList.remove('up');
                             allitems.classList.add('down'); 
-                            alltop.style.textDecoration = 'none';
-                            alltop.style.color = 'white';
+                            alltop.classList.remove('menu-active');
+                            alltop.classList.add('menu-inactive');
 
                             fun.classList.remove('down');
                             fun.classList.add('up');
                             
-                            funtop.style.textDecoration = 'underline';
-                            funtop.style.textDecorationStyle = 'dotted';
-                            funtop.style.color = '#c9ff56';
+                            funtop.classList.remove('menu-inactive');
+                            funtop.classList.add('menu-active');
 
                             window.scrollTo({ top: 0, behavior: 'smooth' });
                         }
                     </script>
                 </div>
                 <li class="menuitems">
-                    <img src="images/question-01.svg" style="width: 24px;">
+                    <img src="images/question-01.svg" style="width: 28px; margin-top:-4px">
                     <div style="width: 8px;"></div>
                     <p><a href="about.html">ABOUT</a></p>
                 </li>
@@ -171,7 +174,7 @@
                 <div class="columns">
                     <li id="allitems" class="columns projgroup">
                         <div class="thirtythree">
-                            <div class="hundred">
+                            <div class="eighty">
                                 <p>Hi, I'm Caleb. I design beautiful <strong>systems</strong> and <strong>artifacts </strong>that bridge brands to people. <br><br>
                                 Incoming Brand Design Intern @ <a href="https://dropbox.design/">Dropbox</a><br>
                                 Home cook @ my kitchen<br>
@@ -494,7 +497,7 @@
                     </li>
                     <li id="visual" class="columns projgroup down">
                         <div class="thirtythree">
-                            <div class="hundred">
+                            <div class="eighty">
                                 <p>Hi, I'm Caleb. I design beautiful <strong>systems</strong> and <strong>artifacts </strong>that bridge brands to people. <br><br>
                                 Incoming Brand Design Intern @ <a href="https://dropbox.design/">Dropbox</a><br>
                                 Home cook @ my kitchen<br>
@@ -639,7 +642,7 @@
                     </li>
                     <li id="product" class="columns projgroup down">
                         <div class="thirtythree">
-                            <div class="hundred">
+                            <div class="eighty">
                                 <p>Hi, I'm Caleb. I design beautiful <strong>systems</strong> and <strong>artifacts </strong>that bridge brands to people. <br><br>
                                 Incoming Brand Design Intern @ <a href="https://dropbox.design/">Dropbox</a><br>
                                 Home cook @ my kitchen<br>
@@ -706,7 +709,7 @@
                     </li>
                     <li id="experiments" class="columns projgroup down">
                         <div class="thirtythree">
-                            <div class="hundred">
+                            <div class="eighty">
                                 <p>Hi, I'm Caleb. I design beautiful <strong>systems</strong> and <strong>artifacts </strong>that bridge brands to people. <br><br>
                                 Incoming Brand Design Intern @ <a href="https://dropbox.design/">Dropbox</a><br>
                                 Home cook @ my kitchen<br>
