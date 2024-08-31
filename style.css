@@ -409,13 +409,15 @@ hr.dotted{
 
 .state-1{
     color: white;
-    height: 4.5em;
 }
 
 .state-2{
     display: none;
     color: white;
-    height: 4.5em;
+}
+
+.state-1.eighty, .state-2.eighty{
+    height:4.5em !important;
 }
 
 .projecthome:hover .state-1{
@@ -483,6 +485,7 @@ footer{
     width: 100vw;
     bottom:1%;
     position: fixed;
+    z-index: 100;
 }
 
 .footerpw{
@@ -768,8 +771,8 @@ input[type='submit']:hover {
     }
     
     h4, p {
-        font-size: 12pt;
-        line-height: 14pt;
+        font-size: 16pt;
+        line-height: 18pt;
     }
     
     sub {
@@ -832,7 +835,11 @@ input[type='submit']:hover {
 
     .eighty{
         width: 100%;
-        gap: 12px;
+        gap: 8px;
+    }
+
+    .state-1.eighty, .state-2.eighty, .projecthome .eighty{
+        width: 60%;
     }
 
     .hundred{
@@ -913,15 +920,16 @@ input[type='submit']:hover {
         width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 16px;
         justify-content: bottom;
-        margin-bottom: 1em;
+        margin-bottom: 2em;
     }
 
     footer{
+        width: 50%;
         position: relative;
         width: 100vw;
         margin-bottom:2%;
+        justify-content: center;    
     }
 
     header{
@@ -963,8 +971,9 @@ input[type='submit']:hover {
     .colproj{
         gap: 56px;
     }
+
     .columns{
-        row-gap:24px;
+        row-gap:8px;
     }
 
     .demo{
