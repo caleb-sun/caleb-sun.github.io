@@ -745,7 +745,7 @@ input[type='submit']:hover {
 .down{
     animation: down 0.1s linear;
     animation-fill-mode: forwards;
-    display: none;
+    display: none !important;
 }
 
 @keyframes down {
