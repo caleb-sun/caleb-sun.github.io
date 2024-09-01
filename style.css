@@ -745,6 +745,7 @@ input[type='submit']:hover {
 .down{
     animation: down 0.1s linear;
     animation-fill-mode: forwards;
+    display: none;
 }
 
 @keyframes down {
@@ -756,7 +757,7 @@ input[type='submit']:hover {
 @keyframes up {
     from{display: none;opacity:0; transform: translateY(70px);}
     /* 1%{} */
-    to{opacity:100%; transform: translateY(-20px);display: flex; }
+    to{opacity:100%; transform: translateY(-20px); display: flex; }
     
 }
 
