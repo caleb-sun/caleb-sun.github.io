@@ -159,8 +159,8 @@ h4, p, sub {
 }
 
 
-sub .gray,sub>a{
-    color: rgb(111, 111, 111) !important;
+sub.gray,sub>a{
+    color: rgb(150, 150, 150) !important;
     text-decoration: none !important;
 }
 
