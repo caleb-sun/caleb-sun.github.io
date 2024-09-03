@@ -345,7 +345,11 @@ hr.dotted{
 .projecthome {
     display: flex;
     flex-direction: column;
-    
+}
+
+.kitchen {
+    display: flex;
+    flex-direction: column;
 }
 
 .projgroup{
@@ -416,6 +420,7 @@ hr.dotted{
     color: white;
 }
 
+
 .state-1.eighty, .state-2.eighty{
     height:4.5em !important;
 }
@@ -424,9 +429,28 @@ hr.dotted{
     display: none;
 }
 
-.projecthome:hover .state-2{
+.kitchen{
+    position: relative;
+}
+
+.kitchen .state-2{
+    position: absolute;
+    top: 0;
+    width: 80%;
+}
+
+.kitchen .hundred{
+    margin-left: 0.5em;
+}
+
+.kitchen:hover .state-1{
+    opacity: 0;
+}
+
+.projecthome:hover .state-2, .kitchen:hover .state-2{
     display: flex;
 }
+
 
 
 img{
@@ -917,7 +941,7 @@ input[type='submit']:hover {
         position: relative;
     }
 
-    .projecthome{
+    .projecthome, .kitchen{
         width: 100%;
         display: flex;
         flex-direction: column;

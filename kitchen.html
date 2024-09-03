@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--- the doctype declaration tells the file reader that we're using html-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Caleb Sun is a visual designer and student at Carnegie Mellon University. He is currently a Brand Design Intern at Dropbox.">
+    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=">
+    <meta name="robots" content="all">
+    <!---declares what kinds of characters are supportive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!---makes site responsive-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!---makes site work better with microsoft browsers-->
+    <title>Caleb Sun – About</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/bav6mvc.css">
+  </head>  
+  <body >
+    <main>
+        <header style="z-index: 100;">
+            <a href="index.html" onpointerenter='arrow()' onpointerleave='arrow2()'> 
+                <img id="white" class="homenav" src="images/arrow-04.svg" style="width: 24px; display: block;"></img>
+                <img id="yellow" class="homenav" src="images/arrow-yellow.svg" style="width: 24px; display: none;"></img>
+            </a>
+            <script>
+                function arrow() {
+                    document.getElementById('white').style.display='none';
+                    document.getElementById('yellow').style.display='block';
+                }
+                function arrow2() {
+                    document.getElementById('white').style.display='block';
+                    document.getElementById('yellow').style.display='none';
+                }
+            </script>
+        </header>
+        <div class="body" style="z-index:90; margin-top: 8%; margin-bottom: 8em;">
+            <ul class="columns projgroup"> 
+                <li class="thirtythree">
+                    <div class="eighty">
+                        <sub style="margin-bottom: 4px;">The Kitchen</sub>
+                        <p style="margin-bottom: 8px;">One of my lifelong passions is food. Maybe not <a onmouseover='anton()' onmouseleave='anton2()' style="cursor: pointer;">Anton Ego</a> level passions, but I like to eat and cook and think about how our relationships with food relate to <strong>literally every other aspect of our identities.</strong> I figure it's silly to compartmentalize my different passions when I find that a lot of what I think about with food connect back to my approach to design, at least from an anthropolgic standpoint.<br><br>Basically, without waxing poetic too much, this is my food (and thinking) diary.</p>
+                        <img id="anton" src="images/kitchen/Antonego.png" style="position: absolute;width: 7em; left: 3em; top: -0.5em; display: none; vertical-align: text-top; align-content: start;" >
+                        <script>
+                            function anton() {
+                                var image = document.getElementById('anton');
+                                image.style.display = 'block';
+                            }
+                            function anton2() {
+                                var image2 = document.getElementById('anton');
+                                image2.style.display = 'none';
+                            }
+                           
+                        </script>
+                    </div>
+                </li>
+                <li class="kitchen thirtythree">
+                    <img src="images/kitchen/kolaches.jpg" class="state-1">
+                    <div class="hundred state-2" style="gap: 4px;">
+                        <sub>5.20.24</sub>
+                        <p>I'm working on a long-term editorial project right now where I ask 15 people what their favorite dish is, and through a process of recreating that dish, continue the oral and culinary histories of their families. It's an incredibly radical act, in my opinion, to take something that's passed down to you and change it. To use your personal taste and knowledge of cooking to destroy and remake a dish for better or for worse. This project is about that process, and also about Joe's Crab Shack and Ina Garten and Trader Joe's Everything Bagel Seasoning. It's about mothers and grandmothers and eating and eating and eating.</p>
+                    </div>
+                </li>
+                <li class="kitchen thirtythree">
+                    <img src="images/kitchen/kitchen-4.jpg" class="state-1">
+                    <div class="hundred state-2" style="gap: 4px;">
+                        <sub>2.10.24</sub>
+                        <p>I've done dumpling nights every Chinese New Year in college with friends. It's really special to escape the cold of Pittsburgh mid-February and eat semi-okay dumplings together. I learned how to make dumplings from my grandparents, and I'm glad that's something that I have from them that I'm proud of.</p>
+                    </div>
+                </li>
+                <li class="kitchen thirtythree">
+                    <img src="images/kitchen/kitchen-1.jpg" class="state-1">
+                    <div class="hundred state-2" style="gap: 4px;">
+                        <sub>11.23.23</sub>
+                        <p>Spread at a gathering with my partner's family. I never liked oysters as a kid, but my partner's mother grew up in Jersey and raised him to like them. The raw oysters have grown on me a lot over the past years. Chinese people usually eat massive oysters that are poached or fried, which have a much harder time going down the hatch. I do like raw oysters quite a bit now, and am always on the lookout for a $1/oyster deal (shoutout Whole Foods' Friday deal), but I do wonder how much my liking oysters comes from a desire to fit in with his family.</p>
+                    </div>
+                </li>
+                <li class="kitchen thirtythree">
+                    <img src="images/kitchen/kitchen-2.jpg" class="state-1">
+                    <div class="hundred state-2" style="gap: 4px;">
+                        <sub>12.24.23</sub>
+                        <p>Spread at a potluck with my close friends from high school. We all grew up with pretty ethnic relationships with food, so it's strange to see what we bring to the table when we gather to eat. Somehow, from two Chinese and one Indian potluckers, we created a spread with foccaccia, egg sandos, spam musubi, jam and crackers, and egg rolls. I wonder about why we don't bring anything our mothers would make for us.</p>
+                    </div>
+                </li>
+
+                <li class="kitchen thirtythree">
+                    <img src="images/kitchen/kitchen-3.jpg" class="state-1">
+                    <div class="hundred state-2" style="gap: 4px;">
+                        <sub>12.27.23</sub>
+                        <p>I'm from California... I miss In-N-Out...</p>
+                    </div>
+                </li>
+
+                
+
+            </ul>
+        </div>
+        </footer>
+    </main>
+  </body>
+</html>
