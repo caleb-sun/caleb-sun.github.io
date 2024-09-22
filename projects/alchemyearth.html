@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!--- the doctype declaration tells the file reader that we're using html-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="An exhibition identity for the birthplace of ceramics.">
+    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=">
+    <meta name="robots" content="all">
+    <!---declares what kinds of characters are supportive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!---makes site responsive-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!---makes site work better with microsoft browsers-->
+    <title>Caleb Sun – Alchemy Earth</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/bav6mvc.css">
+  </head>  
+  <body>
+    <main>
+        <header>
+            <a href="../index.html" onpointerenter='arrow()' onpointerleave='arrow2()'> 
+                <img id="white" class="homenav" src="../images/arrow-04.svg" style="width: 24px; display: block;"></img>
+                <img id="yellow" class="homenav" src="../images/arrow-yellow.svg" style="width: 24px; display: none;"></img>
+            </a>
+            <script>
+                function arrow() {
+                    document.getElementById('white').style.display='none';
+                    document.getElementById('yellow').style.display='block';
+                }
+                function arrow2() {
+                    document.getElementById('white').style.display='block';
+                    document.getElementById('yellow').style.display='none';
+                }
+            </script>
+            <ul class="menu header" onclick='processIn()'>
+                <script>
+                    function processIn() {
+                            var process = document.getElementById('process');
+                            var processlabel = document.getElementById('process-label');
+                            process.classList.remove('process-start');
+                            process.classList.remove('process-out');
+                            process.classList.add('process-in');
+                            processlabel.style.display='none';
+                        }
+                    function processOut() {
+                        var process = document.getElementById('process');
+                        var processlabel = document.getElementById('process-label');
+                        process.classList.remove('process-in');
+                        process.classList.add('process-out');
+                        processlabel.style.display='block';
+                    }
+                </script>
+                <!-- <div class="menuitems"  id="process-label">
+                    <ul class="miniprojnav" style="z-index: 100; width: auto;">
+                        <img src="../images/eye.svg" style="width: 30px; margin-right: 8px;">
+                        <p>
+                            <a style="text-decoration: none !important; cursor: pointer; color: white;" >Process</a>
+                            
+                        </p>
+                    </ul>
+                    
+                </div> -->
+            </ul>
+        </header>
+        <div class="project">
+            <div class="projectbody">
+                <ul class="columns">
+                    <li class="sixtysix">
+                        <h1 class="project-title">Alchemy Earth <!--title-->
+                        </h1>
+                        <p>Exhibition identity</p>
+                    </li>
+                    <li class="thirtythree">
+                        <p>A modern, elegant identity for a ceramic arts biennial held in the birthplace of porcelain.
+                        </p>
+                    </li>
+                    <li class="hundred" style="gap: 8px;">
+                        <img src="../images/alchemy/solo-logo.gif">
+                        <img src="../images/alchemy/indoor-wall.jpg">
+                        <img src="../images/alchemy/large-banner.jpg">
+                        <img src="../images/alchemy/instagram.jpg">
+                        <img src="../images/alchemy/speaker.jpg">
+                    </li>
+                    <div class="sixtysix">
+                        <li class="eighty">
+                        <p>The Jingdezhen International Ceramic Arts Biennial is a celebration of the past, present, and future of the ceramic arts, held at the birthplace of porcelain some 3000 years ago. To this day, Jingdezhen remains a culture hub for ceramicists across the globe. The third edition of this biennial celebrates the beauty of an ageless craft, of transforming elements into art, through what audiences across continents and time can only describe as alchemy.
+                        <br><br>
+                        The Alchemy Earth exhibition identity is a response to the modernization of the ceramic arts. Elegant, simple, and bold, it provides a backbone for the breadth of experimental work exhibited throughout the biennial, without compromising on the roots of the craft.
+                        </p>
+                        </li>
+                    </div>
+                    <div class="thirtythree" style="flex-direction: row;">
+                        <li class="twenty">
+                            <p>Time<br>Role</p>
+                        </li>
+                        <li class="eighty">
+                            <p>5 weeks<br>Sole designer<br>
+                            Instructed by Kelsey Elder</p>
+                        </li>
+                    </div>
+                    <ul class="gallery">
+                        <li class="hundred" style="gap: 8px;"></li>
+                            <img src="../images/alchemy/lanyard.jpg">
+                            <img src="../images/alchemy/tickets.jpg">
+                        </li>
+                        <li class="fifty">
+                            <img
+                            src="../images/alchemy/business-card.jpg"
+                        >
+                        </li>
+                        <li class="fifty">
+                            <img
+                            src="../images/alchemy/notebook.jpg"
+                        >
+                        </li>
+                        <li class="fifty">
+                            <img
+                            src="../images/alchemy/tote-bag.jpg"
+                        >
+                        </li>
+                        <li class="fifty">
+                            <img
+                            src="../images/alchemy/tshirt.jpg"
+                        >
+                        </li>
+                    </ul>
+
+                    
+                    <span class="large spacer"></span>
+                </ul>
+            </div>
+        </div>
+        <!-- <div class="process-viewport">
+            <div id="process" class="process process-start">
+                <div class="process-header">
+                    <a onclick='processOut()'>
+                        <img id="black-arrow" 
+                            style="width: 24px; height: 24px; margin-bottom: 12px; display: block" 
+                            src="../images/x-black.svg" 
+                            onpointerenter='processArrow()' 
+                            onpointerleave='processArrow2()'>
+                        <img id="white-arrow" 
+                            style="width: 24px; margin-bottom: 12px; display: none;" 
+                            src="../images/x-white.svg">
+                    </a>
+                </div>
+                <h2>
+                    A sensitive balancing act reflecting the political and historical nature of the biennial<br><br>
+                </h2>
+                <p>The host of the Jingdezhen Ceramic Arts Biennial is the Jingdezhen University of Ceramic Arts, a historic institution that has played an incredible role in preserving the art of porcelain making, and keeping the region of China that porcelain was invented in the public conscious. The brand strategy is intended to reflect the nature of art as a political identity, and a point of national historic pride. A balancing act between respect for the past, while also not ostracizing the present.
+                </p>
+                <h3>Early sketches</h3>
+                <img src="../images/alchemy/tests/morphing-vase.gif" style="background-color: black;">
+                <img src="../images/alchemy/tests/tilt-image.gif" style="background-color: black;">
+                <p>Early iterations strayed a little far from the core strategy, flexing towards visual metaphors that harken back to the 
+                </p>
+
+                <script>
+                    function processArrow() {
+                        document.getElementById('white-arrow').style.display='block';
+                        document.getElementById('black-arrow').style.display='none';
+                    }
+                    function processArrow2() {
+                        document.getElementById('black-arrow').style.display='block';
+                        document.getElementById('white-arrow').style.display='none';
+                    }
+                </script>
+            </div>
+        </div> -->
+
+        
+        <footer>
+            <div class="columns footmenu" style="width:100%; justify-content: space-between;">
+                <ul class="menu" style="margin-left:4%; align-items: center;">
+                    <li class="menuitems"><a href="../pdfs/caleb-sun_resume.pdf" target="_blank"><sub>Resume</sub></a></li>
+                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><sub>LinkedIn</sub></a></li>
+                    <li class="menuitems"><a href="https://read.cv/calebsun" target="_blank"><sub>ReadCV</sub></a></li>
+                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub>Email</sub></a></li>
+                </ul>
+                <div class="credit">
+                    <sub>Updated June 2024 | Custom coded using HTML/CSS/JS</sub>
+                </div>
+            </div>
+        </footer>
+    </main>
+  </body>
+</html>

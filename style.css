@@ -175,7 +175,12 @@ font-style: italic;
     color: white;
 }
 
-h1,h5, h1>strong {
+h1, h1>strong{
+    font-size: 60pt;
+    line-height: 64pt;
+}
+
+h5 {
     font-size:32pt;
     line-height: 40pt;
 }
@@ -323,9 +328,9 @@ hr.dotted{
 .columns{
     display: flex;
     flex-wrap:wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     column-gap: 0.4%;
-    row-gap: 48px;
+    row-gap: 36px;
     flex-direction: row; 
 }
 
@@ -354,6 +359,7 @@ hr.dotted{
 
 .projgroup{
     transition: all 0.5s ease-in-out;
+    justify-content: flex-start;
 }
 
 
@@ -411,6 +417,28 @@ hr.dotted{
     row-gap: 48px;
 }
 
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row !important;
+    justify-content: space-between;
+    row-gap: 8px;
+    width: 100%;
+}
+
+.gallery>.fifty{
+    width: 49.75%;
+    gap: 4px;
+}
+
+.gallery>.hundred{
+    gap: 4px;
+}
+
+.gallery>.fifty>sub, .gallery>.hundred>sub{
+    color: #8c8d8a !important;
+}
+
 .state-1{
     color: white;
 }
@@ -462,7 +490,7 @@ img{
 .homenav{
     position: fixed;
     top:2%;
-    left: 3.5%;
+    left: 3.4%;
     z-index: 100;
     font-style: initial !important;
     vertical-align: auto;
@@ -500,7 +528,7 @@ img{
     position: fixed;
     justify-content: right;
     top:3%;
-    right:4%;
+    right:3.7vw;
     display: flex;
     gap: 30px;
 }
@@ -508,7 +536,6 @@ img{
 footer{
     width: 100vw;
     bottom:1%;
-    position: fixed;
     z-index: 100;
 }
 
@@ -590,6 +617,85 @@ footer{
     gap: 48px;
 }
 
+/*process*/
+
+
+.process-viewport{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    left:0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* background-color: antiquewhite; */
+    z-index: 20;
+    display: none;
+}
+
+.process{
+    background-color: #c9ff56;
+    color: black !important;
+    width: 40%;
+    left: 100%;
+    right:0%;
+    top:10%;
+    margin-bottom: 10%;
+    box-sizing: border-box;
+    position: relative; 
+    padding: 0 3em 3em 1em;
+    z-index: 100;
+}
+
+
+.process-header{
+    position: sticky; 
+    top: 0; 
+    padding-top: 1em; 
+    padding-bottom: 0.5em; 
+    width: 100%; 
+    background-color: #c9ff56;
+    z-index: auto;
+}
+
+.process-in{
+    left: 60%;
+    display: block;
+    animation: process-in 0.5s 1 cubic-bezier(0.860, 0.000, 0.070, 1.000);
+}
+
+.process-out{
+    left: 101%;
+    display: none;
+    animation: process-out 0.5s 1 cubic-bezier(0.860, 0.000, 0.070, 1.000);
+}
+
+.process-start{
+    left: 101%;
+    display:none;
+}
+
+@keyframes process-in {
+    from{left:101%;}
+    to{left: 60%;}
+}
+
+@keyframes process-out {
+    from{left: 60%;}
+    99%{left:101%; display: block;}
+    to{display: none;}
+}
+
+.process>h1,.process>h2,.process>h3,.process>h4,.process>h5,.process>p{
+    color: black !important;
+}
+
+.process>h3{
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+
 /* project */
 
 .project{
@@ -600,6 +706,7 @@ footer{
     margin-top:0;
     width: 100%;
     gap: 48px;
+    z-index: 20;
 }
 
 .projecttitle{
@@ -618,9 +725,13 @@ footer{
     display: flex;
     flex-direction: column;
     margin:auto;
-    margin-top: 3%;
-    width: 60%;
+    margin-top: 10%;
+    width: 92.5vw;
     row-gap: 48px;
+}
+
+.project-title{
+    text-transform: uppercase;
 }
 
 .demo{
@@ -706,20 +817,23 @@ input[type='submit']:hover {
 }
 
 .cat1{
-    position: absolute; 
-    width: 40%; 
+    position: relative; 
+    width: 36%; 
     height: auto; 
-    right: 3em;
+    margin-left: 60vw;
     margin-top: -10em;
-    padding-bottom: 5em;
+    top: auto;
+    bottom: 2em;
 }
 
 .cat2{
+    position: relative; 
     width: 12%; 
     height: auto; 
-    margin-left: 85%;
-    margin-right: 30px;
-    top: 200vh;
+    margin-left: 83vw;
+    margin-top: -10em;
+    top: auto;
+    bottom: 2em;
 }
 
 .cat3{
