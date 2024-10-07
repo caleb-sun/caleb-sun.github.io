@@ -593,7 +593,12 @@ footer{
     flex-direction: row;
     gap:4px;
     z-index:100;
-    align-items: baseline;
+    align-items: flex-start;
+}
+
+.eye{
+    width: 40px; 
+    margin-right: 8px;
 }
 
 .fixed{
@@ -781,6 +786,10 @@ footer{
     row-gap: 80px;
 }
 
+.menu .menuitems a sub, .credit sub{
+    color:#8c8d8a !important;
+}
+
 
 
 /*password*/
@@ -928,7 +937,12 @@ input[type='submit']:hover {
 @media screen and (max-width: 800px) {
 
     h1{
-        font-size: 36pt;
+        font-size: 32pt;
+        line-height: 32pt;
+    }
+
+    .subtitle{
+        margin-bottom: 16pt;
     }
 
     .homemain{
@@ -968,7 +982,7 @@ input[type='submit']:hover {
         gap:18px;
     }
 
-    .sixty{
+    .sixty,.sixtysix{
         width: 100%;
     }
 
@@ -978,7 +992,7 @@ input[type='submit']:hover {
     }
 
     .state-1.eighty, .state-2.eighty, .projecthome .eighty{
-        width: 60%;
+        width: 100%;
     }
 
     .hundred{
@@ -988,6 +1002,7 @@ input[type='submit']:hover {
 
     .projectbody{
         width: 92%;
+        margin-top: 30%;
     }
 
     .spacer{
@@ -1053,6 +1068,11 @@ input[type='submit']:hover {
 
     .hometitle{
         position: relative;
+    }
+    
+    .state-1 p, .state-2 p{
+        font-size:22pt;
+        line-height: 22pt; 
     }
 
     .projecthome, .kitchen{
@@ -1157,10 +1177,56 @@ input[type='submit']:hover {
         height: auto; 
         margin-left: 65%;
         margin-right: auto;
-        margin-bottom: 24px;
-        top: 200vh;
+        margin-top: 10px;
+        margin-bottom: 0px;
         
     }
+
+    .footmenu>.menu{
+        justify-content: space-between;
+        margin-right: 3.5%;
+    }
+
+    
+
+    .eye{
+        width: 32px; 
+        margin-right: 8px;
+    }
+
+
+    .process-in{
+        left: 5%;
+        animation: process-in 0.5s 1 cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    }
+    
+    .process-out{
+        left: 101%;
+        display: none;
+        animation: process-out 0.5s 1 cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    }
+    
+    .process-start{
+        left: 101%;
+        display:none;
+    }
+    
+    @keyframes process-in {
+        from{left:101%;}
+        to{left: 5%;}
+    }
+    
+    @keyframes process-out {
+        from{left: 5%;}
+        99%{left:101%; display: block;}
+        to{display: none;}
+    }
+
+    .process{
+        width: 95%;
+    }
+
+
 
 
 }
