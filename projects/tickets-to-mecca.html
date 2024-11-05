@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--- the doctype declaration tells the file reader that we're using html-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="An exhibition identity for the birthplace of ceramics.">
+    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=">
+    <meta name="robots" content="all">
+    <!---declares what kinds of characters are supportive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!---makes site responsive-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!---makes site work better with microsoft browsers-->
+    <title>Caleb Sun – Tickets to Mecca</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/bav6mvc.css">
+  </head>  
+  <body>
+    <main>
+        <header>
+            <a href="../index.html" onpointerenter='arrow()' onpointerleave='arrow2()'> 
+                <img id="white" class="homenav" src="../images/arrow-04.svg" style="display: block;"></img>
+                <img id="yellow" class="homenav" src="../images/arrow-yellow.svg" style="display: none;"></img>
+            </a>
+            <script>
+                function arrow() {
+                    document.getElementById('white').style.display='none';
+                    document.getElementById('yellow').style.display='block';
+                }
+                function arrow2() {
+                    document.getElementById('white').style.display='block';
+                    document.getElementById('yellow').style.display='none';
+                }
+            </script>
+            <ul class="menu header" >
+                <script>
+                    function processIn() {
+                        var process = document.getElementById('process');
+                        var processviewport = document.getElementById('process-viewport');
+                        var processlabel = document.getElementById('process-label');
+                        processviewport.style.display='block';
+                        process.classList.remove('process-start');
+                        process.classList.remove('process-out');
+                        process.classList.add('process-in');
+                        // processviewport.style.zIndex='20';
+                        processlabel.style.display='none';
+                    }
+                    function processOut() {
+                        var process = document.getElementById('process');
+                        var processlabel = document.getElementById('process-label');
+                        var processviewport = document.getElementById('process-viewport');
+                        process.classList.remove('process-in');
+                        process.classList.add('process-out');
+                        processlabel.style.display='block';
+                        processviewport.style.display='none';
+                    }
+                </script>
+                <div class="menuitems"  id="process-label">
+                    <ul class="miniprojnav" style="z-index: 100; width: auto;" onclick='processIn()'>
+                        <img src="../images/eye.svg" style="width: 30px; margin-right: 8px;">
+                        <p>
+                            <a style="text-decoration: none !important; cursor: pointer; color: white;" >Process</a>
+                        </p>
+                    </ul>
+                    <!-- <ul class="miniprojnav" style="margin-left: 16px;">
+                        <p>About</p>
+                    </ul> -->
+                </div>
+            </ul>
+        </header>
+        <div class="project">
+            <div class="projectbody">
+                <ul class="columns">
+                    <li class="sixtysix">
+                        <h1 class="project-title">1.7 Million Tickets to Mecca <!--title-->
+                        </h1>
+                        <p class="subtitle">Installation Design</p>
+                    </li>
+                    <li class="thirtythree">
+                        <p>An interactive data visualization installation representing the Hajj visas issued in 2023 by region, cost, and quota rate.
+                        </p>
+                    </li>
+                    <div class="gallery">
+                        <li class="fifty">
+                            <img src="../images/tickets-to-mecca/photo-group.JPG">
+                        </li>
+                        <li class="fifty">
+                            <img src="../images/tickets-to-mecca/photo-holding.JPG">
+                        </li>
+                        <li class="fifty">
+                            <img src="../images/tickets-to-mecca/photo-cameroon-individual.JPG">
+                        </li>
+                        <li class="fifty">
+                            <img src="../images/tickets-to-mecca/photo-nz-individual.JPG">
+                        </li>
+                        
+                    </div>
+                    <div class="sixtysix">
+                        <li class="eighty">
+                        <p> 
+                            Hajj (Arabic: حَجّ, romanized: Hajj; also spelled Hadj, Haj or Haji) is an annual Islamic pilgrimage to Mecca, Saudi Arabia taken by Muslims to cleanse their souls of worldly sins. Hajj is a mandatory religious duty that must be carried out at least once by all adult Muslims who are physically and financially capable.
+                            <br><br>
+                            This piece centers around the conditions that bar most Muslims from the ability to ever fulfill this religious duty, such as physical and logistical capacity, access to mandatory hajj visas issued by the Saudi Arabian government, and cost of travel and accommodations. In 2023, 1,371,520 Hajj visas were granted to pilgrims from outside of Saudi Arabia. The same year, the number of Muslims in the world was estimated to be 1.9 billion. For all of the world’s Muslims to complete the Hajj at the current rate, it would take more than 581 years. 
+                        </p>
+                        </li>
+                    </div>
+                    <div class="thirtythree" style="flex-direction: row;">
+                        <li class="twenty">
+                            <p>Time<br>
+                            Role<br>
+                            Credits</p>
+                        </li>
+                        <li class="eighty">
+                            <p>3 weeks<br>
+                            Sole designer, fabricator
+                            </p>
+                        </li>
+                    </div>
+                    <span class="medium"></span>
+                    <div class="sixtysix">
+                        <h2 style="margin-bottom: 8px;">Reading the tickets</h2>
+                        <p>Each ticket encodes up to 5,000 visas issued to Muslim hajj-goers during 2023. They can be read at the macro-level to understand broad patterns across the world for pilgrims, as well as on a micro-level to shed light upon the more nuanced, country-specific barriers to travel.</p>
+                    </div>
+                    <div class="gallery">
+                        <li class="hundred">
+                            <img src="../images/tickets-to-mecca/label-legend.gif">
+                        </li>
+                        <li class="thirtythree">
+                            <img src="../images/tickets-to-mecca/gradient-legend.gif">
+                            <p>
+                                The most basic barrier for Muslims to attend Hajj stems from capacitiy limitations, and variance in populations by region of the world impacts the amount of visas issued.<br>The most visible feature of the tickets, the color gradients, communicates these population variations, allowing for both macro-level comparison once they are all situated in the installation, and micro-level comparison once they are held side-by-side.
+                            </p>
+                        </li>
+                        <li class="thirtythree">
+                            <img src="../images/tickets-to-mecca/deboss-legend.gif">
+                            <p>
+                                Hajj pilgrimages average about $3,000 for budget trips and $10,000 for luxury trips. <br>The debossed wave pattern documents the relative cost of a budget and luxury pilgrimage based on median income, where a full sine wave corresponds to a full year of income.
+                            </p>
+                        </li>
+                        <li class="thirtythree">
+                            <img src="../images/tickets-to-mecca/cutout-legend.gif">
+                            <p>
+                                The proportion of visas issued in 2022 to the Muslim population. The number of visas is determined by the Saudi Arabian government, and reported by individual countries. The amount of visas is broadly the same proportion for each country. <br>However, this proportion varies based on other factors, like the Saudi Arabian government’s geo-political relationship to the country issuing the visas. 
+                            </p>
+                        </li>
+                        
+                        
+                    </div>
+
+                    
+                    <span class="large"></span>
+                </ul>
+            </div>
+        </div>
+        <div class="process-viewport" id="process-viewport"≈>
+            <div id="process" class="process process-start">
+                <div class="process-header" >
+                    <a onmousedown='processOut()'>
+                        <img id="black-arrow" 
+                            style="width: 24px; height: 24px; margin-bottom: 12px; display: block" 
+                            src="../images/x-black.svg" 
+                            onpointerenter='processArrow()' 
+                            onpointerleave='processArrow2()'>
+                        <img id="white-arrow" 
+                            style="width: 24px; margin-bottom: 12px; display: none;" 
+                            src="../images/x-white.svg">
+                    </a>
+                </div>
+                <h2>
+                    Preserving the spirit of DIY, while also elevating the beauty of hanging out with good friends.<br><br>
+                </h2>
+                <p>
+                    Dropbox’s product visual strategy recently went through an update to introduce a more tactile, emotive faux 3D style. These new graphics appeared in marketing materials throughout 2024. This project explored how to bring this visual strategy into the in-product experience, bridging the gap between a library of assets, a fresh visual style, and the iconic Dropbox product.
+                </p>
+                <h3>Subhead</h3>
+                <p>
+                    Dropbox’s product visual strategy recently went through an update to introduce a more tactile, emotive faux 3D style. These new graphics appeared in marketing materials throughout 2024. This project explored how to bring this visual strategy into the in-product experience, bridging the gap between a library of assets, a fresh visual style, and the iconic Dropbox product.
+                </p>
+                <h3>Subhead</h3>
+                <p>
+                    Dropbox’s product visual strategy recently went through an update to introduce a more tactile, emotive faux 3D style. These new graphics appeared in marketing materials throughout 2024. This project explored how to bring this visual strategy into the in-product experience, bridging the gap between a library of assets, a fresh visual style, and the iconic Dropbox product.
+                </p>
+                <h3>Subhead</h3>
+                <p>
+                    Dropbox’s product visual strategy recently went through an update to introduce a more tactile, emotive faux 3D style. These new graphics appeared in marketing materials throughout 2024. This project explored how to bring this visual strategy into the in-product experience, bridging the gap between a library of assets, a fresh visual style, and the iconic Dropbox product.
+                </p>
+                <script>
+                    function processArrow() {
+                        document.getElementById('white-arrow').style.display='block';
+                        document.getElementById('black-arrow').style.display='none';
+                    }
+                    function processArrow2() {
+                        document.getElementById('black-arrow').style.display='block';
+                        document.getElementById('white-arrow').style.display='none';
+                    }
+                </script>
+            </div>
+        </div>
+        <footer>
+            <div class="columns footmenu" style="width:100%; justify-content: space-between;">
+                <ul class="menu" style="margin-left:4%; align-items: center;">
+                    <li class="menuitems"><a href="../pdfs/caleb-sun_resume.pdf" target="_blank"><sub>Resume</sub></a></li>
+                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><sub>LinkedIn</sub></a></li>
+                    <li class="menuitems"><a href="https://read.cv/calebsun" target="_blank"><sub>ReadCV</sub></a></li>
+                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub>Email</sub></a></li>
+                </ul>
+                <div class="credit">
+                    <sub>Updated June 2024 | Custom coded using HTML/CSS/JS</sub>
+                </div>
+            </div>
+        </footer>
+    </main>
+  </body>
+</html>

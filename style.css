@@ -166,6 +166,7 @@ sub.gray,sub>a{
 
 sub>a:hover{
     text-decoration: underline dotted !important;
+    scale: 105%;
 }
 
 strong{
@@ -250,8 +251,29 @@ a:hover, a:hover>sub{
     text-decoration-style: dotted;
     color: #c9ff56 !important;
     cursor: pointer, auto;
-    
 }
+
+.link:hover, .footmenu>.menu>.menuitems:hover, .menu-active{
+    animation: link-down 0.05s 1 linear;
+}
+
+@keyframes link-down {
+    from{letter-spacing: 2px;}
+    to{letter-spacing: 0px;}
+}
+
+.link:hover, .footmenu>.menu>.menuitems:hover, .menu-active{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: link 0.1s 1 linear;
+}
+
+@keyframes link {
+    from{letter-spacing: 0px;}
+    to{letter-spacing: 2px;}
+}
+
+
 
 .menu-active{
     text-decoration: underline;
@@ -278,6 +300,7 @@ a>div>.fifty>p{
 
 a:hover>div>div>p,a:hover>div>div>h3{
     color: #c9ff56 !important;
+    scale: 105%;
 }
 
 a:hover>div>div>sub{
@@ -435,7 +458,11 @@ hr.dotted{
     gap: 4px;
 }
 
-.gallery>.fifty>sub, .gallery>.hundred>sub{
+.gallery>.thirtythree>p{
+    width: 90%;
+}
+
+.gallery>.fifty>sub, .gallery>.hundred>sub, .gallery>.thirtythree>sub{
     color: #8c8d8a !important;
 }
 
@@ -490,10 +517,19 @@ img{
 .homenav{
     position: fixed;
     top:2%;
-    left: 3.4%;
+    left: 2.5%;
     z-index: 100;
     font-style: initial !important;
     vertical-align: auto;
+}
+
+a>.homenav{
+    width: 48px !important;
+}
+
+.sun>img{ 
+    width: 64px !important;
+    left: 1.7%;
 }
 
 .homenav>a{
@@ -523,6 +559,7 @@ img{
 .footmenu>.menu{
     gap: 15%;
 }
+
 
 .header{
     position: fixed;
@@ -574,7 +611,7 @@ footer{
     margin:auto;
     display: flex;
     flex-direction: column;
-    margin-top:8%;
+    margin-top:11%;
     margin-bottom:16%;
     margin-left: 3.75vw;
     margin-right: 3.75vw;

@@ -19,8 +19,8 @@
   <body>
     <main>
         <header>
-            <div class="homenav" style="display: flex; flex-direction: row; align-items: center;">
-                <img id='sun' src="images/sun.svg" style="width: 32px;">
+            <div class="homenav sun" style="display: flex; flex-direction: row; align-items: center;">
+                <img id='sun' src="images/sun.svg">
                 <p style="height: 20px; margin-left: 8px;">Caleb Sun</p>
             </div>
             <script>
@@ -35,9 +35,9 @@
                     <ul class="miniprojnav" style="z-index: 100;">
                         <img src="images/eye.svg" class="eye">
                         
-                        <p style="cursor: pointer;"><a id=worktop onclick='work()' class="menu-active">Work,</a></p>
-                        <p style="cursor: pointer;"><a id=playtop onclick='play()' class="menu-inactive">Play,</a></p>
-                        <p><a style="text-decoration: none !important;" href="about.html">About</a></p>
+                        <p style="cursor: pointer;"><a id=worktop onclick='work()' class="menu-active link">Work,</a></p>
+                        <p style="cursor: pointer;"><a id=playtop onclick='play()' class="menu-inactive link">Play,</a></p>
+                        <p><a class="link" style="text-decoration: none !important;" href="about.html">About</a></p>
                     </ul>
                     <script> 
                         function work() {
@@ -116,12 +116,12 @@
                             <div class="eighty" style="gap: 4px;">
                                 <sub style="color: white">0.</sub>
                                 <p style="margin-bottom: 8px;">Hi, I'm Caleb. I design beautiful <strong>systems</strong> and <strong>artifacts </strong>that bridge brands to people.</p>
-                                <p>Previously—Brand Design Intern @ <a href="https://dropbox.design/">Dropbox</a><br>
-                                Currently—Senior @ <a href="https://design.cmu.edu//">CMU Design</a><br>
+                                <p>Previously—Brand Design Intern @ <a class="link" href="https://dropbox.design/">Dropbox</a><br>
+                                Currently—Senior @ <a class="link" href="https://design.cmu.edu//">CMU Design</a><br>
                                 Home cook @ my kitchen<br>
                                 Cafe-hopping @ Pittsburgh</p>
-                                <sub style="margin-top: 12px;" class="gray"><a href="pdfs/caleb-sun_resume.pdf" target="_blank">Resume,</a> <a href="https://www.linkedin.com/in/calebsun/" target="_blank">LinkedIn,</a> 
-                                <a href="https://read.cv/calebsun" target="_blank">ReadCV,</a> <a href=mailto:sun.cs0327@gmail.com target="_blank">Email</a>
+                                <sub style="margin-top: 12px;" class="gray"><a class="link" href="pdfs/caleb-sun_resume.pdf" target="_blank">Resume,</a> <a class="link" href="https://www.linkedin.com/in/calebsun/" target="_blank">LinkedIn,</a> 
+                                <a href="https://read.cv/calebsun" class="link" target="_blank">ReadCV,</a> <a class="link" href=mailto:sun.cs0327@gmail.com target="_blank">Email</a>
                             <br>PDF portfolio available upon request</sub>
                                 </div>
                         </div>
@@ -357,8 +357,8 @@
                                 <sub style="color: white">0.</sub>
                                 <p style="margin-bottom: 8px;">Hi again. Here are some things I've been up to.</p>
                                 <p>While I consider myself a generalist, I love to explore motion, bookbinding, and unexpected modes of interaction.</p>
-                                <sub style="margin-top: 12px;"><a href="pdfs/caleb-sun_resume.pdf" target="_blank">Resume,</a> <a href="https://www.linkedin.com/in/calebsun/" target="_blank">LinkedIn,</a> 
-                                <a href="https://read.cv/calebsun" target="_blank">ReadCV,</a> <a href=mailto:sun.cs0327@gmail.com target="_blank">Email</a></sub>
+                                <sub style="margin-top: 12px;"><a class="link" href="pdfs/caleb-sun_resume.pdf" target="_blank">Resume,</a> <a class="link" href="https://www.linkedin.com/in/calebsun/" target="_blank">LinkedIn,</a> 
+                                <a class="link" href="https://read.cv/calebsun" target="_blank">ReadCV,</a> <a class="link" href=mailto:sun.cs0327@gmail.com target="_blank">Email</a></sub>
                                 </div>
                         </div>
                         <div id="rive" class="projecthome thirtythree">
@@ -495,10 +495,10 @@
         <footer>
             <div class="columns footmenu" style="width:100%; justify-content: space-between;">
                 <ul class="menu" style="margin-left:3.5%; align-items: center;">
-                    <li class="menuitems"><a href="pdfs/caleb-sun_resume.pdf" target="_blank"><sub class="gray">Resume</sub></a></li>
-                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><sub class="gray">LinkedIn</sub></a></li>
-                    <li class="menuitems"><a href="https://read.cv/calebsun" target="_blank"><sub class="gray">ReadCV</sub></a></li>
-                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub class="gray">Email</sub></a></li>
+                    <li class="menuitems"><a href="pdfs/caleb-sun_resume.pdf" target="_blank"><sub class="link gray">Resume</sub></a></li>
+                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><sub class="link gray">LinkedIn</sub></a></li>
+                    <li class="menuitems"><a href="https://read.cv/calebsun" target="_blank"><sub class="link gray">ReadCV</sub></a></li>
+                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub class="link gray">Email</sub></a></li>
                 </ul>
                 <div class="credit">
                     <sub class="gray">Updated September 2024 | Custom coded using HTML/CSS/JS</sub>
