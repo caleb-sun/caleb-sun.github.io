@@ -33,40 +33,54 @@
                     document.getElementById('yellow').style.display='none';
                 }
             </script>
-            <ul class="menu header" >
+            <ul class="menu header">
                 <script>
                     function processIn() {
                         var process = document.getElementById('process');
                         var processviewport = document.getElementById('process-viewport');
-                        var processlabel = document.getElementById('process-label');
-                        processviewport.style.display='block';
-                        process.classList.remove('process-start');
-                        process.classList.remove('process-out');
-                        process.classList.add('process-in');
-                        // processviewport.style.zIndex='20';
-                        processlabel.style.display='none';
+                        var processopen = document.getElementById('process-open');
+                        var processclose = document.getElementById('process-close');
+                        
+                        processviewport.classList.remove('processviewport-start');
+                        processviewport.classList.remove('processviewport-out');
+                        processviewport.classList.add('processviewport-in');
+
+                        processclose.style.display='flex';
+                        processopen.style.display='none';
                     }
                     function processOut() {
                         var process = document.getElementById('process');
-                        var processlabel = document.getElementById('process-label');
+                        var processlabel = document.getElementById('process-open');
                         var processviewport = document.getElementById('process-viewport');
+                        var processclose = document.getElementById('process-close');
+
                         process.classList.remove('process-in');
                         process.classList.add('process-out');
-                        processlabel.style.display='block';
-                        processviewport.style.display='none';
+                        processviewport.classList.remove('processviewport-in');
+                        processviewport.classList.add('processviewport-out');
+                        // processviewport.style.display='none';
+
+                        processclose.style.display='none';
+                        processlabel.style.display='flex';
+                        
                     }
                 </script>
-                <div class="menuitems"  id="process-label">
-                    <ul class="miniprojnav" style="z-index: 100; width: auto;" onclick='processIn()'>
-                        <img src="../images/eye.svg" style="width: 30px; margin-right: 8px;">
-                        <p>
+                <!-- <div class="menuitems">
+                    <ul class="processnav" id="process-open" onclick='processIn()' onmouseenter="process1Hover()">
+                        <img src="../images/eye-yellow.svg" class="eye" style="display: none;" id="eye1yellow">
+                        <img src="../images/eye.svg" class="eye" id="eye1white">
+                        <sub>
                             <a style="text-decoration: none !important; cursor: pointer; color: white;" >Process</a>
-                        </p>
+                        </sub>
                     </ul>
-                    <!-- <ul class="miniprojnav" style="margin-left: 16px;">
-                        <p>About</p>
-                    </ul> -->
-                </div>
+                    <ul class="processnav" id="process-close" onclick='processOut()' onmouseenter="process2Hover()" style="display: none">
+                        <img src="../images/eye-yellow.svg" class="eye" style="display: none;" id="eye2yellow">
+                        <img src="../images/eye.svg" class="eye" id="eye2white">
+                        <sub>
+                            <a style="text-decoration: none !important; cursor: pointer; color: white;" >Close</a>
+                        </sub>
+                    </ul>
+                </div> -->
             </ul>
         </header>
         <div class="project">
@@ -154,37 +168,19 @@
                 </ul>
             </div>
         </div>
-        <div class="process-viewport" id="process-viewport"≈>
-            <div id="process" class="process process-start">
-                <div class="process-header" >
-                    <a onmousedown='processOut()'>
-                        <img id="black-arrow" 
-                            style="width: 24px; height: 24px; margin-bottom: 12px; display: block" 
-                            src="../images/x-black.svg" 
-                            onpointerenter='processArrow()' 
-                            onpointerleave='processArrow2()'>
-                        <img id="white-arrow" 
-                            style="width: 24px; margin-bottom: 12px; display: none;" 
-                            src="../images/x-white.svg">
-                    </a>
-                </div>
+        <div class="process-viewport processviewport-start" id="process-viewport">
+            <div id="process" class="process">
                 <h2>
-                    Preserving the spirit of DIY, while also elevating the beauty of hanging out with good friends.<br><br>
+                    Negotiating a classic fixture of Pittsburgh tradition with modern aspirations.<br><br>
                 </h2>
                 <p>
-                    Dropbox’s product visual strategy recently went through an update to introduce a more tactile, emotive faux 3D style. These new graphics appeared in marketing materials throughout 2024. This project explored how to bring this visual strategy into the in-product experience, bridging the gap between a library of assets, a fresh visual style, and the iconic Dropbox product.
-                </p>
-                <h3>Subhead</h3>
-                <p>
-                    Dropbox’s product visual strategy recently went through an update to introduce a more tactile, emotive faux 3D style. These new graphics appeared in marketing materials throughout 2024. This project explored how to bring this visual strategy into the in-product experience, bridging the gap between a library of assets, a fresh visual style, and the iconic Dropbox product.
-                </p>
-                <h3>Subhead</h3>
-                <p>
-                    Dropbox’s product visual strategy recently went through an update to introduce a more tactile, emotive faux 3D style. These new graphics appeared in marketing materials throughout 2024. This project explored how to bring this visual strategy into the in-product experience, bridging the gap between a library of assets, a fresh visual style, and the iconic Dropbox product.
-                </p>
-                <h3>Subhead</h3>
-                <p>
-                    Dropbox’s product visual strategy recently went through an update to introduce a more tactile, emotive faux 3D style. These new graphics appeared in marketing materials throughout 2024. This project explored how to bring this visual strategy into the in-product experience, bridging the gap between a library of assets, a fresh visual style, and the iconic Dropbox product.
+                    Phipps has captured the imaginations of visitors with beautiful flower shows and seasonal exhibitions since their inception in the 1800s. While the botanical garden still brings joy and wonder to the city with currated shows, Phipps is also turning towards the future, considering how the conservatory can play a role in leading sustainability efforts in the region, as well as serving the community through adult education and community programs.
+                    <br><br>
+                    Rebranding the Phipps posed a unique challenge in that the gardens were not shying away from their historical role. They will always be a garden respite from the hustle and bustle of the city, they just do more now. This rebrand hinged on that idea of "doing more", from visual identity to web architecture.
+                    <br><br>
+                    Identity<br>
+                    A challenge that Phipps identified with their diverse programming was that most of their visitors were simply unaware of 
+
                 </p>
                 <script>
                     function processArrow() {

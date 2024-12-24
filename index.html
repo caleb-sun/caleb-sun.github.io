@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--- the doctype declaration tells the file reader that we're using html-->
-<html lang="en" >
+<html lang="en" class="htmlhome">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Caleb Sun is a visual designer and student at Carnegie Mellon University. He is currently a Brand Design Intern at Dropbox.">
@@ -19,7 +19,7 @@
   <body>
     <main>
         <header>
-            <div class="homenav sun" style="display: flex; flex-direction: row; align-items: center;">
+            <div class="homenav sun">
                 <img id='sun' src="images/sun.svg">
                 <p style="height: 20px; margin-left: 8px;">Caleb Sun</p>
             </div>
@@ -29,21 +29,25 @@
                     var value = window.scrollY * 0.1;
                     elem.style.transform = `rotate(${value}deg)`; 
                 });
+
+                function resize() {
+                    window.scrollTo(0, 0);
+                    }
+                window.onresize = resize;
             </script>
             <ul class="menu header">
                 <div class="menuitems">
                     <ul class="miniprojnav" style="z-index: 100;">
-                        <img src="images/eye.svg" class="eye">
-                        
+                        <img src="images/eye.svg" class="eye" style="width: 32px !important;">
                         <p style="cursor: pointer;"><a id=worktop onclick='work()' class="menu-active link">Work,</a></p>
                         <p style="cursor: pointer;"><a id=playtop onclick='play()' class="menu-inactive link">Play,</a></p>
-                        <p><a class="link" style="text-decoration: none !important;" href="about.html">About</a></p>
+                        <p style="cursor: pointer;"><a id=abouttop onclick='about()' class="menu-inactive link">About</a></p>                        
                     </ul>
-                    <script> 
+                    <!-- <script> 
                         function work() {
                             var work = document.getElementById('work');
                             var play = document.getElementById('play');
-                            
+                            var about = document.getElementById('about');
 
                             play.classList.remove('up');
                             play.classList.add('down'); 
@@ -52,16 +56,23 @@
 
                             work.classList.remove('down');
                             work.classList.add('up');
-                            
                             worktop.classList.remove('menu-inactive');
                             worktop.classList.add('menu-active');
 
+                            about.classList.remove('up');
+                            about.classList.add('down'); 
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+
                             window.scrollTo({ top: 0, behavior: 'smooth' });
+
                         }
                         function play() {
                             var work = document.getElementById('work');
                             var play = document.getElementById('play');
-
+                            var about = document.getElementById('about');
+                            
                             work.classList.remove('up');
                             work.classList.add('down'); 
                             worktop.classList.remove('menu-active');
@@ -69,439 +80,604 @@
 
                             play.classList.remove('down');
                             play.classList.add('up');
-                            
                             playtop.classList.remove('menu-inactive');
                             playtop.classList.add('menu-active');
 
+                            about.classList.remove('up');
+                            about.classList.add('down'); 
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                        }
+
+                        function about() {
+                            var work = document.getElementById('work');
+                            var play = document.getElementById('play');
+                            var about = document.getElementById('about');
+
+                            work.classList.remove('up');
+                            work.classList.add('down'); 
+                            worktop.classList.remove('menu-active');
+                            worktop.classList.add('menu-inactive');
+
+                            play.classList.remove('up');
+                            play.classList.add('down'); 
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            about.classList.remove('down');
+                            about.classList.add('up');
+                            abouttop.classList.remove('menu-inactive');
+                            abouttop.classList.add('menu-active');
+
                             window.scrollTo({ top: 0, behavior: 'smooth' });
                         }
-                        // function graphic() {
-                        //     var allitems = document.getElementById('allitems');
-                        //     var product = document.getElementById('product');
-                        //     var graphic = document.getElementById('visual');
-                        //     var fun = document.getElementById('experiments');
+                        
+                    </script> -->
+                    <script>
+                        function work() {
+                            var w = (window.innerWidth);
+                            var work = document.getElementById('work');
+                            window.scrollTo(0, 0);
+                            work.scrollTo(0,0);
 
-                        //     product.classList.remove('up');
-                        //     product.classList.add('down'); 
-                        //     producttop.classList.remove('menu-active');
-                        //     producttop.classList.add('menu-inactive');
+                            worktop.classList.remove('menu-inactive');
+                            worktop.classList.add('menu-active');
 
-                        //     fun.classList.remove('up');
-                        //     fun.classList.add('down'); 
-                        //     funtop.classList.remove('menu-active');
-                        //     funtop.classList.add('menu-inactive');
-                            
-                        //     allitems.classList.remove('up');
-                        //     allitems.classList.add('down'); 
-                        //     alltop.classList.remove('menu-active');
-                        //     alltop.classList.add('menu-inactive');
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
 
-                        //     graphic.classList.remove('down');
-                        //     graphic.classList.add('up');
-                            
-                        //     graphictop.classList.remove('menu-inactive');
-                        //     graphictop.classList.add('menu-active');
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
 
-                        //     window.scrollTo({ top: 0, behavior: 'smooth' });
-                        // }
+                        }
+                        function play() {
+                            var w = (window.innerWidth);
+                            var play = document.getElementById('play');
+
+                            window.scrollTo(w, 0);
+                            play.scrollTo(0,0);
+
+
+                            worktop.classList.remove('menu-active');
+                            worktop.classList.add('menu-inactive');
+
+                            playtop.classList.remove('menu-inactive');
+                            playtop.classList.add('menu-active');
+
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+                        }
+
+                        function about() {
+                            var w = (window.innerWidth);
+                            var about = document.getElementById('about');
+
+                            window.scrollTo((2*w), 0);
+                            about.scrollTo(0,0);
+
+                            worktop.classList.remove('menu-active');
+                            worktop.classList.add('menu-inactive');
+
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            abouttop.classList.remove('menu-inactive');
+                            abouttop.classList.add('menu-active');
+                        }
+                        
                     </script>
                 </div>
             </ul>
         </header>
         <ul class="home">
-            <div class="hundred"> 
-                <div class="columns">
-                    <li id="work" class="columns projgroup">
-                        <div class="thirtythree projecthome">
-                            <div class="eighty" style="gap: 4px;">
-                                <sub style="color: white">0.</sub>
-                                <p style="margin-bottom: 8px;">Hi, I'm Caleb. I design beautiful <strong>systems</strong> and <strong>artifacts </strong>that bridge brands to people.</p>
-                                <p>Previously—Brand Design Intern @ <a class="link" href="https://dropbox.design/">Dropbox</a><br>
-                                Currently—Senior @ <a class="link" href="https://design.cmu.edu//">CMU Design</a><br>
-                                Home cook @ my kitchen<br>
-                                Cafe-hopping @ Pittsburgh</p>
-                                <sub style="margin-top: 12px;" class="gray"><a class="link" href="pdfs/caleb-sun_resume.pdf" target="_blank">Resume,</a> <a class="link" href="https://www.linkedin.com/in/calebsun/" target="_blank">LinkedIn,</a> 
-                                <a href="https://read.cv/calebsun" class="link" target="_blank">ReadCV,</a> <a class="link" href=mailto:sun.cs0327@gmail.com target="_blank">Email</a>
-                            <br>PDF portfolio available upon request</sub>
-                                </div>
-                        </div>
-                        <!-- <div id="dbx" class="projecthome thirtythree">
-                            <a href="projects/dbx.html" class="columns proj">
-                                <div class="hundred"> 
-                                 <img
-                                    src="images/alchemy/indoor-wall.jpg">
-                                </div>
-                                <div class="columns" style="width: 98%; margin:auto;">
-                                    <div class="twenty spacer">
-                                        <div class="tag">
-                                            <p style="text-decoration: none !important;">NEW</p>
-                                        </div>
-                                    </div>
-                                    <div class="eighty">
-                                        <p>Identity for a biennial in the birthplace of porcelain</p>
-                                        <sub>IDENTITY DESIGN / MOTION / DESIGN STRATEGY</sub>
-                                    </div>
-                                </div>
-                            </a>
-                        </div> -->
-
-                        <div id="alchemy" class="projecthome thirtythree">
-                            <a href="projects/alchemyearth.html" class="columns proj">
-                                <div class="eighty state-1" style="gap:4px;">
-                                    <sub>1.</sub>
-                                    <p>Alchemy Earth</p>
-                                    <sub>Identity design, branded systems, event branding</sub>
-                                </div>
-                                <div class="eighty state-2" style="gap:4px;">
-                                    <sub>1.</sub>
-                                    <p>Identity for a ceramics biennial held at the birthplace of porcelain
-                                </div>
-                                <div class="hundred"> 
-                                 <img id="psaimg"
-                                    src="images/alchemy/indoor-wall.jpg">
-                                </div>
-                            </a>
-                            
-                        </div>
-                        <div id="alchemy" class="projecthome thirtythree">
-                            <a href="projects/5539.html" class="columns proj">
-                                <div class="eighty state-1" style="gap:4px;">
-                                    <sub>2.</sub>
-                                    <p>5539 Cafe</p>
-                                    <sub>Identity design, event branding</sub>
-                                </div>
-                                <div class="eighty state-2" style="gap:4px;">
-                                    <sub>2.</sub>
-                                    <p>
-                                        A down-to-earth, place-based identity for a cafe pop-up hosted by and for friends.
-                                </div>
-                                <div class="hundred"> 
-                                 <img id="psaimg"
-                                    src="images/5539/5539-thumb.jpg">
-                                </div>
-                            </a>
-                            
-                        </div>
-                        <div id="guangyu" class="projecthome thirtythree">
-                            <a href="projects/guangyu.html" class="columns proj">
-                                <div class="eighty state-1" style="gap:4px;">
-                                    <sub>3.</sub>
-                                    <p>Guang Yu</p>
-                                    <sub>Editorial, motion, interactive</sub>
-                                </div>
-                                <div class="eighty state-2" style="gap:4px;">
-                                    <sub>3.</sub>
-                                    <p>Documenting the work and life of Guang Yu, my design hero
-                                </div>
-                                <div class="hundred state-1"> 
-                                 <img
-                                    id="gystill"
-                                    src="images/gy/thumb-gy-still.jpg"
-                                    alt="Screens from the TLJ Suite.">
-                                </div>
-                                <div class="hundred state-2"> 
-                                    <img
-                                       id="gystill"
-                                       src="images/gy/thumb-gy.gif"
-                                       alt="Screens from the TLJ Suite.">
-                                   </div>
-                            </a>
-                            
-                        </div>
-                        <div id="dbx" class="projecthome thirtythree">
-                            <a href="projects/dbx.html" class="columns proj">
-                                <div class="eighty state-1" style="gap:4px;">
-                                    <sub>4.</sub>
-                                    <p>Drobox Internship</p>
-                                    <sub>Motion, interactive, data visualization</sub>
-                                </div>
-                                <div class="eighty state-2" style="gap:4px;">
-                                    <sub>4.</sub>
-                                    <p>Designing across surfaces for Dropbox's in-house design studio</p>
-                                </div>
-                                <div class="hundred state-1"> 
-                                    <img
-                                       src="images/misc/dbx-still.jpg">
-                                   </div>
-                                <div class="hundred state-2"> 
-                                <img
-                                    src="images/misc/dbx-thumb.gif">
-                                </div>
-                            </a>
-                            
-                        </div>
-                        <div id="sonny" class="projecthome thirtythree">
-                            <a href="projects/sonny.html" class="columns proj">
-                                <div class="eighty state-1" style="gap:4px;">
-                                    <sub>5.</sub>
-                                    <p>Sonny Angel Book</p>
-                                    <sub>Editorial, bookbinding </sub>
-                                </div>
-                                <div class="eighty state-2" style="gap:4px;">
-                                    <sub>5.</sub>
-                                    <p>A book about a little angel boy.
-                                </div>
-                                <div class="hundred"> 
-                                    <img 
-                                    src="images/sonny/sonny-1.jpg"
-                                    alt="A little orange clothbound book on grass">
-                                </div>
-                            </a>
-                            
-                        </div>
-                        <div id="psa" class="projecthome thirtythree">
-                            <a href="projects/psa.html" class="columns proj">
-                                <div class="eighty state-1" style="gap:4px;">
-                                    <sub>6.</sub>
-                                    <p>The Long Haul</p>
-                                    <sub>Campaign design, motion</sub>
-                                </div>
-                                <div class="eighty state-2" style="gap:4px;">
-                                    <sub>6.</sub>
-                                    <p>Convincing middle America to care about their internet
-                                </div>
-                                <div class="hundred state-1"> 
-                                    <img 
-                                    src="images/broadband/psa-thumb0.jpg"
-                                    alt="A little orange clothbound book on grass">
-                                </div>
-                                <div class="hundred state-2"> 
-                                    <img 
-                                    src="images/broadband/psa-thumb.gif"
-                                    alt="A little orange clothbound book on grass">
-                                </div>
-                            </a>
-                            
-                        </div>
-                        <div id="vela" class="projecthome thirtythree">
-                            <a href="projects/vela.html" class="columns proj">
-                                <div class="eighty state-1" style="gap:4px;">
-                                    <sub>7.</sub>
-                                    <p>Vela Projects</p>
-                                    <sub>Identity design, branding</sub>
-                                </div>
-                                <div class="eighty state-2" style="gap:4px;">
-                                    <sub>7.</sub>
-                                    <p>Culturally sensitive branding for a construction consultancy
-                                </div>
-                                <div class="hundred state-1"> 
-                                    <img 
-                                    src="images/vela/thumb-vela.jpg"
-                                    >
-                                </div>
-                                <div class="hundred state-2"> 
-                                    <img 
-                                    src="images/vela/thumb-vela.gif"
-                                    >
-                                </div>
-                            </a> 
-                        </div>
-                        <!-- <div id="tlj" class="projecthome thirtythree">
-                            <a href="projects/tlj.html" class="columns proj">
-                                <div class="eighty state-1" style="gap:4px;">
-                                    <sub>7.</sub>
-                                    <p>TLJ Digital Cafe</p>
-                                    <sub>Product design, brand design, strategy</sub>
-                                </div>
-                                <div class="eighty state-2" style="gap:4px;">
-                                    <sub>7.</sub>
-                                    <p>Tools to bring a bakery into the modern age
-                                </div>
-                                <div class="hundred"> 
-                                    <img 
-                                    src="images/tlj/kiosk-mockup.jpg"
-                                    alt="Screens from the TLJ Suite.">
-                                </div>
-                            </a> 
-                        </div>   -->
-                        <!-- <div id="csl" class="projecthome thirtythree">
-                            <a href="projects/csl.html" class="columns proj">
-                                <div class="eighty state-1" style="gap:4px;">
-                                    <sub>8.</sub>
-                                    <p>CSL Behring Internship</p>
-                                    <sub>Product design, design systems, design ops, UX research</sub>
-                                </div>
-                                <div class="eighty state-2" style="gap:4px;">
-                                    <sub>8.</sub>
-                                    <p>Designing for the future of plasma donation
-                                </div>
-                                <div class="hundred"> 
-                                    <img src="images/csl/hero1.jpg"
-                                    alt="A screen from a plasma donation app on a red background 
-                                    with the words 'CSL Behring, Biotherapies for Life'">
-                                </div>
-                            </a> 
-                        </div> -->
-                        <div id="wnwn" class="projecthome thirtythree">
-                            <a href="projects/wnwn.html" class="columns proj">
-                                <div class="eighty state-1" style="gap:4px;">
-                                    <sub>8.</sub>
-                                    <p>Waste Not, Want Not</p>
-                                    <sub>Product design, design systems, brand experience</sub>
-                                </div>
-                                <div class="eighty state-2" style="gap:4px;">
-                                    <sub>8.</sub>
-                                    <p>Gamifying food responsibility
-                                </div>
-                                <div class="hundred"> 
-                                    <img src="images/wastenot/hero-waste.jpg"
-                                    >
-                                </div>
-                            </a> 
-                        </div>
+            <li id="work" class="columns projgroup">
+                <div class="thirtythree projecthome">
+                    <div class="eighty" style="gap: 4px;">
+                        <p class="number">&#x2780;</p>
+                        <p style="margin-bottom: 8px;">Hey, I’m Caleb. I design strategic systems and brands that tell stories.</p>
+                        <span class="small"></span>
+                        <sub>Previously — Brand Design Intern @ <a class="link" href="https://dropbox.design/">Dropbox</a><br>
+                        Currently — Senior @ <a class="link" href="https://design.cmu.edu//">CMU Design</a><br>
+                        Home cook @ my kitchen<br>
+                        Cafe-hopping @ Pittsburgh</sub>
                         
-                    </li>
-                    <li id="play" class="columns projgroup down">
-                        <div class="thirtythree projecthome">
-                            <div class="eighty" style="gap: 4px;">
-                                <sub style="color: white">0.</sub>
-                                <p style="margin-bottom: 8px;">Hi again. Here are some things I've been up to.</p>
-                                <p>While I consider myself a generalist, I love to explore motion, bookbinding, and unexpected modes of interaction.</p>
-                                <sub style="margin-top: 12px;"><a class="link" href="pdfs/caleb-sun_resume.pdf" target="_blank">Resume,</a> <a class="link" href="https://www.linkedin.com/in/calebsun/" target="_blank">LinkedIn,</a> 
-                                <a class="link" href="https://read.cv/calebsun" target="_blank">ReadCV,</a> <a class="link" href=mailto:sun.cs0327@gmail.com target="_blank">Email</a></sub>
-                                </div>
+                        <sub style="margin-top: 12px;" class="gray"><a class="link" href="pdfs/caleb-sun_resume.pdf" target="_blank">Resume,</a>  <a class="link" href="https://www.linkedin.com/in/calebsun/" target="_blank">LinkedIn,</a>  
+                        <a href="https://read.cv/calebsun" class="link" target="_blank">ReadCV,</a>   <a class="link" href=mailto:sun.cs0327@gmail.com target="_blank">Email</a>
+                    <br>PDF portfolio available upon request</sub>
                         </div>
-                        <div id="rive" class="projecthome thirtythree">
-                            <a href="https://vqws5x.csb.app/" target="_blank" class="columns proj">
-                                <div class="eighty state-1" style="gap:4px;">
-                                    <sub>1.</sub>
-                                    <p>Sisyphus's dishes &#8599;</p>
-                                    <sub>Interactive motion graphics, Rive</sub>
-                                </div>
-                                <div class="eighty state-2" style="gap:4px;">
-                                    <sub>1.</sub>
-                                    <p>A silly little rive exploration about doing dishes... forever and ever... &#8599;</p>
-                                </div>
-                                <div class="hundred"> 
-                                    <img src="images/rive/washing-dishes.gif">
-                                </div>
-                            </a> 
+                </div>
+                <div id="phipps" class="projecthome thirtythree">
+                    <a href="projects/phipps.html" class="columns proj">
+                        <div class="eighty state-1">
+                            <p class="number">&#x2781;</p>
+                            <p>Do More With Phipps</p>
+                            <sub>Coursework — Brand repositioning, web strategy, identity design</sub>
                         </div>
-                        <div id="sigul" class="projecthome thirtythree">
-                            <a href="projects/type-design.html" class="columns proj">
-                                <div class="eighty state-1" style="gap:4px;">
-                                    <sub>2.</sub>
-                                    <p>Singularity Typeface</p>
-                                    <sub>Type design</sub>
-                                </div>
-                                <div class="eighty state-2" style="gap:4px;">
-                                    <sub>2.</sub>
-                                    <p>A pixel typeface
-                                </div>
-                                <div class="hundred"> 
-                                    <img src="images/type/hero.gif">
-                                </div>
-                            </a> 
+                        <div class="eighty state-2">
+                            <p class="number">&#x2781;</p>
+                            <p>Marrying historic beauty to modern aspirations for Pittsburgh's premiere botanical gardens</p>
                         </div>
-                        <div id="sigul" class="projecthome thirtythree">
-                            <a href="#" class="columns proj">
-                                <div class="eighty state-1" style="gap:4px;">
-                                    <sub>3.</sub>
-                                    <p>Neue Bobbin Typeface</p>
-                                    <sub>Type design</sub>
-                                </div>
-                                <div class="eighty state-2" style="gap:4px;">
-                                    <sub>3.</sub>
-                                    <p>A bobbin-lace inspired typeface (More specimens coming soon)
-                                </div>
-                                <div class="hundred"> 
-                                    <img src="images/misc/neue-bobbin.gif">
-                                </div>
-                            </a> 
+                        <div class="hundred"> 
+                            <img id="psaimg"
+                            src="images/phipps/hero.jpg">
                         </div>
-                        <div id="ascii" class="projecthome thirtythree">
-                            <a href="projects/ascii.html" class="columns proj">
-                                <div class="eighty state-1" style="gap:4px;">
-                                    <sub>4.</sub>
-                                    <p>ASCII</p>
-                                    <sub>Experimental type, bookbinding</sub>
-                                </div>
-                                <div class="eighty state-2" style="gap:4px;">
-                                    <sub>4.</sub>
-                                    <p>ChatGPT drawing ASCII representations of human experience
-                                </div>
-                                <div class="hundred"> 
-                                    <img 
-                                    src="images/ascii/IMG_5129.jpg"
-                                    alt="A book with ascii art on it"
-                                    >
-                                </div>
-                            </a> 
-                        </div>
-
-                        <div id="whatshould" class="projecthome thirtythree">
-                            <a href="projects/whatshould.html" class="columns proj">
-                                <div class="eighty state-1" style="gap:4px;">
-                                    <sub>5.</sub>
-                                    <p>What Should We Eat</p>
-                                    <sub>Physical computing, fabrication, creative direction</sub>
-                                </div>
-                                <div class="eighty state-2" style="gap:4px;">
-                                    <sub>5.</sub>
-                                    <p>A fanciful device connecting people through food
-                                </div>
-                                <div class="hundred"> 
-                                    <img src="images/whatshould/what-should-4.jpg">
-                                </div>
-                            </a> 
-                        </div>
-
-                        <div id="letter" class="projecthome thirtythree">
-                            <a href="projects/letter.html" class="columns proj">
-                                <div class="eighty state-1" style="gap:4px;">
-                                    <sub>6.</sub>
-                                    <p>Letter to a past self</p>
-                                    <sub>Experimental type</sub>
-                                </div>
-                                <div class="eighty state-2" style="gap:4px;">
-                                    <sub>6.</sub>
-                                    <p>An explorative mark-making exercise using a scanner and laser cutter
-                                </div>
-                                <div class="hundred"> 
-                                    <img 
-                                    src="images/letter/letter-1.jpg"
-                                    >
-                                </div>
-                            </a> 
-                        </div>
-                        <div id="paradox" class="projecthome thirtythree">
-                            <a href="projects/paradox.html" class="columns proj">
-                                <div class="eighty state-1" style="gap:4px;">
-                                    <sub>7.</sub>
-                                    <p>Paradox</p>
-                                    <sub>Design systems, experiential design, installation</sub>
-                                </div>
-                                <div class="eighty state-2" style="gap:4px;">
-                                    <sub>7.</sub>
-                                    <p>Visualizing artificial intelligence and cultural competence
-                                </div>
-                                <div class="hundred state-1"> 
-                                    <img src="images/paradox/thumb_paradox.jpg">
-                                </div>
-                                <div class="hundred state-2">
-                                    <img src="images/paradox/thumb_paradox.gif">
-                                </div>
-                            </a> 
-                        </div>  
-                        
-                    </li>
+                    </a>
                     
                 </div>
+                <div id="alchemy" class="projecthome thirtythree">
+                    <a href="projects/alchemyearth.html" class="columns proj">
+                        <div class="eighty state-1">
+                            <p class="number">&#x2782;</p>
+                            <p>Alchemy Earth</p>
+                            <sub>Coursework — Identity design, event branding, naming</sub>
+                        </div>
+                        <div class="eighty state-2">
+                            <p class="number">&#x2782;</p>
+                            <p>Identity for a ceramics biennial held at the birthplace of porcelain
+                        </div>
+                        <div class="hundred"> 
+                            <img id="psaimg"
+                            src="images/alchemy/indoor-wall.jpg">
+                        </div>
+                    </a>
+                    
                 </div>
+                <div id="5539" class="projecthome thirtythree">
+                    <a href="projects/5539.html" class="columns proj">
+                        <div class="eighty state-1">
+                            <p class="number">&#x2783;</p>
+                            <p>5539 Cafe</p>
+                            <sub>Personal — Identity design, event branding</sub>
+                        </div>
+                        <div class="eighty state-2">
+                            <p class="number">&#x2783;</p>
+                            <p>
+                                A down-to-earth, place-based identity for a cafe pop-up hosted by and for friends.
+                        </div>
+                        <div class="hundred"> 
+                            <img id="psaimg"
+                            src="images/5539/5539-thumb.jpg">
+                        </div>
+                    </a>
+                    
+                </div>
+                <div id="guangyu" class="projecthome thirtythree">
+                    <a href="projects/guangyu.html" class="columns proj">
+                        <div class="eighty state-1">
+                            <p class="number">&#x2784;</p>
+                            <p>Guang Yu</p>
+                            <sub> Coursework — Editorial, motion, interactive</sub>
+                        </div>
+                        <div class="eighty state-2">
+                            <p class="number">&#x2784;</p>
+                            <p>Documenting the work and life of Guang Yu, my design hero
+                        </div>
+                        <div class="hundred state-1"> 
+                            <img
+                            id="gystill"
+                            src="images/gy/thumb-gy-still.jpg"
+                            alt="Screens from the TLJ Suite.">
+                        </div>
+                        <div class="hundred state-2"> 
+                            <img
+                                id="gystill"
+                                src="images/gy/thumb-gy.gif"
+                                alt="Screens from the TLJ Suite.">
+                            </div>
+                    </a>
+                    
+                </div>
+                <div id="dbx" class="projecthome thirtythree">
+                    <a href="projects/dbx.html" class="columns proj">
+                        <div class="eighty state-1">
+                            <p class="number">&#x2785;</p>
+                            <p>Drobox Transparency Hub</p>
+                            <sub>Internship — Web interactive, data visualization</sub>
+                        </div>
+                        <div class="eighty state-2">
+                            <p class="number">&#x2785;</p>
+                            <p>Crafting a dashboard to house Dropbox's organizational transparency report.</p>
+                        </div>
+                        <div class="hundred state-1"> 
+                            <img
+                                src="images/misc/dbx-still.jpg">
+                            </div>
+                        <div class="hundred state-2"> 
+                        <img
+                            src="images/misc/dbx-thumb.gif">
+                        </div>
+                    </a>
+                    
+                </div>
+                
+                <!-- <div id="psa" class="projecthome thirtythree">
+                    <a href="projects/psa.html" class="columns proj">
+                        <div class="eighty state-1" style="gap:4px;">
+                            <sub>6.</sub>
+                            <p>The Long Haul</p>
+                            <sub>Campaign design, motion</sub>
+                        </div>
+                        <div class="eighty state-2" style="gap:4px;">
+                            <sub>6.</sub>
+                            <p>Convincing middle America to care about their internet
+                        </div>
+                        <div class="hundred state-1"> 
+                            <img 
+                            src="images/broadband/psa-thumb0.jpg"
+                            alt="A little orange clothbound book on grass">
+                        </div>
+                        <div class="hundred state-2"> 
+                            <img 
+                            src="images/broadband/psa-thumb.gif"
+                            alt="A little orange clothbound book on grass">
+                        </div>
+                    </a>
+                    
+                </div>
+                <div id="vela" class="projecthome thirtythree">
+                    <a href="projects/vela.html" class="columns proj">
+                        <div class="eighty state-1" style="gap:4px;">
+                            <sub>7.</sub>
+                            <p>Vela Projects</p>
+                            <sub>Identity design, branding</sub>
+                        </div>
+                        <div class="eighty state-2" style="gap:4px;">
+                            <sub>7.</sub>
+                            <p>Culturally sensitive branding for a construction consultancy
+                        </div>
+                        <div class="hundred state-1"> 
+                            <img 
+                            src="images/vela/thumb-vela.jpg"
+                            >
+                        </div>
+                        <div class="hundred state-2"> 
+                            <img 
+                            src="images/vela/thumb-vela.gif"
+                            >
+                        </div>
+                    </a> 
+                </div>
+                <div id="tlj" class="projecthome thirtythree">
+                    <a href="projects/tlj.html" class="columns proj">
+                        <div class="eighty state-1" style="gap:4px;">
+                            <sub>7.</sub>
+                            <p>TLJ Digital Cafe</p>
+                            <sub>Product design, brand design, strategy</sub>
+                        </div>
+                        <div class="eighty state-2" style="gap:4px;">
+                            <sub>7.</sub>
+                            <p>Tools to bring a bakery into the modern age
+                        </div>
+                        <div class="hundred"> 
+                            <img 
+                            src="images/tlj/kiosk-mockup.jpg"
+                            alt="Screens from the TLJ Suite.">
+                        </div>
+                    </a> 
+                </div>  
+                <div id="csl" class="projecthome thirtythree">
+                    <a href="projects/csl.html" class="columns proj">
+                        <div class="eighty state-1" style="gap:4px;">
+                            <sub>8.</sub>
+                            <p>CSL Behring Internship</p>
+                            <sub>Product design, design systems, design ops, UX research</sub>
+                        </div>
+                        <div class="eighty state-2" style="gap:4px;">
+                            <sub>8.</sub>
+                            <p>Designing for the future of plasma donation
+                        </div>
+                        <div class="hundred"> 
+                            <img src="images/csl/hero1.jpg"
+                            alt="A screen from a plasma donation app on a red background 
+                            with the words 'CSL Behring, Biotherapies for Life'">
+                        </div>
+                    </a> 
+                </div>
+                <div id="wnwn" class="projecthome thirtythree">
+                    <a href="projects/wnwn.html" class="columns proj">
+                        <div class="eighty state-1" style="gap:4px;">
+                            <sub>8.</sub>
+                            <p>Waste Not, Want Not</p>
+                            <sub>Product design, design systems, brand experience</sub>
+                        </div>
+                        <div class="eighty state-2" style="gap:4px;">
+                            <sub>8.</sub>
+                            <p>Gamifying food responsibility
+                        </div>
+                        <div class="hundred"> 
+                            <img src="images/wastenot/hero-waste.jpg"
+                            >
+                        </div>
+                    </a> 
+                </div> -->
+                
+            </li>
+            <li id="play" class="columns projgroup ">
+                <div id="rive" class="projecthome thirtythree">
+                    <a href="https://vqws5x.csb.app/" target="_blank" class="columns proj">
+                        <div class="eighty state-1">
+                            <p class="number">&#x2780;</p>
+                            <p>Sisyphus's dishes &#8599;</p>
+                            <sub>Interactive motion graphics, Rive</sub>
+                        </div>
+                        <div class="eighty state-2">
+                            <p class="number">&#x2780;</p>
+                            <p>A silly little rive exploration about doing dishes... forever and ever... &#8599;</p>
+                        </div>
+                        <div class="hundred"> 
+                            <img src="images/rive/washing-dishes.gif">
+                        </div>
+                    </a> 
+                </div>
+                <div id="design-week" class="projecthome thirtythree">
+                    <a href="#" class="columns proj">
+                        <div class="eighty state-1">
+                            <p class="number">&#x2781;</p>
+                            <p>Fall 2024 Design Week</p>
+                            <sub>Motion, branding</sub>
+                        </div>
+                        <div class="eighty state-2">
+                            <p class="number">&#x2781;</p>
+                            <p>Graphics for Carnegie Mellon's Fall 2024 design week.
+                        </div>
+                        <div class="hundred"> 
+                            <img 
+                            src="images/design-week-graphic.gif"
+                            alt="A book with ascii art on it"
+                            >
+                        </div>
+                    </a> 
+                </div>
+                <div id="sonny" class="projecthome thirtythree">
+                    <a href="projects/sonny.html" class="columns proj">
+                        <div class="eighty state-1">
+                            <p class="number">&#x2782;</p>
+                            <p>Sonny Angel Book</p>
+                            <sub>Editorial, bookbinding </sub>
+                        </div>
+                        <div class="eighty state-2">
+                            <p class="number">&#x2782;</p>
+                            <p>A book about a little angel boy.
+                        </div>
+                        <div class="hundred"> 
+                            <img 
+                            src="images/sonny/sonny-1.jpg"
+                            alt="A little orange clothbound book on grass">
+                        </div>
+                    </a>
+                </div>
+                <div id="sigul" class="projecthome thirtythree">
+                    <a href="#" class="columns proj">
+                        <div class="eighty state-1">
+                            <p class="number">&#x2783;</p>
+                            <p>Neue Bobbin Typeface</p>
+                            <sub>Type design</sub>
+                        </div>
+                        <div class="eighty state-2">
+                            <p class="number">&#x2783;</p>
+                            <p>A bobbin-lace inspired typeface (More specimens coming soon)
+                        </div>
+                        <div class="hundred"> 
+                            <img src="images/misc/neue-bobbin.gif">
+                        </div>
+                    </a> 
+                </div>
+                
+                <div id="ascii" class="projecthome thirtythree">
+                    <a href="projects/ascii.html" class="columns proj">
+                        <div class="eighty state-1">
+                            <p class="number">&#x2784;</p>
+                            <p>ASCII</p>
+                            <sub>Experimental type, bookbinding</sub>
+                        </div>
+                        <div class="eighty state-2">
+                            <p class="number">&#x2784;</p>
+                            <p>ChatGPT drawing ASCII representations of human experience
+                        </div>
+                        <div class="hundred"> 
+                            <img 
+                            src="images/ascii/IMG_5129.jpg"
+                            alt="A book with ascii art on it"
+                            >
+                        </div>
+                    </a> 
+                </div>
+                <div id="sigul" class="projecthome thirtythree">
+                    <a href="projects/sigul.html" class="columns proj">
+                        <div class="eighty state-1">
+                            <p class="number">&#x2785;</p>
+                            <p>Singularity Typeface</p>
+                            <sub>Type design</sub>
+                        </div>
+                        <div class="eighty state-2">
+                            <p class="number">&#x2785;</p>
+                            <p>A pixel typeface
+                        </div>
+                        <div class="hundred"> 
+                            <img src="images/type/hero.gif">
+                        </div>
+                    </a> 
+                </div>
+                <div id="whatshould" class="projecthome thirtythree">
+                    <a href="projects/whatshould.html" class="columns proj">
+                        <div class="eighty state-1">
+                            <p class="number">&#x2786;</p>
+                            <p>What Should We Eat</p>
+                            <sub>Physical computing, fabrication, creative direction</sub>
+                        </div>
+                        <div class="eighty state-2">
+                            <p class="number">&#x2786;</p>
+                            <p>A fanciful device connecting people through food
+                        </div>
+                        <div class="hundred"> 
+                            <img src="images/whatshould/what-should-4.jpg">
+                        </div>
+                    </a> 
+                </div>
+
+                <div id="letter" class="projecthome thirtythree">
+                    <a href="projects/letter.html" class="columns proj">
+                        <div class="eighty state-1">
+                            <p class="number">&#x2787;</p>
+                            <p>Letter to a past self</p>
+                            <sub>Experimental type</sub>
+                        </div>
+                        <div class="eighty state-2">
+                            <p class="number">&#x2787;</p>
+                            <p>An explorative mark-making exercise using a scanner and laser cutter
+                        </div>
+                        <div class="hundred"> 
+                            <img 
+                            src="images/letter/letter-1.jpg"
+                            >
+                        </div>
+                    </a> 
+                </div>
+                <div class="projecthome thirtythree"></div>
+                
+            </li>
+            <li id="about" class="columns projgroup ">
+                <div style="margin-top: 10vh;">
+                    <ul class="columns projgroup"> 
+                        <li class="fifty">
+                            <h1>Hi!</h1>
+                            <p>
+                                My name is Caleb. I am currently a senior design student at Carnegie Mellon University and previously a brand design intern at Dropbox.<br><br>I'm a firm believer that designed brands create moments of <strong style="color: #c9ff56;">joy and connection</strong> that enrich existing products. But as time goes on and companies grow, brands can become limited or unimaginative, and lose consistency. My work involves <strong style="color: #c9ff56;">nurturing brands through change</strong> without losing the energy and joy that they inspire. While I consider myself a generalist within my practice, I'm super excited about interactive, moving, and strategic design systems that inspire, whether on digital or traditional surfaces.</a>
+                            </p>
+                            <script>
+                                function caleb() {
+                                    var image = document.getElementById('image');
+                                    image.style.display = 'block';
+                                }
+                                function caleb2() {
+                                    var image2 = document.getElementById('image');
+                                    image2.style.display = 'none';
+                                }
+                                function food() {
+                                    var image = document.getElementById('food');
+                                    image.style.display = 'flex';
+                                }
+                                function food2() {
+                                    var image2 = document.getElementById('food');
+                                    image2.style.display = 'none';
+                                }
+                            </script>
+                        </li>
+                        <li class="fifty">
+                            <img id='image' style="height: auto; width: 40vw; z-index:0;" src="images/Subject.png">
+                        </li>
+                        
+                    </ul>
+                    <span class="large"></span>
+                    <span class="large"></span>
+                    <!-- <ul class="about columns" style="row-gap: 1em;"> 
+                        <li class="twenty">
+                            <h2>Expertise</h2>
+                        </li>
+                        <li class="forty">
+                            <div>
+                                <h2>Brand</h2>
+                                <span class="small"></span>
+                                <p>Logo Design &nbsp;&#x2758;&nbsp; Brand Refresh/Update &nbsp;&#x2758;&nbsp; Branded Web Design &nbsp;&#x2758;&nbsp; Branded Asset Design</p>
+                            </div>
+                        </li>
+                        <li class="forty">
+                            <div>
+                                <h2>Web</h2>
+                                <span class="small"></span>
+                                <p>Web Strategy and Organization &nbsp;&#x2758;&nbsp; Small Business Sites &nbsp;&#x2758;&nbsp; Portfolios &nbsp;&#x2758;&nbsp; Event Sites</p>
+                                <span class="small"></span>
+                                <p>HTML/CSS/JS &nbsp;&#x2758;&nbsp; Webflow &nbsp;&#x2758;&nbsp; Wix &nbsp;&#x2758;&nbsp; Cargo</p>
+                            </div>
+                        </li>
+                        <span class="medium"></span>
+                        <li class="twenty"></li>
+                        <li class="forty">
+                            <div style="margin-top:2%;">
+                                <h2>Miscellaneous</h2>
+                                <span class="small"></span>
+                                <p>Book Design &nbsp;&#x2758;&nbsp; Digital Motion Assets &nbsp;&#x2758;&nbsp; Graphic Art and Illustration</p>
+                            </div>
+                            
+                        </li>
+                        <li class="forty">
+                                <div style="margin-top:2%;">
+                                <h2>Software</h2>
+                                <span class="small"></span>
+                                <p>Adobe Suite (After Effects, Illustrator, InDesign, Photoshop) &nbsp;&#x2758;&nbsp; Figma &nbsp;&#x2758;&nbsp; Microsoft Office &nbsp;&#x2758;&nbsp; Google Suite</p>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                    <span class="large"></span>
+                    <span class="large"></span> -->
+                    <!-- <ul class="about columns" style="row-gap: 1em; margin-bottom: 10em; "> 
+                        <li class="twenty">
+                            <h2>Currently...</h2>
+                        </li>
+                        <li class="forty">
+                            <div>
+                                <h2>Brand</h2>
+                                <span class="small"></span>
+                                <p>Logo Design &nbsp;&#x2758;&nbsp; Brand Refresh/Update &nbsp;&#x2758;&nbsp; Branded Web Design &nbsp;&#x2758;&nbsp; Branded Asset Design</p>
+                            </div>
+                        </li>
+                        <li class="forty">
+                            <div>
+                                <h2>Web</h2>
+                                <span class="small"></span>
+                                <p>Web Strategy and Organization &nbsp;&#x2758;&nbsp; Small Business Sites &nbsp;&#x2758;&nbsp; Portfolios &nbsp;&#x2758;&nbsp; Event Sites</p>
+                                <span class="small"></span>
+                                <p>HTML/CSS/JS &nbsp;&#x2758;&nbsp; Webflow &nbsp;&#x2758;&nbsp; Wix &nbsp;&#x2758;&nbsp; Cargo</p>
+                            </div>
+                        </li>
+                        <span class="medium"></span>
+                        <li class="twenty"></li>
+                        <li class="forty">
+                            <div style="margin-top:2%;">
+                                <h2>Miscellaneous</h2>
+                                <span class="small"></span>
+                                <p>Book Design &nbsp;&#x2758;&nbsp; Digital Motion Assets &nbsp;&#x2758;&nbsp; Graphic Art and Illustration</p>
+                            </div>
+                            
+                        </li>
+                        <li class="forty">
+                                <div style="margin-top:2%;">
+                                <h2>Software</h2>
+                                <span class="small"></span>
+                                <p>Adobe Suite (After Effects, Illustrator, InDesign, Photoshop) &nbsp;&#x2758;&nbsp; Figma &nbsp;&#x2758;&nbsp; Microsoft Office &nbsp;&#x2758;&nbsp; Google Suite</p>
+                            </div>
+                        </li>
+                        
+                    </ul> -->
+                    <ul style="width: 100%; justify-content: center; margin-bottom: 10em;">
+                        <h1  style="text-align: center; color:#c9ff56;"> <a href=mailto:sun.cs0327@gmail.com>Let's work together!</a></h1>
+                        <p style="text-align: center;">Currently seeking brand and long-form print projects</p>
+                    </ul>
+                </div>
+                
+                <div id='food' class= "food" style="position: absolute; right:15vw; top:70vh; width:25%; height: 15vw; object-fit: contain; z-index:0; display:none;">
+                    <img src="images/food.gif">
+                </div>
+                
+            </li>
             </div>
            
         </ul>
-        <img src="images/cat-01.png" class="cat2" >
         <footer>
-            <div class="columns footmenu" style="width:100%; justify-content: space-between;">
-                <ul class="menu" style="margin-left:3.5%; align-items: center;">
-                    <li class="menuitems"><a href="pdfs/caleb-sun_resume.pdf" target="_blank"><sub class="link gray">Resume</sub></a></li>
-                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><sub class="link gray">LinkedIn</sub></a></li>
-                    <li class="menuitems"><a href="https://read.cv/calebsun" target="_blank"><sub class="link gray">ReadCV</sub></a></li>
-                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub class="link gray">Email</sub></a></li>
+            <!-- <img src="images/cat-01.png" class="cat2" > -->
+            <div class="columns footmenu">
+                <ul class="menu" style="align-items: center;">
+                    <li class="menuitems"><a href="pdfs/caleb-sun_resume.pdf" target="_blank"><sub class="link">Resume</sub></a></li>
+                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><sub class="link">LinkedIn</sub></a></li>
+                    <li class="menuitems"><a href="https://read.cv/calebsun" target="_blank"><sub class="link">ReadCV</sub></a></li>
+                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub class="link">Email</sub></a></li>
                 </ul>
                 <div class="credit">
-                    <sub class="gray">Updated September 2024 | Custom coded using HTML/CSS/JS</sub>
+                    <sub>Updated September 2024 | Custom coded using HTML/CSS/JS</sub>
                 </div>
             </div>
         </footer>

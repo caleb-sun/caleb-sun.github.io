@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!--- the doctype declaration tells the file reader that we're using html-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="An exhibition identity for the birthplace of ceramics.">
+    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=">
+    <meta name="robots" content="all">
+    <!---declares what kinds of characters are supportive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!---makes site responsive-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!---makes site work better with microsoft browsers-->
+    <title>Caleb Sun – Phipps</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/bav6mvc.css">
+  </head>  
+  <body>
+    <main>
+        <header>
+            <a href="../index.html" onpointerenter='arrow()' onpointerleave='arrow2()'> 
+                <img id="white" class="homenav" src="../images/arrow-04.svg" style="width: 24px; display: block;"></img>
+                <img id="yellow" class="homenav" src="../images/arrow-yellow.svg" style="width: 24px; display: none;"></img>
+            </a>
+            <script>
+                function arrow() {
+                    document.getElementById('white').style.display='none';
+                    document.getElementById('yellow').style.display='block';
+                }
+                function arrow2() {
+                    document.getElementById('white').style.display='block';
+                    document.getElementById('yellow').style.display='none';
+                }
+            </script>
+            <ul class="menu header">
+                <script>
+                    function processIn() {
+                        var process = document.getElementById('process');
+                        var processviewport = document.getElementById('process-viewport');
+                        var processopen = document.getElementById('process-open');
+                        var processclose = document.getElementById('process-close');
+                        
+                        processviewport.classList.remove('processviewport-start');
+                        processviewport.classList.remove('processviewport-out');
+                        processviewport.classList.add('processviewport-in');
+
+                        processclose.style.display='flex';
+                        processopen.style.display='none';
+                    }
+                    function processOut() {
+                        var process = document.getElementById('process');
+                        var processlabel = document.getElementById('process-open');
+                        var processviewport = document.getElementById('process-viewport');
+                        var processclose = document.getElementById('process-close');
+
+                        process.classList.remove('process-in');
+                        process.classList.add('process-out');
+                        processviewport.classList.remove('processviewport-in');
+                        processviewport.classList.add('processviewport-out');
+                        // processviewport.style.display='none';
+
+                        processclose.style.display='none';
+                        processlabel.style.display='flex';
+                        
+                    }
+                </script>
+                <div class="menuitems">
+                    <ul class="processnav" id="process-open" onclick='processIn()' onmouseenter="process1Hover()">
+                        <img src="../images/eye-yellow.svg" class="eye" style="display: none;" id="eye1yellow">
+                        <img src="../images/eye.svg" class="eye" id="eye1white">
+                        <sub>
+                            <a style="text-decoration: none !important; cursor: pointer; color: white;" >Process</a>
+                        </sub>
+                    </ul>
+                    <ul class="processnav" id="process-close" onclick='processOut()' onmouseenter="process2Hover()" style="display: none">
+                        <img src="../images/eye-yellow.svg" class="eye" style="display: none;" id="eye2yellow">
+                        <img src="../images/eye.svg" class="eye" id="eye2white">
+                        <sub>
+                            <a style="text-decoration: none !important; cursor: pointer; color: white;" >Close</a>
+                        </sub>
+                    </ul>
+                    <!-- <ul class="miniprojnav" style="margin-left: 16px;">
+                        <p>About</p>
+                    </ul> -->
+                </div>
+            </ul>
+        </header>
+        <div class="project">
+            <div class="projectbody">
+                <ul class="columns">
+                    <li class="sixtysix">
+                        <h1 class="project-title">Phipps Botanical Gardens <!--title-->
+                        </h1>
+                        <p class="subtitle">Brand Redesign and Repositioning, Identity, Marketing, Web</p>
+                    </li>
+                    <li class="thirtythree">
+                        <p>A timeless identity for a botanical garden that honors the past and looks eagerly towards the future.
+                        </p>
+                    </li>
+                    <div class="gallery">
+                        <li class="hundred"></li>
+                            <img src="../images/phipps/hero.jpg">
+                        </li>
+                        <li class="hundred"></li>
+                            <img src="../images/phipps/logo-use.png">
+                        </li>
+                        <li class="thirtythree">
+                            <img src="../images/phipps/phipps_outdoor-sign.jpg">
+                        </li>
+                        <li class="sixtysix">
+                            <img src="../images/phipps/phipps_thin-flag.jpg">
+                        </li>
+                        <li class="hundred">
+                            <img src="../images/phipps/phipps_garden-signs.jpg">
+                        </li>
+                    </div>
+                    <div class="sixtysix">
+                        <li class="eighty">
+                        <p>The Phipps Conservatory and Botanical Gardens is a fixture in the Pittsburgh community. For nearly two centuries, Phipps has served as an urban oasis, hosting seasonal flower shows and providing respite from the hustle and bustle of industrial Pittsburgh. In the past 15 years, though, Phipps has set their sights on the future. 
+                        <br><br>
+                        As a leader in sustainability, education, and regional community programs, The Phipps has adopted many new faces beyond their identity as a simple garden. This brand repositioning project breathes new light into the Phipps brand, with a focus on surfacing the diverse offerings the garden provides to the Pittsburgh community.
+                        </p>
+                        </li>
+                    </div>
+                    <div class="thirtythree" style="flex-direction: row;">
+                        <li class="twenty">
+                            <p>Time<br>
+                            Role<br>
+                            Credits</p>
+                        </li>
+                        <li class="eighty">
+                            <p>6 weeks<br>
+                            Sole Designer (Course Project)
+                            <br>
+                            Guidance — Justin Edmund, Andrew Twigg<br>
+                            Special Thanks — Joe Reed, Alexa Sinatra<br>
+                            Photography — Unsplash, various</p>
+                        </li>
+                    </div>
+                    <div class="gallery">
+                        <li class="hundred">
+                            <img src="../images/phipps/phipps_screens.jpg">
+                        </li>
+                        <li class="hundred">
+                            <img src="../images/phipps/phipps_naming.jpg">
+                        </li>
+                        
+                        
+                    </div>
+
+                    
+                    <span class="large"></span>
+                </ul>
+            </div>
+        </div>
+        <div class="process-viewport processviewport-start" id="process-viewport">
+            <div id="process" class="process">
+                <h2>
+                    Negotiating a classic fixture of Pittsburgh tradition with modern aspirations.<br><br>
+                </h2>
+                <p>
+                    Phipps has captured the imaginations of visitors with beautiful flower shows and seasonal exhibitions since their inception in the 1800s. While the botanical garden still brings joy and wonder to the city with currated shows, Phipps is also turning towards the future, considering how the conservatory can play a role in leading sustainability efforts in the region, as well as serving the community through adult education and community programs.
+                    <br><br>
+                    Rebranding the Phipps posed a unique challenge in that the gardens were not shying away from their historical role. They will always be a garden respite from the hustle and bustle of the city, they just do more now. This rebrand hinged on that idea of "doing more", from visual identity to web architecture.
+                    <br><br>
+                    Identity<br>
+                    A challenge that Phipps identified with their diverse programming was that most of their visitors were simply unaware of 
+
+                </p>
+                <script>
+                    function processArrow() {
+                        document.getElementById('white-arrow').style.display='block';
+                        document.getElementById('black-arrow').style.display='none';
+                    }
+                    function processArrow2() {
+                        document.getElementById('black-arrow').style.display='block';
+                        document.getElementById('white-arrow').style.display='none';
+                    }
+                </script>
+            </div>
+        </div>
+        <footer>
+            <!-- <img src="images/cat-01.png" class="cat2" > -->
+            <div class="columns footmenu">
+                <ul class="menu" style="align-items: center;">
+                    <li class="menuitems"><a href="../pdfs/caleb-sun_resume.pdf" target="_blank"><sub class="link">Resume</sub></a></li>
+                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><sub class="link">LinkedIn</sub></a></li>
+                    <li class="menuitems"><a href="https://read.cv/calebsun" target="_blank"><sub class="link">ReadCV</sub></a></li>
+                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub class="link">Email</sub></a></li>
+                </ul>
+                <div class="credit">
+                    <sub>Updated September 2024 | Custom coded using HTML/CSS/JS</sub>
+                </div>
+            </div>
+        </footer>
+    </main>
+  </body>
+</html>

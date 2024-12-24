@@ -33,34 +33,41 @@
                     document.getElementById('yellow').style.display='none';
                 }
             </script>
-            <ul class="menu header" onclick='processIn()'>
+            <ul class="menu header" >
                 <script>
                     function processIn() {
-                            var process = document.getElementById('process');
-                            var processlabel = document.getElementById('process-label');
-                            process.classList.remove('process-start');
-                            process.classList.remove('process-out');
-                            process.classList.add('process-in');
-                            processlabel.style.display='none';
-                        }
+                        var process = document.getElementById('process');
+                        var processviewport = document.getElementById('process-viewport');
+                        var processlabel = document.getElementById('process-label');
+                        processviewport.style.display='block';
+                        process.classList.remove('process-start');
+                        process.classList.remove('process-out');
+                        process.classList.add('process-in');
+                        // processviewport.style.zIndex='20';
+                        processlabel.style.display='none';
+                    }
                     function processOut() {
                         var process = document.getElementById('process');
                         var processlabel = document.getElementById('process-label');
+                        var processviewport = document.getElementById('process-viewport');
                         process.classList.remove('process-in');
                         process.classList.add('process-out');
                         processlabel.style.display='block';
+                        processviewport.style.display='none';
                     }
                 </script>
                 <div class="menuitems"  id="process-label">
-                    <ul class="miniprojnav" style="z-index: 100; width: auto;">
+                    <ul class="miniprojnav" style="z-index: 100; width: auto;" onclick='processIn()'>
                         <img src="../images/eye.svg" style="width: 30px; margin-right: 8px;">
                         <p>
                             <a style="text-decoration: none !important; cursor: pointer; color: white;" >Process</a>
-                            
                         </p>
                     </ul>
-                    
+                    <!-- <ul class="miniprojnav" style="margin-left: 16px;">
+                        <p>About</p>
+                    </ul> -->
                 </div>
+            </ul>
             </ul>
         </header>
         <div class="project">
@@ -106,40 +113,49 @@
                 </ul>
             </div>
         </div>
-        <div id="process" class="process process-start">
-            <div style="position: sticky; top: 0; padding-top: 1em; padding-bottom: 0.5em; width: 100%; background-color: #c9ff56;">
-                <a onclick='processOut()'>
-                    <img id="black-arrow" 
-                        style="width: 24px; height: 24px; margin-bottom: 12px; display: block" 
-                        src="../images/x-black.svg" 
-                        onpointerenter='processArrow()' 
-                        onpointerleave='processArrow2()'>
-                    <img id="white-arrow" 
-                        style="width: 24px; margin-bottom: 12px; display: none;" 
-                        src="../images/x-white.svg">
-                </a>
+        <div class="process-viewport" id="process-viewport"≈>
+            <div id="process" class="process process-start">
+                <div class="process-header" >
+                    <a onmousedown='processOut()'>
+                        <img id="black-arrow" 
+                            style="width: 24px; height: 24px; margin-bottom: 12px; display: block" 
+                            src="../images/x-black.svg" 
+                            onpointerenter='processArrow()' 
+                            onpointerleave='processArrow2()'>
+                        <img id="white-arrow" 
+                            style="width: 24px; margin-bottom: 12px; display: none;" 
+                            src="../images/x-white.svg">
+                    </a>
+                </div>
+                <h2>
+                    Preserving the spirit of DIY, while also elevating the beauty of hanging out with good friends.<br><br>
+                </h2>
+                <p>
+                    Dropbox’s product visual strategy recently went through an update to introduce a more tactile, emotive faux 3D style. These new graphics appeared in marketing materials throughout 2024. This project explored how to bring this visual strategy into the in-product experience, bridging the gap between a library of assets, a fresh visual style, and the iconic Dropbox product.
+                </p>
+                <h3>Subhead</h3>
+                <p>
+                    Dropbox’s product visual strategy recently went through an update to introduce a more tactile, emotive faux 3D style. These new graphics appeared in marketing materials throughout 2024. This project explored how to bring this visual strategy into the in-product experience, bridging the gap between a library of assets, a fresh visual style, and the iconic Dropbox product.
+                </p>
+                <h3>Subhead</h3>
+                <p>
+                    Dropbox’s product visual strategy recently went through an update to introduce a more tactile, emotive faux 3D style. These new graphics appeared in marketing materials throughout 2024. This project explored how to bring this visual strategy into the in-product experience, bridging the gap between a library of assets, a fresh visual style, and the iconic Dropbox product.
+                </p>
+                <h3>Subhead</h3>
+                <p>
+                    Dropbox’s product visual strategy recently went through an update to introduce a more tactile, emotive faux 3D style. These new graphics appeared in marketing materials throughout 2024. This project explored how to bring this visual strategy into the in-product experience, bridging the gap between a library of assets, a fresh visual style, and the iconic Dropbox product.
+                </p>
+                <script>
+                    function processArrow() {
+                        document.getElementById('white-arrow').style.display='block';
+                        document.getElementById('black-arrow').style.display='none';
+                    }
+                    function processArrow2() {
+                        document.getElementById('black-arrow').style.display='block';
+                        document.getElementById('white-arrow').style.display='none';
+                    }
+                </script>
             </div>
-            <h2>
-                Crafting a sensitive, modern identity that blends the present and the past
-            </h2>
-            <p>
-                Subtitle<br><br>
-                Dropbox’s product visual strategy recently went through an update to introduce a more tactile, emotive faux 3D style. These new graphics appeared in marketing materials throughout 2024. This project explored how to bring this visual strategy into the in-product experience, bridging the gap between a library of assets, a fresh visual style, and the iconic Dropbox product.
-            </p>
-            <h3>Subhead</h3>
-            <p>
-                Dropbox’s product visual strategy recently went through an update to introduce a more tactile, emotive faux 3D style. These new graphics appeared in marketing materials throughout 2024. This project explored how to bring this visual strategy into the in-product experience, bridging the gap between a library of assets, a fresh visual style, and the iconic Dropbox product.
-            </p>
-            <script>
-                function processArrow() {
-                    document.getElementById('white-arrow').style.display='block';
-                    document.getElementById('black-arrow').style.display='none';
-                }
-                function processArrow2() {
-                    document.getElementById('black-arrow').style.display='block';
-                    document.getElementById('white-arrow').style.display='none';
-                }
-            </script>
         </div>
 
         

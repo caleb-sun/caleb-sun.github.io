@@ -33,34 +33,57 @@
                     document.getElementById('yellow').style.display='none';
                 }
             </script>
-            <ul class="menu header" onclick='processIn()'>
+            <ul class="menu header">
                 <script>
                     function processIn() {
-                            var process = document.getElementById('process');
-                            var processlabel = document.getElementById('process-label');
-                            process.classList.remove('process-start');
-                            process.classList.remove('process-out');
-                            process.classList.add('process-in');
-                            processlabel.style.display='none';
-                        }
+                        var process = document.getElementById('process');
+                        var processviewport = document.getElementById('process-viewport');
+                        var processopen = document.getElementById('process-open');
+                        var processclose = document.getElementById('process-close');
+                        
+                        processviewport.classList.remove('processviewport-start');
+                        processviewport.classList.remove('processviewport-out');
+                        processviewport.classList.add('processviewport-in');
+
+                        processclose.style.display='flex';
+                        processopen.style.display='none';
+                    }
                     function processOut() {
                         var process = document.getElementById('process');
-                        var processlabel = document.getElementById('process-label');
+                        var processlabel = document.getElementById('process-open');
+                        var processviewport = document.getElementById('process-viewport');
+                        var processclose = document.getElementById('process-close');
+
                         process.classList.remove('process-in');
                         process.classList.add('process-out');
-                        processlabel.style.display='block';
+                        processviewport.classList.remove('processviewport-in');
+                        processviewport.classList.add('processviewport-out');
+                        // processviewport.style.display='none';
+
+                        processclose.style.display='none';
+                        processlabel.style.display='flex';
+                        
                     }
                 </script>
-                <!-- <div class="menuitems"  id="process-label">
-                    <ul class="miniprojnav" style="z-index: 100; width: auto;">
-                        <img src="../images/eye.svg" style="width: 30px; margin-right: 8px;">
-                        <p>
+                <div class="menuitems">
+                    <ul class="processnav" id="process-open" onclick='processIn()' onmouseenter="process1Hover()">
+                        <img src="../images/eye-yellow.svg" class="eye" style="display: none;" id="eye1yellow">
+                        <img src="../images/eye.svg" class="eye" id="eye1white">
+                        <sub>
                             <a style="text-decoration: none !important; cursor: pointer; color: white;" >Process</a>
-                            
-                        </p>
+                        </sub>
                     </ul>
-                    
-                </div> -->
+                    <ul class="processnav" id="process-close" onclick='processOut()' onmouseenter="process2Hover()" style="display: none">
+                        <img src="../images/eye-yellow.svg" class="eye" style="display: none;" id="eye2yellow">
+                        <img src="../images/eye.svg" class="eye" id="eye2white">
+                        <sub>
+                            <a style="text-decoration: none !important; cursor: pointer; color: white;" >Close</a>
+                        </sub>
+                    </ul>
+                    <!-- <ul class="miniprojnav" style="margin-left: 16px;">
+                        <p>About</p>
+                    </ul> -->
+                </div>
             </ul>
         </header>
         <div class="project">
@@ -125,37 +148,25 @@
                         >
                         </li>
                     </ul>
-
                     
                     <span class="large"></span>
                 </ul>
             </div>
         </div>
-        <!-- <div class="process-viewport">
-            <div id="process" class="process process-start">
-                <div class="process-header">
-                    <a onclick='processOut()'>
-                        <img id="black-arrow" 
-                            style="width: 24px; height: 24px; margin-bottom: 12px; display: block" 
-                            src="../images/x-black.svg" 
-                            onpointerenter='processArrow()' 
-                            onpointerleave='processArrow2()'>
-                        <img id="white-arrow" 
-                            style="width: 24px; margin-bottom: 12px; display: none;" 
-                            src="../images/x-white.svg">
-                    </a>
-                </div>
+        <div class="process-viewport processviewport-start" id="process-viewport">
+            <div id="process" class="process">
                 <h2>
-                    A sensitive balancing act reflecting the political and historical nature of the biennial<br><br>
+                    Negotiating a classic fixture of Pittsburgh tradition with modern aspirations.<br><br>
                 </h2>
-                <p>The host of the Jingdezhen Ceramic Arts Biennial is the Jingdezhen University of Ceramic Arts, a historic institution that has played an incredible role in preserving the art of porcelain making, and keeping the region of China that porcelain was invented in the public conscious. The brand strategy is intended to reflect the nature of art as a political identity, and a point of national historic pride. A balancing act between respect for the past, while also not ostracizing the present.
-                </p>
-                <h3>Early sketches</h3>
-                <img src="../images/alchemy/tests/morphing-vase.gif" style="background-color: black;">
-                <img src="../images/alchemy/tests/tilt-image.gif" style="background-color: black;">
-                <p>Early iterations strayed a little far from the core strategy, flexing towards visual metaphors that harken back to the 
-                </p>
+                <p>
+                    Phipps has captured the imaginations of visitors with beautiful flower shows and seasonal exhibitions since their inception in the 1800s. While the botanical garden still brings joy and wonder to the city with currated shows, Phipps is also turning towards the future, considering how the conservatory can play a role in leading sustainability efforts in the region, as well as serving the community through adult education and community programs.
+                    <br><br>
+                    Rebranding the Phipps posed a unique challenge in that the gardens were not shying away from their historical role. They will always be a garden respite from the hustle and bustle of the city, they just do more now. This rebrand hinged on that idea of "doing more", from visual identity to web architecture.
+                    <br><br>
+                    Identity<br>
+                    A challenge that Phipps identified with their diverse programming was that most of their visitors were simply unaware of 
 
+                </p>
                 <script>
                     function processArrow() {
                         document.getElementById('white-arrow').style.display='block';
@@ -167,19 +178,18 @@
                     }
                 </script>
             </div>
-        </div> -->
-
-        
+        </div>
         <footer>
-            <div class="columns footmenu" style="width:100%; justify-content: space-between;">
-                <ul class="menu" style="margin-left:4%; align-items: center;">
-                    <li class="menuitems"><a href="../pdfs/caleb-sun_resume.pdf" target="_blank"><sub>Resume</sub></a></li>
-                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><sub>LinkedIn</sub></a></li>
-                    <li class="menuitems"><a href="https://read.cv/calebsun" target="_blank"><sub>ReadCV</sub></a></li>
-                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub>Email</sub></a></li>
+            <!-- <img src="images/cat-01.png" class="cat2" > -->
+            <div class="columns footmenu">
+                <ul class="menu" style="align-items: center;">
+                    <li class="menuitems"><a href="../pdfs/caleb-sun_resume.pdf" target="_blank"><sub class="link">Resume</sub></a></li>
+                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><sub class="link">LinkedIn</sub></a></li>
+                    <li class="menuitems"><a href="https://read.cv/calebsun" target="_blank"><sub class="link">ReadCV</sub></a></li>
+                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub class="link">Email</sub></a></li>
                 </ul>
                 <div class="credit">
-                    <sub>Updated June 2024 | Custom coded using HTML/CSS/JS</sub>
+                    <sub>Updated September 2024 | Custom coded using HTML/CSS/JS</sub>
                 </div>
             </div>
         </footer>

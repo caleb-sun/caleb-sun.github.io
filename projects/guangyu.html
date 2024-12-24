@@ -33,9 +33,41 @@
                     document.getElementById('yellow').style.display='none';
                 }
             </script>
-            <!-- <ul class="menu header">
-                <li class="menuitems"><p><a href="../about.html">ABOUT</a></p></li>
-            </ul> -->
+            <ul class="menu header" >
+                <script>
+                    function processIn() {
+                        var process = document.getElementById('process');
+                        var processviewport = document.getElementById('process-viewport');
+                        var processlabel = document.getElementById('process-label');
+                        processviewport.style.display='block';
+                        process.classList.remove('process-start');
+                        process.classList.remove('process-out');
+                        process.classList.add('process-in');
+                        // processviewport.style.zIndex='20';
+                        processlabel.style.display='none';
+                    }
+                    function processOut() {
+                        var process = document.getElementById('process');
+                        var processlabel = document.getElementById('process-label');
+                        var processviewport = document.getElementById('process-viewport');
+                        process.classList.remove('process-in');
+                        process.classList.add('process-out');
+                        processlabel.style.display='block';
+                        processviewport.style.display='none';
+                    }
+                </script>
+                <div class="menuitems"  id="process-label">
+                    <ul class="miniprojnav" style="z-index: 100; width: auto;" onclick='processIn()'>
+                        <img src="../images/eye.svg" style="width: 30px; margin-right: 8px;">
+                        <p>
+                            <a style="text-decoration: none !important; cursor: pointer; color: white;" >Process</a>
+                        </p>
+                    </ul>
+                    <!-- <ul class="miniprojnav" style="margin-left: 16px;">
+                        <p>About</p>
+                    </ul> -->
+                </div>
+            </ul>
         </header>
 
         <div class="project">
@@ -125,6 +157,32 @@
                     </li>
                     <span class="large spacer"></span>
                 </ul>
+            </div>
+        </div>
+        <div class="process-viewport processviewport-start" id="process-viewport">
+            <div id="process" class="process">
+                <h2>
+                    Negotiating a classic fixture of Pittsburgh tradition with modern aspirations.<br><br>
+                </h2>
+                <p>
+                    Phipps has captured the imaginations of visitors with beautiful flower shows and seasonal exhibitions since their inception in the 1800s. While the botanical garden still brings joy and wonder to the city with currated shows, Phipps is also turning towards the future, considering how the conservatory can play a role in leading sustainability efforts in the region, as well as serving the community through adult education and community programs.
+                    <br><br>
+                    Rebranding the Phipps posed a unique challenge in that the gardens were not shying away from their historical role. They will always be a garden respite from the hustle and bustle of the city, they just do more now. This rebrand hinged on that idea of "doing more", from visual identity to web architecture.
+                    <br><br>
+                    Identity<br>
+                    A challenge that Phipps identified with their diverse programming was that most of their visitors were simply unaware of 
+
+                </p>
+                <script>
+                    function processArrow() {
+                        document.getElementById('white-arrow').style.display='block';
+                        document.getElementById('black-arrow').style.display='none';
+                    }
+                    function processArrow2() {
+                        document.getElementById('black-arrow').style.display='block';
+                        document.getElementById('white-arrow').style.display='none';
+                    }
+                </script>
             </div>
         </div>
         <footer>
