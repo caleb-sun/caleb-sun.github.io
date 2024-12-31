@@ -183,7 +183,7 @@ font-style: italic;
 
 h1, h1>strong{
     font-size: 60pt;
-    line-height: 64pt;
+    line-height: 62pt;
 }
 
 h5 {
@@ -418,7 +418,7 @@ hr.dotted{
 }
 
 .fifty{
-    width:49%;
+    width:49.5%;
     gap:18px;
 }
 
@@ -792,6 +792,7 @@ footer{
     z-index: 20;
 }
 
+
 .projecttitle{
     position:relative;
     margin:auto;
@@ -816,6 +817,9 @@ footer{
 .project-title{
     text-transform: uppercase;
 }
+
+
+
 
 /* .demo{
     margin-left: calc(50% - 50vw);
@@ -990,20 +994,21 @@ input[type='submit']:hover {
 
 @media screen and (max-width: 1200px) { 
     h1 {
-        font-size:28pt;
+        font-size:42pt;
+        line-height: 44pt;
     }
     
     h2 {
         font-size: 28pt;
     }
 
-    .thirtythree{
+    .projgroup>.thirtythree{
         width: 49.5%;
     }
 
-    .home{
+    /* .home{
         margin-top: 8em;
-    }
+    } */
     .projgroup{
         justify-content: space-between;
     }
@@ -1036,8 +1041,8 @@ input[type='submit']:hover {
 @media screen and (max-width: 800px) {
 
     h1{
-        font-size: 44pt;
-        line-height: 44pt;
+        font-size: 64pt;
+        line-height: 64pt;
     }
 
     p{
@@ -1047,7 +1052,7 @@ input[type='submit']:hover {
     
 
     .subtitle{
-        margin-bottom: 16pt;
+        margin-bottom: 10pt;
     }
 
     .twenty, .forty, .eighty, .thirty, .thirtythree, .fifty, .sixty, .sixtysix, .eighty, .hundred{
@@ -1056,6 +1061,10 @@ input[type='submit']:hover {
 
     .twentyfive{
         width:20%;
+    }
+
+    .projgroup>.thirtythree{
+        width: 100%;
     }
 
     .thirty, .twentyfive, .thirtythree, .fifty{
@@ -1072,7 +1081,7 @@ input[type='submit']:hover {
 
     .projectbody{
         width: 92%;
-        margin-top: 30%;
+        margin-top: 15vh;
     }
 
     .spacer{
@@ -1117,13 +1126,10 @@ input[type='submit']:hover {
         display: none !important;
     }
 
-    .home,.body,.projecttitle {
+    /* .home,.body,.projecttitle {
         margin-top:36%;
-    }
+    } */
 
-    .password{
-        margin-top: 35% !important;
-    }
 
     .homeprojects{
         width: 100%; 
@@ -1135,7 +1141,7 @@ input[type='submit']:hover {
         position: relative;
     }
 
-    .projecthome, .kitchen{
+    .projecthome{
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -1178,12 +1184,9 @@ input[type='submit']:hover {
 
     .home {
         margin:auto;
-        margin-top:10em;
-        margin-left: 2em;
         margin-bottom: 20%;
         width: 300vw;
         gap: 10px;
-        flex-direction: column;
     }
 
     .miniprojnav{
@@ -1294,6 +1297,23 @@ input[type='submit']:hover {
         width: 90%;
         gap: 2px;
     }
+
+    .projectbody>.columns>.sixtysix{
+        margin-bottom: 2em;
+    }
+
+    .projectbody>.columns>li:nth-child(1){
+        display: flex;
+        flex-direction: column-reverse !important; 
+        gap: 0;
+        margin-bottom: 0em;
+    }
+
+    .projectbody>.columns>li:nth-child(2){
+        margin-bottom: 2em;
+        width: 66%;
+    }
+
 
 
 }
