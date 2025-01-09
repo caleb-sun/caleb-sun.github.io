@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--- the doctype declaration tells the file reader that we're using html-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="An exhibition identity for the birthplace of ceramics.">
+    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=">
+    <meta name="robots" content="all">
+    <!---declares what kinds of characters are supportive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!---makes site responsive-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!---makes site work better with microsoft browsers-->
+    <title>Caleb Sun – Design Lecture Series</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/bav6mvc.css">
+  </head>  
+  <body>
+    <main>
+        <header>
+            <a href="../index.html" onpointerenter='arrow()' onpointerleave='arrow2()'> 
+                <img id="white" class="homenav" src="../images/arrow-04.svg" style="width: 24px; display: block;"></img>
+                <img id="yellow" class="homenav" src="../images/arrow-yellow.svg" style="width: 24px; display: none;"></img>
+            </a>
+            <script>
+                function arrow() {
+                    document.getElementById('white').style.display='none';
+                    document.getElementById('yellow').style.display='block';
+                }
+                function arrow2() {
+                    document.getElementById('white').style.display='block';
+                    document.getElementById('yellow').style.display='none';
+                }
+            </script>
+            <ul class="menu header">
+                <script>
+                    function processIn() {
+                        var process = document.getElementById('process');
+                        var processviewport = document.getElementById('process-viewport');
+                        var processopen = document.getElementById('process-open');
+                        var processclose = document.getElementById('process-close');
+                        
+                        processviewport.classList.remove('processviewport-start');
+                        processviewport.classList.remove('processviewport-out');
+                        processviewport.classList.add('processviewport-in');
+
+                        processclose.style.display='flex';
+                        processopen.style.display='none';
+                    }
+                    function processOut() {
+                        var process = document.getElementById('process');
+                        var processlabel = document.getElementById('process-open');
+                        var processviewport = document.getElementById('process-viewport');
+                        var processclose = document.getElementById('process-close');
+
+                        process.classList.remove('process-in');
+                        process.classList.add('process-out');
+                        processviewport.classList.remove('processviewport-in');
+                        processviewport.classList.add('processviewport-out');
+                        // processviewport.style.display='none';
+
+                        processclose.style.display='none';
+                        processlabel.style.display='flex';
+                        
+                    }
+                </script>
+                <div class="menuitems">
+                    <ul class="processnav" id="process-open" onclick='processIn()' onmouseenter="process1Hover()">
+                        <img src="../images/eye-yellow.svg" class="eye" style="display: none;" id="eye1yellow">
+                        <img src="../images/eye.svg" class="eye" id="eye1white">
+                        <sub>
+                            <a style="text-decoration: none !important; cursor: pointer; color: white;" >Process</a>
+                        </sub>
+                    </ul>
+                    <ul class="processnav" id="process-close" onclick='processOut()' onmouseenter="process2Hover()" style="display: none">
+                        <img src="../images/eye-yellow.svg" class="eye" style="display: none;" id="eye2yellow">
+                        <img src="../images/eye.svg" class="eye" id="eye2white">
+                        <sub>
+                            <a style="text-decoration: none !important; cursor: pointer; color: white;" >Close</a>
+                        </sub>
+                    </ul>
+                    <!-- <ul class="miniprojnav" style="margin-left: 16px;">
+                        <p>About</p>
+                    </ul> -->
+                </div>
+            </ul>
+        </header>
+        <div class="project">
+            <div class="projectbody">
+                <ul class="columns">
+                    <li class="sixtysix">
+                        <h1 class="project-title">Design Lecture Series <!--title-->
+                        </h1>
+                        <sub class="subtitle">Identity design</sub>
+                    </li>
+                    <li class="thirtythree">
+                        <p>A modern, elegant identity for a ceramic arts biennial held in the birthplace of porcelain.
+                        </p>
+                    </li>
+                    <li class="hundred" style="gap: 8px;">
+                        <img src="../images/dls/DLS-hero.gif">
+                        <img src="../images/dls/layers.gif">
+                        <img src="../images/dls/gravity-demo.gif">
+                    </li>
+                    <li class="fifty">
+                        <img src="../images/dls/gray-unit.gif">
+                        
+                    </li>
+                    <li class="fifty">
+                       
+                        <img src="../images/dls/text-effect.gif">
+                    </li>
+                    <span class="small"></span>
+                    <div class="sixtysix">
+                        <li class="eighty">
+                        <p>The Jingdezhen International Ceramic Arts Biennial is a celebration of the past, present, and future of the ceramic arts, held at the birthplace of porcelain some 3000 years ago. To this day, Jingdezhen remains a culture hub for ceramicists across the globe. The third edition of this biennial celebrates the beauty of an ageless craft, of transforming elements into art, through what audiences across continents and time can only describe as alchemy.
+                        <br><br>
+                        The Alchemy Earth exhibition identity is a response to the modernization of the ceramic arts. Elegant, simple, and bold, it provides a backbone for the breadth of experimental work exhibited throughout the biennial, without compromising on the roots of the craft.
+                        </p>
+                        </li>
+                    </div>
+                    <div class="thirtythree" style="flex-direction: row;">
+                        <li class="twenty">
+                            <p>Time<br>Role</p>
+                        </li>
+                        <li class="eighty">
+                            <p>5 weeks<br>Sole designer<br>
+                            Instructed by Kelsey Elder</p>
+                        </li>
+                    </div>
+                    <span class="small"></span>
+                    <ul class="gallery">
+                        <li class="hundred" style="gap: 8px;"></li>
+                            <img src="../images/alchemy/lanyard.jpg">
+                            <img src="../images/alchemy/tickets.jpg">
+                        </li>
+                        <li class="fifty">
+                            <img
+                            src="../images/alchemy/business-card.jpg"
+                        >
+                        </li>
+                        <li class="fifty">
+                            <img
+                            src="../images/alchemy/notebook.jpg"
+                        >
+                        </li>
+                        <li class="fifty">
+                            <img
+                            src="../images/alchemy/tote-bag.jpg"
+                        >
+                        </li>
+                        <li class="fifty">
+                            <img
+                            src="../images/alchemy/tshirt.jpg"
+                        >
+                        </li>
+                    </ul>
+                    
+                    <span class="large"></span>
+                </ul>
+            </div>
+        </div>
+        <div class="process-viewport processviewport-start" id="process-viewport">
+            <div id="process" class="process">
+                <h2>
+                    Negotiating a classic fixture of Pittsburgh tradition with modern aspirations.<br><br>
+                </h2>
+                <p>
+                    Phipps has captured the imaginations of visitors with beautiful flower shows and seasonal exhibitions since their inception in the 1800s. While the botanical garden still brings joy and wonder to the city with currated shows, Phipps is also turning towards the future, considering how the conservatory can play a role in leading sustainability efforts in the region, as well as serving the community through adult education and community programs.
+                    <br><br>
+                    Rebranding the Phipps posed a unique challenge in that the gardens were not shying away from their historical role. They will always be a garden respite from the hustle and bustle of the city, they just do more now. This rebrand hinged on that idea of "doing more", from visual identity to web architecture.
+                    <br><br>
+                    Identity<br>
+                    A challenge that Phipps identified with their diverse programming was that most of their visitors were simply unaware of 
+
+                </p>
+                <script>
+                    function processArrow() {
+                        document.getElementById('white-arrow').style.display='block';
+                        document.getElementById('black-arrow').style.display='none';
+                    }
+                    function processArrow2() {
+                        document.getElementById('black-arrow').style.display='block';
+                        document.getElementById('white-arrow').style.display='none';
+                    }
+                </script>
+            </div>
+        </div>
+        <footer>
+            <!-- <img src="images/cat-01.png" class="cat2" > -->
+            <div class="columns footmenu">
+                <ul class="menu" style="align-items: center;">
+                    <li class="menuitems"><a href="../pdfs/caleb-sun_resume.pdf" target="_blank"><sub class="link">Resume</sub></a></li>
+                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><sub class="link">LinkedIn</sub></a></li>
+                    <li class="menuitems"><a href="https://read.cv/calebsun" target="_blank"><sub class="link">ReadCV</sub></a></li>
+                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub class="link">Email</sub></a></li>
+                </ul>
+                <div class="credit">
+                    <sub>Updated September 2024 | Custom coded using HTML/CSS/JS</sub>
+                </div>
+            </div>
+        </footer>
+    </main>
+  </body>
+</html>
