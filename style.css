@@ -270,6 +270,7 @@ a:hover, a:hover>sub{
     text-decoration-style: dotted;
     color: #c9ff56 !important;
     cursor: pointer, auto;
+    
 }
 
 .menu-inactive{
