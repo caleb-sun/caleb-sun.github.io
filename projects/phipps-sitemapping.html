@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--- the doctype declaration tells the file reader that we're using html-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="An exhibition identity for the birthplace of ceramics.">
+    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=">
+    <meta name="robots" content="all">
+    <!---declares what kinds of characters are supportive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!---makes site responsive-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!---makes site work better with microsoft browsers-->
+    <title>Caleb Sun – Phipps Sitemapping</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/bav6mvc.css">
+  </head>  
+  <body>
+    <main>
+        <header>
+            <a href="../index.html" onpointerenter='arrow()' onpointerleave='arrow2()'> 
+                <img id="white" class="homenav" src="../images/arrow-04.svg" style="width: 24px; display: block;"></img>
+                <img id="yellow" class="homenav" src="../images/arrow-yellow.svg" style="width: 24px; display: none;"></img>
+            </a>
+            <script>
+                function arrow() {
+                    document.getElementById('white').style.display='none';
+                    document.getElementById('yellow').style.display='block';
+                }
+                function arrow2() {
+                    document.getElementById('white').style.display='block';
+                    document.getElementById('yellow').style.display='none';
+                }
+            </script>
+        </header>
+        <div class="project">
+            <div class="projectbody">
+                <ul class="columns">
+                    <li class="sixtysix">
+                        <h1 class="project-title">Phipps Sitemapping <!--title-->
+                        </h1>
+                        <sub class="subtitle">Web sitemapping and strategy</sub>
+                    </li>
+                    <li class="thirtythree">
+                        <p>Deep-dive in web strategy for the <a href="phipps.html">Phipps identity redesign</a>
+                        </p>
+                    </li>
+                    <div class="gallery">
+                        <li class="hundred">
+                            <img src="../images/phipps/phipps-site/menu.jpg">
+                        </li>
+                        
+                    </div>
+                    <div class="sixtysix">
+                        <li class="hundred" style="gap: 0;">
+                            <h3 class="thirtythree">&#8627; Web strategy and sitemapping</h3><br>
+                            <p>The Phipps website was possibly the most urgent touchpoint in need of a refresh. Bulky and overflowing, the site struggled from a navigational and organizational standpoint to accomodate an ever-growing archive of information which in turn <strong>created confusion among customers trying to accomplish simple tasks</strong> like buying tickets and planning their visit. By conducting a comprehensive site audit and rooting the web redesign in a update to site architecture strategy, the new Phipps site is not only visually stunning and on-par with peer organizations, but also aligned with core customer needs. <br><br> Above is an example of the types of strategies I proposed when meeting with Phipps leadership. By consolidating navigational sections to minimal, easy to understand labels, site visitors are able to navigate towards their desired paths much more easily. 
+                                <!-- <br><br>Read more about the strategy and site-remapping <a href="_">here</a>. -->
+                            </p>
+                        </li>
+                    </div>
+                    
+                    <span class="large"></span>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <!-- <img src="images/cat-01.png" class="cat2" > -->
+            <div class="columns footmenu">
+                <ul class="menu" style="align-items: center;">
+                    <li class="menuitems"><a href="../pdfs/caleb-sun_resume.pdf" target="_blank"><sub class="link">Resume</sub></a></li>
+                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><sub class="link">LinkedIn</sub></a></li>
+                    <li class="menuitems"><a href="https://read.cv/calebsun" target="_blank"><sub class="link">ReadCV</sub></a></li>
+                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub class="link">Email</sub></a></li>
+                </ul>
+                <div class="credit">
+                    <sub>Updated September 2024 | Custom coded using HTML/CSS/JS</sub>
+                </div>
+            </div>
+        </footer>
+    </main>
+  </body>
+</html>

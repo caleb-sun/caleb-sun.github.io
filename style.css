@@ -147,8 +147,13 @@ html {
 /* type */
 
 
+@font-face {
+    font-family: hal;
+    src: url(fonts/arialnarrow.ttf);
+}
+
 h1,h2,h3,h5,h4,p{
-    font-family: "elza-condensed", sans-serif;
+    font-family: "hal", sans-serif;
     font-weight: 300;
     font-style: normal;
     color: white;
@@ -156,7 +161,7 @@ h1,h2,h3,h5,h4,p{
 }
 
 h4, p, sub {
-    font-family: "elza-condensed", sans-serif;
+    font-family: "hal", sans-serif;
     font-weight: 300;
     font-style: normal;
     font-style: normal;
@@ -175,7 +180,7 @@ sub>a:hover{
 }
 
 strong{
-    font-family: "elza-condensed", sans-serif;
+    font-family: "hal", sans-serif;
 font-weight: 300;
 font-style: italic;
     color: white;
@@ -197,8 +202,8 @@ h2{
 }
 
 p{
-    font-size: 18pt;
-    line-height: 22pt;
+    font-size: 16pt;
+    line-height: 20pt;
     /* overflow: hidden;
     text-overflow: ellipsis; */
 }
