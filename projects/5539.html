@@ -19,68 +19,152 @@
   <body>
     <main>
         <header>
-            <a href="../index.html" onpointerenter='arrow()' onpointerleave='arrow2()'> 
-                <img id="white" class="homenav" src="../images/arrow-04.svg" style="width: 24px; display: block;"></img>
-                <img id="yellow" class="homenav" src="../images/arrow-yellow.svg" style="width: 24px; display: none;"></img>
+            <a class="homenav sun" href="../index.html">
+                <img id='sun' src="../images/sun.svg">
+                <p style="height: 20px; margin-left: 8px; ">Caleb Sun</p>
             </a>
             <script>
-                function arrow() {
-                    document.getElementById('white').style.display='none';
-                    document.getElementById('yellow').style.display='block';
-                }
-                function arrow2() {
-                    document.getElementById('white').style.display='block';
-                    document.getElementById('yellow').style.display='none';
-                }
+                var elem = document.getElementById('sun');
+                window.addEventListener('scroll', function() {
+                    var value = window.scrollY * 0.1;
+                    elem.style.transform = `rotate(${value}deg)`; 
+                });
+
+                function resize() {
+                    window.scrollTo(0, 0);
+                    }
+                window.onresize = resize;
             </script>
             <ul class="menu header">
-                <script>
-                    function processIn() {
-                        var process = document.getElementById('process');
-                        var processviewport = document.getElementById('process-viewport');
-                        var processopen = document.getElementById('process-open');
-                        var processclose = document.getElementById('process-close');
+                <div class="menuitems">
+                    <ul class="miniprojnav" style="z-index: 100;">
                         
-                        processviewport.classList.remove('processviewport-start');
-                        processviewport.classList.remove('processviewport-out');
-                        processviewport.classList.add('processviewport-in');
+                        <p style="cursor: pointer;"><a id=worktop onclick='work()' class="menu-active link">Selected Work,</a></p>
+                        <p style="cursor: pointer;"><a id=playtop onclick='play()' class="menu-inactive link">Etc,</a></p>
+                        <p style="cursor: pointer;"><a id=abouttop onclick='about()' class="menu-inactive link">About</a></p>                        
+                    </ul>
+                    <!-- <script> 
+                        function work() {
+                            var work = document.getElementById('work');
+                            var play = document.getElementById('play');
+                            var about = document.getElementById('about');
 
-                        processclose.style.display='flex';
-                        processopen.style.display='none';
-                    }
-                    function processOut() {
-                        var process = document.getElementById('process');
-                        var processlabel = document.getElementById('process-open');
-                        var processviewport = document.getElementById('process-viewport');
-                        var processclose = document.getElementById('process-close');
+                            play.classList.remove('up');
+                            play.classList.add('down'); 
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
 
-                        process.classList.remove('process-in');
-                        process.classList.add('process-out');
-                        processviewport.classList.remove('processviewport-in');
-                        processviewport.classList.add('processviewport-out');
-                        // processviewport.style.display='none';
+                            work.classList.remove('down');
+                            work.classList.add('up');
+                            worktop.classList.remove('menu-inactive');
+                            worktop.classList.add('menu-active');
 
-                        processclose.style.display='none';
-                        processlabel.style.display='flex';
+                            about.classList.remove('up');
+                            about.classList.add('down'); 
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                        }
+                        function play() {
+                            var work = document.getElementById('work');
+                            var play = document.getElementById('play');
+                            var about = document.getElementById('about');
+                            
+                            work.classList.remove('up');
+                            work.classList.add('down'); 
+                            worktop.classList.remove('menu-active');
+                            worktop.classList.add('menu-inactive');
+
+                            play.classList.remove('down');
+                            play.classList.add('up');
+                            playtop.classList.remove('menu-inactive');
+                            playtop.classList.add('menu-active');
+
+                            about.classList.remove('up');
+                            about.classList.add('down'); 
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                        }
+
+                        function about() {
+                            var work = document.getElementById('work');
+                            var play = document.getElementById('play');
+                            var about = document.getElementById('about');
+
+                            work.classList.remove('up');
+                            work.classList.add('down'); 
+                            worktop.classList.remove('menu-active');
+                            worktop.classList.add('menu-inactive');
+
+                            play.classList.remove('up');
+                            play.classList.add('down'); 
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            about.classList.remove('down');
+                            about.classList.add('up');
+                            abouttop.classList.remove('menu-inactive');
+                            abouttop.classList.add('menu-active');
+
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
                         
-                    }
-                </script>
-                <!-- <div class="menuitems">
-                    <ul class="processnav" id="process-open" onclick='processIn()' onmouseenter="process1Hover()">
-                        <img src="../images/eye-yellow.svg" class="eye" style="display: none;" id="eye1yellow">
-                        <img src="../images/eye.svg" class="eye" id="eye1white">
-                        <sub>
-                            <a style="text-decoration: none !important; cursor: pointer; color: white;" >Process</a>
-                        </sub>
-                    </ul>
-                    <ul class="processnav" id="process-close" onclick='processOut()' onmouseenter="process2Hover()" style="display: none">
-                        <img src="../images/eye-yellow.svg" class="eye" style="display: none;" id="eye2yellow">
-                        <img src="../images/eye.svg" class="eye" id="eye2white">
-                        <sub>
-                            <a style="text-decoration: none !important; cursor: pointer; color: white;" >Close</a>
-                        </sub>
-                    </ul>
-                </div> -->
+                    </script> -->
+                    <script>
+                        function work() {
+                            var w = (window.innerWidth);
+                            var work = document.getElementById('work');
+                            window.location.href = "../index.html";
+                            window.scrollTo(0, 0);
+                            work.scrollTo(0,0);
+
+                            worktop.classList.remove('menu-inactive');
+                            worktop.classList.add('menu-active');
+
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+                        }
+                        function play() {
+                            var play = document.getElementById('play');
+                            window.location.href = "../index.html#play";
+                            worktop.classList.add('menu-inactive');
+
+                            playtop.classList.remove('menu-inactive');
+                            playtop.classList.add('menu-active');
+
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+                        }
+
+                        function about() {
+                            var w = (window.innerWidth);
+                            var about = document.getElementById('about');
+                            window.location.href = "../index.html#about";
+                            about.scrollTo(0,0);
+
+                            worktop.classList.remove('menu-active');
+                            worktop.classList.add('menu-inactive');
+
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            abouttop.classList.remove('menu-inactive');
+                            abouttop.classList.add('menu-active');
+                        }
+                        
+                    </script>
+                </div>
             </ul>
         </header>
         <div class="project">

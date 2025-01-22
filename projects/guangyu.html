@@ -19,57 +19,81 @@
   <body>
     <main>
         <header>
-            <a href="../index.html" onpointerenter='arrow()' onpointerleave='arrow2()'> 
-                <img id="white" class="homenav" src="../images/arrow-04.svg" style="width: 24px; display: block;"></img>
-                <img id="yellow" class="homenav" src="../images/arrow-yellow.svg" style="width: 24px; display: none;"></img>
+            <a class="homenav sun" href="../index.html">
+                <img id='sun' src="../images/sun.svg">
+                <p style="height: 20px; margin-left: 8px; ">Caleb Sun</p>
             </a>
             <script>
-                function arrow() {
-                    document.getElementById('white').style.display='none';
-                    document.getElementById('yellow').style.display='block';
-                }
-                function arrow2() {
-                    document.getElementById('white').style.display='block';
-                    document.getElementById('yellow').style.display='none';
-                }
+                var elem = document.getElementById('sun');
+                window.addEventListener('scroll', function() {
+                    var value = window.scrollY * 0.1;
+                    elem.style.transform = `rotate(${value}deg)`; 
+                });
+
+                function resize() {
+                    window.scrollTo(0, 0);
+                    }
+                window.onresize = resize;
             </script>
-            <ul class="menu header" >
-                <script>
-                    function processIn() {
-                        var process = document.getElementById('process');
-                        var processviewport = document.getElementById('process-viewport');
-                        var processlabel = document.getElementById('process-label');
-                        processviewport.style.display='block';
-                        process.classList.remove('process-start');
-                        process.classList.remove('process-out');
-                        process.classList.add('process-in');
-                        // processviewport.style.zIndex='20';
-                        processlabel.style.display='none';
-                    }
-                    function processOut() {
-                        var process = document.getElementById('process');
-                        var processlabel = document.getElementById('process-label');
-                        var processviewport = document.getElementById('process-viewport');
-                        process.classList.remove('process-in');
-                        process.classList.add('process-out');
-                        processlabel.style.display='block';
-                        processviewport.style.display='none';
-                    }
-                </script>
-                <div class="menuitems"  id="process-label">
-                    <ul class="miniprojnav" style="z-index: 100; width: auto;" onclick='processIn()'>
-                        <img src="../images/eye.svg" style="width: 30px; margin-right: 8px;">
-                        <p>
-                            <a style="text-decoration: none !important; cursor: pointer; color: white;" >Process</a>
-                        </p>
+            <ul class="menu header">
+                <div class="menuitems">
+                    <ul class="miniprojnav" style="z-index: 100;">
+                        
+                        <p style="cursor: pointer;"><a id=worktop onclick='work()' class="menu-inactive link">Selected Work,</a></p>
+                        <p style="cursor: pointer;"><a id=playtop onclick='play()' class="menu-inactive link">Etc,</a></p>
+                        <p style="cursor: pointer;"><a id=abouttop onclick='about()' class="menu-inactive link">About</a></p>                        
                     </ul>
-                    <!-- <ul class="miniprojnav" style="margin-left: 16px;">
-                        <p>About</p>
-                    </ul> -->
+                    <script>
+                        function work() {
+                            var w = (window.innerWidth);
+                            var work = document.getElementById('work');
+                            window.location.href = "../index.html";
+                            window.scrollTo(0, 0);
+                            work.scrollTo(0,0);
+
+                            worktop.classList.remove('menu-inactive');
+                            worktop.classList.add('menu-active');
+
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+                        }
+                        function play() {
+                            var play = document.getElementById('play');
+                            window.location.href = "../index.html#play";
+                            worktop.classList.add('menu-inactive');
+
+                            playtop.classList.remove('menu-inactive');
+                            playtop.classList.add('menu-active');
+
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+                        }
+
+                        function about() {
+                            var w = (window.innerWidth);
+                            var about = document.getElementById('about');
+                            window.location.href = "../index.html#about";
+                            about.scrollTo(0,0);
+
+                            worktop.classList.remove('menu-active');
+                            worktop.classList.add('menu-inactive');
+
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            abouttop.classList.remove('menu-inactive');
+                            abouttop.classList.add('menu-active');
+                        }
+                        
+                    </script>
                 </div>
             </ul>
         </header>
-
         <div class="project">
             <div class="projectbody">
                 <ul class="columns">

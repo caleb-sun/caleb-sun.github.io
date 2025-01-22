@@ -11,7 +11,7 @@
     <!---makes site responsive-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!---makes site work better with microsoft browsers-->
-    <title>Caleb Sun – Home</title>
+    <title>Caleb Sun – Portfolio</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/bav6mvc.css">
@@ -38,84 +38,10 @@
             <ul class="menu header">
                 <div class="menuitems">
                     <ul class="miniprojnav" style="z-index: 100;">
-                        <img src="images/eye.svg" class="eye" style="width: 32px !important;">
                         <p style="cursor: pointer;"><a id=worktop onclick='work()' class="menu-active link">Selected Work,</a></p>
                         <p style="cursor: pointer;"><a id=playtop onclick='play()' class="menu-inactive link">Etc,</a></p>
                         <p style="cursor: pointer;"><a id=abouttop onclick='about()' class="menu-inactive link">About</a></p>                        
                     </ul>
-                    <!-- <script> 
-                        function work() {
-                            var work = document.getElementById('work');
-                            var play = document.getElementById('play');
-                            var about = document.getElementById('about');
-
-                            play.classList.remove('up');
-                            play.classList.add('down'); 
-                            playtop.classList.remove('menu-active');
-                            playtop.classList.add('menu-inactive');
-
-                            work.classList.remove('down');
-                            work.classList.add('up');
-                            worktop.classList.remove('menu-inactive');
-                            worktop.classList.add('menu-active');
-
-                            about.classList.remove('up');
-                            about.classList.add('down'); 
-                            abouttop.classList.remove('menu-active');
-                            abouttop.classList.add('menu-inactive');
-
-
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-
-                        }
-                        function play() {
-                            var work = document.getElementById('work');
-                            var play = document.getElementById('play');
-                            var about = document.getElementById('about');
-                            
-                            work.classList.remove('up');
-                            work.classList.add('down'); 
-                            worktop.classList.remove('menu-active');
-                            worktop.classList.add('menu-inactive');
-
-                            play.classList.remove('down');
-                            play.classList.add('up');
-                            playtop.classList.remove('menu-inactive');
-                            playtop.classList.add('menu-active');
-
-                            about.classList.remove('up');
-                            about.classList.add('down'); 
-                            abouttop.classList.remove('menu-active');
-                            abouttop.classList.add('menu-inactive');
-
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-
-                        }
-
-                        function about() {
-                            var work = document.getElementById('work');
-                            var play = document.getElementById('play');
-                            var about = document.getElementById('about');
-
-                            work.classList.remove('up');
-                            work.classList.add('down'); 
-                            worktop.classList.remove('menu-active');
-                            worktop.classList.add('menu-inactive');
-
-                            play.classList.remove('up');
-                            play.classList.add('down'); 
-                            playtop.classList.remove('menu-active');
-                            playtop.classList.add('menu-inactive');
-
-                            about.classList.remove('down');
-                            about.classList.add('up');
-                            abouttop.classList.remove('menu-inactive');
-                            abouttop.classList.add('menu-active');
-
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-                        }
-                        
-                    </script> -->
                     <script>
                         function work() {
                             var w = (window.innerWidth);
@@ -167,17 +93,46 @@
                             abouttop.classList.remove('menu-inactive');
                             abouttop.classList.add('menu-active');
                         }
+
+                        var myScrollFunc = function (){
+                            var x = window.scrollx;
+                            var w = (window.innerWidth);
+                            if (x >= w){
+                                worktop.classList.remove('menu-active');
+                                worktop.classList.add('menu-inactive');
+
+                                playtop.classList.remove('menu-inactive');
+                                playtop.classList.add('menu-active');
+
+                                abouttop.classList.remove('menu-active');
+                                abouttop.classList.add('menu-inactive');
+                            }
+                            if (x >= (2*w)){
+                                worktop.classList.remove('menu-active');
+                            worktop.classList.add('menu-inactive');
+
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            abouttop.classList.remove('menu-inactive');
+                            abouttop.classList.add('menu-active');
+                            }
+                        }
+                        window.addEventListener("scroll", myScrollFunc);
+
+
                         
                     </script>
                 </div>
             </ul>
         </header>
         <ul class="home">
-            <li id="work" class="columns projgroup" style="margin-top: -5vh;">
+            <li id="work" class="columns projgroup">
                 <div class="thirtythree projecthome">
-                    <div class="sixtysix" style="gap: 4px;">
-                        <p class="number">&#x2780;</p>
-                        <p style="margin-bottom: 8px;">Hey, I’m Caleb.<br>I design strategic, moving, digital brands that tell stories.</p>
+                    <div class="columns proj">
+                        <div class="eighty">
+                        <p class="number"> &nbsp;</p>
+                        <p>Hey, I’m Caleb.<br>I design strategic, moving, digital systems and brands that tell stories.</p>
                         <span class="small"></span>
                         <sub style="color: gray">Prev. Brand Design Intern @ <a class="link" href="https://dropbox.design/" style="color: gray">Dropbox</a><br>
                         BDes '25 @ <a style="color: gray" class="link" href="https://design.cmu.edu//">CMU Design</a><br>
@@ -187,17 +142,18 @@
                         <sub  style="margin-top: 12px; color: gray" class="gray"><a style="color: gray" class="link" href="pdfs/caleb-sun_resume.pdf" target="_blank">Resume,</a>  <a style="color: gray" class="link" href="https://www.linkedin.com/in/calebsun/" target="_blank">LinkedIn,</a>  
                         <a style="color: gray" href="https://read.cv/calebsun" class="link" target="_blank">ReadCV,</a>   <a style="color: gray"class="link" href=mailto:sun.cs0327@gmail.com target="_blank">Email</a>
                     <br>PDF portfolio available upon request</sub>
+                </div>
                         </div>
                 </div>
                 <div id="phipps" class="projecthome thirtythree">
                     <a href="projects/phipps.html" class="columns proj">
                         <div class="eighty state-1">
-                            <p class="number">&#x2781;</p>
+                            <p class="number">&#x2780;</p>
                             <p>Do More With Phipps</p>
                             <sub>Coursework — Brand repositioning, web strategy, identity design</sub>
                         </div>
                         <div class="eighty state-2">
-                            <p class="number">&#x2781;</p>
+                            <p class="number">&#x2780;</p>
                             <p>Marrying historic beauty to modern aspirations for Pittsburgh's premiere botanical gardens</p>
                         </div>
                         <div class="hundred"> 
@@ -210,17 +166,17 @@
                 <div id="alchemy" class="projecthome thirtythree">
                     <a href="projects/alchemyearth.html" class="columns proj">
                         <div class="eighty state-1">
-                            <p class="number">&#x2782;</p>
+                            <p class="number">&#x2781;</p>
                             <p>Alchemy Earth</p>
                             <sub>Coursework — Identity design, event branding, naming</sub>
                         </div>
                         <div class="eighty state-2">
-                            <p class="number">&#x2782;</p>
+                            <p class="number">&#x2781;</p>
                             <p>Identity for a ceramics biennial held at the birthplace of porcelain
                         </div>
                         <div class="hundred"> 
                             <img id="psaimg"
-                            src="images/alchemy/indoor-wall.jpg">
+                            src="images/alchemy/billboard1.png">
                         </div>
                     </a>
                     
@@ -228,82 +184,82 @@
                 <div id="5539" class="projecthome thirtythree">
                     <a href="projects/5539.html" class="columns proj">
                         <div class="eighty state-1">
-                            <p class="number">&#x2783;</p>
+                            <p class="number">&#x2782;</p>
                             <p>5539 Cafe</p>
                             <sub>Personal — Identity design, event branding</sub>
                         </div>
                         <div class="eighty state-2">
-                            <p class="number">&#x2783;</p>
+                            <p class="number">&#x2782;</p>
                             <p>
                                 A down-to-earth, place-based identity for a cafe pop-up hosted by and for friends.
                         </div>
-                        <div class="hundred state-1"> 
+                        <div class="hundred"> 
                             <img
                             id="gystill"
-                            src="images/5539/hero.jpg"
+                            src="images/5539/hero.gif"
                             alt="Screens from the TLJ Suite.">
                         </div>
-                        <div class="hundred state-2"> 
+                        <!-- <div class="hundred state-2"> 
                             <img
                                 id="gystill"
                                 src="images/5539/hero.gif"
                                 alt="Screens from the TLJ Suite.">
-                        </div>
+                        </div> -->
                     </a>
                     
                 </div>
                 <div id="dls" class="projecthome thirtythree" >
                     <a class="columns proj" href="projects/dls.html">
                         <div class="eighty state-1">
-                            <p class="number">&#x2784;</p>
+                            <p class="number">&#x2783;</p>
                             <p>Design Lecture Series</p>
                             <sub>Client — Brand Identity</sub>
                         </div>
                         <div class="eighty state-2">
-                            <p class="number">&#x2784;</p>
+                            <p class="number">&#x2783;</p>
                             <p>Energetic identity for CMU School of Design's 2024-25 Lecture Series.</p>
                         </div>
-                        <div class="hundred state-1"> 
+                        <div class="hundred"> 
                             <img
-                                src="images/dls/DLS-hero.jpg">
+                                src="images/dls/DLS-hero.gif">
                             </div>
-                        <div class="hundred state-2"> 
-                        <img
+                        <!-- <div class="hundred state-2">  -->
+                        <!-- <img
                             src="images/dls/DLS-hero.gif">
-                        </div>
+                        </div> -->
                     </a>
                 </div>
                 <div id="dbx" class="projecthome thirtythree">
                     <a href="projects/dbx.html" class="columns proj">
                         <div class="eighty state-1">
-                            <p class="number">&#x2785;</p>
+                            <p class="number">&#x2784;</p>
                             <p>Drobox Transparency Hub</p>
                             <sub>Internship — Web interactive, data visualization</sub>
                         </div>
                         <div class="eighty state-2">
-                            <p class="number">&#x2785;</p>
+                            <p class="number">&#x2784;</p>
                             <p>Crafting a dashboard to house Dropbox's organizational transparency report.</p>
                         </div>
-                        <div class="hundred state-1"> 
+                        <div class="hundred"> 
                             <img
-                                src="images/misc/dbx-still.jpg">
+                                src="images/misc/dbx-thumb.gif">
                             </div>
-                        <div class="hundred state-2"> 
+                        <!-- <div class="hundred state-2"> 
                         <img
                             src="images/misc/dbx-thumb.gif">
-                        </div>
+                        </div> -->
                     </a>
                     
                 </div>
                 <div id="guangyu" class="projecthome thirtythree">
                     <a href="projects/guangyu.html" class="columns proj">
                         <div class="eighty state-1">
-                            <p class="number">&#x2786;</p>
+                            <p class="number">&#x2785;</p>
                             <p>Guang Yu</p>
                             <sub> Coursework — Editorial, motion, interactive</sub>
                         </div>
                         <div class="eighty state-2">
-                            <p class="number">&#x2786;</p>
+                            <p class="number">&#x2785;</p>
                             <p>Documenting the work and life of Guang Yu, my design hero
                         </div>
                         <div class="hundred state-1"> 
@@ -324,12 +280,12 @@
                 <div id="tickets" class="projecthome thirtythree">
                     <div class="columns proj" style="cursor:wait">
                         <div class="eighty state-1">
-                            <p class="number">&#x2787;</p>
+                            <p class="number">&#x2786;</p>
                             <p>Tickets to Mecca</p>
                             <sub>Coursework — Print, data visualization</sub>
                         </div>
                         <div class="eighty state-2">
-                            <p class="number">&#x2787;</p>
+                            <p class="number">&#x2786;</p>
                             <p>[COMING SOON] An interactive data visualization representing all 1.7 million Hajj visas issued in 2023.</p>
                         </div>
                         <div class="hundred state-1"> 
@@ -346,12 +302,12 @@
                 <div id="sixiang" class="projecthome thirtythree" style="cursor:wait">
                     <div class="columns proj">
                         <div class="eighty state-1">
-                            <p class="number">&#x2788;</p>
+                            <p class="number">&#x2787;</p>
                             <p>Si Xiang Mooncakes</p>
                             <sub> Personal Project — Branding, Packaging</sub>
                         </div>
                         <div class="eighty state-2">
-                            <p class="number">&#x2788;</p>
+                            <p class="number">&#x2787;</p>
                             <p>[COMING SOON] A mooncake company for Chinese Americans who can't speak Chinese
                         </div>
                         <div class="hundred"> 
@@ -363,17 +319,31 @@
                 </div>
             </li>
             <li id="play" class="columns projgroup ">
-                <div id="rive" class="projecthome sixtysix">
+                <div class="projecthome sixtysix">
                     <a href="https://vqws5x.csb.app/" target="_blank" class="columns proj">
                         <div class="hundred"> 
-                            <img src="images/rive/washing-dishes.gif">
+                            <img src="images/etc/year-of-the-snake.png">
                         </div>
                         <div class="eighty">
-                            <p>Sisyphus's dishes &#8599;</p>
-                            <sub>Rive, Motion</sub>
+                            <p>Lunar New Year Postcard</p>
+                            <sub>Risograph</sub>
                         </div>
                     </a> 
                 </div>
+                <div id="sonny" class="projecthome thirtythree">
+                    <a href="projects/sonny.html" class="columns proj">
+                        <div class="hundred"> 
+                            <img 
+                            src="images/sonny/sonny-1.jpg"
+                            alt="A little orange clothbound book on grass">
+                        </div>
+                        <div class="eighty">
+                            <p>Sonny Angel Book &#8599;</p>
+                            <sub>Editorial, bookbinding </sub>
+                        </div>
+                    </a>
+                </div>
+                
                 <div id="design-week" class="projecthome thirtythree">
                     <div class="columns proj">
                         <div class="hundred"> 
@@ -388,18 +358,16 @@
                         </div>
                     </div> 
                 </div>
-                <div id="sonny" class="projecthome thirtythree">
-                    <a href="projects/sonny.html" class="columns proj">
+                <div id="rive" class="projecthome sixtysix">
+                    <a href="https://vqws5x.csb.app/" target="_blank" class="columns proj">
                         <div class="hundred"> 
-                            <img 
-                            src="images/sonny/sonny-1.jpg"
-                            alt="A little orange clothbound book on grass">
+                            <img src="images/rive/washing-dishes.gif">
                         </div>
                         <div class="eighty">
-                            <p>Sonny Angel Book &#8599;</p>
-                            <sub>Editorial, bookbinding </sub>
+                            <p>Sisyphus's dishes &#8599;</p>
+                            <sub>Rive, Motion</sub>
                         </div>
-                    </a>
+                    </a> 
                 </div>
                 <div id="design-week" class="projecthome sixtysix">
                     <div class="columns proj">
@@ -454,7 +422,7 @@
                         </div>
                     </a> 
                 </div>
-                <div id="sigul" class="projecthome sixtysix">
+                <div id="sigul" class="projecthome thirtythree">
                     <a href="projects/sigul.html" class="columns proj">
                         <div class="hundred"> 
                             <img src="images/type/hero.gif">
@@ -485,14 +453,14 @@
         
                 
             </li>
-            <li id="about" class="columns projgroup ">
+            <li id="about" class="columns projgroup" style="overflow-y: hidden;">
                 <div style="margin-top: 2.5vh;">
                     <ul class="columns projgroup"> 
-                        <li class="fifty">
+                        <li class="fifty" style="width:45%;">
                             <h1>Hi!</h1>
                             <p>
                                 My name is Caleb. I'm a brand designer creating artifacts that feel like a breath of fresh air and make us excited about the brands and systems and environments that we interact with.
-                                .<br><br>I'm a firm believer that designed brands create moments of <strong style="color: #c9ff56;">joy and connection</strong> that enrich existing products. But as time goes on and companies grow, brands can become limited or unimaginative, and lose consistency. My work involves <strong style="color: #c9ff56;">nurturing brands through growth, expansion, and change</strong> without losing the energy and joy that they inspire. While I consider myself a generalist within my practice, I'm super excited about interactive, moving, and strategic design systems that inspire, whether on digital or traditional surfaces.
+                                <br><br>I'm a firm believer that designed brands create moments of <strong style="color: #c9ff56;">joy and connection</strong> that enrich existing products. But as time goes on and companies grow, brands can become limited or unimaginative, and lose consistency. My work involves <strong style="color: #c9ff56;">nurturing identities through growth, expansion, and change</strong> without losing the energy and joy that they inspire. While I consider myself a generalist within my practice, I'm super excited about interactive, moving, and strategic design systems that inspire, whether on digital or traditional surfaces.
                             </p>
                             <span class="small"></span>
                             <sub style="color: gray;">
@@ -524,8 +492,8 @@
                         </li>
                         
                     </ul>
-                    <span class="large"></span>
-                    <span class="large"></span>
+                    <!-- <span class="large"></span>
+                    <span class="large"></span> -->
                     <!-- <ul class="about columns" style="row-gap: 1em;"> 
                         <li class="twenty">
                             <h2>Expertise</h2>
@@ -606,15 +574,12 @@
                         </li>
                         
                     </ul> -->
-                    <ul style="width: 100%; justify-content: center; margin-bottom: 10em;">
-                        <h1  style="text-align: center; color:#c9ff56;"> <a href=mailto:sun.cs0327@gmail.com>Let's work together!</a></h1>
-                        <p style="text-align: center;">Currently seeking brand and long-form print projects</p>
-                    </ul>
+                    
                 </div>
-                
+<!--                 
                 <div id='food' class= "food" style="position: absolute; right:15vw; top:70vh; width:25%; height: 15vw; object-fit: contain; z-index:0; display:none;">
                     <img src="images/food.gif">
-                </div>
+                </div> -->
                 
             </li>
             </div>
@@ -630,7 +595,7 @@
                     <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub class="link">Email</sub></a></li>
                 </ul>
                 <div class="credit">
-                    <sub>Updated December 2024, Custom coded using HTML/CSS/JS, All rights reserved</sub>
+                    <sub>Updated January 2025, Custom coded using HTML/CSS/JS, All rights reserved</sub>
                 </div>
             </div>
         </footer>

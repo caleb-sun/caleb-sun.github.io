@@ -231,6 +231,7 @@ b{
 sub, h4 {
     font-size: 12pt;
     line-height:15pt;
+    letter-spacing: 0.2px;
 }
 
 a:link{
@@ -242,7 +243,7 @@ a:link{
 p>a{
     text-decoration: underline;
     text-decoration-style:dotted;
-    color: #c9ff56;
+    /* color: #c9ff56; */
 }
 
 a:active{
@@ -443,6 +444,19 @@ hr.dotted{
     row-gap: 48px;
 }
 
+.section{
+    display: flex;
+    flex-direction: row;
+    border-top: 1px white solid;
+    width: 87.5vw;
+    padding-top: 0.5em;
+}
+
+.section-label{
+    margin-top: 0.25em;
+    width: 5vw;
+}
+
 .gallery{
     display: flex;
     flex-wrap: wrap;
@@ -495,24 +509,6 @@ hr.dotted{
 .projecthome:hover .state-1{
     display: none;
 }
-/* 
-.kitchen{
-    position: relative;
-}
-
-.kitchen .state-2{
-    position: absolute;
-    top: 0;
-    width: 80%;
-}
-
-.kitchen .hundred{
-    margin-left: 0.5em;
-}
-
-.kitchen:hover .state-1{
-    opacity: 0;
-} */
 
 .projecthome:hover .state-2, .kitchen:hover .state-2{
     display: flex;
@@ -529,28 +525,30 @@ img{
 header{
     display: flex;
     align-items: center;
-    height: 80px;
+    height: 8vh;
     position: fixed;
     justify-content: space-between;
     top: 0;
-    margin-left: 2.5vw;
-    margin-right: 3.75vw;
-    width: 93.75vw;
+    padding-left: 2.5vw;
+    padding-right: 3.25vw;
+    width: 100%;
     z-index: 100;
+    background-color: #111112;
+    border-bottom: 1px white solid;
+    box-sizing: border-box;
 }
 
-/* .homenav{
-    top:2%;
-    left: 2.5%;
-    z-index: 100;
-    font-style: initial !important;
-    vertical-align: auto;
-} */
+
 
 .homenav.sun{
     display: flex; 
     flex-direction: row; 
     align-items: center;
+    text-decoration: none;
+}
+
+.homenav.sun:hover{
+    text-transform: uppercase;
 }
 
 a>.homenav{
@@ -558,12 +556,8 @@ a>.homenav{
 }
 
 .sun>img{ 
-    width: 64px !important;
+    width: 48px !important;
     left: 1.7%;
-}
-
-.homenav>a{
-    text-decoration:none;
 }
 
 .credit{
@@ -594,6 +588,8 @@ footer{
     position: fixed;
     bottom: 0;
     width: 100%;
+    background-color: #111112;
+    border-top: white 1px solid;
 }
 
 .footmenu{
@@ -648,7 +644,7 @@ footer{
     height: 65vh;
 } */
 .columns.projgroup{
-    padding-top:20vh;
+    padding-top:15vh;
     padding-bottom:16%;
     padding-left: 3.75vw;
     padding-right: 3.75vw;
@@ -675,31 +671,49 @@ footer{
     height: 26px;
 }
 
+.process-tab{
+    position: fixed;
+    right: 0;
+    top: 20%;
+    /* width: 9%; */
+   
+}
+
 .processnav{
-    width: auto;
+    width: 100%;
+    padding: 0.5em 1em;
     display:flex;
     flex-direction: row;
     gap:4px;
     z-index:100;
     align-items: center;
+    padding-right: 1vw;
+    background-color: #111112;
+    border-top: 1px white solid;
+    border-bottom: 1px white solid;
+    border-left: 1px white solid;
+
 }
 
-.processnav>sub{
-    height: 20px;
+
+.processnav:hover>p>a{
+    color: white !important;
+    text-transform: uppercase;
 }
 
 .processnav>p{
     height: 30px;
 }
 
-.processnav>sub:hover{
-    text-decoration: underline dotted #c9ff56;
+.processnav>p:hover{
+    text-decoration: underline dotted white;
 }
 
-.eye{
+/* .eye{
     width: 28px; 
     margin-right: 8px;
-}
+    color: black;
+} */
 
 .fixed{
     overflow-x:hidden;
@@ -725,21 +739,24 @@ footer{
 
 .process-viewport{
     width: 30vw;
-    height: 80vh;
-    background-color: #c9ff56;
+    height: 86.7vh;
+    background-color: #111112;
     position: fixed;
-    top:10vh;
+    top:7.5vh;
     right:0;
     overflow-y: scroll;
     overflow-x: hidden;
     z-index: 20;
     box-sizing: border-box;
+    border-top: 1px white solid;
+    border-bottom: 1px white solid;
+    border-left: 1px white solid;
     /* display: none; */
 }
 
 .process{
-    margin: 2.5em 5em 5em 1.5em;
-    color: black !important;
+    padding: 2em 1vw 5em 1.5em;
+    color: white !important;
     width: 28vw;
     box-sizing: border-box;
     position: relative; 
@@ -776,7 +793,7 @@ footer{
 
 
 .process>h1,.process>h2,.process>h3,.process>h4,.process>h5,.process>p{
-    color: black !important;
+    color: white !important;
 }
 
 .process>h3{
@@ -814,11 +831,21 @@ footer{
     position: relative;
     display: flex;
     flex-direction: column;
-    margin:auto;
+    margin-right:10vw;
+    padding-left:5vw;
+    justify-content: end;
     margin-top: 10%;
-    width: 80vw;
+    width: 85vw;
     row-gap: 48px;
 }
+
+.projectbody>.columns>.sixtysix, .projectbody>.columns>.thirtythree, .projectbody>.columns>.hundred, .projectbody>.columns>.gallery, .projectbody>.columns>.fifty{
+    margin-left: 5vw;
+}
+
+/* .tab{
+    margin-left: 5vw;
+} */
 
 .project-title{
     text-transform: uppercase;

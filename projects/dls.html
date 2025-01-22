@@ -19,85 +19,96 @@
   <body>
     <main>
         <header>
-            <a href="../index.html" onpointerenter='arrow()' onpointerleave='arrow2()'> 
-                <img id="white" class="homenav" src="../images/arrow-04.svg" style="width: 24px; display: block;"></img>
-                <img id="yellow" class="homenav" src="../images/arrow-yellow.svg" style="width: 24px; display: none;"></img>
+            <a class="homenav sun" href="../index.html">
+                <img id='sun' src="../images/sun.svg">
+                <p style="height: 20px; margin-left: 8px; ">Caleb Sun</p>
             </a>
             <script>
-                function arrow() {
-                    document.getElementById('white').style.display='none';
-                    document.getElementById('yellow').style.display='block';
-                }
-                function arrow2() {
-                    document.getElementById('white').style.display='block';
-                    document.getElementById('yellow').style.display='none';
-                }
+                var elem = document.getElementById('sun');
+                window.addEventListener('scroll', function() {
+                    var value = window.scrollY * 0.1;
+                    elem.style.transform = `rotate(${value}deg)`; 
+                });
+
+                function resize() {
+                    window.scrollTo(0, 0);
+                    }
+                window.onresize = resize;
             </script>
             <ul class="menu header">
-                <script>
-                    function processIn() {
-                        var process = document.getElementById('process');
-                        var processviewport = document.getElementById('process-viewport');
-                        var processopen = document.getElementById('process-open');
-                        var processclose = document.getElementById('process-close');
-                        
-                        processviewport.classList.remove('processviewport-start');
-                        processviewport.classList.remove('processviewport-out');
-                        processviewport.classList.add('processviewport-in');
-
-                        processclose.style.display='flex';
-                        processopen.style.display='none';
-                    }
-                    function processOut() {
-                        var process = document.getElementById('process');
-                        var processlabel = document.getElementById('process-open');
-                        var processviewport = document.getElementById('process-viewport');
-                        var processclose = document.getElementById('process-close');
-
-                        process.classList.remove('process-in');
-                        process.classList.add('process-out');
-                        processviewport.classList.remove('processviewport-in');
-                        processviewport.classList.add('processviewport-out');
-                        // processviewport.style.display='none';
-
-                        processclose.style.display='none';
-                        processlabel.style.display='flex';
-                        
-                    }
-                </script>
                 <div class="menuitems">
-                    <ul class="processnav" id="process-open" onclick='processIn()' onmouseenter="process1Hover()">
-                        <img src="../images/eye-yellow.svg" class="eye" style="display: none;" id="eye1yellow">
-                        <img src="../images/eye.svg" class="eye" id="eye1white">
-                        <sub>
-                            <a style="text-decoration: none !important; cursor: pointer; color: white;" >Process</a>
-                        </sub>
+                    <ul class="miniprojnav" style="z-index: 100;">
+                        
+                        <p style="cursor: pointer;"><a id=worktop onclick='work()' class="menu-inactive link">Selected Work,</a></p>
+                        <p style="cursor: pointer;"><a id=playtop onclick='play()' class="menu-inactive link">Etc,</a></p>
+                        <p style="cursor: pointer;"><a id=abouttop onclick='about()' class="menu-inactive link">About</a></p>                        
                     </ul>
-                    <ul class="processnav" id="process-close" onclick='processOut()' onmouseenter="process2Hover()" style="display: none">
-                        <img src="../images/eye-yellow.svg" class="eye" style="display: none;" id="eye2yellow">
-                        <img src="../images/eye.svg" class="eye" id="eye2white">
-                        <sub>
-                            <a style="text-decoration: none !important; cursor: pointer; color: white;" >Close</a>
-                        </sub>
-                    </ul>
-                    <!-- <ul class="miniprojnav" style="margin-left: 16px;">
-                        <p>About</p>
-                    </ul> -->
+                    <script>
+                        function work() {
+                            var w = (window.innerWidth);
+                            var work = document.getElementById('work');
+                            window.location.href = "../index.html";
+                            window.scrollTo(0, 0);
+                            work.scrollTo(0,0);
+
+                            worktop.classList.remove('menu-inactive');
+                            worktop.classList.add('menu-active');
+
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+                        }
+                        function play() {
+                            var play = document.getElementById('play');
+                            window.location.href = "../index.html#play";
+                            worktop.classList.add('menu-inactive');
+
+                            playtop.classList.remove('menu-inactive');
+                            playtop.classList.add('menu-active');
+
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+                        }
+
+                        function about() {
+                            var w = (window.innerWidth);
+                            var about = document.getElementById('about');
+                            window.location.href = "../index.html#about";
+                            about.scrollTo(0,0);
+
+                            worktop.classList.remove('menu-active');
+                            worktop.classList.add('menu-inactive');
+
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            abouttop.classList.remove('menu-inactive');
+                            abouttop.classList.add('menu-active');
+                        }
+                        
+                    </script>
                 </div>
             </ul>
         </header>
         <div class="project">
             <div class="projectbody">
                 <ul class="columns">
-                    <li class="sixtysix">
-                        <h1 class="project-title">Design Lecture Series <!--title-->
-                        </h1>
-                        <sub class="subtitle">Identity design</sub>
-                    </li>
-                    <li class="thirtythree">
-                        <p>An identity for the 2024-2025 Design Lecture Series at Carnegie Mellon School of Design that's in perpetual motion.
-                        </p>
-                    </li>
+                    <div class="gallery">
+                        <li class="sixtysix">
+                            <h1 class="project-title">Design Lecture Series <!--title-->
+                            </h1>
+                            <sub class="subtitle">Identity design</sub>
+                        </li>
+                        <li class="thirtythree" style="margin-top: 0.5em;">
+                            <p>An identity for the 2024-2025 Design Lecture Series at Carnegie Mellon School of Design that's in perpetual motion.
+                            </p>
+                        </li>
+                    </div>
+                    
                     <div class="gallery">
                         <li class="hundred" style="gap: 8px;">
                             <img src="../images/dls/DLS-hero.gif">
@@ -105,87 +116,104 @@
                     </div>
                     <span class="small"></span>
 
-
-                    <div class="sixtysix">
-                        <li class="hundred" style="gap: 0;">
-                            <h2>Setting the stage for a constructive, collaborative lecture series</h2><br>
+                    <div class="gallery">
+                        <div class="sixtysix">
+                            <li class="eighty" style="gap: 0;">
+                                <h2>Setting the stage for a constructive, collaborative lecture series</h2><br>
                                 <p>Carnegie Mellon School of Design Lecture Series is an annual run of lectures bringing diverse designers to Pittsburgh to deliver talks that expand students' horizons and understandings about all things design. This identity for the series hinges on themes of the talks and their role in design students' lives, as building blocks that come together to create an informed and enriched ethos.
-                        </p>
-                        <br><br><br>
-                        <h3>Team: Amber Li</h3>
-                        </li>
+                            </p>
+                            </li>
+                        </div>
+                        <div class="thirtythree" style="flex-direction: row; margin-top: 0.5em;">
+                            <li class="twenty">
+                                <h3>Team</h3>
+                            </li>
+                            <li class="eighty">
+                                <h3>Amber Li</h3>
+                            </li>
+                            
+                        </div>
                     </div>
+                    
 
                     <span class="small"></span>
-                    <div class="gallery">
-                        <li class="fifty">
-                            <img src="../images/dls/gray-unit.gif">
-                        </li>
-                        <li class="fifty">
-                            <img src="../images/dls/text-effect.gif">
-                        </li>
+                    <div class="section">
+                        <li class="section-label"><sub>Atoms to organisms</sub></li>
+                        <div class="gallery">
+                            <li class="fifty">
+                                <img src="../images/dls/gray-unit.gif">
+                            </li>
+                            <li class="fifty">
+                                <img src="../images/dls/text-effect.gif">
+                            </li>
+                        </div>
                     </div>
-
-                    <div class="sixtysix">
+                    <div class="fifty">
                         <li class="hundred" style="gap: 0;">
-                            <h3>&#8627; Atoms to organisms</h3>
-                            <br>
                             <p>The base of the identity system hinges on a simple combination of rectangles that serves as both a brush stroke for hero type, as well as frames for image and block assets. The continuity that the core component brings to the system continues to support the narrative of connection between students and lecturers, course content and lecture content, and the school with the rest of the design world.
                             </p>
                         </li>
                     </div>
+
                     <span class="small"></span>
 
-                    <div class="gallery">
-                        <li class="hundred">
-                            <img src="../images/dls/gravity-demo.gif">
+                    <div class="section">
+                        <li class="section-label">
+                            <sub>Putting it together</sub>
                         </li>
-                        <li class="hundred">
-                            <img src="../images/dls/layers.gif">
-                        </li>
+                        <div class="gallery">
+                            <li class="hundred">
+                                <img src="../images/dls/gravity-demo.gif">
+                            </li>
+                            <li class="hundred">
+                                <img src="../images/dls/layers.gif">
+                            </li>
+                        </div>
                     </div>
-                    <div class="sixtysix">
+                    <div class="fifty">
                         <li class="hundred" style="gap: 0;">
-                            <h3>&#8627; Putting it together</h3>
-                            <br>
                             <p>The gesture of "things falling into place" was born out of a lived experience of reflecting on years of lectures and how they've impacted our own ethos. The core movement applied to these assets created from the base components was a simulated descent in which assets collapse into a pile, and then fall away off screen. This, combined with two layers of 'meta'-content (the underlying grid system and informational text) create a motion system that captures the everchanging relationship design students have with their work, and the passing influence each lecturer imbues upon their lives.
                             </p>
                         </li>
                     </div>
+                    
                     <span class="small"></span>
 
-                    <div class="gallery">
-                        <li class="fifty">
-                            <img src="../images/dls/name-drop.gif">
+                    <div class="section">
+                        <li class="section-label">
+                            <sub>Unique colorways for each lecturer</sub>
                         </li>
-                        <li class="fifty">
-                            <img src="../images/dls/dls-collateral-4.jpg">
-                        </li>
-                        
+                        <div class="gallery">
+                            <li class="fifty">
+                                <img src="../images/dls/name-drop.gif">
+                            </li>
+                            <li class="fifty">
+                                <img src="../images/dls/dls-collateral-4.jpg">
+                            </li>
+                        </div>
                     </div>
-                    <div class="sixtysix">
+                    <div class="fifty">
                         <li class="hundred" style="gap: 0;">
-                            <h3>&#8627; Unique colorways for each lecturer</h3>
-                            <br>
                             <p>Each lecturer brings different energy and bodies of work to the school, and so the colorways we assigned for the system were unique to each speaker. We chose a darker palette for fall and a lighter one for spring, with each unique palette selected to compliment the lecturer's work.</p>
                         </li>
                     </div>
                     <span class="small"></span>
 
-
-                    <div class="gallery">
-                        <li class="fifty">
-                            <img src="../images/dls/book-pages.gif">
+                    <div class="section">
+                        <li class="section-label">
+                            <sub>Zines</sub>
                         </li>
-                        <li class="fifty">
-                            <img src="../images/dls/dls-collateral-1.jpg">
-                        </li>
-                        
+                        <div class="gallery">
+                            <li class="fifty">
+                                <img src="../images/dls/book-pages.gif">
+                            </li>
+                            <li class="fifty">
+                                <img src="../images/dls/dls-collateral-1.jpg">
+                            </li>
+                        </div>
                     </div>
-                    <div class="sixtysix">
+                    <div class="fifty">
                         <li class="hundred" style="gap: 0;">
-                            <h3>&#8627; Zine Series</h3>
-                            <br>
                             <p>In addition to their talks, our team interviewed each lecturer to get the inside scoop on their hottest takes on design, freshest advice for students, and deepest cuts for inspiration. These interviews were published in a series of mini zines as take-home souvenirs for attendees, as a complement to each talk.</p>
                         </li>
                     </div>

@@ -19,25 +19,88 @@
   <body>
     <main>
         <header>
-            <a href="../index.html" onpointerenter='arrow()' onpointerleave='arrow2()'> 
-                <img id="white" class="homenav" src="../images/arrow-04.svg" style="width: 24px; display: block;"></img>
-                <img id="yellow" class="homenav" src="../images/arrow-yellow.svg" style="width: 24px; display: none;"></img>
+            <a class="homenav sun" href="../index.html">
+                <img id='sun' src="../images/sun.svg">
+                <p style="height: 20px; margin-left: 8px; ">Caleb Sun</p>
             </a>
             <script>
-                function arrow() {
-                    document.getElementById('white').style.display='none';
-                    document.getElementById('yellow').style.display='block';
-                }
-                function arrow2() {
-                    document.getElementById('white').style.display='block';
-                    document.getElementById('yellow').style.display='none';
-                }
+                var elem = document.getElementById('sun');
+                window.addEventListener('scroll', function() {
+                    var value = window.scrollY * 0.1;
+                    elem.style.transform = `rotate(${value}deg)`; 
+                });
+
+                function resize() {
+                    window.scrollTo(0, 0);
+                    }
+                window.onresize = resize;
             </script>
             <ul class="menu header">
+                <div class="menuitems">
+                    <ul class="miniprojnav" style="z-index: 100;">
+                        
+                        <p style="cursor: pointer;"><a id=worktop onclick='work()' class="menu-inactive link">Selected Work,</a></p>
+                        <p style="cursor: pointer;"><a id=playtop onclick='play()' class="menu-inactive link">Etc,</a></p>
+                        <p style="cursor: pointer;"><a id=abouttop onclick='about()' class="menu-inactive link">About</a></p>                        
+                    </ul>
+                    
+                    <script>
+                        function work() {
+                            var w = (window.innerWidth);
+                            var work = document.getElementById('work');
+                            window.location.href = "../index.html";
+                            window.scrollTo(0, 0);
+                            work.scrollTo(0,0);
+
+                            worktop.classList.remove('menu-inactive');
+                            worktop.classList.add('menu-active');
+
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+                        }
+                        function play() {
+                            var play = document.getElementById('play');
+                            window.location.href = "../index.html#play";
+                            worktop.classList.add('menu-inactive');
+
+                            playtop.classList.remove('menu-inactive');
+                            playtop.classList.add('menu-active');
+
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+                        }
+
+                        function about() {
+                            var w = (window.innerWidth);
+                            var about = document.getElementById('about');
+                            window.location.href = "../index.html#about";
+                            about.scrollTo(0,0);
+
+                            worktop.classList.remove('menu-active');
+                            worktop.classList.add('menu-inactive');
+
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            abouttop.classList.remove('menu-inactive');
+                            abouttop.classList.add('menu-active');
+                        }
+                        
+                    </script>
+                </div>
+            </ul>
+
+            <div class="process-tab" id="process-tab">
                 <script>
                     function processIn() {
                         var process = document.getElementById('process');
                         var processviewport = document.getElementById('process-viewport');
+                        var processtab = document.getElementById('process-tab');
                         var processopen = document.getElementById('process-open');
                         var processclose = document.getElementById('process-close');
                         
@@ -46,11 +109,15 @@
                         processviewport.classList.add('processviewport-in');
 
                         processclose.style.display='flex';
+                        processclose.style.paddingRight='1em';
+                        processtab.style.top='7.875vh';
                         processopen.style.display='none';
                     }
                     function processOut() {
                         var process = document.getElementById('process');
                         var processlabel = document.getElementById('process-open');
+                        var processtab = document.getElementById('process-tab');
+
                         var processviewport = document.getElementById('process-viewport');
                         var processclose = document.getElementById('process-close');
 
@@ -61,73 +128,80 @@
                         // processviewport.style.display='none';
 
                         processclose.style.display='none';
+                        processtab.style.top='20vh';
                         processlabel.style.display='flex';
                         
                     }
                 </script>
                 <div class="menuitems">
                     <ul class="processnav" id="process-open" onclick='processIn()' onmouseenter="process1Hover()">
-                        <img src="../images/eye-yellow.svg" class="eye" style="display: none;" id="eye1yellow">
-                        <img src="../images/eye.svg" class="eye" id="eye1white">
-                        <sub>
-                            <a style="text-decoration: none !important; cursor: pointer; color: white;" >Process</a>
-                        </sub>
+                        <!-- <img src="../images/eye-yellow.svg" class="eye" style="display: none;" id="eye1yellow">
+                        <img src="../images/eye.svg" class="eye" id="eye1white"> -->
+                        <p>
+                            <a style="text-decoration: none !important; cursor: pointer;" >Process</a>
+                        </p>
                     </ul>
                     <ul class="processnav" id="process-close" onclick='processOut()' onmouseenter="process2Hover()" style="display: none">
-                        <img src="../images/eye-yellow.svg" class="eye" style="display: none;" id="eye2yellow">
-                        <img src="../images/eye.svg" class="eye" id="eye2white">
-                        <sub>
-                            <a style="text-decoration: none !important; cursor: pointer; color: white;" >Close</a>
-                        </sub>
+                        
+                        <p>
+                            <a style="text-decoration: none !important; cursor: pointer;" >&#x2715;</a>
+                        </p>
                     </ul>
                     <!-- <ul class="miniprojnav" style="margin-left: 16px;">
                         <p>About</p>
                     </ul> -->
                 </div>
-            </ul>
+            </div>
         </header>
         <div class="project">
             <div class="projectbody">
                 <ul class="columns">
-                    <li class="sixtysix">
-                        <h1 class="project-title">Alchemy Earth <!--title-->
-                        </h1>
-                        <sub class="subtitle">Exhibition identity</sub>
-                    </li>
-                    <li class="thirtythree">
-                        <p>A modern, elegant identity for a ceramic arts biennial held in the birthplace of porcelain.
-                        </p>
-                    </li>
+                    <div class="gallery">
+                        <li class="sixtysix">
+                            <h1 class="project-title">Alchemy Earth <!--title-->
+                            </h1>
+                            <sub class="subtitle">Exhibition identity</sub>
+                        </li>
+                        <li class="thirtythree" style="margin-top: 0.5em;">
+                            <p>A modern, elegant identity for a ceramic arts biennial held in the birthplace of porcelain.
+                            </p>
+                        </li>
+                    </div>
                     <li class="hundred" style="gap: 8px;">
-                        <img src="../images/alchemy/solo-logo.gif">
+                        <img src="../images/alchemy/billboard1.png">
+                        <!-- <img src="../images/alchemy/solo-logo.gif"> -->
                         <img src="../images/alchemy/indoor-wall.jpg">
-                        <img src="../images/alchemy/large-banner.jpg">
+                        <!-- <img src="../images/alchemy/large-banner.jpg"> -->
                         <img src="../images/alchemy/instagram.jpg">
                         <img src="../images/alchemy/speaker.jpg">
                     </li>
                     <span class="small"></span>
-                    <div class="sixtysix">
-                        <li class="eighty">
-                        <p>The Jingdezhen International Ceramic Arts Biennial is a celebration of the past, present, and future of the ceramic arts, held at the birthplace of porcelain some 3000 years ago. To this day, Jingdezhen remains a culture hub for ceramicists across the globe. The third edition of this biennial celebrates the beauty of an ageless craft, of transforming elements into art, through what audiences across continents and time can only describe as alchemy.
-                        <br><br>
-                        The Alchemy Earth exhibition identity is a response to the modernization of the ceramic arts. Elegant, simple, and bold, it provides a backbone for the breadth of experimental work exhibited throughout the biennial, without compromising on the roots of the craft.
-                        </p>
-                        </li>
+                    <div class="gallery">
+                        <div class="sixtysix">
+                            <li class="eighty">
+                            <p>The Jingdezhen International Ceramic Arts Biennial is a celebration of the past, present, and future of the ceramic arts, held at the birthplace of porcelain some 3000 years ago. To this day, Jingdezhen remains a culture hub for ceramicists across the globe. The third edition of this biennial celebrates the beauty of an ageless craft, of transforming elements into art, through what audiences across continents and time can only describe as alchemy.
+                            <br><br>
+                            The Alchemy Earth exhibition identity is a response to the modernization of the ceramic arts. Elegant, simple, and bold, it provides a backbone for the breadth of experimental work exhibited throughout the biennial, without compromising on the roots of the craft.
+                            </p>
+                            </li>
+                        </div>
+                        <div class="thirtythree" style="flex-direction: row;">
+                            <li class="twenty">
+                                <p>Time<br>Role</p>
+                            </li>
+                            <li class="eighty">
+                                <p>5 weeks<br>Sole designer<br>
+                                Instructed by Kelsey Elder</p>
+                            </li>
+                        </div>
                     </div>
-                    <div class="thirtythree" style="flex-direction: row;">
-                        <li class="twenty">
-                            <p>Time<br>Role</p>
-                        </li>
-                        <li class="eighty">
-                            <p>5 weeks<br>Sole designer<br>
-                            Instructed by Kelsey Elder</p>
-                        </li>
-                    </div>
+                    
                     <span class="small"></span>
                     <ul class="gallery">
                         <li class="hundred" style="gap: 8px;"></li>
                             <img src="../images/alchemy/lanyard.jpg">
                             <img src="../images/alchemy/tickets.jpg">
+                            
                         </li>
                         <li class="fifty">
                             <img
@@ -148,6 +222,9 @@
                             <img
                             src="../images/alchemy/tshirt.jpg"
                         >
+                        </li>
+                        <li class="hundred">
+                            <img src="../images/alchemy/guidelines.jpg">
                         </li>
                     </ul>
                     
