@@ -109,8 +109,6 @@
                         processviewport.classList.add('processviewport-in');
 
                         processclose.style.display='flex';
-                        processclose.style.paddingRight='1em';
-                        processtab.style.top='7.875vh';
                         processopen.style.display='none';
                     }
                     function processOut() {
@@ -128,7 +126,7 @@
                         // processviewport.style.display='none';
 
                         processclose.style.display='none';
-                        processtab.style.top='20vh';
+                        processtab.style.top='9%';
                         processlabel.style.display='flex';
                         
                     }
@@ -137,21 +135,45 @@
                     <ul class="processnav" id="process-open" onclick='processIn()' onmouseenter="process1Hover()">
                         <!-- <img src="../images/eye-yellow.svg" class="eye" style="display: none;" id="eye1yellow">
                         <img src="../images/eye.svg" class="eye" id="eye1white"> -->
-                        <p>
-                            <a style="text-decoration: none !important; cursor: pointer;" >Process</a>
-                        </p>
+                        <h3>
+                            <a style="text-decoration: none !important; cursor: pointer;">Process</a>
+                        </h3>
                     </ul>
                     <ul class="processnav" id="process-close" onclick='processOut()' onmouseenter="process2Hover()" style="display: none">
-                        
-                        <p>
+                        <h3>
                             <a style="text-decoration: none !important; cursor: pointer;" >&#x2715;</a>
-                        </p>
+                        </h3>
                     </ul>
                     <!-- <ul class="miniprojnav" style="margin-left: 16px;">
                         <p>About</p>
                     </ul> -->
                 </div>
             </div>
+            <a class="up-button" href="#top" style="text-decoration: none; display: none;" id="up-button">
+                <h3 style="line-height: 30pt;">Top</h3>
+            </a>
+            <script>
+                up = document.getElementById("up-button");
+                var myScrollFunc = function () {
+                    var y = window.scrollY;
+                    if (y >= 700) {
+                        up.style.display = "flex";
+                    } else {
+                        up.style.display = "none";
+                    }
+                }
+                window.addEventListener("scroll", myScrollFunc);
+                var elem = document.getElementById('up-button');
+                window.addEventListener('scroll', function() {
+                    var value = window.scrollY * 0.1;
+                    elem.style.transform = `rotate(${value}deg)`; 
+                });
+
+                function resize() {
+                    window.scrollTo(0, 0);
+                    }
+                window.onresize = resize;
+            </script>
         </header>
         <div class="project">
             <div class="projectbody">
@@ -168,7 +190,7 @@
                         </li>
                     </div>
                     <li class="hundred" style="gap: 8px;">
-                        <img src="../images/alchemy/billboard1.png">
+                        <img src="../images/alchemy/billboard1.jpg">
                         <!-- <img src="../images/alchemy/solo-logo.gif"> -->
                         <img src="../images/alchemy/indoor-wall.jpg">
                         <!-- <img src="../images/alchemy/large-banner.jpg"> -->
@@ -185,18 +207,19 @@
                             </p>
                             </li>
                         </div>
-                        <div class="thirtythree" style="flex-direction: row;">
+                        <div class="thirtythree" style="flex-direction: row; ">
                             <li class="twenty">
-                                <p>Time<br>Role</p>
+                                <h3>Time<br>Role</h3>
                             </li>
                             <li class="eighty">
-                                <p>5 weeks<br>Sole designer<br>
-                                Instructed by Kelsey Elder</p>
+                                <h3>5 weeks<br>Sole designer<br>
+                                Instructed by Kelsey Elder</h3>
                             </li>
                         </div>
                     </div>
                     
-                    <span class="small"></span>
+                    <span class="medium"></span>
+
                     <ul class="gallery">
                         <li class="hundred" style="gap: 8px;"></li>
                             <img src="../images/alchemy/lanyard.jpg">

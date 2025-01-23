@@ -23,18 +23,6 @@
                 <img id='sun' src="../images/sun.svg">
                 <p style="height: 20px; margin-left: 8px; ">Caleb Sun</p>
             </a>
-            <script>
-                var elem = document.getElementById('sun');
-                window.addEventListener('scroll', function() {
-                    var value = window.scrollY * 0.1;
-                    elem.style.transform = `rotate(${value}deg)`; 
-                });
-
-                function resize() {
-                    window.scrollTo(0, 0);
-                    }
-                window.onresize = resize;
-            </script>
             <ul class="menu header">
                 <div class="menuitems">
                     <ul class="miniprojnav" style="z-index: 100;">
@@ -181,8 +169,6 @@
                         processviewport.classList.add('processviewport-in');
 
                         processclose.style.display='flex';
-                        processclose.style.paddingRight='1em';
-                        processtab.style.top='7.875vh';
                         processopen.style.display='none';
                     }
                     function processOut() {
@@ -200,7 +186,7 @@
                         // processviewport.style.display='none';
 
                         processclose.style.display='none';
-                        processtab.style.top='20vh';
+                        processtab.style.top='9%';
                         processlabel.style.display='flex';
                         
                     }
@@ -209,23 +195,45 @@
                     <ul class="processnav" id="process-open" onclick='processIn()' onmouseenter="process1Hover()">
                         <!-- <img src="../images/eye-yellow.svg" class="eye" style="display: none;" id="eye1yellow">
                         <img src="../images/eye.svg" class="eye" id="eye1white"> -->
-                        <p>
+                        <h3>
                             <a style="text-decoration: none !important; cursor: pointer;">Process</a>
-                        </p>
+                        </h3>
                     </ul>
                     <ul class="processnav" id="process-close" onclick='processOut()' onmouseenter="process2Hover()" style="display: none">
-                        
-                        <p>
+                        <h3>
                             <a style="text-decoration: none !important; cursor: pointer;" >&#x2715;</a>
-                        </p>
+                        </h3>
                     </ul>
-                    <!-- <ul class="miniprojnav" style="margin-left: 16px;">
-                        <p>About</p>
-                    </ul> -->
                 </div>
             </div>
+
+            <a class="up-button" href="#top" style="text-decoration: none; display: none;" id="up-button">
+                <h3 style="line-height: 30pt;">Top</h3>
+            </a>
+            <script>
+                up = document.getElementById("up-button");
+                var myScrollFunc = function () {
+                    var y = window.scrollY;
+                    if (y >= 700) {
+                        up.style.display = "flex";
+                    } else {
+                        up.style.display = "none";
+                    }
+                }
+                window.addEventListener("scroll", myScrollFunc);
+                var elem = document.getElementById('up-button');
+                window.addEventListener('scroll', function() {
+                    var value = window.scrollY * 0.1;
+                    elem.style.transform = `rotate(${value}deg)`; 
+                });
+
+                function resize() {
+                    window.scrollTo(0, 0);
+                    }
+                window.onresize = resize;
+            </script>
         </header>
-        <div class="project">
+        <div class="project" id="tip">
             <div class="projectbody">
                 <ul class="columns">
                     <div class="gallery">
@@ -264,7 +272,7 @@
     
                             </li>
                         </div>
-                        <div class="thirtythree" style="flex-direction: row;">
+                        <div class="thirtythree" style="flex-direction:row; margin-top: 3.75em;">
                             <li class="twenty">
                                 <h3>Time<br>
                                 Role<br>
@@ -282,7 +290,7 @@
                     </div>
                     
                     
-                    <span class="small"></span>
+                    <span class="medium"></span>
                     <div class="section">
                         <li class="section-label">
                             <sub>Phipps Core</sub>

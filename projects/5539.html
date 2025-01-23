@@ -43,79 +43,7 @@
                         <p style="cursor: pointer;"><a id=playtop onclick='play()' class="menu-inactive link">Etc,</a></p>
                         <p style="cursor: pointer;"><a id=abouttop onclick='about()' class="menu-inactive link">About</a></p>                        
                     </ul>
-                    <!-- <script> 
-                        function work() {
-                            var work = document.getElementById('work');
-                            var play = document.getElementById('play');
-                            var about = document.getElementById('about');
-
-                            play.classList.remove('up');
-                            play.classList.add('down'); 
-                            playtop.classList.remove('menu-active');
-                            playtop.classList.add('menu-inactive');
-
-                            work.classList.remove('down');
-                            work.classList.add('up');
-                            worktop.classList.remove('menu-inactive');
-                            worktop.classList.add('menu-active');
-
-                            about.classList.remove('up');
-                            about.classList.add('down'); 
-                            abouttop.classList.remove('menu-active');
-                            abouttop.classList.add('menu-inactive');
-
-
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-
-                        }
-                        function play() {
-                            var work = document.getElementById('work');
-                            var play = document.getElementById('play');
-                            var about = document.getElementById('about');
-                            
-                            work.classList.remove('up');
-                            work.classList.add('down'); 
-                            worktop.classList.remove('menu-active');
-                            worktop.classList.add('menu-inactive');
-
-                            play.classList.remove('down');
-                            play.classList.add('up');
-                            playtop.classList.remove('menu-inactive');
-                            playtop.classList.add('menu-active');
-
-                            about.classList.remove('up');
-                            about.classList.add('down'); 
-                            abouttop.classList.remove('menu-active');
-                            abouttop.classList.add('menu-inactive');
-
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-
-                        }
-
-                        function about() {
-                            var work = document.getElementById('work');
-                            var play = document.getElementById('play');
-                            var about = document.getElementById('about');
-
-                            work.classList.remove('up');
-                            work.classList.add('down'); 
-                            worktop.classList.remove('menu-active');
-                            worktop.classList.add('menu-inactive');
-
-                            play.classList.remove('up');
-                            play.classList.add('down'); 
-                            playtop.classList.remove('menu-active');
-                            playtop.classList.add('menu-inactive');
-
-                            about.classList.remove('down');
-                            about.classList.add('up');
-                            abouttop.classList.remove('menu-inactive');
-                            abouttop.classList.add('menu-active');
-
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-                        }
-                        
-                    </script> -->
+                   
                     <script>
                         function work() {
                             var w = (window.innerWidth);
@@ -166,19 +94,46 @@
                     </script>
                 </div>
             </ul>
+            <a class="up-button" href="#top" style="text-decoration: none; display: none;" id="up-button">
+                <h3 style="line-height: 30pt;">Top</h3>
+            </a>
+            <script>
+                up = document.getElementById("up-button");
+                var myScrollFunc = function () {
+                    var y = window.scrollY;
+                    if (y >= 700) {
+                        up.style.display = "flex";
+                    } else {
+                        up.style.display = "none";
+                    }
+                }
+                window.addEventListener("scroll", myScrollFunc);
+                var elem = document.getElementById('up-button');
+                window.addEventListener('scroll', function() {
+                    var value = window.scrollY * 0.1;
+                    elem.style.transform = `rotate(${value}deg)`; 
+                });
+
+                function resize() {
+                    window.scrollTo(0, 0);
+                    }
+                window.onresize = resize;
+            </script>
         </header>
         <div class="project">
             <div class="projectbody">
                 <ul class="columns">
-                    <li class="sixtysix">
-                        <h1 class="project-title">5539 Cafe <!--title-->
-                        </h1>
-                        <p class="subtitle">Pop-up Identity</p>
-                    </li>
-                    <li class="thirtythree">
-                        <p>A down-to-earth, place-based identity for a cafe pop-up hosted by and for friends.
-                        </p>
-                    </li>
+                    <div class="gallery">
+                        <li class="sixtysix">
+                            <h1 class="project-title">5539 Cafe <!--title-->
+                            </h1>
+                            <sub class="subtitle">Pop-up Identity</sub>
+                        </li>
+                        <li class="thirtythree">
+                            <p>A down-to-earth, place-based identity for a cafe pop-up hosted by and for friends.
+                            </p>
+                        </li>
+                    </div>
                     <div class="gallery">
                         <li class="hundred"></li>
                             <img src="../images/5539/hero.gif">
@@ -194,26 +149,29 @@
                         </li> -->
                     </div>
                     <span class="small"></span>
-                    <div class="sixtysix">
-                        <li class="eighty">
-                        <p>When my good friend Hikari approached me to do a casual home cafe where we invite a few good friends over and have good coffee and matcha, I knew this would be one of the few chances we'd be able to do something like this ever. So, to make it a little more special, we decided to go all out on the identity of our little event, transforming what could've been a casual hangout to something alive, that highlights the uniqueness of the time and space we were filling with lattes and daifuku and all the people we love.
-                        </p>
-                        </li>
+                    <div class="gallery">
+                        <div class="sixtysix">
+                            <li class="eighty">
+                            <p>When my good friend Hikari approached me to do a casual home cafe where we invite a few good friends over and have good coffee and matcha, I knew this would be one of the few chances we'd be able to do something like this ever. So, to make it a little more special, we decided to go all out on the identity of our little event, transforming what could've been a casual hangout to something alive, that highlights the uniqueness of the time and space we were filling with lattes and daifuku and all the people we love.
+                            </p>
+                            </li>
+                        </div>
+                        <div class="thirtythree" style="flex-direction: row;">
+                            <li class="twenty">
+                                <h3>Time<br>
+                                Role<br>
+                                Credits</h3>
+                            </li>
+                            <li class="eighty">
+                                <h3>3 weeks<br>
+                                Sole Designer
+                                <br>
+                                Photography — <a href="https://www.flickr.com/photos/200636481@N05/" target="_blank">Emma Tong</a></h3>
+                            </li>
+                        </div>
                     </div>
-                    <div class="thirtythree" style="flex-direction: row;">
-                        <li class="twenty">
-                            <p>Time<br>
-                            Role<br>
-                            Credits</p>
-                        </li>
-                        <li class="eighty">
-                            <p>3 weeks<br>
-                            Sole Designer
-                            <br>
-                            Photography — <a href="https://www.flickr.com/photos/200636481@N05/" target="_blank">Emma Tong</a></p>
-                        </li>
-                    </div>
-                    <span class="small"></span>
+                    
+                    <span class="medium"></span>
                     <div class="gallery">
                         <li class="hundred">
                             <img src="../images/5539/name-plate-logo.gif">

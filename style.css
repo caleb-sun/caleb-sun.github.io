@@ -134,7 +134,7 @@ table {
 /* colors */
 
 html {
-    background-color: #111112;
+    background-color: #1b1b1d;
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
@@ -229,9 +229,10 @@ b{
 }
 
 sub, h4 {
-    font-size: 12pt;
-    line-height:15pt;
+    font-size: 11pt;
+    line-height:13pt;
     letter-spacing: 0.2px;
+    color:#8c8d8a
 }
 
 a:link{
@@ -397,8 +398,20 @@ hr.dotted{
     /* gap:16px; */
 }
 
-.proj>.eighty{
-    width: 90%;
+.state-1.eighty{
+    width: 100%;
+}
+
+.state-1.eighty>.columns{
+    align-items: baseline;
+}
+
+.state-1.eighty>.columns>sub{
+    text-align: right;
+}
+
+.state-2.eighty{
+    width: 66%;
 }
 
 .twenty{
@@ -453,8 +466,13 @@ hr.dotted{
 }
 
 .section-label{
-    margin-top: 0.25em;
+    box-sizing: border-box;
+    padding-right: 1em;
     width: 5vw;
+}
+
+.section-label>sub{
+    color:white;
 }
 
 .gallery{
@@ -479,12 +497,16 @@ hr.dotted{
     width: 90%;
 }
 
-.gallery>.fifty>sub, .gallery>.hundred>sub, .gallery>.thirtythree>sub{
+.proj>.hundred{
+    gap: 8px;
+}
+
+.gallery>.fifty>sub, .gallery>.hundred>sub, .gallery>.thirtythree>sub,.proj>.hundred>sub{
     color: #8c8d8a !important;
 }
 
 .number{
-    margin-bottom: 0.5em;
+    margin-bottom: 0.25em;
 }
 
 .state-1{
@@ -496,9 +518,9 @@ hr.dotted{
     color: white;
 }
 
-
 .state-1.eighty, .state-2.eighty{
-    height:5.75em !important;
+    padding: 0 0.5em;
+    height:5.25em !important;
     gap: 2px;
 }
 
@@ -529,11 +551,11 @@ header{
     position: fixed;
     justify-content: space-between;
     top: 0;
-    padding-left: 2.5vw;
-    padding-right: 3.25vw;
+    padding-left: 1.75vw;
+    padding-right: 1vw;
     width: 100%;
     z-index: 100;
-    background-color: #111112;
+    background-color:  #1b1b1d;
     border-bottom: 1px white solid;
     box-sizing: border-box;
 }
@@ -551,13 +573,12 @@ header{
     text-transform: uppercase;
 }
 
-a>.homenav{
+/* a>.homenav{
     width: 48px !important;
-}
+} */
 
 .sun>img{ 
     width: 48px !important;
-    left: 1.7%;
 }
 
 .credit{
@@ -588,13 +609,13 @@ footer{
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #111112;
+    background-color: #1b1b1d;
     border-top: white 1px solid;
 }
 
 .footmenu{
-    padding-left: 3.75vw;
-    padding-right: 3.75vw;
+    padding-left: 1.75vw;
+    padding-right: 1.75vw;
     display: flex;
     justify-content: space-between;
 }
@@ -644,7 +665,7 @@ footer{
     height: 65vh;
 } */
 .columns.projgroup{
-    padding-top:15vh;
+    padding-top:12vh;
     padding-bottom:16%;
     padding-left: 3.75vw;
     padding-right: 3.75vw;
@@ -673,31 +694,28 @@ footer{
 
 .process-tab{
     position: fixed;
-    right: 0;
-    top: 20%;
+    right: 0.3em;
+    top: 9%;
     /* width: 9%; */
    
 }
 
 .processnav{
-    width: 100%;
-    padding: 0.5em 1em;
+    /* width: 100%; */
+    padding: 0.5em 0.7em;
     display:flex;
     flex-direction: row;
-    gap:4px;
     z-index:100;
     align-items: center;
-    padding-right: 1vw;
-    background-color: #111112;
-    border-top: 1px white solid;
-    border-bottom: 1px white solid;
-    border-left: 1px white solid;
+    background-color:  #1b1b1d;
+    border: 1px white solid;
+    border-radius: 100px;
 
 }
 
 
-.processnav:hover>p>a{
-    color: white !important;
+.processnav:hover>h3>a{
+    color: #c9ff56 !important;
     text-transform: uppercase;
 }
 
@@ -735,12 +753,34 @@ footer{
     gap: 48px;
 }
 
+
+/*Up button*/
+
+.up-button{
+    position: fixed;
+    background-color: #1b1b1d;
+    border: 1px white solid;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    z-index: 100;
+    bottom: 7vh;
+    right: 0.3em;
+    border-radius: 100px;
+}
+
+.up-button:hover>p{
+    color:#c9ff56
+}
+
 /*process*/
 
 .process-viewport{
     width: 30vw;
     height: 86.7vh;
-    background-color: #111112;
+    background-color: #1b1b1d;
     position: fixed;
     top:7.5vh;
     right:0;
@@ -834,9 +874,16 @@ footer{
     margin-right:10vw;
     padding-left:5vw;
     justify-content: end;
-    margin-top: 10%;
+    margin-top: 17vh;
     width: 85vw;
     row-gap: 48px;
+}
+
+.projectbody>.columns>div:nth-child(1){
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 0em;
 }
 
 .projectbody>.columns>.sixtysix, .projectbody>.columns>.thirtythree, .projectbody>.columns>.hundred, .projectbody>.columns>.gallery, .projectbody>.columns>.fifty{
@@ -849,6 +896,7 @@ footer{
 
 .project-title{
     text-transform: uppercase;
+    margin-bottom: 8px;
 }
 
 
