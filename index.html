@@ -21,20 +21,8 @@
         <header>
             <div class="homenav sun" onclick='work()'>
                 <img id='sun' src="images/sun.svg">
-                <p style="height: 20px; margin-left: 8px;">Caleb Sun</p>
+                <p>Caleb Sun</p>
             </div>
-            <script>
-                var elem = document.getElementById('sun');
-                window.addEventListener('scroll', function() {
-                    var value = window.scrollY * 0.1;
-                    elem.style.transform = `rotate(${value}deg)`; 
-                });
-
-                function resize() {
-                    window.scrollTo(0, 0);
-                    }
-                window.onresize = resize;
-            </script>
             <ul class="menu header">
                 <div class="menuitems">
                     <ul class="miniprojnav" style="z-index: 100;">
