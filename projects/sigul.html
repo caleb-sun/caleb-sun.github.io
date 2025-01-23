@@ -19,33 +19,110 @@
   <body>
     <main>
         <header>
-            <a href="../index.html" onpointerenter='arrow()' onpointerleave='arrow2()'> 
-                <img id="white" class="homenav" src="../images/arrow-04.svg" style="width: 24px; display: block;"></img>
-                <img id="yellow" class="homenav" src="../images/arrow-yellow.svg" style="width: 24px; display: none;"></img>
+            <a class="homenav sun" href="../index.html">
+                <img id='sun' src="../images/sun.svg">
+                <p style="height: 20px; margin-left: 8px; ">Caleb Sun</p>
+            </a>
+            <ul class="menu header">
+                <div class="menuitems">
+                    <ul class="miniprojnav" style="z-index: 100;">
+                        <p style="cursor: pointer;"><a id=worktop onclick='work()' class="menu-inactive link">Selected Work,</a></p>
+                        <p style="cursor: pointer;"><a id=playtop onclick='play()' class="menu-inactive link">Etc,</a></p>
+                        <p style="cursor: pointer;"><a id=abouttop onclick='about()' class="menu-inactive link">About</a></p>                        
+                    </ul>
+                   
+                    <script>
+                        function work() {
+                            var w = (window.innerWidth);
+                            var work = document.getElementById('work');
+                            window.location.href = "../index.html";
+                            window.scrollTo(0, 0);
+                            work.scrollTo(0,0);
+
+                            worktop.classList.remove('menu-inactive');
+                            worktop.classList.add('menu-active');
+
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+                        }
+                        function play() {
+                            var play = document.getElementById('play');
+                            window.location.href = "../index.html#play";
+                            worktop.classList.add('menu-inactive');
+
+                            playtop.classList.remove('menu-inactive');
+                            playtop.classList.add('menu-active');
+
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+                        }
+
+                        function about() {
+                            var w = (window.innerWidth);
+                            var about = document.getElementById('about');
+                            window.location.href = "../index.html#about";
+                            about.scrollTo(0,0);
+
+                            worktop.classList.remove('menu-active');
+                            worktop.classList.add('menu-inactive');
+
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            abouttop.classList.remove('menu-inactive');
+                            abouttop.classList.add('menu-active');
+                        }
+                        
+                    </script>
+                </div>
+            </ul>
+
+            <a class="up-button" href="#top" style="text-decoration: none; display: none;" id="up-button">
+                <h3 style="line-height: 30pt;">Top</h3>
             </a>
             <script>
-                function arrow() {
-                    document.getElementById('white').style.display='none';
-                    document.getElementById('yellow').style.display='block';
+                up = document.getElementById("up-button");
+                var myScrollFunc = function () {
+                    var y = window.scrollY;
+                    if (y >= 700) {
+                        up.style.display = "flex";
+                    } else {
+                        up.style.display = "none";
+                    }
                 }
-                function arrow2() {
-                    document.getElementById('white').style.display='block';
-                    document.getElementById('yellow').style.display='none';
-                }
+                window.addEventListener("scroll", myScrollFunc);
+                var elem = document.getElementById('up-button');
+                window.addEventListener('scroll', function() {
+                    var value = window.scrollY * 0.1;
+                    elem.style.transform = `rotate(${value}deg)`; 
+                });
+
+                function resize() {
+                    window.scrollTo(0, 0);
+                    }
+                window.onresize = resize;
             </script>
         </header>
         <div class="project">
             <div class="projectbody">
                 <ul class="columns">
-                    <li class="sixtysix">
-                        <h1 class="project-title">Sigul.otf <!--title-->
-                        </h1>
-                        <p>Type Design</p>
-                    </li>
-                    <li class="thirtythree">
-                        <p>Singul, short for singularity, is an exercise in reversing expectations for type design, exploring how spacing changes the way a font interacts at scale.
-                        </p>
-                    </li>
+                    <div class="gallery">
+                        <li class="sixtysix">
+                            <h1 class="project-title">Sigul.otf <!--title-->
+                            </h1>
+                            <p>Type Design</p>
+                        </li>
+                        <li class="thirtythree">
+                            <p>Singul, short for singularity, is an exercise in reversing expectations for type design, exploring how spacing changes the way a font interacts at scale.
+                            </p>
+                        </li>
+                    </div>
+                    
                     <li class="hundred" style="gap: 8px;">
                         <img src="../images/type/hero.gif">
                         <img src="../images/type/sigul-case-studies-08.jpg">

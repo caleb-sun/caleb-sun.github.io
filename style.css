@@ -131,10 +131,18 @@ table {
 
 /* custom css */
 
+:root{
+    --background: #1b1b1d;
+    --textBase: #FFFFFF;
+    --border: #FFFFFF;
+    --highlight: #ccee65;
+    --textSub:#a7a7b0;
+}
+
 /* colors */
 
 html {
-    background-color: #1b1b1d;
+    background-color: var(--background);
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
@@ -156,7 +164,7 @@ h1,h2,h3,h5,h4,p{
     font-family: "hal", sans-serif;
     font-weight: 300;
     font-style: normal;
-    color: white;
+    color: var(--textBase);
     /* letter-spacing: 1px; */
 }
 
@@ -165,7 +173,7 @@ h4, p, sub {
     font-weight: 300;
     font-style: normal;
     font-style: normal;
-    color: white;
+    color: var(--textBase);
 }
 
 
@@ -183,7 +191,7 @@ strong{
     font-family: "hal", sans-serif;
 font-weight: 300;
 font-style: italic;
-    color: white;
+    color: var(--highlight);
 }
 
 h1, h1>strong{
@@ -218,27 +226,27 @@ h3 {
 }
 
 h4 {
-    color: #c9ff56;
+    color: var(--highlight);
     margin-bottom: 1em;
 }
 
 b{
     font-family: "elza-condensed", sans-serif;
     font-weight: 500;
-    color: #c9ff56;
+    color: var(--highlight);
 }
 
 sub, h4 {
     font-size: 11pt;
     line-height:13pt;
     letter-spacing: 0.2px;
-    color:#8c8d8a
+    color:var(--textSub);
 }
 
 a:link{
     text-decoration: underline;
     text-decoration-style:dotted;
-    color:#FFFFFF;
+    color:var(--textBase);
 }
 
 p>a{
@@ -254,14 +262,14 @@ a:active{
 
 a:visited {
     text-decoration: none;
-    color:#FFFFFF;
+    color:var(--textBase);
   }
 
 
 a:hover, a:hover>sub{
     text-decoration: underline;
     text-decoration-style: dotted;
-    color: #c9ff56 !important;
+    color: var(--highlight) !important;
     cursor: pointer, auto;
 }
 
@@ -275,14 +283,14 @@ a:hover, a:hover>sub{
 .menu-active{
     text-decoration: underline;
     text-decoration-style: dotted;
-    color: #c9ff56 !important;
+    color: var(--highlight) !important;
     cursor: pointer, auto;
     
 }
 
 .menu-inactive{
     text-decoration: none !important;
-    color: white;
+    color: var(--textBase);
     cursor: pointer, auto;
 }
 
@@ -297,32 +305,18 @@ a>div>.fifty>p{
 }
 
 a:hover>div>div>p,a:hover>div>div>h3{
-    color: #c9ff56 !important;
+    color: var(--highlight) !important;
     scale: 105%;
 }
 
 a:hover>div>div>sub{
-    color: #738b40 !important;
+    color: var(--textSub) !important;
 }
 
 a:hover>img{
     cursor:pointer, auto;
 }
 
-.tag{
-    border-color:#c9ff56;
-    border-radius: 12pt;
-    border-width: 1.5px;
-    border-style: solid;
-    height: 10pt;
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    padding: 2px;
-    padding-left:8px;
-    padding-right: 8px;
-    padding-top:5px;
-}
 
 h1>a{
     text-decoration: none !important;
@@ -334,11 +328,11 @@ h1>a:hover{
 
 .tag>p{
     font-size:small;
-    color:#c9ff56
+    color:var(--highlight);
 }
 
 hr.dotted{
-    border-style: 3px solid #FFFFFF;
+    border-style: 3px solid var(--border);
     width: 100%;
     
 }
@@ -460,7 +454,7 @@ hr.dotted{
 .section{
     display: flex;
     flex-direction: row;
-    border-top: 1px white solid;
+    border-top: 1px var(--border) solid;
     width: 87.5vw;
     padding-top: 0.5em;
 }
@@ -472,7 +466,7 @@ hr.dotted{
 }
 
 .section-label>sub{
-    color:white;
+    color:var(--textBase);
 }
 
 .gallery{
@@ -502,7 +496,7 @@ hr.dotted{
 }
 
 .gallery>.fifty>sub, .gallery>.hundred>sub, .gallery>.thirtythree>sub,.proj>.hundred>sub{
-    color: #8c8d8a !important;
+    color: var(--textSub) !important;
 }
 
 .number{
@@ -510,12 +504,12 @@ hr.dotted{
 }
 
 .state-1{
-    color: white;
+    color: var(--textBase);
 }
 
 .state-2{
     display: none;
-    color: white;
+    color: var(--textBase);
 }
 
 .state-1.eighty, .state-2.eighty{
@@ -551,12 +545,12 @@ header{
     position: fixed;
     justify-content: space-between;
     top: 0;
-    padding-left: 1.75vw;
-    padding-right: 1vw;
+    padding-left: 1.25vw;
+    padding-right: 1.75vw;
     width: 100%;
     z-index: 100;
-    background-color:  #1b1b1d;
-    border-bottom: 1px white solid;
+    background-color: var(--background);
+    border-bottom: 1px var(--border) solid;
     box-sizing: border-box;
 }
 
@@ -609,8 +603,8 @@ footer{
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #1b1b1d;
-    border-top: white 1px solid;
+    background-color: var(--background);
+    border-top: var(--border) 1px solid;
 }
 
 .footmenu{
@@ -707,15 +701,15 @@ footer{
     flex-direction: row;
     z-index:100;
     align-items: center;
-    background-color:  #1b1b1d;
-    border: 1px white solid;
+    background-color:  var(--background);
+    border: 1px var(--border) solid;
     border-radius: 100px;
 
 }
 
 
 .processnav:hover>h3>a{
-    color: #c9ff56 !important;
+    color: var(--highlight) !important;
     text-transform: uppercase;
 }
 
@@ -724,7 +718,7 @@ footer{
 }
 
 .processnav>p:hover{
-    text-decoration: underline dotted white;
+    text-decoration: underline dotted var(--textBase);
 }
 
 /* .eye{
@@ -758,8 +752,8 @@ footer{
 
 .up-button{
     position: fixed;
-    background-color: #1b1b1d;
-    border: 1px white solid;
+    background-color: var(--background);
+    border: 1px var(--border) solid;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -772,7 +766,7 @@ footer{
 }
 
 .up-button:hover>p{
-    color:#c9ff56
+    color:var(--highlight);
 }
 
 /*process*/
@@ -780,7 +774,7 @@ footer{
 .process-viewport{
     width: 30vw;
     height: 86.7vh;
-    background-color: #1b1b1d;
+    background-color: var(--background);
     position: fixed;
     top:7.5vh;
     right:0;
@@ -788,15 +782,15 @@ footer{
     overflow-x: hidden;
     z-index: 20;
     box-sizing: border-box;
-    border-top: 1px white solid;
-    border-bottom: 1px white solid;
-    border-left: 1px white solid;
+    border-top: 1px var(--border) solid;
+    border-bottom: 1px var(--border) solid;
+    border-left: 1px var(--border) solid;
     /* display: none; */
 }
 
 .process{
     padding: 2em 1vw 5em 1.5em;
-    color: white !important;
+    color: var(--textBase) !important;
     width: 28vw;
     box-sizing: border-box;
     position: relative; 
@@ -833,7 +827,7 @@ footer{
 
 
 .process>h1,.process>h2,.process>h3,.process>h4,.process>h5,.process>p{
-    color: white !important;
+    color: var(--textBase) !important;
 }
 
 .process>h3{
