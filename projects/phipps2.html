@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<!--- the doctype declaration tells the file reader that we're using html-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="An exhibition identity for the birthplace of ceramics.">
+    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=">
+    <meta name="robots" content="all">
+    <!---declares what kinds of characters are supportive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!---makes site responsive-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!---makes site work better with microsoft browsers-->
+    <title>Caleb Sun – Phipps</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/bav6mvc.css">
+  </head>  
+  <body>
+    <main>
+        <header>
+            <a class="homenav sun" href="../index.html">
+                <img id='sun' src="../images/sun.svg">
+                <p>Caleb Sun</p>
+            </a>
+            <ul class="menu header">
+                <div class="menuitems">
+                    <ul class="miniprojnav" style="z-index: 100;">
+                        
+                        <p style="cursor: pointer;"><a id=worktop onclick='work()' class="menu-active link">Selected Work,</a></p>
+                        <p style="cursor: pointer;"><a id=playtop onclick='play()' class="menu-inactive link">Etc,</a></p>
+                        <p style="cursor: pointer;"><a id=abouttop onclick='about()' class="menu-inactive link">About</a></p>                        
+                    </ul>
+                    <!-- <script> 
+                        function work() {
+                            var work = document.getElementById('work');
+                            var play = document.getElementById('play');
+                            var about = document.getElementById('about');
+
+                            play.classList.remove('up');
+                            play.classList.add('down'); 
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            work.classList.remove('down');
+                            work.classList.add('up');
+                            worktop.classList.remove('menu-inactive');
+                            worktop.classList.add('menu-active');
+
+                            about.classList.remove('up');
+                            about.classList.add('down'); 
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                        }
+                        function play() {
+                            var work = document.getElementById('work');
+                            var play = document.getElementById('play');
+                            var about = document.getElementById('about');
+                            
+                            work.classList.remove('up');
+                            work.classList.add('down'); 
+                            worktop.classList.remove('menu-active');
+                            worktop.classList.add('menu-inactive');
+
+                            play.classList.remove('down');
+                            play.classList.add('up');
+                            playtop.classList.remove('menu-inactive');
+                            playtop.classList.add('menu-active');
+
+                            about.classList.remove('up');
+                            about.classList.add('down'); 
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                        }
+
+                        function about() {
+                            var work = document.getElementById('work');
+                            var play = document.getElementById('play');
+                            var about = document.getElementById('about');
+
+                            work.classList.remove('up');
+                            work.classList.add('down'); 
+                            worktop.classList.remove('menu-active');
+                            worktop.classList.add('menu-inactive');
+
+                            play.classList.remove('up');
+                            play.classList.add('down'); 
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            about.classList.remove('down');
+                            about.classList.add('up');
+                            abouttop.classList.remove('menu-inactive');
+                            abouttop.classList.add('menu-active');
+
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                        
+                    </script> -->
+                    <script>
+                        function work() {
+                            var w = (window.innerWidth);
+                            var work = document.getElementById('work');
+                            window.location.href = "../index.html";
+                            window.scrollTo(0, 0);
+                            work.scrollTo(0,0);
+
+                            worktop.classList.remove('menu-inactive');
+                            worktop.classList.add('menu-active');
+
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+                        }
+                        function play() {
+                            var play = document.getElementById('play');
+                            window.location.href = "../index.html#play";
+                            worktop.classList.add('menu-inactive');
+
+                            playtop.classList.remove('menu-inactive');
+                            playtop.classList.add('menu-active');
+
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+                        }
+
+                        function about() {
+                            var w = (window.innerWidth);
+                            var about = document.getElementById('about');
+                            window.location.href = "../index.html#about";
+                            about.scrollTo(0,0);
+
+                            worktop.classList.remove('menu-active');
+                            worktop.classList.add('menu-inactive');
+
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            abouttop.classList.remove('menu-inactive');
+                            abouttop.classList.add('menu-active');
+                        }
+                        
+                    </script>
+                </div>
+            </ul>
+            <div class="process-tab" id="process-tab">
+                <script>
+                    function processIn() {
+                        var process = document.getElementById('process');
+                        var processviewport = document.getElementById('process-viewport');
+                        var processtab = document.getElementById('process-tab');
+                        var processopen = document.getElementById('process-open');
+                        var processclose = document.getElementById('process-close');
+                        
+                        processviewport.classList.remove('processviewport-start');
+                        processviewport.classList.remove('processviewport-out');
+                        processviewport.classList.add('processviewport-in');
+
+                        processclose.style.display='flex';
+                        processopen.style.display='none';
+                    }
+                    function processOut() {
+                        var process = document.getElementById('process');
+                        var processlabel = document.getElementById('process-open');
+                        var processtab = document.getElementById('process-tab');
+
+                        var processviewport = document.getElementById('process-viewport');
+                        var processclose = document.getElementById('process-close');
+
+                        process.classList.remove('process-in');
+                        process.classList.add('process-out');
+                        processviewport.classList.remove('processviewport-in');
+                        processviewport.classList.add('processviewport-out');
+                        // processviewport.style.display='none';
+
+                        processclose.style.display='none';
+                        processtab.style.top='9%';
+                        processlabel.style.display='flex';
+                        
+                    }
+                </script>
+                <div class="menuitems">
+                    <ul class="processnav" id="process-open" onclick='processIn()' onmouseenter="process1Hover()">
+                        <!-- <img src="../images/eye-yellow.svg" class="eye" style="display: none;" id="eye1yellow">
+                        <img src="../images/eye.svg" class="eye" id="eye1white"> -->
+                        <h3>
+                            <a style="text-decoration: none !important; cursor: pointer;">Process</a>
+                        </h3>
+                    </ul>
+                    <ul class="processnav" id="process-close" onclick='processOut()' onmouseenter="process2Hover()" style="display: none">
+                        <h3>
+                            <a style="text-decoration: none !important; cursor: pointer;" >&#x2715;</a>
+                        </h3>
+                    </ul>
+                </div>
+            </div>
+
+            <a class="up-button" href="#top" style="text-decoration: none; display: none;" id="up-button">
+                <h3 style="line-height: 30pt;">Top</h3>
+            </a>
+            <script>
+                up = document.getElementById("up-button");
+                var myScrollFunc = function () {
+                    var y = window.scrollY;
+                    if (y >= 700) {
+                        up.style.display = "flex";
+                    } else {
+                        up.style.display = "none";
+                    }
+                }
+                window.addEventListener("scroll", myScrollFunc);
+                var elem = document.getElementById('up-button');
+                window.addEventListener('scroll', function() {
+                    var value = window.scrollY * 0.1;
+                    elem.style.transform = `rotate(${value}deg)`; 
+                });
+
+                function resize() {
+                    window.scrollTo(0, 0);
+                    }
+                window.onresize = resize;
+            </script>
+        </header>
+        <div class="project" id="tip">
+            <div class="projectbody">
+                <ul class="columns">
+                    <div class="gallery">
+                        <li class="sixtysix">
+                            <h1 class="project-title">Phipps Botanical Gardens <!--title-->
+                            </h1>
+                            <sub class="subtitle">Brand Redesign and Repositioning, Identity, Marketing, Web</sub>
+                        </li>
+                        <li class="thirtythree" style="margin-top: 0.5em;">
+                            <p>A timeless identity for a botanical garden that honors the past and looks eagerly towards the future.
+                            </p>
+                        </li>
+                    </div>
+                    
+                    <div class="gallery">
+                        <li class="hundred"></li>
+                            <img src="../images/phipps2/hero.jpg">
+                        </li>
+                    </div>
+                    <span class="small"></span>
+                    <div class="gallery">
+                        <div class="sixtysix">
+                            <li class="eighty">
+                                <h2>Something old, something new...</h2>
+                                <span class="small"></span>
+                            <p>The Phipps Conservatory and Botanical Gardens is a fixture in the Pittsburgh community. For nearly two centuries, Phipps has served as an urban oasis, hosting seasonal flower shows and providing respite from the hustle and bustle of industrial Pittsburgh. In the past 15 years, though, Phipps has set their sights on the future. 
+                            <span class="small"></span>
+                            As a leader in sustainability, education, and regional community programs, The Phipps has adopted many new faces beyond their identity as a simple garden. This brand repositioning project breathes new light into the Phipps brand, with a focus on surfacing the diverse offerings the garden provides to the Pittsburgh community.
+                            </p>
+                            
+    
+                            </li>
+                        </div>
+                        <div class="thirtythree" style="flex-direction:row; margin-top: 3.75em;">
+                            <li class="twenty">
+                                <h3>Time<br>
+                                Role<br>
+                                Credits</h3>
+                            </li>
+                            <li class="eighty">
+                                <h3>6 weeks<br>
+                                Sole Designer (Course Project)
+                                <br>
+                                Guidance — Justin Edmund, Andrew Twigg<br>
+                                Special Thanks — Joe Reed, Alexa Sinatra<br>
+                                Photography — Unsplash, various</h3>
+                            </li>
+                        </div>
+                    </div>
+                    
+                    
+                    <span class="medium"></span>
+                    <div class="gallery">                        
+                        <li class="fifty">
+                            <img src="../images/phipps2/logotype-animation.gif">
+                            <sub>&#x21aa; Custom logotype combining sharp glass-inspired corners with botanical curves.</sub>
+                        </li>
+                        
+                        <li class="fifty">
+                            <img src="../images/phipps2/leaf.gif">
+                        </li>
+
+                        <li class="hundred">
+                            <img src="../images/phipps2/poster-templates.gif">
+                        </li>
+                        <li class="hundred">
+                            <img src="../images/phipps2/slogans.gif">
+                        </li>
+                        <li class="hundred">
+                            <img src="../images/phipps2/colors.jpg">
+                            <sub>&#x21aa; Lively, nature-inspired colors that create subpalettes for different organizational functions.</sub>
+                        </li>
+                        <li class="fifty">
+                            <img src="../images/phipps2/ig-story1.jpg">
+                        </li>
+                            <li class="fifty">
+                            <img src="../images/phipps2/yellow-petal.gif">
+                        </li>
+                        <li class="hundred">
+                            <img src="../images/phipps2/ig-posts.jpg">
+                        </li>
+                        <li class="fifty">
+                            <img src="../images/phipps2/signage.jpg">
+                        </li>
+                        <li class="fifty">
+                            <img src="../images/phipps2/billboard2.jpg">
+                        </li>
+                        <li class="sixtysix">
+                            <img src="../images/phipps2/web1.jpg">
+                        </li>
+                        <li class="thirtythree">
+                            <img src="../images/phipps2/outdoor-sign.jpg">
+                        </li>
+                        <li class="hundred">
+                            <img src="../images/phipps2/billboard.jpg">
+                        </li>
+                        
+                        <li class="fifty">
+                            <img src="../images/phipps2/business-cards.gif">
+                        </li>
+                        <li class="fifty">
+                            <img src="../images/phipps2/tote.jpg">
+                        </li>
+                        <li class="hundred">
+                            <img src="../images/phipps2/mobile-tix.jpg">
+                        </li>
+                        <li class="hundred">
+                            <img src="../images/phipps2/web.gif">
+                            <sub>&#x21aa; Delightful web interactions that keep the sight feeling alive and highlight real photography.</sub>
+                        </li>
+                    </div>
+                    
+                    <div class="sixtysix">
+                        <li class="hundred" style="gap: 0;">
+                            <p>At the core of this rebrand is an organization steeped in history and tradition, with a keen eye for modernization. By modernizing and abstracting the key blooming leaf, the new identity feels fresh and contemporary, without sacrificing the relationship and impact the organization has with the community.</p>
+                            <span class="medium"></span>
+                            <h3>Impact</h3><span class="small"></span>
+                            <h3 class="eighty">&#x21aa; Shifted to a brand with dual identities that support Phipps core, as well as diverse Phipps functionalities<br>
+                                &#x21aa; Aligned visual identity with peer cultural institutions<br>
+                                &#x21aa; Developed a web strategy that aligns core navigation and content structure with principle customer jobs-to-be-done<br>
+                                &#x21aa; Created roadmap for Phipps’ marketing team to appeal to institution leadership for a digital redesign in the future</h3>
+                        </li>
+                    </div>
+                    <span class="large"></span>
+                    <div class="hundred" style="align-items: center;">
+                        <li class="eighty" style="gap: 16px; text-align: center;">
+                            <h2>&#x301D Caleb’s work was a true gift to Phipps Conservatory. On a short timeline, he was able to thoroughly assess the structure of our website, propose thoughtful changes to bring the most customer-demanded resources to the forefront, and find novel opportunities to bring mission-centered messaging and experience-deepening connections to the user flow. His work inspires us to prioritize a redesign in the near future by giving a vivid glimpse of the potential and possibilities. &#x301E</h2>
+                            <p style="font-style: italic;">— Joe Reed, Phipps Marketing Director</p>
+                        </li>
+                    </div>
+                    <span class="small"></span>
+                    
+                    <span class="large"></span>
+                </ul>
+            </div>
+        </div>
+        <div class="process-viewport processviewport-start" id="process-viewport">
+            <div id="process" class="process">
+                <h2>
+                    Challenge
+                </h2>
+                <span class="small"></span>
+                <p>
+                    Marry a classic fixture of Pittsburgh with future aspirations of sustainability and community engagement.
+                </p>
+                <span class="medium"></span>
+                <h2>
+                    Story
+                </h2>
+                <span class="small"></span>
+                <p>
+                    Phipps has captured the imaginations of visitors with beautiful flower shows and seasonal exhibitions since their inception in the 1800s. While the botanical garden still brings joy and wonder to the city with curated shows, Phipps is also turning towards the future, considering how the conservatory can play a role in leading sustainability efforts in the region, as well as serving the community through adult education and community programs.
+                    <br><br>
+                    Rebranding the Phipps posed a unique challenge in that the gardens were not shying away from their historical role. They will always be a botanical respite from the hustle and bustle of the city, they just do more now. This rebrand hinged on that idea of "doing more", from visual identity to web architecture.</p>
+                    <span class="medium"></span>
+                    <h2>
+                        Impact (Identity)
+                    </h2>
+                    <span class="small"></span>
+                    <p>
+                        &#9679; Shifted to a brand with dual identities that support Phipps core, as well as diverse Phipps functionalities<br>
+                        	
+                        &#9679; Aligned visual identity with peer cultural institutions
+                    </p>
+                    <span class="medium"></span>
+                    <h2>
+                        Impact (Web Strategy)
+                    </h2>
+                    <span class="small"></span>
+                    <p>
+                        &#9679; Developed a web strategy that aligns core navigation and content structure with principle customer jobs-to-be-done<br>
+                            
+                        &#9679; Created roadmap for Phipps’ marketing team to appeal to institution leadership for a digital redesign in the future
+                        </p>
+                <script>
+                    function processArrow() {
+                        document.getElementById('white-arrow').style.display='block';
+                        document.getElementById('black-arrow').style.display='none';
+                    }
+                    function processArrow2() {
+                        document.getElementById('black-arrow').style.display='block';
+                        document.getElementById('white-arrow').style.display='none';
+                    }
+                </script>
+            </div>
+        </div>
+        <footer>
+            <!-- <img src="images/cat-01.png" class="cat2" > -->
+            <div class="columns footmenu">
+                <ul class="menu" style="align-items: center;">
+                    <li class="menuitems"><a href="../pdfs/caleb-sun_resume.pdf" target="_blank"><sub class="link">Resume</sub></a></li>
+                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><sub class="link">LinkedIn</sub></a></li>
+                    <li class="menuitems"><a href="https://read.cv/calebsun" target="_blank"><sub class="link">ReadCV</sub></a></li>
+                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub class="link">Email</sub></a></li>
+                </ul>
+                <div class="credit">
+                    <sub>Updated September 2024 | Custom coded using HTML/CSS/JS</sub>
+                </div>
+            </div>
+        </footer>
+    </main>
+  </body>
+</html>
