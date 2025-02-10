@@ -994,16 +994,23 @@ input[type='submit']:hover {
 @media screen and (max-width: 800px) {
 
     h1{
-        font-size: 64pt;
-        line-height: 64pt;
+        font-size: 28pt;
+        line-height: 28pt;
+    }
+
+    h2{
+        font-size: 16pt;
+        line-height: 18pt;
     }
 
     p{
-        font-size: 18pt;
-        line-height: 22pt;
+        font-size: 14pt;
+        line-height: 18pt;
     }
     
-
+    sub{
+        font-size: 9pt;
+    }
     .subtitle{
         margin-bottom: 10pt;
     }
@@ -1033,8 +1040,13 @@ input[type='submit']:hover {
     }
 
     .projectbody{
-        width: 92%;
-        margin-top: 15vh;
+        width: 97%;
+        margin-top: 12vh;
+        padding-left: 1.5%;
+        padding-right: 1.5%;
+    }
+    .projectbody>.columns>.sixtysix, .projectbody>.columns>.thirtythree, .projectbody>.columns>.hundred, .projectbody>.columns>.gallery, .projectbody>.columns>.fifty {
+        margin-left:0;
     }
 
     .spacer{
@@ -1106,9 +1118,14 @@ input[type='submit']:hover {
         width: 50%;
         position: fixed;
         width: 100vw;
-        margin-bottom:2%;
         justify-content: left; 
-        gap: 8px;
+        gap: 0;
+        padding-bottom: 1em;
+        padding-top: 1em;
+    }
+
+    .credit, .footmenu>.menu{
+        height: 8px;
     }
 
     header{
@@ -1118,9 +1135,9 @@ input[type='submit']:hover {
         position: fixed;
         justify-content: space-between;
         top: 0;
-        margin-left: 2.5vw;
-        margin-right: 3.75vw;
-        width: 93.75vw;
+        padding-left: 2.5vw;
+        padding-right: 3.75vw;
+        width: 100vw;
         z-index: 100;
     }
     
@@ -1202,23 +1219,23 @@ input[type='submit']:hover {
     }
 
     .process-viewport{
-        width: 65vw;
-        height: 80vh;
-        top:10vh;
+        width: 80vw;
+        height: 92vh;
+        top:8vh;
         right:0;
     }
     
     .process{
-        margin: 2.5em 5em 5em 1.5em;
+        margin: 0;
         color: black !important;
-        width: 60vw;
+        width: 76vw;
         box-sizing: border-box;
         position: relative; 
         z-index: 100;
     }
     
     .processviewport-in{
-        left: 35vw;
+        left: 20vw;
         /* display: block; */
         animation: processviewport-in 0.5s 1 cubic-bezier(0.860, 0.000, 0.070, 1.000);
     }
@@ -1237,7 +1254,7 @@ input[type='submit']:hover {
     
     @keyframes processviewport-in {
         from{left:100vw;}
-        to{left: 35vw;}
+        to{left: 20vw;}
     }
     
     @keyframes processviewport-out {
@@ -1262,10 +1279,10 @@ input[type='submit']:hover {
         margin-bottom: 0em;
     }
 
-    .projectbody>.columns>li:nth-child(2){
+    /* .projectbody>.columns>li:nth-child(2){
         margin-bottom: 2em;
         width: 66%;
-    }
+    } */
 
 
 
