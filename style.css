@@ -589,7 +589,7 @@ header{
     flex-direction: row;
     align-items: center;
     gap: 15%;
-    height: 36px;
+    height: 4vh;
     z-index: 100;
 }
 
@@ -744,7 +744,7 @@ footer{
 
 .process-viewport{
     width: 30vw;
-    height: 86.7vh;
+    height: 89vh;
     position: fixed;
     top:7.5vh;
     right:0;
