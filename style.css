@@ -259,7 +259,7 @@ a:active{
 
 
 
-a:hover, a:hover>sub{
+a:hover, a:hover>sub, a:visited{
     text-decoration: underline;
     text-decoration-style: dotted;
     color: var(--highlight) !important;
@@ -416,7 +416,7 @@ hr.dotted{
 }
 
 .thirtythree{
-    width: 33%;
+    width: 32%;
     gap:18px;
 }
 
@@ -425,8 +425,12 @@ hr.dotted{
 }
 
 .fifty{
-    width:49.5%;
+    width:48.5%;
     gap:18px;
+}
+
+.projecthome.fifty{
+    width: 49.5%;
 }
 
 .sixty{
@@ -434,7 +438,7 @@ hr.dotted{
 }
 
 .sixtysix{
-    width: 66%;
+    width: 65%;
     gap:18px;
 }
 
@@ -448,7 +452,7 @@ hr.dotted{
     display: flex;
     flex-direction: row;
     border-top: 1px var(--border) solid;
-    width: 87.5vw;
+    width: 90vw;
     padding-top: 0.5em;
 }
 
@@ -467,12 +471,12 @@ hr.dotted{
     flex-wrap: wrap;
     flex-direction: row !important;
     justify-content: space-between;
-    row-gap: 8px;
+    row-gap: 44px;
     width: 100%;
 }
 
 .gallery>.fifty{
-    width: 49.75%;
+    width: 48.5%;
     gap: 4px;
 }
 
@@ -807,11 +811,11 @@ footer{
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-right:10vw;
-    padding-left:5vw;
+    margin-right:5vw;
+    padding-left: 2.5vw;
     justify-content: end;
     margin-top: 17vh;
-    width: 85vw;
+    width: 90vw;
     row-gap: 48px;
 }
 
