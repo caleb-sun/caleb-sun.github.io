@@ -185,11 +185,11 @@ h1,h2,h3,h5,h4,p,sub{
 }
 
 sub>a{
-    text-decoration: underline dotted;
+    /* text-decoration: underline dotted; */
 }
 
 sub>a:hover{
-    text-decoration: underline dotted !important;
+    text-decoration: underline !important;
 }
 
 strong{
@@ -249,19 +249,25 @@ sub, h4 {
 
 a:link{
     text-decoration: none;
-    text-decoration-style:dotted;
+    /* text-decoration-style:dotted; */
     color:var(--textBase);
+}
+
+.sixtysix p>a:hover, a:hover>sub, .thirtythree p>a:hover{
+    color:var(--textSub);
+    text-decoration: underline var(--textSub);
+    white-space: nowrap;
 }
 
 p>a{
     text-decoration: none;
-    text-decoration-style:dotted;
+    /* text-decoration-style:dotted; */
     /* color: #c9ff56; */
 }
 
 a:active{
     text-decoration: none;
-    text-decoration-style:dotted;
+    /* text-decoration-style:dotted; */
 }
 
 
@@ -793,7 +799,7 @@ footer{
 
 .menuitems>p>a:hover{
     text-decoration: underline !important;
-    text-decoration-style: dotted !important;
+    /* text-decoration-style: dotted !important; */
 }
 
 /* home */
@@ -848,8 +854,8 @@ footer{
     box-sizing: border-box;
     padding: 6pt 10pt;
     box-sizing: border-box;
-    border: 1px black solid;
-    /* background-color: var(--textBase); */
+    /* border: 1px black solid; */
+    background-color: var(--backgroundGray);
     color: var(--textBase) !important;
 }
 
@@ -860,7 +866,6 @@ footer{
 
 
 .menu-active{
-    color: var(--highlight) !important;
     background-color: var(--highlight) !important;
     cursor: pointer, auto;
 }
@@ -910,7 +915,7 @@ footer{
 }
 
 .processnav>p:hover{
-    text-decoration: underline dotted var(--textBase);
+    /* text-decoration: underline dotted var(--textBase); */
 }
 
 
@@ -994,6 +999,14 @@ footer{
 .process>h3{
     margin-top: 1em;
     margin-bottom: 0.5em;
+}
+
+#profileimage{
+    height: auto; 
+    width: 40vw; 
+    z-index:0; 
+    margin-top: 10vh;
+    margin-left: 5vw;
 }
 
 
@@ -1146,7 +1159,7 @@ footer{
     }
 
     p{
-        font-size: 12pt;
+        font-size: 11pt;
         line-height: 13pt;
     }
     
@@ -1238,16 +1251,34 @@ footer{
         width: 80%;
     }
 
+    .fifty.crop>img, .thirtythree.crop>img, .sixtysix.crop>img{
+        height: auto;
+        /* object-fit: cover; */
+    }
 
+    .fifty.profileimage{
+        width: 90vw;
+    }
 
+    #profileimage{
+        width: 90vw;
+        margin-top:0;
+    }
 
+    #about{
+        height: 100vh;
+    }
 
     .subtitle{
         margin-bottom: 10pt;
     }
 
     .twenty, .forty, .eighty, .thirty, .thirtythree, .fifty, .sixty, .sixtysix, .eighty, .hundred{
-        width: 100%;
+        width: 100% !important ;
+    }
+
+    .thirtythree.about, .sixtysix.about{
+        width: 49% !important;
     }
 
     .twentyfive{
