@@ -19,9 +19,8 @@
   <body>
     <main>
         <header>
-            <a class="homenav sun" href="../index.html">
-                <img id='sun' src="../images/sun.svg">
-                <p>Caleb Sun</p>
+            <a class="homenav" href="../index.html">
+                <img class="noborder sun" id='sun' src="../images/sun.svg" style="position: fixed; left:-52px; top: -52px; width: 128px; z-index:100;">
             </a>
             <script>
                 var elem = document.getElementById('sun');
@@ -38,10 +37,11 @@
             <ul class="menu header">
                 <div class="menuitems">
                     <ul class="miniprojnav" style="z-index: 100;">
-                        
-                        <p style="cursor: pointer;"><a id=worktop onclick='work()' class="menu-inactive link">Selected Work,</a></p>
-                        <p style="cursor: pointer;"><a id=playtop onclick='play()' class="menu-inactive link">Etc,</a></p>
-                        <p style="cursor: pointer;"><a id=abouttop onclick='about()' class="menu-inactive link">About</a></p>                        
+                        <ul class="miniprojnav" style="z-index: 100;">
+                            <p id=worktop onclick='work()' style="cursor: pointer; border-radius: 50%;" class="menu-active link"><a>Selected Work</a></p>
+                            <p id=playtop onclick='play()' style="cursor: pointer; border-radius: 50%;" class="menu-inactive link"><a>Etc</a></p>
+                            <p id=abouttop onclick='about()' class="menu-inactive link" style="cursor: pointer;"><a>About</a></p>                    
+                        </ul>            
                     </ul>
                     
                     <script>
@@ -94,61 +94,6 @@
                     </script>
                 </div>
             </ul>
-
-            <div class="process-tab" id="process-tab">
-                <script>
-                    function processIn() {
-                        var process = document.getElementById('process');
-                        var processviewport = document.getElementById('process-viewport');
-                        var processtab = document.getElementById('process-tab');
-                        var processopen = document.getElementById('process-open');
-                        var processclose = document.getElementById('process-close');
-                        
-                        processviewport.classList.remove('processviewport-start');
-                        processviewport.classList.remove('processviewport-out');
-                        processviewport.classList.add('processviewport-in');
-
-                        processclose.style.display='flex';
-                        processopen.style.display='none';
-                    }
-                    function processOut() {
-                        var process = document.getElementById('process');
-                        var processlabel = document.getElementById('process-open');
-                        var processtab = document.getElementById('process-tab');
-
-                        var processviewport = document.getElementById('process-viewport');
-                        var processclose = document.getElementById('process-close');
-
-                        process.classList.remove('process-in');
-                        process.classList.add('process-out');
-                        processviewport.classList.remove('processviewport-in');
-                        processviewport.classList.add('processviewport-out');
-                        // processviewport.style.display='none';
-
-                        processclose.style.display='none';
-                        processtab.style.top='9%';
-                        processlabel.style.display='flex';
-                        
-                    }
-                </script>
-                <div class="menuitems">
-                    <ul class="processnav" id="process-open" onclick='processIn()' onmouseenter="process1Hover()">
-                        <!-- <img src="../images/eye-yellow.svg" class="eye" style="display: none;" id="eye1yellow">
-                        <img src="../images/eye.svg" class="eye" id="eye1white"> -->
-                        <h3>
-                            <a style="text-decoration: none !important; cursor: pointer;">Process</a>
-                        </h3>
-                    </ul>
-                    <ul class="processnav" id="process-close" onclick='processOut()' onmouseenter="process2Hover()" style="display: none">
-                        <h3>
-                            <a style="text-decoration: none !important; cursor: pointer;" >&#x2715;</a>
-                        </h3>
-                    </ul>
-                    <!-- <ul class="miniprojnav" style="margin-left: 16px;">
-                        <p>About</p>
-                    </ul> -->
-                </div>
-            </div>
             <a class="up-button" href="#top" style="text-decoration: none; display: none;" id="up-button">
                 <h3 style="line-height: 30pt;">Top</h3>
             </a>
@@ -168,7 +113,6 @@
                     var value = window.scrollY * 0.1;
                     elem.style.transform = `rotate(${value}deg)`; 
                 });
-
                 function resize() {
                     window.scrollTo(0, 0);
                     }
@@ -184,7 +128,7 @@
                             </h1>
                             <sub class="subtitle">Book design, Poster Design</sub>
                         </li>
-                        <li class="thirtythree" style="margin-top: 0.5em;">
+                        <li class="thirtythree" style="margin-top: 1.4em;">
                             <p>Book and poster documenting the cross-border migratory patterns of monarch butterflies, and the metaphorical, multi-lingual implications of that journey.
                             </p>
                         </li>

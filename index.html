@@ -11,29 +11,39 @@
     <!---makes site responsive-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!---makes site work better with microsoft browsers-->
-    <title>Caleb Sun – Portfolio</title>
+    <title>Caleb Sun_Portfolio_2025</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/bav6mvc.css">
   </head>  
   <body>
+    <!-- <img class="noborder" id='backgroundImg' src="images/background.svg" style="position: fixed; width: 100vw;"> -->
+    <script>
+        var elem = document.getElementById('sun');
+        window.addEventListener('scroll', function() {
+            var value = window.scrollY * 0.1;
+            elem.style.transform = `rotate(${value}deg)`; 
+        });
+
+        function resize() {
+            window.scrollTo(0, 0);
+            }
+        window.onresize = resize;
+    </script>
     <main>
         <header>
-            <div class="homenav sun" onclick='work()'>
-                <img id='sun' src="images/sun.svg">
-                <p>Caleb Sun</p>
-            </div>
-            <ul class="menu header">
+            <ul class="menu header" style="width: 100%; justify-content: right;">
                 <div class="menuitems">
                     <ul class="miniprojnav" style="z-index: 100;">
-                        <p style="cursor: pointer;"><a id=worktop onclick='work()' class="menu-active link">Selected Work,</a></p>
-                        <p style="cursor: pointer;"><a id=playtop onclick='play()' class="menu-inactive link">Etc,</a></p>
-                        <p style="cursor: pointer;"><a id=abouttop onclick='about()' class="menu-inactive link">About</a></p>                        
+                        <p id=worktop onclick='work()' style="cursor: pointer; border-radius: 50%;" class="menu-active link"><a>Selected Work</a></p>
+                        <p id=playtop onclick='play()' style="cursor: pointer; border-radius: 50%;" class="menu-inactive link"><a>Etc</a></p>
+                        <p id=abouttop onclick='about()' class="menu-inactive link" style="cursor: pointer;"><a>About</a></p>                    
                     </ul>
                     <script>
                         function work() {
                             var w = (window.innerWidth);
                             var work = document.getElementById('work');
+                            var mininav=document.getElementById('mininav');
                             window.scrollTo(0, 0);
                             work.scrollTo(0,0);
 
@@ -45,15 +55,24 @@
 
                             abouttop.classList.remove('menu-active');
                             abouttop.classList.add('menu-inactive');
+                            
+                            // mininav.style = "position:fixed";
+                            
+
 
                         }
                         function play() {
                             var w = (window.innerWidth);
                             var play = document.getElementById('play');
+                            var mininav=document.getElementById('mininav');
+                            var projects=document.getElementById('projects');
+
 
                             window.scrollTo(w, 0);
                             play.scrollTo(0,0);
 
+                            // mininav.style = "position:relative";
+                            // projects.style = "position:relative";
 
                             worktop.classList.remove('menu-active');
                             worktop.classList.add('menu-inactive');
@@ -68,9 +87,15 @@
                         function about() {
                             var w = (window.innerWidth);
                             var about = document.getElementById('about');
+                            var mininav=document.getElementById('mininav');
+                            var projects=document.getElementById('projects');
+
 
                             window.scrollTo((2*w), 0);
                             about.scrollTo(0,0);
+
+                            // mininav.style = "position:relative";
+                            // projects.style = "position:relative";
 
                             worktop.classList.remove('menu-active');
                             worktop.classList.add('menu-inactive');
@@ -114,183 +139,294 @@
                 </div>
             </ul>
         </header>
+        <img class="noborder sun" id='sun' src="images/sun.svg" style="position: fixed; left:-52px; top: -52px; width: 128px; z-index:100;">
+
         <ul class="home">
             <li id="work" class="columns projgroup">
-                <div id="phipps" class="projecthome fifty">
-                    <a href="projects/phipps2.html" class="columns proj">
-                        <div class="eighty state-1">
-                            <p class="number">&#x2780;</p>
-                            <p>Do More With Phipps</p>
-                            <sub>Coursework_Brand repositioning, web strategy, identity design</sub>
+                <ul id="mininav" class="mininav">
+                    <div class="mininav_head">
+                        <div class="mininav_head_top">
+                            <p style="margin-bottom: 1em;">
+                                CALEB SUN is a Philly-based multidisciplinary designer crafting moving, interactive, story-driven systems.
+                            </p>
+                            <div class="links">
+                                <a href="sun.cs0327@gmail.com"><sub>⮡ Contact</sub></a>
+                                <a href="pdfs/sunCaleb-resume25.pdf"><sub>⮡ Resume</sub></a>
+                                <a href="https://www.linkedin.com/in/calebsun/"><sub>⮡ LinkedIn</sub></a>
+                            </div>
                         </div>
-                        <div class="eighty state-2">
-                            <p class="number">&#x2780;</p>
-                            <p>Marrying historic beauty to modern aspirations for Pittsburgh's premiere botanical gardens.</p>
-                        </div>
-                        <div class="hundred"> 
-                            <img id="psaimg"
-                            src="images/phipps2/slogans.gif">
-                        </div>
-                    </a>
-                    
-                </div>
-                <div id="alchemy" class="projecthome fifty">
-                    <a href="projects/alchemyearth.html" class="columns proj">
-                        <div class="eighty state-1">
-                            <p class="number">&#x2781;</p>
-                            <p>Alchemy Earth</p>
-                            <sub>Coursework_Identity design, event branding, naming</sub>
-                        </div>
-                        <div class="eighty state-2">
-                            <p class="number">&#x2781;</p>
-                            <p>Identity for a ceramics biennial held at the birthplace of porcelain.
-                        </div>
-                        <div class="hundred"> 
-                            <img id="psaimg"
-                            src="images/alchemy/billboard1.jpg">
-                        </div>
-                    </a>
-                    
-                </div>
-                <div id="sixiang" class="projecthome fifty">
-                    <a class="columns proj" href="projects/sixiang.html">
-                        <div class="eighty state-1">
-                            <p class="number">&#x2782;</p>
-                            <p>Si Xiang Mooncakes</p>
-                            <sub> Personal Project — Branding, Packaging</sub>
-                        </div>
-                        <div class="eighty state-2">
-                            <p class="number">&#x2782;</p>
-                            <p>A mooncake company for Chinese Americans who can't speak Chinese
-                        </div>
-                        <div class="hundred"> 
-                            <img
-                            src="images/sixiang/hero.jpg"
-                            alt="Mustard yellow background with light yellow patterning and black text that reads Si Xiang">
-                        </div>
-                    </a>
-                </div>
-                <div id="5539" class="projecthome fifty">
-                    <a href="projects/5539.html" class="columns proj">
-                        <div class="eighty state-1">
-                            <p class="number">&#x2783;</p>
-                            <p>5539 Cafe</p>
-                            <sub>Personal_Identity design, event branding</sub>
-                        </div>
-                        <div class="eighty state-2">
-                            <p class="number">&#x2783;</p>
+                        <p style="margin-bottom: 1em;">____________<br>Selected Work</p>
+                    </div>
+                    <a class="mininav_proj" href="projects/lifeblood.html">
+                        <p>[1]</p>
+                        <div>
                             <p>
-                                A down-to-earth, place-based identity for a cafe pop-up hosted by and for friends.
+                                Lifeblood
+                            </p>
+                            <sub>Personal_Editorial</sub>
                         </div>
-                        <div class="hundred"> 
-                            <img
-                            id="gystill"
-                            src="images/5539/hero.gif"
-                            alt="Screens from the TLJ Suite.">
+                    </a>
+                    <!-- <a class="mininav_proj_sub" href="projects/lifeblood.html">
+                        <p>
+                            ⮡ Lifeblood Editorial System
+                        </p>
+                    </a>
+                    <a class="mininav_proj_sub" href="projects/lifeblood.html">
+                        <p>
+                            ⮡ Lifeblood Exhibition
+                        </p>
+                    </a> -->
+                    <a class="mininav_proj" href="projects/phipps2.html">
+                        <p>[2]</p>
+                        <div>
+                            <p>
+                                Do More With Phipps
+                            </p>
+                            <sub>Personal_Brand Redesign + Repositioning</sub>
                         </div>
-                        <!-- <div class="hundred state-2"> 
-                            <img
-                                id="gystill"
-                                src="images/5539/hero.gif"
-                                alt="Screens from the TLJ Suite.">
-                        </div> -->
+                    </a>
+                    <a class="mininav_proj" href="projects/alchemyearth.html">
+                        <p>[3]</p>
+                        <div>
+                            <p>
+                                Alchemy Earth
+                            </p>
+                            <sub>Personal_Event Branding</sub>
+                        </div>
+                    </a>
+                    <a class="mininav_proj" href="projects/sixiang.html">
+                        <p>[4]</p>
+                        <div>
+                            <p>
+                                Si Xiang Mooncake
+                            </p>
+                            <sub>Personal_Packaging Design</sub>
+                        </div>
+                    </a>
+                    <a class="mininav_proj" href="projects/5539.html">
+                        <p>[5]</p>
+                        <div>
+                            <p>
+                                5539 Cafe
+                            </p>
+                            <sub>Personal_Event Branding</sub>
+                        </div>
+                    </a>
+                    <a class="mininav_proj" href="projects/ortotaste.html">
+                        <p>[6]</p>
+                        <div>
+                            <p>
+                                Or to Taste
+                            </p>
+                            <sub>Personal_Book Design</sub>
+                        </div>
+                    </a>
+                    <a class="mininav_proj" href="projects/dls.html">
+                        <p>[7]</p>
+                        <div>
+                            <p>
+                                Design Lecture Series
+                            </p>
+                            <sub>Client_Event Branding</sub>
+                        </div>
+                    </a>
+                    <a class="mininav_proj" href="projects/memoryOfMonarch.html">
+                        <p>[8]</p>
+                        <div>
+                            <p>
+                                Memories of a Monarch
+                            </p>
+                            <sub>Personal_Editorial</sub>
+                        </div>
+                    </a>
+                    <a class="mininav_proj" href="projects/dbx.html">
+                        <p>[9]</p>
+                        <div>
+                            <p>
+                                Dropbox
+                            </p>
+                            <sub>Client_Web Design</sub>
+                        </div>
+                    </a>
+                    <a class="mininav_proj" href="projects/guangyu.html">
+                        <p>[10]</p>
+                        <div>
+                            <p>
+                                Guang Yu
+                            </p>
+                            <sub>Personal_Editorial + Video + Interactive</sub>
+                        </div>
+                    </a>
+
+                </ul>
+                <ul id="projects" class="projhome">
+                    <a class="projhome_individual full_width" href="projects/lifeblood.html">
+                        <div class="state-1">
+                            <img src="images/lifeblood/page.jpg">
+                        </div>
+                        <div class="state-2">
+                            <div>
+                                <p>[1]</p>
+                                <h1>Lifeblood</h1>
+                                <p>A series of artifacts in remembrance of Pittsburgh's bygone gay bars.</p>
+                            </div>
+                            <div>
+                                <sub>______<br>Undergraduate Thesis_Archival Research, Editorial Design, Exhibition Design</sub>
+                            </div>
+                        </div>
+                        
+                    </a>
+                    <a class="projhome_individual sixth_width" href="projects/phipps2.html">
+                        <div class="state-1">
+                            <img src="images/phipps2/tshirt.jpg" >
+                        </div>
+                        <div class="state-2">
+                            <div>
+                                <p>[2]</p>
+                                <h1>Do More With Phipps</h1>
+                                <p>A timeless identity for a botanical garden that honors the past and looks eagerly towards the future.</p>
+                            </div>
+                            <div>
+                                <sub>______<br>Undergraduate Thesis_Archival Research, Editorial Design, Exhibition Design</sub>
+                            </div>
+                        </div>
+                        
+                    </a>
+                    <a class="projhome_individual third_width" href="projects/alchemyearth.html">
+                        <div class="state-1">
+                            <img src="images/alchemy/billboard2.jpg">
+                        </div>
+                        <div class="state-2">
+                            <div>
+                                <p>[3]</p>
+                                <h1>Alchemy Earth</h1>
+                                <p>A modern, elegant identity for a ceramic arts biennial held in the birthplace of porcelain.</p>
+                            </div>
+                            <div>
+                                <sub>______<br>Event Identity</sub>
+                            </div>
+                        </div>
+                        
+                    </a>
+                    <a class="projhome_individual third_width" href="projects/sixiang.html">
+                        <div class="state-1">
+                            <img src="images/sixiang/smallBoxStackOpen.jpg">
+                        </div>
+                        <div class="state-2">
+                            <div>
+                                <p>[4]</p>
+                                <h1>Si Xiang Mooncake</h1>
+                                <p>Mooncake packaging for Chinese Americans who can't speak Chinese.</p>
+                            </div>
+                            <div>
+                                <sub>Brand Identity, Repositioning</sub>
+                            </div>
+                        </div>
+                        
+                    </a>
+                    <a class="projhome_individual sixth_width" href="projects/5539.html">
+                        <div class="state-1">
+                            <img src="images/5539/name-plate-logo.gif">
+                        </div>
+                        <div class="state-2">
+                            <div>
+                                <p>[5]</p>
+                                <h1>5539 Cafe</h1>
+                                <p>A down-to-earth, place-based identity for a cafe pop-up hosted by and for friends.</p>
+                            </div>
+                            <div>
+                                <sub>Brand Identity, Repositioning</sub>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="projhome_individual half_width" href="projects/ortotaste.html">
+                        <div class="state-1">
+                            <img src="images/ortotaste/flipthru.gif">
+                        </div>
+                        <div class="state-2">
+                            <div>
+                                <p>[6]</p>
+                                <h1>Or to Taste</h1>
+                                <p>A book about food and memories told by 12 strangers.</p>
+                            </div>
+                            <div>
+                                <sub>______<br>Personal_Book Design, Creative Direction</sub>
+                            </div>
+                        </div>
+                        
+                    </a>
+                    <a class="projhome_individual half_width" href="projects/dls.html">
+                        <div class="state-1">
+                            <img src="images/dls/name-drop.gif" style="object-position: left bottom;">
+                        </div>
+                        <div class="state-2">
+                            <div>
+                                <p>[7]</p>
+                                <h1>Design Lecture Series</h1>
+                                <p>An identity for the 2024-2025 Design Lecture Series at Carnegie Mellon School of Design that's in perpetual motion.</p>
+                            </div>
+                            <div>
+                                <sub>______<br>Client_Event Identity Design</sub>
+                            </div>
+                        </div>
+                        
+                    </a>
+                    <a class="projhome_individual sixth_width" href="projects/memoryOfMonarch.html">
+                        <div class="state-1">
+                            <img src="images/memoriesOfAMonarch/book_scan.gif">
+                        </div>
+                        <div class="state-2">
+                            <div>
+                                <p>[8]</p>
+                                <h1>Memory of a Monarch</h1>
+                                <p>Book and poster documenting the cross-border migratory patterns of monarch butterflies, and the metaphorical, multi-lingual implications of that journey.</p>
+                            </div>
+                            <div>
+                                <sub>______<br>Personal_Editorial Design, Print Production</sub>
+                            </div>
+                        </div>
+                        
+                    </a>
+                    <!-- <a class="projhome_individual third_width" href="projects/dbx.html">
+                        <div class="state-1">
+                            <img src="images/misc/dbx-thumb.gif">
+                        </div>
+                        <div class="state-2">
+                            <div>
+                                <p>[9]</p>
+                                <h1>Mineral Transitions for Dynamic Africa</h1>
+                                <p>Dissertation book design for Dr. Fas Lebbie</p>
+                            </div>
+                            <div>
+                                <sub>______<br>Client_Editorial Design</sub>
+                            </div>
+                        </div>
+                    </a> -->
+                    <a class="projhome_individual third_width" href="projects/5539.html">
+                        <div class="state-1">
+                            <img src="images/misc/dbx-thumb.gif">
+                        </div>
+                        <div class="state-2">
+                            <div>
+                                <p>[9]</p>
+                                <h1>Dropbox</h1>
+                                <p>[Confidential]<br>Transparency report web redesign</p>
+                            </div>
+                            <div>
+                                <sub>______<br>Client_Website Design</sub>
+                            </div>
+                        </div>
                     </a>
                     
-                </div>
-                
-                <div id="dls" class="projecthome fifty" >
-                    <a class="columns proj" href="projects/dls.html">
-                        <div class="eighty state-1">
-                            <p class="number">&#x2784;</p>
-                            <p>Design Lecture Series</p>
-                            <sub>Client_Brand Identity</sub>
-                        </div>
-                        <div class="eighty state-2">
-                            <p class="number">&#x2784;</p>
-                            <p>Energetic identity for CMU School of Design's 2024-25 Lecture Series.</p>
-                        </div>
-                        <div class="hundred"> 
-                            <img
-                                src="images/dls/DLS-hero.gif">
-                            </div>
-                        <!-- <div class="hundred state-2">  -->
-                        <!-- <img
-                            src="images/dls/DLS-hero.gif">
-                        </div> -->
-                    </a>
-                </div>
-                <div id="monarch" class="projecthome fifty">
-                    <a class="columns proj" href="projects/memoryOfMonarch.html">
-                        <div class="eighty state-1">
-                            <p class="number">&#x2785;</p>
-                            <p>Memories of a Monarch</p>
-                            <sub>Coursework_Book design, printmaking</sub>
-                        </div>
-                        <div class="eighty state-2">
-                            <p class="number">&#x2785;</p>
-                            <p>Book and poster documenting the migratory patterns of monarch butterflies.</p>
-                        </div>
-                        <div class="hundred"> 
-                            <img
-                                src="images/memoriesOfAMonarch/book_scan.gif">
-                            </div>
-                        </a>
-                </div>
-                <div id="dbx" class="projecthome fifty">
-                    <a href="projects/dbx.html" class="columns proj">
-                        <div class="eighty state-1">
-                            <p class="number">&#x2786;</p>
-                            <p>Drobox Transparency Hub</p>
-                            <sub>Internship_Web interactive, data visualization</sub>
-                        </div>
-                        <div class="eighty state-2">
-                            <p class="number">&#x2786;</p>
-                            <p>Crafting a dashboard to house Dropbox's organizational transparency report.</p>
-                        </div>
-                        <div class="hundred"> 
-                            <img
-                                src="images/misc/dbx-thumb.gif">
-                            </div>
-                        <!-- <div class="hundred state-2"> 
-                        <img
-                            src="images/misc/dbx-thumb.gif">
-                        </div> -->
-                    </a>
-                    
-                </div>
-                <div id="guangyu" class="projecthome fifty">
-                    <a href="projects/guangyu.html" class="columns proj">
-                        <div class="eighty state-1">
-                            <p class="number">&#x2787;</p>
-                            <p>Guang Yu</p>
-                            <sub> Coursework_Editorial, motion, interactive</sub>
-                        </div>
-                        <div class="eighty state-2">
-                            <p class="number">&#x2787;</p>
-                            <p>Documenting the work and life of Guang Yu, my design hero.
-                        </div>
-                        <div class="hundred state-1"> 
-                            <img
-                            id="gystill"
-                            src="images/gy/thumb-gy-still.jpg"
-                            alt="Screens from the TLJ Suite.">
-                        </div>
-                        <div class="hundred state-2"> 
-                            <img
-                                id="gystill"
-                                src="images/gy/thumb-gy.gif"
-                                alt="Screens from the TLJ Suite.">
-                        </div>
-                    </a>
-                    
-                </div>
+
+                </ul>
                 
             </li>
             <li id="play" class="columns projgroup ">
                 <div class="projecthome sixtysix">
                     <div  class="columns proj">
                         <div class="hundred"> 
-                            <img src="images/etc/year-of-the-snake.png">
+                            <img class="noborder" src="images/etc/year-of-the-snake.png">
                             <sub>Lunar New Year Postcard<br>Risograph</sub>
                         </div>
                     </div> 
@@ -301,7 +437,6 @@
                             <img src="images/sonny/sonny-1.jpg"
                             alt="A little orange clothbound book on grass">
                             <sub>Sonny Angel Book &#8599;<br>Editorial, bookbinding</sub>
-
                         </div>
                     </a>
                 </div>
@@ -354,158 +489,71 @@
                         </div>
                     </a> 
                 </div>
-                <!-- <div id="whatshould" class="projecthome thirtythree">
-                    <a href="projects/whatshould.html" class="columns proj">
-                        <div class="eighty state-1">
-                            <p class="number">&#x2786;</p>
-                            <p>What Should We Eat</p>
-                            <sub>Physical computing, fabrication, creative direction</sub>
-                        </div>
-                        <div class="eighty state-2">
-                            <p class="number">&#x2786;</p>
-                            <p>A fanciful device connecting people through food
-                        </div>
-                        <div class="hundred"> 
-                            <img src="images/whatshould/what-should-4.jpg">
-                        </div>
-                    </a> 
-                </div> -->
-
-        
+               
                 
             </li>
-            <li id="about" class="columns projgroup" style="overflow-y: hidden;">
-                <div style="margin-top: 7vh;">
-                    <ul class="columns projgroup"> 
-                        <li class="fifty" style="width:45%;">
-                            <h1>Hi!</h1>
-                            <p>
-                                My name is Caleb. I'm a brand designer creating artifacts that feel like a breath of fresh air and make people excited about the brands that they interact with through strategic, moving, story-driven systems.
-                                <br><br>I'm a firm believer that designed brands create moments of <strong>joy and connection</strong> that enrich existing products. But as time goes on and companies grow, brands can become limited or unimaginative, and lose consistency. My work involves <strong>nurturing identities through growth, expansion, and change</strong> without losing the energy and joy that they inspire. While I consider myself a generalist within my practice, I'm super excited about interactive, moving, and strategic design systems that inspire, whether on digital or traditional surfaces.<br><br>
-                                Seeking opportunities starting Summer 2025
-                            </p>
+            <li id="about" class="columns projgroup">
+                <div style="margin-top: 3vh;" class="columns">
+                    <ul class="columns projgroup fifty" style="width: 50%;"> 
+                        <ul class="columns">
+                            <h2>Caleb Sun is a Philly-based brand and graphic designer. He’s passionate about creating artifacts that feel like a breath of fresh air and make people excited about the brands that they interact with through strategic, moving, story-driven systems.<br>But he does all sorts of things.</sub></h2>
                             <span class="tiny"></span>
-                            <sub style="color: gray;">
-                                BDes '25, Carnegie Mellon University School of Design
+
+                            <li class="thirtythree">
+                                <p>
+                                    __________<br>
+                                    Expertise<br><br>
+                                    Branding, print, motion, digital, matcha whisking, farmers market hunting, etc.
+                                </p>
+                            </li>
+                            <li class="sixtysix">
+                                <p>
+                                    ___________<br>
+                                    Seeking<br><br>
+                                    Freelance projects always<br>Full-time opportunities starting Fall 2025
+                                </p>
+                            </li>
+                            
+                            <li class="thirtythree">
+                                <p>
+                                    __________<br>
+                                    Experience<br><br>
+                                    <a href="https://smith-diction.com/">Smith & Diction</a>   <sub>Present</sub><br>
+                                    <a href="https://www.jonwisecreative.com/">JWC Creative</a>   <sub>Present</sub><br>
+                                    <a href="http://dropbox.design/">Dropbox</a>   <sub>2025</sub><br>
+                                    <br>
+                            </li>
+                            <li class= "thirtythree">
+                                <p>
+                                __________<br>
+                                Education<br><br>
+                                <a href="https://smith-diction.com/">Carnegie Mellon University</a><br>Graphic Design   <sub>BFA</sub><br>
                                 <br>
-                                Current: JWC Creative<br>
-                                Previous: Dropbox, CSL Behring, The Nature Conservancy, <br>Warm Cookies of the Revolution, Suburb Futures, Dr. Erica Dorn
-                            </sub>
-                            <script>
-                                function caleb() {
-                                    var image = document.getElementById('image');
-                                    image.style.display = 'block';
-                                }
-                                function caleb2() {
-                                    var image2 = document.getElementById('image');
-                                    image2.style.display = 'none';
-                                }
-                                function food() {
-                                    var image = document.getElementById('food');
-                                    image.style.display = 'flex';
-                                }
-                                function food2() {
-                                    var image2 = document.getElementById('food');
-                                    image2.style.display = 'none';
-                                }
-                            </script>
-                        </li>
-                        <li class="fifty">
-                            <img id='image' style="height: auto; width: 40vw; z-index:0;" src="images/Subject.png">
-                        </li>
+                                </p>
+                            </li>
+                            <li class="thirtythree">
+                                <p>
+                                __________<br>
+                                Recognition<br><br>
+                                CMU Design Merit Award   <sub>2025</sub><br>
+                                Lee Goodman Scholarship   <sub>2024</sub><br>
+                                <a>Frank Ratcheye Studio Further Fund Recipient</a>   <sub>2024</sub><br>
+                                CMU Design Merit Award   <sub>2022</sub><br>
+                                <br>
+                                </p>
+                            </li>
+                            
+                               
+                            </p>
+                        </ul>
                         
                     </ul>
-                    <!-- <span class="large"></span>
-                    <span class="large"></span> -->
-                    <!-- <ul class="about columns" style="row-gap: 1em;"> 
-                        <li class="twenty">
-                            <h2>Expertise</h2>
-                        </li>
-                        <li class="forty">
-                            <div>
-                                <h2>Brand</h2>
-                                <span class="small"></span>
-                                <p>Logo Design &nbsp;&#x2758;&nbsp; Brand Refresh/Update &nbsp;&#x2758;&nbsp; Branded Web Design &nbsp;&#x2758;&nbsp; Branded Asset Design</p>
-                            </div>
-                        </li>
-                        <li class="forty">
-                            <div>
-                                <h2>Web</h2>
-                                <span class="small"></span>
-                                <p>Web Strategy and Organization &nbsp;&#x2758;&nbsp; Small Business Sites &nbsp;&#x2758;&nbsp; Portfolios &nbsp;&#x2758;&nbsp; Event Sites</p>
-                                <span class="small"></span>
-                                <p>HTML/CSS/JS &nbsp;&#x2758;&nbsp; Webflow &nbsp;&#x2758;&nbsp; Wix &nbsp;&#x2758;&nbsp; Cargo</p>
-                            </div>
-                        </li>
-                        <span class="medium"></span>
-                        <li class="twenty"></li>
-                        <li class="forty">
-                            <div style="margin-top:2%;">
-                                <h2>Miscellaneous</h2>
-                                <span class="small"></span>
-                                <p>Book Design &nbsp;&#x2758;&nbsp; Digital Motion Assets &nbsp;&#x2758;&nbsp; Graphic Art and Illustration</p>
-                            </div>
-                            
-                        </li>
-                        <li class="forty">
-                                <div style="margin-top:2%;">
-                                <h2>Software</h2>
-                                <span class="small"></span>
-                                <p>Adobe Suite (After Effects, Illustrator, InDesign, Photoshop) &nbsp;&#x2758;&nbsp; Figma &nbsp;&#x2758;&nbsp; Microsoft Office &nbsp;&#x2758;&nbsp; Google Suite</p>
-                            </div>
-                        </li>
-                        
+                    <ul class="fifty">
+                        <img class="noborder" id='image' style="height: auto; width: 40vw; z-index:0; margin-top: 10vh;margin-left: 5vw;" src="images/Subject.png">
                     </ul>
-                    <span class="large"></span>
-                    <span class="large"></span> -->
-                    <!-- <ul class="about columns" style="row-gap: 1em; margin-bottom: 10em; "> 
-                        <li class="twenty">
-                            <h2>Currently...</h2>
-                        </li>
-                        <li class="forty">
-                            <div>
-                                <h2>Brand</h2>
-                                <span class="small"></span>
-                                <p>Logo Design &nbsp;&#x2758;&nbsp; Brand Refresh/Update &nbsp;&#x2758;&nbsp; Branded Web Design &nbsp;&#x2758;&nbsp; Branded Asset Design</p>
-                            </div>
-                        </li>
-                        <li class="forty">
-                            <div>
-                                <h2>Web</h2>
-                                <span class="small"></span>
-                                <p>Web Strategy and Organization &nbsp;&#x2758;&nbsp; Small Business Sites &nbsp;&#x2758;&nbsp; Portfolios &nbsp;&#x2758;&nbsp; Event Sites</p>
-                                <span class="small"></span>
-                                <p>HTML/CSS/JS &nbsp;&#x2758;&nbsp; Webflow &nbsp;&#x2758;&nbsp; Wix &nbsp;&#x2758;&nbsp; Cargo</p>
-                            </div>
-                        </li>
-                        <span class="medium"></span>
-                        <li class="twenty"></li>
-                        <li class="forty">
-                            <div style="margin-top:2%;">
-                                <h2>Miscellaneous</h2>
-                                <span class="small"></span>
-                                <p>Book Design &nbsp;&#x2758;&nbsp; Digital Motion Assets &nbsp;&#x2758;&nbsp; Graphic Art and Illustration</p>
-                            </div>
-                            
-                        </li>
-                        <li class="forty">
-                                <div style="margin-top:2%;">
-                                <h2>Software</h2>
-                                <span class="small"></span>
-                                <p>Adobe Suite (After Effects, Illustrator, InDesign, Photoshop) &nbsp;&#x2758;&nbsp; Figma &nbsp;&#x2758;&nbsp; Microsoft Office &nbsp;&#x2758;&nbsp; Google Suite</p>
-                            </div>
-                        </li>
-                        
-                    </ul> -->
-                    
                 </div>
-<!--                 
-                <div id='food' class= "food" style="position: absolute; right:15vw; top:70vh; width:25%; height: 15vw; object-fit: contain; z-index:0; display:none;">
-                    <img src="images/food.gif">
-                </div> -->
                 
             </li>
-            </div>
         </ul>
         <footer>
             <!-- <img src="images/cat-01.png" class="cat2" > -->
@@ -517,7 +565,7 @@
                     <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub class="link">Email</sub></a></li>
                 </ul>
                 <div class="credit">
-                    <sub>Updated February 2025, Custom coded using HTML/CSS/JS, All rights reserved</sub>
+                    <sub>Updated May 2025, Custom coded using HTML/CSS/JS, All rights reserved</sub>
                 </div> 
             </div>
         </footer>

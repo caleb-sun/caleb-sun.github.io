@@ -19,9 +19,8 @@
   <body>
     <main>
         <header>
-            <a class="homenav sun" href="../index.html">
-                <img id='sun' src="../images/sun.svg">
-                <p>Caleb Sun</p>
+            <a class="homenav" href="../index.html">
+                <img class="noborder sun" id='sun' src="../images/sun.svg" style="position: fixed; left:-52px; top: -52px; width: 128px; z-index:100;">
             </a>
             <script>
                 var elem = document.getElementById('sun');
@@ -38,11 +37,13 @@
             <ul class="menu header">
                 <div class="menuitems">
                     <ul class="miniprojnav" style="z-index: 100;">
-                        
-                        <p style="cursor: pointer;"><a id=worktop onclick='work()' class="menu-inactive link">Selected Work,</a></p>
-                        <p style="cursor: pointer;"><a id=playtop onclick='play()' class="menu-inactive link">Etc,</a></p>
-                        <p style="cursor: pointer;"><a id=abouttop onclick='about()' class="menu-inactive link">About</a></p>                        
+                        <ul class="miniprojnav" style="z-index: 100;">
+                            <p id=worktop onclick='work()' style="cursor: pointer; border-radius: 50%;" class="menu-active link"><a>Selected Work</a></p>
+                            <p id=playtop onclick='play()' style="cursor: pointer; border-radius: 50%;" class="menu-inactive link"><a>Etc</a></p>
+                            <p id=abouttop onclick='about()' class="menu-inactive link" style="cursor: pointer;"><a>About</a></p>                    
+                        </ul>            
                     </ul>
+                    
                     <script>
                         function work() {
                             var w = (window.innerWidth);
@@ -93,6 +94,30 @@
                     </script>
                 </div>
             </ul>
+            <a class="up-button" href="#top" style="text-decoration: none; display: none;" id="up-button">
+                <h3 style="line-height: 30pt;">Top</h3>
+            </a>
+            <script>
+                up = document.getElementById("up-button");
+                var myScrollFunc = function () {
+                    var y = window.scrollY;
+                    if (y >= 700) {
+                        up.style.display = "flex";
+                    } else {
+                        up.style.display = "none";
+                    }
+                }
+                window.addEventListener("scroll", myScrollFunc);
+                var elem = document.getElementById('up-button');
+                window.addEventListener('scroll', function() {
+                    var value = window.scrollY * 0.1;
+                    elem.style.transform = `rotate(${value}deg)`; 
+                });
+                function resize() {
+                    window.scrollTo(0, 0);
+                    }
+                window.onresize = resize;
+            </script>
         </header>
         <div class="project">
             <div class="projectbody">

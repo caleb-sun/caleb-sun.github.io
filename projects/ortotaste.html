@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!--- the doctype declaration tells the file reader that we're using html-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="An exhibition identity for the birthplace of ceramics.">
+    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=">
+    <meta name="robots" content="all">
+    <!---declares what kinds of characters are supportive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!---makes site responsive-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!---makes site work better with microsoft browsers-->
+    <title>Caleb Sun – Or to Taste</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/bav6mvc.css">
+  </head>  
+  <body>
+    <main>
+        <header>
+            <a class="homenav" href="../index.html">
+                <img class="noborder sun" id='sun' src="../images/sun.svg" style="position: fixed; left:-52px; top: -52px; width: 128px; z-index:100;">
+            </a>
+            <script>
+                var elem = document.getElementById('sun');
+                window.addEventListener('scroll', function() {
+                    var value = window.scrollY * 0.1;
+                    elem.style.transform = `rotate(${value}deg)`; 
+                });
+
+                function resize() {
+                    window.scrollTo(0, 0);
+                    }
+                window.onresize = resize;
+            </script>
+            <ul class="menu header">
+                <div class="menuitems">
+                    <ul class="miniprojnav" style="z-index: 100;">
+                        <ul class="miniprojnav" style="z-index: 100;">
+                            <p id=worktop onclick='work()' style="cursor: pointer; border-radius: 50%;" class="menu-active link"><a>Selected Work</a></p>
+                            <p id=playtop onclick='play()' style="cursor: pointer; border-radius: 50%;" class="menu-inactive link"><a>Etc</a></p>
+                            <p id=abouttop onclick='about()' class="menu-inactive link" style="cursor: pointer;"><a>About</a></p>                    
+                        </ul>            
+                    </ul>
+                    
+                    <script>
+                        function work() {
+                            var w = (window.innerWidth);
+                            var work = document.getElementById('work');
+                            window.location.href = "../index.html";
+                            window.scrollTo(0, 0);
+                            work.scrollTo(0,0);
+
+                            worktop.classList.remove('menu-inactive');
+                            worktop.classList.add('menu-active');
+
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+                        }
+                        function play() {
+                            var play = document.getElementById('play');
+                            window.location.href = "../index.html#play";
+                            worktop.classList.add('menu-inactive');
+
+                            playtop.classList.remove('menu-inactive');
+                            playtop.classList.add('menu-active');
+
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+                        }
+
+                        function about() {
+                            var w = (window.innerWidth);
+                            var about = document.getElementById('about');
+                            window.location.href = "../index.html#about";
+                            about.scrollTo(0,0);
+
+                            worktop.classList.remove('menu-active');
+                            worktop.classList.add('menu-inactive');
+
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            abouttop.classList.remove('menu-inactive');
+                            abouttop.classList.add('menu-active');
+                        }
+                        
+                    </script>
+                </div>
+            </ul>
+            <a class="up-button" href="#top" style="text-decoration: none; display: none;" id="up-button">
+                <h3 style="line-height: 30pt;">Top</h3>
+            </a>
+            <script>
+                up = document.getElementById("up-button");
+                var myScrollFunc = function () {
+                    var y = window.scrollY;
+                    if (y >= 700) {
+                        up.style.display = "flex";
+                    } else {
+                        up.style.display = "none";
+                    }
+                }
+                window.addEventListener("scroll", myScrollFunc);
+                var elem = document.getElementById('up-button');
+                window.addEventListener('scroll', function() {
+                    var value = window.scrollY * 0.1;
+                    elem.style.transform = `rotate(${value}deg)`; 
+                });
+                function resize() {
+                    window.scrollTo(0, 0);
+                    }
+                window.onresize = resize;
+            </script>
+        </header>
+        <div class="project">
+            <div class="projectbody">
+                <ul class="columns">
+                    <div class="gallery">
+                        <li class="sixtysix">
+                            <h1 class="project-title">Or to Taste <!--title-->
+                            </h1>
+                            <sub class="subtitle">Book design, Art Direction</sub>
+                        </li>
+                        <li class="thirtythree" style="margin-top: 0.5em;">
+                            <p>
+                            </p>
+                        </li>
+                    </div>
+                    <ul class="gallery">
+                        <li class="hundred">
+                            <img src="../images/ortotaste/flipthru.gif">
+                            <!-- <img src="../images/alchemy/solo-logo.gif"> -->
+                            <!-- <img src="../images/alchemy/large-banner.jpg"> -->
+                        </li>
+                        
+                    </ul>
+                    
+                    <span class="small"></span>
+                    <div class="gallery">
+                        <div class="sixtysix">
+                            <li class="eighty">
+                            <p>Every year, millions of monarch butterflies make the cross-border migration from the continental United States to specific regions in the forests of central Mexico. This project is about that journey, and the cultural and ecological implications of their continued ancestral migration despite borders, languages, and time. 
+                            </p>
+                            </li>
+                        </div>
+                        <div class="thirtythree" style="flex-direction: row;">
+                            <li class="twenty">
+                                <h3>Time<br>Role</h3>
+                            </li>
+                            <li class="eighty">
+                                <h3>3 weeks<br>Designer, Bookmaker<br>
+                                In collaboration with Ricky Chen<br>
+                                Special thanks to Dr. Karen Oberhauser</h3>
+                            </li>
+                        </div>
+                    </div>
+                    
+                    <span class="medium"></span>
+                    
+                    
+                    <span class="large"></span>
+                </ul>
+            </div>
+        </div>
+        <div class="process-viewport processviewport-start" id="process-viewport">
+            <div id="process" class="process">
+                <h2>
+                    Designing a low-production zine that captures the beauty and cultural complexity of monarch migration.<br><br>
+                </h2>
+                <h3>Brief</h3>
+                    <p>Design a zine that can be printed in a multi-edition run about the monarch sanctuary in Mexico.
+                <br><br>
+                
+
+
+                
+                <script>
+                    function processArrow() {
+                        document.getElementById('white-arrow').style.display='block';
+                        document.getElementById('black-arrow').style.display='none';
+                    }
+                    function processArrow2() {
+                        document.getElementById('black-arrow').style.display='block';
+                        document.getElementById('white-arrow').style.display='none';
+                    }
+                </script>
+            </div>
+        </div>
+        <footer>
+            <!-- <img src="images/cat-01.png" class="cat2" > -->
+            <div class="columns footmenu">
+                <ul class="menu" style="align-items: center;">
+                    <li class="menuitems"><a href="../pdfs/caleb-sun_resume.pdf" target="_blank"><sub class="link">Resume</sub></a></li>
+                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><sub class="link">LinkedIn</sub></a></li>
+                    <li class="menuitems"><a href="https://read.cv/calebsun" target="_blank"><sub class="link">ReadCV</sub></a></li>
+                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub class="link">Email</sub></a></li>
+                </ul>
+                <div class="credit">
+                    <sub>Updated September 2024 | Custom coded using HTML/CSS/JS</sub>
+                </div>
+            </div>
+        </footer>
+    </main>
+  </body>
+</html>

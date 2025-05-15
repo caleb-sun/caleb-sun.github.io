@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<!--- the doctype declaration tells the file reader that we're using html-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="An exhibition identity for the birthplace of ceramics.">
+    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=">
+    <meta name="robots" content="all">
+    <!---declares what kinds of characters are supportive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!---makes site responsive-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!---makes site work better with microsoft browsers-->
+    <title>Caleb Sun – Lifeblood</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/bav6mvc.css">
+  </head>  
+  <body>
+    <main>
+        <header>
+            <a class="homenav" href="../index.html">
+                <img class="noborder sun" id='sun' src="../images/sun.svg" style="position: fixed; left:-52px; top: -52px; width: 128px; z-index:100;">
+            </a>
+            <script>
+                var elem = document.getElementById('sun');
+                window.addEventListener('scroll', function() {
+                    var value = window.scrollY * 0.1;
+                    elem.style.transform = `rotate(${value}deg)`; 
+                });
+
+                function resize() {
+                    window.scrollTo(0, 0);
+                    }
+                window.onresize = resize;
+            </script>
+            <ul class="menu header">
+                <div class="menuitems">
+                    <ul class="miniprojnav" style="z-index: 100;">
+                        <ul class="miniprojnav" style="z-index: 100;">
+                            <p id=worktop onclick='work()' style="cursor: pointer; border-radius: 50%;" class="menu-active link"><a>Selected Work</a></p>
+                            <p id=playtop onclick='play()' style="cursor: pointer; border-radius: 50%;" class="menu-inactive link"><a>Etc</a></p>
+                            <p id=abouttop onclick='about()' class="menu-inactive link" style="cursor: pointer;"><a>About</a></p>                    
+                        </ul>            
+                    </ul>
+                    
+                    <script>
+                        function work() {
+                            var w = (window.innerWidth);
+                            var work = document.getElementById('work');
+                            window.location.href = "../index.html";
+                            window.scrollTo(0, 0);
+                            work.scrollTo(0,0);
+
+                            worktop.classList.remove('menu-inactive');
+                            worktop.classList.add('menu-active');
+
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+                        }
+                        function play() {
+                            var play = document.getElementById('play');
+                            window.location.href = "../index.html#play";
+                            worktop.classList.add('menu-inactive');
+
+                            playtop.classList.remove('menu-inactive');
+                            playtop.classList.add('menu-active');
+
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+                        }
+
+                        function about() {
+                            var w = (window.innerWidth);
+                            var about = document.getElementById('about');
+                            window.location.href = "../index.html#about";
+                            about.scrollTo(0,0);
+
+                            worktop.classList.remove('menu-active');
+                            worktop.classList.add('menu-inactive');
+
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            abouttop.classList.remove('menu-inactive');
+                            abouttop.classList.add('menu-active');
+                        }
+                        
+                    </script>
+                </div>
+            </ul>
+            <a class="up-button" href="#top" style="text-decoration: none; display: none;" id="up-button">
+                <h3 style="line-height: 30pt;">Top</h3>
+            </a>
+            <script>
+                up = document.getElementById("up-button");
+                var myScrollFunc = function () {
+                    var y = window.scrollY;
+                    if (y >= 700) {
+                        up.style.display = "flex";
+                    } else {
+                        up.style.display = "none";
+                    }
+                }
+                window.addEventListener("scroll", myScrollFunc);
+                var elem = document.getElementById('up-button');
+                window.addEventListener('scroll', function() {
+                    var value = window.scrollY * 0.1;
+                    elem.style.transform = `rotate(${value}deg)`; 
+                });
+                function resize() {
+                    window.scrollTo(0, 0);
+                    }
+                window.onresize = resize;
+            </script>
+        </header>
+        <div class="project">
+            <div class="projectbody">
+                <ul class="columns">
+                    <div class="gallery">
+                        <li class="sixtysix">
+                            <h1 class="project-title">Lifeblood <!--title-->
+                            </h1>
+                            <sub class="subtitle">Undergraduate Thesis</sub>
+                            <span class="small"></span>
+                            <p class="eighty">Lifeblood is a three-part series in celebration and remembrance of the OUT Magazine photo archives that documented a bygone era of gay bars in Pittsburgh. The separate artifacts of the series challenge how we might access and document queer archives, bringing order and clarity to mess without oversimplifying and institutionalizing historically scattered histories.<br><br>The overarching visual throughlines in this project include newspaper-inspired typography in celebration of the original form these artifacts hail from. A strong indexing system unifies artifacts across medium. Purple and silver paper embrace the </p>
+                        </li>
+                        <div class="thirtythree" style="margin-top: 1.4em; flex-direction: row;">
+                            <li class="twenty">
+                                <sub>Time<br>Role</sub>
+                            </li>
+                            <li class="eighty">
+                                <sub>14 weeks<br>Sole designer<br>
+                                Special thanks to Silas Maxwell Switzer, whose archival practice made this project possible.</sub>
+                            </li>
+                        </div>
+                    </div>
+                    <span class="small"></span>
+                    <div class="gallery" style="gap:1em">
+                        <div class="hundred" >
+                            <h2><hr></h2>
+                       </div>
+                        <div class="fifty">
+                            <h2>I. Stories of Survival and Community-Making in Pittsburgh's Bygone Gay Bars</h2>
+                            <p>A </p>
+                        </div>
+                    </div>
+                    <ul class="gallery">
+                        <li class="hundred crop">
+                            <img src="../images/lifeblood/holdingbook.jpg">
+                        </li>
+                        <li class="fifty crop">
+                            <img src="../images/lifeblood/bookCloseup.jpg">
+                        </li>
+                        <li class="fifty crop">
+                            <img src="../images/lifeblood/bookCloseup2.jpg">
+                        </li>
+                        <li class="hundred crop">
+                            <img src="../images/lifeblood/page.jpg">
+                        </li>
+                        <li class="fifty crop">
+                            <img src="../images/lifeblood/openingGatefold.gif">
+                        </li>
+                        <li class="fifty crop">
+                            <img src="../images/lifeblood/gatefold.jpg">
+                        </li>
+                        
+                        
+                        
+                        <li class="hundred">
+                            <img src="../images/lifeblood/lifebloodPages.gif">
+                        </li>
+                        <li class="fifty">
+                            <p>Printed with Mixam in an edition of 7.</p>
+                        </li>
+                    </ul>
+                    <span class="medium"></span>
+                    <div class="gallery" style="gap:1em">
+                        <div class="hundred" >
+                            <h2><hr></h2>
+                       </div>
+                        <div class="fifty">
+                            <h2>II. Photos from Pittsburgh's Bygone Gay Bars</h2>
+                            <p>A recreation of the photo archives as an archivist might encounter them. 165 photos are reprinted front-and-back to real scale, then sorted into folders that mirror the folders in real life.</p>
+                        </div>
+                    </div>
+                    <ul class="gallery">
+                        <li class="hundred">
+                            <img src="../images/lifeblood/envelope.gif">
+                            <img src="../images/lifeblood/envelopeFlat.jpg">
+                        </li>
+                        <li class="fifty crop">
+                            <img src="../images/lifeblood/envelopeHoldingPhoto.jpg">
+                        </li>
+                        <li class="fifty crop">
+                            <img src="../images/lifeblood/envelopeIndex.jpg">
+                        </li>
+                    </ul>
+                    <div class="gallery" style="gap:1em">
+                       <div class="hundred">
+                            <h2><hr></h2>
+                       </div>
+                        <div class="fifty">
+                            <h2>III. Exhibition</h2>
+                            <p>An exhibition concept that brings the photo archive to a wider audience in space. The photos are printed onto large sheets of newsprint, like they were historically intended to be, and sorted by folder into wardrobe-style racks. Participants are encouraged to retrieve each photo from their archival position and engage with both the photo and the photographer's notes, before returning it to its place. By doing so, the viewer participates in a sacred, queer act of historical and ancestral engagement.</p>
+                        </div>
+                    </div>
+                    <ul class="gallery">
+                        <li class="thirtythree crop">
+                            <img src="../images/lifeblood/exhibtion4.jpg">
+                        </li>
+                        <li class="sixtysix crop">
+                            <img src="../images/lifeblood/exhibition1.jpg">
+                        </li>
+                        <li class="fifty">
+                            <img src="../images/lifeblood/exhibition3.jpg">
+                        </li>
+                        <li class="fifty">
+                            <img src="../images/lifeblood/exhibition2.jpg">
+                        </li>
+                    </ul>
+                    
+                    <span class="large"></span>
+                </ul>
+            </div>
+        </div>
+        <div class="process-viewport processviewport-start" id="process-viewport">
+            <div id="process" class="process">
+                <h2>
+                    Designing a culturally sensitive backdrop for the past, present, and future of ceramics.<br><br>
+                </h2>
+                <h3>Brief</h3>
+                    <p>Design an exhibition identity that honors the unique space and time that Jingdezhen occupies in the history of the ceramic arts.
+                <br><br>
+                <h3>Early considerations</h3>
+                <p>Jingdezhen is the birthplace of porcelain and has been a cultural capital for the ceramic arts for centuries. It is a cultural icon and source of national pride in China, and continues to be a powerhouse in the production of fine ceramic products to this day. This exhibition is a chance for ceramic artists from around the world to exhibit different ceramic arts techniques and philosophies, under the backdrop of a city steeped in history and legend. <br> 
+                The precedent set by previous iterations of the biennale left many things to be desired. While the biennale is sourced from a place of history and story and culture, the accompanying identity is generalistic.</p>
+                <span class="small"></span>
+                    <img src="../images/alchemy/og-designs.jpg" style="width: 85%;"> 
+                    <span class="small"></span>
+                <p>As I set out to design an identity for the biennale, I wanted to capture the unique nature of the place and time that the biennale was being held, more so than the previous design.</p>
+
+
+                
+                <script>
+                    function processArrow() {
+                        document.getElementById('white-arrow').style.display='block';
+                        document.getElementById('black-arrow').style.display='none';
+                    }
+                    function processArrow2() {
+                        document.getElementById('black-arrow').style.display='block';
+                        document.getElementById('white-arrow').style.display='none';
+                    }
+                </script>
+            </div>
+        </div>
+        <footer>
+            <!-- <img src="images/cat-01.png" class="cat2" > -->
+            <div class="columns footmenu">
+                <ul class="menu" style="align-items: center;">
+                    <li class="menuitems"><a href="../pdfs/caleb-sun_resume.pdf" target="_blank"><sub class="link">Resume</sub></a></li>
+                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><sub class="link">LinkedIn</sub></a></li>
+                    <li class="menuitems"><a href="https://read.cv/calebsun" target="_blank"><sub class="link">ReadCV</sub></a></li>
+                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub class="link">Email</sub></a></li>
+                </ul>
+                <div class="credit">
+                    <sub>Updated September 2024 | Custom coded using HTML/CSS/JS</sub>
+                </div>
+            </div>
+        </footer>
+    </main>
+  </body>
+</html>

@@ -19,9 +19,8 @@
   <body>
     <main>
         <header>
-            <a class="homenav sun" href="../index.html">
-                <img id='sun' src="../images/sun.svg">
-                <p>Caleb Sun</p>
+            <a class="homenav" href="../index.html">
+                <img class="noborder sun" id='sun' src="../images/sun.svg" style="position: fixed; left:-52px; top: -52px; width: 128px; z-index:100;">
             </a>
             <script>
                 var elem = document.getElementById('sun');
@@ -38,10 +37,11 @@
             <ul class="menu header">
                 <div class="menuitems">
                     <ul class="miniprojnav" style="z-index: 100;">
-                        
-                        <p style="cursor: pointer;"><a id=worktop onclick='work()' class="menu-inactive link">Selected Work,</a></p>
-                        <p style="cursor: pointer;"><a id=playtop onclick='play()' class="menu-inactive link">Etc,</a></p>
-                        <p style="cursor: pointer;"><a id=abouttop onclick='about()' class="menu-inactive link">About</a></p>                        
+                        <ul class="miniprojnav" style="z-index: 100;">
+                            <p id=worktop onclick='work()' style="cursor: pointer; border-radius: 50%;" class="menu-active link"><a>Selected Work</a></p>
+                            <p id=playtop onclick='play()' style="cursor: pointer; border-radius: 50%;" class="menu-inactive link"><a>Etc</a></p>
+                            <p id=abouttop onclick='about()' class="menu-inactive link" style="cursor: pointer;"><a>About</a></p>                    
+                        </ul>            
                     </ul>
                     
                     <script>
@@ -113,7 +113,6 @@
                     var value = window.scrollY * 0.1;
                     elem.style.transform = `rotate(${value}deg)`; 
                 });
-
                 function resize() {
                     window.scrollTo(0, 0);
                     }
