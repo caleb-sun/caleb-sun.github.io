@@ -19,9 +19,6 @@
   <body>
     <main>
         <header>
-            <a class="homenav" href="../index.html">
-                <img class="noborder sun" id='sun' src="../images/sun.svg" style="position: fixed; left:-52px; top: -52px; width: 128px; z-index:100;">
-            </a>
             <script>
                 var elem = document.getElementById('sun');
                 window.addEventListener('scroll', function() {
@@ -38,8 +35,8 @@
                 <div class="menuitems">
                     <ul class="miniprojnav" style="z-index: 100;">
                         <ul class="miniprojnav" style="z-index: 100;">
-                            <p id=worktop onclick='work()' style="cursor: pointer; border-radius: 50%;" class="menu-active link"><a>Selected Work</a></p>
-                            <p id=playtop onclick='play()' style="cursor: pointer; border-radius: 50%;" class="menu-inactive link"><a>Etc</a></p>
+                            <p id=worktop onclick='work()' style="cursor: pointer;" class="menu-active link"><a>Selected Work</a></p>
+                            <p id=playtop onclick='play()' style="cursor: pointer;" class="menu-inactive link"><a>Etc</a></p>
                             <p id=abouttop onclick='about()' class="menu-inactive link" style="cursor: pointer;"><a>About</a></p>                    
                         </ul>            
                     </ul>
@@ -119,6 +116,8 @@
                 window.onresize = resize;
             </script>
         </header>
+        <a href="../index.html"><h2 class="noborder astericks" id="sun">*</h2></a>
+
         <div class="project">
             <div class="projectbody">
                 <ul class="columns">

@@ -19,9 +19,6 @@
   <body>
     <main>
         <header>
-            <a class="homenav" href="../index.html">
-                <img class="noborder sun" id='sun' src="../images/sun.svg" style="position: fixed; left:-52px; top: -52px; width: 128px; z-index:100;">
-            </a>
             <script>
                 var elem = document.getElementById('sun');
                 window.addEventListener('scroll', function() {
@@ -38,12 +35,11 @@
                 <div class="menuitems">
                     <ul class="miniprojnav" style="z-index: 100;">
                         <ul class="miniprojnav" style="z-index: 100;">
-                            <p id=worktop onclick='work()' style="cursor: pointer; border-radius: 50%;" class="menu-active link"><a>Selected Work</a></p>
-                            <p id=playtop onclick='play()' style="cursor: pointer; border-radius: 50%;" class="menu-inactive link"><a>Etc</a></p>
+                            <p id=worktop onclick='work()' style="cursor: pointer;" class="menu-active link"><a>Selected Work</a></p>
+                            <p id=playtop onclick='play()' style="cursor: pointer;" class="menu-inactive link"><a>Etc</a></p>
                             <p id=abouttop onclick='about()' class="menu-inactive link" style="cursor: pointer;"><a>About</a></p>                    
                         </ul>            
                     </ul>
-                    
                     <script>
                         function work() {
                             var w = (window.innerWidth);
@@ -94,61 +90,32 @@
                     </script>
                 </div>
             </ul>
-            <div class="process-tab" id="process-tab">
-                <script>
-                    function processIn() {
-                        var process = document.getElementById('process');
-                        var processviewport = document.getElementById('process-viewport');
-                        var processtab = document.getElementById('process-tab');
-                        var processopen = document.getElementById('process-open');
-                        var processclose = document.getElementById('process-close');
-                        
-                        processviewport.classList.remove('processviewport-start');
-                        processviewport.classList.remove('processviewport-out');
-                        processviewport.classList.add('processviewport-in');
-
-                        processclose.style.display='flex';
-                        processopen.style.display='none';
+            <a class="up-button" href="#top" style="text-decoration: none; display: none;" id="up-button">
+                <h3 style="line-height: 30pt;">Top</h3>
+            </a>
+            <script>
+                up = document.getElementById("up-button");
+                var myScrollFunc = function () {
+                    var y = window.scrollY;
+                    if (y >= 700) {
+                        up.style.display = "flex";
+                    } else {
+                        up.style.display = "none";
                     }
-                    function processOut() {
-                        var process = document.getElementById('process');
-                        var processlabel = document.getElementById('process-open');
-                        var processtab = document.getElementById('process-tab');
-
-                        var processviewport = document.getElementById('process-viewport');
-                        var processclose = document.getElementById('process-close');
-
-                        process.classList.remove('process-in');
-                        process.classList.add('process-out');
-                        processviewport.classList.remove('processviewport-in');
-                        processviewport.classList.add('processviewport-out');
-                        // processviewport.style.display='none';
-
-                        processclose.style.display='none';
-                        processtab.style.top='9%';
-                        processlabel.style.display='flex';
-                        
+                }
+                window.addEventListener("scroll", myScrollFunc);
+                var elem = document.getElementById('up-button');
+                window.addEventListener('scroll', function() {
+                    var value = window.scrollY * 0.1;
+                    elem.style.transform = `rotate(${value}deg)`; 
+                });
+                function resize() {
+                    window.scrollTo(0, 0);
                     }
-                </script>
-                <div class="menuitems">
-                    <ul class="processnav" id="process-open" onclick='processIn()' onmouseenter="process1Hover()">
-                        <!-- <img src="../images/eye-yellow.svg" class="eye" style="display: none;" id="eye1yellow">
-                        <img src="../images/eye.svg" class="eye" id="eye1white"> -->
-                        <h3>
-                            <a style="text-decoration: none !important; cursor: pointer;">Process</a>
-                        </h3>
-                    </ul>
-                    <ul class="processnav" id="process-close" onclick='processOut()' onmouseenter="process2Hover()" style="display: none">
-                        <h3>
-                            <a style="text-decoration: none !important; cursor: pointer;" >&#x2715;</a>
-                        </h3>
-                    </ul>
-                    <!-- <ul class="miniprojnav" style="margin-left: 16px;">
-                        <p>About</p>
-                    </ul> -->
-                </div>
-            </div>
+                window.onresize = resize;
+            </script>
         </header>
+        <a href="../index.html"><h2 class="noborder astericks" id="sun">*</h2></a>
         <div class="project">
             <div class="projectbody">
                 <ul class="columns">

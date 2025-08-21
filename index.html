@@ -18,26 +18,15 @@
   </head>  
   <body>
     <!-- <img class="noborder" id='backgroundImg' src="images/background.svg" style="position: fixed; width: 100vw;"> -->
-    <script>
-        var elem = document.getElementById('sun');
-        window.addEventListener('scroll', function() {
-            var value = window.scrollY * 0.1;
-            elem.style.transform = `rotate(${value}deg)`; 
-        });
-
-        function resize() {
-            window.scrollTo(0, 0);
-            }
-        window.onresize = resize;
-    </script>
+    
     <main>
         <header>
-            <ul class="menu header" style="width: 100%; justify-content: right;">
+            <ul class="menu header">
                 <div class="menuitems">
                     <ul class="miniprojnav" style="z-index: 100;">
-                        <p id=worktop onclick='work()' style="cursor: pointer; border-radius: 50%;" class="menu-active link"><a>Selected Work</a></p>
-                        <p id=playtop onclick='play()' style="cursor: pointer; border-radius: 50%;" class="menu-inactive link"><a>Etc</a></p>
-                        <p id=abouttop onclick='about()' class="menu-inactive link" style="cursor: pointer;"><a>About</a></p>                    
+                        <p id=worktop onclick='work()' style="cursor: pointer; border-radius: 2em;" class="menu-active link"><a>Selected Work</a></p>
+                        <p id=playtop onclick='play()' style="cursor: pointer; border-radius: 2em;" class="menu-inactive link"><a>Etc</a></p>
+                        <p id=abouttop onclick='about()' class="menu-inactive link" style="cursor: pointer;border-radius: 2em;"><a>About</a></p>                    
                     </ul>
                     <script>
                         function work() {
@@ -139,7 +128,19 @@
                 </div>
             </ul>
         </header>
-        <img onclick='work()' class="noborder sun" id='sun' src="images/sun.svg" style="position: fixed; left:-52px; top: -52px; width: 128px; z-index:100;">
+        <h2 id="sun" onclick='work()' class="noborder astericks">*</h2>
+        <script>
+            var elem = document.getElementById('sun');
+            window.addEventListener('scroll', function() {
+                var value = window.scrollY * 0.1;
+                elem.style.transform = `rotate(${value}deg)`; 
+            });
+
+            function resize() {
+                window.scrollTo(0, 0);
+                }
+            window.onresize = resize;
+        </script>
 
         <ul class="home">
             <li id="work" class="columns projgroup">
@@ -150,14 +151,14 @@
                                 CALEB SUN is a Philly-based multidisciplinary designer crafting moving, interactive, story-driven systems.
                             </p>
                             <div class="links">
-                                <a href="sun.cs0327@gmail.com"><sub>⮡ Contact</sub></a>
-                                <a href="pdfs/sunCaleb-resume25.pdf"><sub>⮡ Resume</sub></a>
-                                <a href="https://www.linkedin.com/in/calebsun/"><sub>⮡ LinkedIn</sub></a>
+                                <a href="mailto:sun.cs0327@gmail.com"><h4>⮡ Contact</h4></a>
+                                <a href="https://www.instagram.com/calebsdesign/" target="_blank"><h4>⮡ Instagram</h4></a>
+                                <a href="https://www.linkedin.com/in/calebsun/" target="_blank"><h4>⮡ LinkedIn</h4></a>
                             </div>
                         </div>
-                        <p style="margin-bottom: 1em;">____________<br>Selected Work</p>
+                        <!-- <p style="margin-bottom: 1em;">____________<br>Selected Work</p> -->
                     </div>
-                    <a class="mininav_proj" href="projects/lifeblood.html">
+                    <!-- <a class="mininav_proj" href="projects/lifeblood.html">
                         <p>[1]</p>
                         <div>
                             <p>
@@ -166,7 +167,7 @@
                             <sub>Personal_Editorial</sub>
                         </div>
                     </a>
-                    <!-- <a class="mininav_proj_sub" href="projects/lifeblood.html">
+                    <a class="mininav_proj_sub" href="projects/lifeblood.html">
                         <p>
                             ⮡ Lifeblood Editorial System
                         </p>
@@ -175,7 +176,7 @@
                         <p>
                             ⮡ Lifeblood Exhibition
                         </p>
-                    </a> -->
+                    </a>
                     <a class="mininav_proj" href="projects/phipps2.html">
                         <p>[2]</p>
                         <div>
@@ -256,11 +257,85 @@
                             </p>
                             <sub>Personal_Editorial + Video + Interactive</sub>
                         </div>
-                    </a>
+                    </a> -->
 
                 </ul>
                 <ul id="projects" class="projhome">
-                    <a class="projhome_individual full_width" href="projects/lifeblood.html">
+                    <a class="projhome_individual square" href="projects/lifeblood.html">
+                        <img src="images/lifeblood/holdingbook.jpg">
+                        <div>
+                            <h4>Undergraduate Thesis Project</h4>
+                            <p>Lifeblood</p>
+                            <sub>A series of artifacts in remembrance of Pittsburgh's bygone gay bars.</sub>
+                        </div>
+                    </a>
+                    <!-- <a class="projhome_individual square" href="projects/bloodfriends.html">
+                        <img src="images/bloodfriends/hero">
+                        <div>
+                            <h4>Client</h4>
+                            <p>Bloodfriends</p>
+                            <sub>Titles and lower thirds for a film about genetic siblings and chosen family.</sub>
+                        </div>
+                    </a>
+                    <a class="projhome_individual square" href="projects/bloodfriends.html">
+                        <img src="images/bloodfriends/hero">
+                        <div>
+                            <h4>Client</h4>
+                            <p>Enby</p>
+                            <sub>Titles and lower thirds for a film about genetic siblings and chosen family.</sub>
+                        </div>
+                    </a> -->
+
+                    <a class="projhome_individual square" href="projects/phipps2.html">
+                        <img src="images/phipps2/tshirt.jpg">
+                            <div>
+                                <h4>Student Project</h4>
+                                <p>Phipps</p>
+                                <sub>Rebranding a Pittsburgh institution for the modern age of horticulture.</sub>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="projhome_individual square" href="projects/alchemyearth.html">
+                        <img src="images/alchemy/billboard2.jpg">
+                        <div>
+                            <h4>Student Project</h4>
+                            <p>Alchemy Earth</p>
+                            <sub>A modern, elegant identity for a ceramic arts biennial held in the birthplace of porcelain.</sub>
+                        </div>
+                    </a>
+                    <a class="projhome_individual square" href="projects/sixiang.html">
+                        <img src="images/sixiang/smallBoxStackOpen.jpg">
+                        <div>
+                            <h4>Student Project</h4>
+                            <p>Si Xiang Mooncake</p>
+                            <sub>Mooncake packaging for Chinese Americans who can't speak Chinese.</sub>
+                        </div>
+                    </a>
+                    <a class="projhome_individual square" href="projects/dls.html">
+                        <img src="images/dls/DLS-hero.gif">
+                        <div>
+                            <h4>Client</h4>
+                            <p>Design Lecture Series</p>
+                            <sub>An identity for the 2024-2025 Design Lecture Series at Carnegie Mellon School of Design that's in perpetual motion.</sub>
+                        </div>
+                    </a>
+                    <a class="projhome_individual square" href="projects/memoryOfMonarch.html">
+                        <img src="images/memoriesOfAMonarch/poster-outside.jpg">
+                        <div>
+                            <h4>Student Project</h4>
+                            <p>Memory of a Monarch</p>
+                            <sub>Book and poster documenting the cross-border migratory patterns of monarch butterflies.</sub>
+                        </div>
+                    </a>
+                    <a class="projhome_individual square" href="mailto:sun.cs0327@gmail.com">
+                        <img src="images/misc/dbx-thumb.gif">
+                        <div>
+                            <h4>Client</h4>
+                            <p>Dropbox Brand Design</p>
+                            <sub>[Confidential]</sub>
+                        </div>
+                    </a>
+                    <!-- <a class="projhome_individual full_width" href="projects/lifeblood.html">
                         <div class="state-1">
                             <img src="images/lifeblood/hero.gif">
                         </div>
@@ -275,8 +350,8 @@
                             </div>
                         </div>
                         
-                    </a>
-                    <a class="projhome_individual sixth_width" href="projects/phipps2.html">
+                    </a> -->
+                    <!-- <a class="projhome_individual sixth_width" href="projects/phipps2.html">
                         <div class="state-1">
                             <img src="images/phipps2/tshirt.jpg" >
                         </div>
@@ -386,7 +461,7 @@
                             </div>
                         </div>
                         
-                    </a>
+                    </a> -->
                     <!-- <a class="projhome_individual third_width" href="projects/dbx.html">
                         <div class="state-1">
                             <img src="images/misc/dbx-thumb.gif">
@@ -402,7 +477,7 @@
                             </div>
                         </div>
                     </a> -->
-                    <a class="projhome_individual third_width" href="projects/dbx.html">
+                    <!-- <a class="projhome_individual third_width" href="projects/dbx.html">
                         <div class="state-1">
                             <img src="images/misc/dbx-thumb.gif">
                         </div>
@@ -416,11 +491,8 @@
                                 <sub>______<br>Client_Website Design</sub>
                             </div>
                         </div>
-                    </a>
-                    
-
+                    </a> -->
                 </ul>
-                
             </li>
             <li id="play" class="columns projgroup ">
                 <div class="projecthome sixtysix">
@@ -496,42 +568,41 @@
                 <div style="margin-top: 3vh;" class="columns">
                     <ul class="columns projgroup fifty" style="width: 50%;"> 
                         <ul class="columns">
-                            <h2>Caleb Sun is a Philly-based brand and graphic designer. He’s passionate about creating artifacts that feel like a breath of fresh air and make people excited about the brands that they interact with through strategic, moving, story-driven systems.<br>But he does all sorts of things.</sub></h2>
+                            <p class="eighty">Caleb Sun is a Philly-based brand and graphic designer.<br><br>He’s passionate about creating artifacts that feel like a breath of fresh air and make people excited about the brands that they interact with through strategic, moving, story-driven systems.<br><br>But he does all sorts of things.</p>
                             <span class="tiny"></span>
-
-                            <li class="thirtythree about">
+                            <li class="fifty about">
                                 <p>
-                                    __________<br>
+                                    ___<br>
                                     Expertise<br><br>
-                                    Branding, print, motion, digital, matcha whisking, farmers market hunting, etc.
+                                    Branding, digital, motion, print, matcha whisking, farmers market hunting, etc.
                                 </p>
                             </li>
-                            <li class="sixtysix about">
+                            <li class="fifty about">
                                 <p>
-                                    ___________<br>
+                                    ___<br>
                                     Seeking<br><br>
-                                    Freelance projects always<br>Full-time opportunities starting Fall 2025
+                                    Freelance web, print, and projects
                                 </p>
                             </li>
                             
-                            <li class="thirtythree about">
+                            <li class="fifty about">
                                 <p>
-                                    __________<br>
+                                    ___<br>
                                     Experience<br><br>
                                     <a href="https://smith-diction.com/">Smith & Diction ↗</a>   <sub>Present</sub><br>
-                                    <a href="https://www.jonwisecreative.com/">JWC Creative ↗</a>   <sub>Present</sub><br>
-                                    <a href="http://dropbox.design/">Dropbox ↗</a>   <sub>2025</sub><br>
+                                    <a href="https://www.jonwisecreative.com/">JWC Creative ↗</a>   <sub>2025</sub><br>
+                                    <a href="http://dropbox.design/">Dropbox ↗</a>   <sub>2024</sub><br>
                                     <br>
                                     <p>
-                                        __________<br>
+                                        ___<br>
                                         Education<br><br>
                                         <a href="https://smith-diction.com/">Carnegie Mellon University ↗</a><br>Graphic Design   <sub>BFA</sub><br>
                                         <br>
                                         </p>
                             </li>
-                            <li class="sixtysix about">
+                            <li class="fifty about">
                                 <p>
-                                __________<br>
+                                ___<br>
                                 Recognition<br><br>
                                 CMU Design Merit Award   <sub>2025</sub><br>
                                 Lee Goodman Scholarship   <sub>2024</sub><br>
@@ -543,7 +614,7 @@
                         </ul>
                     </ul>
                     <ul class="fifty profileimage">
-                        <img class="noborder" id='profileimage'  src="images/Subject.png">
+                        <img class="noborder" id='profileimage' src="images/Subject.png">
                     </ul>
                 </div>
                 
