@@ -181,10 +181,6 @@ h1,h2,h3,h5,h4,p,sub{
     /* letter-spacing: 1px; */
 }
 
-sub>a{
-    /* text-decoration: underline dotted; */
-}
-
 sub>a:hover{
     text-decoration: underline !important;
 }
@@ -194,11 +190,6 @@ strong{
     font-weight: 300;
     font-style: italic;
     color: var(--highlight);
-}
-
-h4 {
-    color: var(--highlight);
-    margin-bottom: 1em;
 }
 
 /* type sizing */
@@ -273,9 +264,6 @@ a:active{
     text-decoration: none;
     /* text-decoration-style:dotted; */
 }
-
-
-
 
 a>div>.fifty>p{
     text-decoration: none !important;
@@ -377,22 +365,6 @@ hr{
     /* gap:16px; */
 }
 
-.state-1.eighty{
-    width: 100%;
-}
-
-.state-1.eighty>.columns{
-    align-items: baseline;
-}
-
-.state-1.eighty>.columns>sub{
-    text-align: right;
-}
-
-.state-2.eighty{
-    width: 66%;
-}
-
 .twenty{
     width: 18%;
 }
@@ -458,11 +430,6 @@ hr{
     color:var(--textBase);
 }
 
-.about.fifty{
-    padding-right: 2.5em;
-    box-sizing: border-box;
-}
-
 .gallery{
     display: flex;
     flex-wrap: wrap;
@@ -497,32 +464,6 @@ hr{
     margin-bottom: 0.25em;
 }
 
-.state-1{
-    color: var(--textBase);
-}
-
-.state-2{
-    display: none;
-    color: var(--textBase);
-}
-
-.state-1.eighty, .state-2.eighty{
-    padding: 0 0.5em;
-    height:5.25em !important;
-    gap: 2px;
-}
-
-.state-1.hundred,.state-2.hundred{
-    height: max-content !important;
-}
-
-.projecthome:hover .state-1{
-    display: none;
-}
-
-.projecthome:hover .state-2, .kitchen:hover .state-2{
-    display: flex;
-}
 
 img{
     width:100%;
@@ -603,18 +544,18 @@ img{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 0.5%;
     box-sizing: border-box;
     padding-left: 28vw;
     padding-top: 12.5vh;
-    padding-right: 5vw;
+    padding-right: 6vw;
     row-gap: 2em;
     overflow-y: scroll;
     padding-bottom: 15vh;
 }
 
 .projhome_individual{
-    width: 100%;
+    /* width: 100%; */
     height: auto;
     position: relative;
 }
@@ -625,12 +566,27 @@ img{
     height: min-content;
 }
 
-.square img{
+.square .container{
     width: 100%;
     aspect-ratio: 1 !important;
-    object-fit: cover;
     margin-bottom: 1em;
+    height: auto;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid var(--textBase);
+}
+
+.square img{
+    aspect-ratio: 1 !important;
+    object-fit: cover;
+   
     height: fit-content;
+    border: none;
+}
+
+.square:hover div img{
+    transform: scale(1.05);
+    transition: .1s ease;
 }
 
 .square sub{
@@ -686,43 +642,7 @@ img{
 }
 
 
-.projhome_individual>.state-2{
-    position: absolute;
-    top: 0;
-    padding: 1em 1.2em;
-    box-sizing: border-box;
-    filter: opacity(0%);
-    flex-direction: column;
-    display: flex;
-}
-.projhome_individual>.state-1{
-    position: absolute;
-    bottom: 0;
-}
 
-.projhome_individual>.state-2>div>h1,.projhome_individual>.state-2>div>sub,.projhome_individual>.state-2>div>p{
-    color: white !important;
-}
-
-.projhome_individual>.state-2{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.projhome_individual>.state-2>sub{
-    width: 40%;
-}
-
-.projhome_individual:hover>.state-1{
-    filter: grayscale(40%) brightness(60%);
-    /* transition: all 0.15s linear; */
-}
-.projhome_individual:hover>.state-2{
-    filter: opacity(100%);
-    /* transition: all 0.15s linear; */
-}
 
 /* header-footer */
 
@@ -753,33 +673,6 @@ header{
 
 .astericks:hover{
     color:var(--textSub)
-}
-
-/* .homenav.sun:hover{
-    text-transform: uppercase;
-   
-} */
-
-/* a>.homenav{
-    width: 48px !important;
-} */
-
-.sun{ 
-    z-index: 1000;
-    /* width: 48px !important; */
-    transition: all 0.05s linear;
-
-    transform: rotate(0);
-
-}
-
-.sun>p{
-    height: 26px; margin-left: 8px;
-}
-
-.sun:hover{
-    transition: all 0.1s linear;
-    transform: rotate(10deg) scale(1.5);
 }
 
 
@@ -872,9 +765,14 @@ footer{
 }
 
 #about{
-    padding-top: 0; 
-    height:80%;    
+    padding-top: 12vh; 
+    padding-left: 4vw;
+    height:100%;    
     /* tightens padding on about page */
+}
+
+#about>.columns>.columns{
+    row-gap:1vh;
 }
 
 .miniprojnav{
@@ -1128,34 +1026,30 @@ footer{
 
 
 @media screen and (max-width: 1200px) { 
-/* 
+    header{
+        top:1vh;
+    }
 
     #about{
-        height: 80vh;
-    } */
+        height:100vh;
+        overflow-y: scroll;
+    }
+    
     .mininav{
         width: 30vw;
     }
-
 
     .projhome{
         padding-left: 33vw;
     }
     .projhome_individual{
         width: 49.5%;
-        /* height: 40vh; */
         position: relative;
     }
 
     .projhome_individual>div{
         width: 100%;
-        /* height: 40vh; */
     }
-/* 
-    .state-1.eighty, .state-2.eighty{
-        height:4.5em !important;
-        gap: 2px;
-    } */
 
     .projgroup>.thirtythree{
         width: 49.5%;
@@ -1203,9 +1097,18 @@ footer{
         overflow-y: scroll;
         padding-bottom: 10vh;
     }
+
     #play{
         padding-top:8vh;
     }
+
+    #about{
+        overflow-y:scroll;
+    }
+
+    #about>.columns>.columns{
+    row-gap:3.2vh;
+}
 
     .columns.projgroup{
         padding-bottom: 5vh;
@@ -1222,14 +1125,9 @@ footer{
 
     .projhome_individual{
         width: 100%;
-        position: relative;
         margin-bottom: 5vh;
     }
 
-    .square img{
-    aspect-ratio: 5/3 !important;
-
-}
 
     .mininav{
         z-index: 0;
@@ -1299,13 +1197,11 @@ footer{
     }
 
     #about{
-        padding-top:0;
+        padding-top:10vh;
+        padding-left: 1.5vw;
+        padding-right: 8vw;
         margin-top:0;
         height: 100vh;
-    }
-
-    #about .projgroup{
-        padding-top:8vh;
     }
 
     .columns.projgroup{
@@ -1367,18 +1263,12 @@ footer{
         flex-direction: row;
     }
 
-
     .footmenu{
         margin-bottom:1vh;
         justify-content: center;
         gap:10px !important;
     }
 
-/* 
-    .home{
-        gap:8px;
-    }
-     */
     .quicknav{
         display: none !important;
     }
@@ -1498,12 +1388,6 @@ footer{
         to{left:100vw;}
     }
 
-    .state-1.eighty, .state-2.eighty{
-        height:6.5em !important;
-        width: 90%;
-        gap: 2px;
-    }
-
     .projectbody>.columns>.sixtysix{
         margin-bottom: 2em;
     }
@@ -1515,11 +1399,10 @@ footer{
         margin-bottom: 0em;
     }
 
-    /* .projectbody>.columns>li:nth-child(2){
-        margin-bottom: 2em;
-        width: 66%;
-    } */
-
+    
+    #about{
+        row-gap:10vh;
+    }
 
 
 }
