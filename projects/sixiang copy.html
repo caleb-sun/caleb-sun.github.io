@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!--- the doctype declaration tells the file reader that we're using html-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="An exhibition identity for the birthplace of ceramics.">
+    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=">
+    <meta name="robots" content="all">
+    <!---declares what kinds of characters are supportive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!---makes site responsive-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!---makes site work better with microsoft browsers-->
+    <title>Caleb Sun – Si Xiang Mooncake</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/bav6mvc.css">
+  </head>  
+  <body>
+    <main>
+        <header>
+            <script>
+                var elem = document.getElementById('sun');
+                window.addEventListener('scroll', function() {
+                    var value = window.scrollY * 0.1;
+                    elem.style.transform = `rotate(${value}deg)`; 
+                });
+
+                function resize() {
+                    window.scrollTo(0, 0);
+                    }
+                window.onresize = resize;
+            </script>
+            <ul class="menu header">
+                <div class="menuitems">
+                    <ul class="miniprojnav" style="z-index: 100;">
+                        <ul class="miniprojnav" style="z-index: 100;">
+                            <p id=worktop onclick='work()' style="cursor: pointer;" class="menu-active link"><a>Selected Work</a></p>
+                            <p id=playtop onclick='play()' style="cursor: pointer;" class="menu-inactive link"><a>Etc</a></p>
+                            <p id=abouttop onclick='about()' class="menu-inactive link" style="cursor: pointer;"><a>About</a></p>                    
+                        </ul>            
+                    </ul>
+                    
+                    <script>
+                        function work() {
+                            var w = (window.innerWidth);
+                            var work = document.getElementById('work');
+                            window.location.href = "../index.html";
+                            window.scrollTo(0, 0);
+                            work.scrollTo(0,0);
+
+                            worktop.classList.remove('menu-inactive');
+                            worktop.classList.add('menu-active');
+
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+                        }
+                        function play() {
+                            var play = document.getElementById('play');
+                            window.location.href = "../index.html#play";
+                            worktop.classList.add('menu-inactive');
+
+                            playtop.classList.remove('menu-inactive');
+                            playtop.classList.add('menu-active');
+
+                            abouttop.classList.remove('menu-active');
+                            abouttop.classList.add('menu-inactive');
+
+                        }
+
+                        function about() {
+                            var w = (window.innerWidth);
+                            var about = document.getElementById('about');
+                            window.location.href = "../index.html#about";
+                            about.scrollTo(0,0);
+
+                            worktop.classList.remove('menu-active');
+                            worktop.classList.add('menu-inactive');
+
+                            playtop.classList.remove('menu-active');
+                            playtop.classList.add('menu-inactive');
+
+                            abouttop.classList.remove('menu-inactive');
+                            abouttop.classList.add('menu-active');
+                        }
+                        
+                    </script>
+                </div>
+            </ul>
+            <a class="up-button" href="#top" style="text-decoration: none; display: none;" id="up-button">
+                <h3 style="line-height: 30pt;">Top</h3>
+            </a>
+            <script>
+                up = document.getElementById("up-button");
+                var myScrollFunc = function () {
+                    var y = window.scrollY;
+                    if (y >= 700) {
+                        up.style.display = "flex";
+                    } else {
+                        up.style.display = "none";
+                    }
+                }
+                window.addEventListener("scroll", myScrollFunc);
+                var elem = document.getElementById('up-button');
+                window.addEventListener('scroll', function() {
+                    var value = window.scrollY * 0.1;
+                    elem.style.transform = `rotate(${value}deg)`; 
+                });
+                function resize() {
+                    window.scrollTo(0, 0);
+                    }
+                window.onresize = resize;
+            </script>
+        </header>
+        <a href="../index.html"><h2 class="noborder astericks" id="sun">*</h2></a>
+        <div class="project">
+            <div class="projectbody">
+                <ul class="columns">
+                    <div class="gallery">
+                        <li class="sixtysix">
+                            <h1 class="project-title">Si Xiang Mooncake <!--title-->
+                            </h1>
+                            <sub class="subtitle">Packaging Design</sub>
+                        </li>
+                        <li class="thirtythree" style="margin-top: 0.5em;">
+                            <p>Mooncake packaging for Chinese Americans who can't speak Chinese
+                            </p>
+                        </li>
+                    </div>
+                    <ul class="gallery">
+                        <li class="hundred">
+                            <img src="../images/sixiang/hero.jpg">
+                        </li>
+                        <li class="fifty">
+                            <img src="../images/sixiang/bigBox.jpg">
+                        </li>
+                        <li class="fifty">
+                            <img src="../images/sixiang/smallBoxStackOpen.jpg">
+                        </li>
+                        <li class="fifty">
+                            <img src="../images/sixiang/Guide.jpg">
+                        </li>
+                        <li class="fifty">
+                            <img src="../images/sixiang/boxWithGuide.jpg">
+                        </li>
+                        
+                        
+                        <li class="fifty">
+                            <img src="../images/sixiang/blackBoxDetail.jpg">
+                        </li>
+                        <li class="fifty">
+                            <img src="../images/sixiang/blackBoxDetail2.jpg">
+                        </li>
+                    </ul>
+                    
+                    <span class="small"></span>
+                    <div class="gallery">
+                        <div class="sixtysix">
+                            <li class="eighty">
+                                <p>Si Xiang mooncakes are a response to the tried and true gestures of mooncake branding, embracing counterculture, diaspora, and the loss of language in an identity that celebrates transformation in cultural understanding. Not your mama's mooncake, if you will.<br><br>The visual identity of the mooncakes pull from contemporary dual-script typesetting approaches, while introducing ping-yin content to educate bad Chinese kids who didn't pay attention when their mom sent them to after school. Iconic good luck symbols become pattern and color, and the customary square boxes meant for sharing with large families are waived out in favor of a narrow profile meant for gifting.
+                                </p>
+                            </li>
+                        </div>
+                        <div class="thirtythree" style="flex-direction: row;">
+                            <li class="twenty">
+                                <h3>Time<br>Role</h3>
+                            </li>
+                            <li class="eighty">
+                                <h3>6 weeks<br>Sole designer, fabricator<br>
+                                Instructed by Kelsey Dusenka</h3>
+                            </li>
+                        </div>
+                    </div>
+                    <span class="large"></span>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <!-- <img src="images/cat-01.png" class="cat2" > -->
+            <div class="columns footmenu">
+                <ul class="menu" style="align-items: center;">
+                    <li class="menuitems"><a href="../pdfs/caleb-sun_resume.pdf" target="_blank"><sub class="link">Resume</sub></a></li>
+                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><sub class="link">LinkedIn</sub></a></li>
+                    <li class="menuitems"><a href="https://read.cv/calebsun" target="_blank"><sub class="link">ReadCV</sub></a></li>
+                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub class="link">Email</sub></a></li>
+                </ul>
+                <div class="credit">
+                    <sub>Updated September 2024 | Custom coded using HTML/CSS/JS</sub>
+                </div>
+            </div>
+        </footer>
+    </main>
+  </body>
+</html>
