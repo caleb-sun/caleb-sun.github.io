@@ -265,6 +265,10 @@ a:active{
     /* text-decoration-style:dotted; */
 }
 
+a:visited{
+    color: var(--textBase) !important;
+}
+
 a>div>.fifty>p{
     text-decoration: none !important;
 }
@@ -700,6 +704,13 @@ header{
     justify-content: right;
 }
 
+.desktop{
+    display: flex;
+}
+.mobile{
+    display: none;
+}
+
 footer{
     z-index: 100;
     position: fixed;
@@ -752,6 +763,7 @@ footer{
 #play{
     padding-bottom: 20vh;
 }
+
 .columns.projgroup{
     padding-top:13vh;
     padding-bottom:16%;
@@ -1090,6 +1102,15 @@ footer{
     }
 
     /* Home Page */
+
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+    }
+
+
     #work{
         display: flex;
         flex-wrap: wrap;
@@ -1106,9 +1127,6 @@ footer{
         overflow-y:scroll;
     }
 
-    #about>.columns>.columns{
-    row-gap:3.2vh;
-}
 
     .columns.projgroup{
         padding-bottom: 5vh;
@@ -1145,9 +1163,9 @@ footer{
         margin-bottom: 5vh;
     }
 
-    .mininav_head_top p{
-        font-size: 22pt;
-        line-height: 24pt;
+    .mininav_head_top p, .mininav_head_top{
+        font-size: 22pt !important;
+        line-height: 24pt !important;
     }
 
     .mininav>p{
@@ -1193,12 +1211,13 @@ footer{
 
     #profileimage{
         width: 90vw;
-        margin-top:0;
+        margin-top:5vh;
     }
 
     #about{
         padding-top:10vh;
         padding-left: 1.5vw;
+        padding-bottom: 5vh;
         padding-right: 8vw;
         margin-top:0;
         height: 100vh;
@@ -1398,11 +1417,5 @@ footer{
         gap: 0;
         margin-bottom: 0em;
     }
-
-    
-    #about{
-        row-gap:10vh;
-    }
-
 
 }

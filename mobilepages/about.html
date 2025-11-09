@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--- the doctype declaration tells the file reader that we're using html-->
+<html lang="en" class="htmlhome">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Caleb Sun is a visual designer and student at Carnegie Mellon University. He is currently a Brand Design Intern at Dropbox.">
+    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=">
+    <meta name="robots" content="all">
+    <!---declares what kinds of characters are supportive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!---makes site responsive-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!---makes site work better with microsoft browsers-->
+    <title>Caleb Sun_Portfolio_2025</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/bav6mvc.css">
+  </head>  
+  <body>
+    <!-- <img class="noborder" id='backgroundImg' src="images/background.svg" style="position: fixed; width: 100vw;"> -->
+    <header>
+        <ul class="menu header">
+                <div class="menuitems">
+                    <ul class="miniprojnav" style="z-index: 100;">
+                        <p style="cursor: pointer; border-radius: 2em;" class="menu-inactive link"><a href="../index.html">Work</a></p>
+                        <p style="cursor: pointer; border-radius: 2em;" class="menu-inactive link"><a href="etc.html">Etc</a></p>
+                        <p class="menu-active link" style="cursor: pointer; border-radius: 2em;"><a>About</a></p>                    
+                    </ul>
+                </div>
+            </ul>
+    </header>
+    <h2 id="sun" class="noborder astericks"><a href="../index.html">*</a></h2>
+
+
+    <main>
+        
+        <script>
+            var elem = document.getElementById('sun');
+            window.addEventListener('scroll', function() {
+                var value = window.scrollY * 0.1;
+                elem.style.transform = `rotate(${value}deg)`; 
+            });
+
+            function resize() {
+                window.scrollTo(0, 0);
+                }
+            window.onresize = resize;
+        </script>
+
+        <ul class="home">
+            <li id="about" class="columns projgroup">
+                <ul class="columns fifty"> 
+                    <ul class="columns">
+                        <p class="eighty mininav_head_top">CALEB SUN is a Philly-based brand and graphic designer.</p>
+                        <br>
+                        <p>He’s passionate about creating artifacts that feel like a breath of fresh air and make people excited about the brands that they interact with through strategic, moving, story-driven systems.<br><br>But he does all sorts of things.</p>
+                        <span class="small"></span>
+                        <li class="fifty about">
+                            <p>
+                                ___<br>
+                                Expertise<br><br>
+                                Branding, digital, motion, print, matcha whisking, farmers market hunting, etc.<br><br>
+                                ___<br>
+                                Experience<br><br>
+                                <a href="https://smith-diction.com/">Smith & Diction ↗</a>   <sub>Present</sub><br>
+                                <a href="https://www.jonwisecreative.com/">JWC Creative ↗</a>   <sub>2025</sub><br>
+                                <a href="http://dropbox.design/">Dropbox ↗</a>   <sub>2024</sub>
+                                <br>
+                                <br>
+                                ___<br>
+                                Education<br><br>
+                                Carnegie Mellon University<br>Graphic Design   <sub>BFA</sub><br>
+                                <br>
+                            </p>
+                        </li>
+                        <li class="fifty about">
+                            <p>
+                                ___<br>
+                                Seeking<br><br>
+                                Freelance web, print, and branding projects about culture, food, queerness, and archives. <br><br>
+                                <a href="mailto:sun.cs0327@gmail.com" style="color:var(--textSub)">&#x2709; Drop a line!</a>
+                                <br><br>
+                                ___<br>
+                                Recognition<br><br>
+                                CMU Design Merit Award   <sub>2025</sub><br>
+                                Lee Goodman Scholarship   <sub>2024</sub><br>
+                                <a href="https://studioforcreativeinquiry.org/frff-grants-microgrants">Frank Ratchye Further Fund Recipient ↗</a>   <sub>2024</sub><br>
+                                CMU Design Merit Award   <sub>2022</sub>
+                            </p>
+                            <br>
+                        </li>
+                        <li class="eighty about">
+                            <h4>Made with: HTML/CSS/JS<br>Typefaces used: Director Degheest by Ange Degheest, Camille Depalle, Eugénie Bidaut, Luna Delabre, Mandy Elbé, May Jolivet, Oriane Charvieux, Benjamin Gomez, Justine Herbel. Distributed by velvetyne.fr</h4>
+                        </li>
+                    </ul>
+                </ul>
+                <ul class="fifty profileimage">
+                    <img class="noborder" id='profileimage' src="../images/Subject.png">
+                </ul>
+            </li>
+        </ul>
+        <footer>
+            <!-- <img src="images/cat-01.png" class="cat2" > -->
+            <div class="columns footmenu">
+                <ul class="menu" style="align-items: center;">
+                    <li class="menuitems"><a href="pdfs/sunCaleb-resume25.pdf" target="_blank"><sub class="link">Resume</sub></a></li>
+                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><sub class="link">LinkedIn</sub></a></li>
+                    <li class="menuitems"><a href="https://www.instagram.com/calebsdesign/" target="_blank"><sub class="link">Instagram</sub></a></li>
+                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub class="link">Email</sub></a></li>
+                </ul>
+                <div class="credit">
+                    <sub>Updated August 2025</sub>
+                </div> 
+            </div>
+        </footer>
+    </main>
+  </body>
+</html>

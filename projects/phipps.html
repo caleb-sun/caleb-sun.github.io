@@ -19,91 +19,28 @@
   <body>
     <main>
         <header>
-            <a class="homenav sun" href="../index.html">
-                <img id='sun' src="../images/sun.svg">
-                <p>Caleb Sun</p>
-            </a>
+            <script>
+                var elem = document.getElementById('sun');
+                window.addEventListener('scroll', function() {
+                    var value = window.scrollY * 0.1;
+                    elem.style.transform = `rotate(${value}deg)`; 
+                });
+
+                function resize() {
+                    window.scrollTo(0, 0);
+                    }
+                window.onresize = resize;
+            </script>
             <ul class="menu header">
                 <div class="menuitems">
                     <ul class="miniprojnav" style="z-index: 100;">
-                        
-                        <p style="cursor: pointer;"><a id=worktop onclick='work()' class="menu-active link">Selected Work,</a></p>
-                        <p style="cursor: pointer;"><a id=playtop onclick='play()' class="menu-inactive link">Etc,</a></p>
-                        <p style="cursor: pointer;"><a id=abouttop onclick='about()' class="menu-inactive link">About</a></p>                        
+                        <ul class="miniprojnav" style="z-index: 100;">
+                            <p id=worktop onclick='work()' style="cursor: pointer;" class="menu-active link"><a>Selected Work</a></p>
+                            <p id=playtop onclick='play()' style="cursor: pointer;" class="menu-inactive link"><a>Etc</a></p>
+                            <p id=abouttop onclick='about()' class="menu-inactive link" style="cursor: pointer;"><a>About</a></p>                    
+                        </ul>            
                     </ul>
-                    <!-- <script> 
-                        function work() {
-                            var work = document.getElementById('work');
-                            var play = document.getElementById('play');
-                            var about = document.getElementById('about');
-
-                            play.classList.remove('up');
-                            play.classList.add('down'); 
-                            playtop.classList.remove('menu-active');
-                            playtop.classList.add('menu-inactive');
-
-                            work.classList.remove('down');
-                            work.classList.add('up');
-                            worktop.classList.remove('menu-inactive');
-                            worktop.classList.add('menu-active');
-
-                            about.classList.remove('up');
-                            about.classList.add('down'); 
-                            abouttop.classList.remove('menu-active');
-                            abouttop.classList.add('menu-inactive');
-
-
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-
-                        }
-                        function play() {
-                            var work = document.getElementById('work');
-                            var play = document.getElementById('play');
-                            var about = document.getElementById('about');
-                            
-                            work.classList.remove('up');
-                            work.classList.add('down'); 
-                            worktop.classList.remove('menu-active');
-                            worktop.classList.add('menu-inactive');
-
-                            play.classList.remove('down');
-                            play.classList.add('up');
-                            playtop.classList.remove('menu-inactive');
-                            playtop.classList.add('menu-active');
-
-                            about.classList.remove('up');
-                            about.classList.add('down'); 
-                            abouttop.classList.remove('menu-active');
-                            abouttop.classList.add('menu-inactive');
-
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-
-                        }
-
-                        function about() {
-                            var work = document.getElementById('work');
-                            var play = document.getElementById('play');
-                            var about = document.getElementById('about');
-
-                            work.classList.remove('up');
-                            work.classList.add('down'); 
-                            worktop.classList.remove('menu-active');
-                            worktop.classList.add('menu-inactive');
-
-                            play.classList.remove('up');
-                            play.classList.add('down'); 
-                            playtop.classList.remove('menu-active');
-                            playtop.classList.add('menu-inactive');
-
-                            about.classList.remove('down');
-                            about.classList.add('up');
-                            abouttop.classList.remove('menu-inactive');
-                            abouttop.classList.add('menu-active');
-
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-                        }
-                        
-                    </script> -->
+                    
                     <script>
                         function work() {
                             var w = (window.innerWidth);
@@ -154,59 +91,6 @@
                     </script>
                 </div>
             </ul>
-
-            <div class="process-tab" id="process-tab">
-                <script>
-                    function processIn() {
-                        var process = document.getElementById('process');
-                        var processviewport = document.getElementById('process-viewport');
-                        var processtab = document.getElementById('process-tab');
-                        var processopen = document.getElementById('process-open');
-                        var processclose = document.getElementById('process-close');
-                        
-                        processviewport.classList.remove('processviewport-start');
-                        processviewport.classList.remove('processviewport-out');
-                        processviewport.classList.add('processviewport-in');
-
-                        processclose.style.display='flex';
-                        processopen.style.display='none';
-                    }
-                    function processOut() {
-                        var process = document.getElementById('process');
-                        var processlabel = document.getElementById('process-open');
-                        var processtab = document.getElementById('process-tab');
-
-                        var processviewport = document.getElementById('process-viewport');
-                        var processclose = document.getElementById('process-close');
-
-                        process.classList.remove('process-in');
-                        process.classList.add('process-out');
-                        processviewport.classList.remove('processviewport-in');
-                        processviewport.classList.add('processviewport-out');
-                        // processviewport.style.display='none';
-
-                        processclose.style.display='none';
-                        processtab.style.top='9%';
-                        processlabel.style.display='flex';
-                        
-                    }
-                </script>
-                <div class="menuitems">
-                    <ul class="processnav" id="process-open" onclick='processIn()' onmouseenter="process1Hover()">
-                        <!-- <img src="../images/eye-yellow.svg" class="eye" style="display: none;" id="eye1yellow">
-                        <img src="../images/eye.svg" class="eye" id="eye1white"> -->
-                        <h3>
-                            <a style="text-decoration: none !important; cursor: pointer;">Process</a>
-                        </h3>
-                    </ul>
-                    <ul class="processnav" id="process-close" onclick='processOut()' onmouseenter="process2Hover()" style="display: none">
-                        <h3>
-                            <a style="text-decoration: none !important; cursor: pointer;" >&#x2715;</a>
-                        </h3>
-                    </ul>
-                </div>
-            </div>
-
             <a class="up-button" href="#top" style="text-decoration: none; display: none;" id="up-button">
                 <h3 style="line-height: 30pt;">Top</h3>
             </a>
@@ -226,13 +110,13 @@
                     var value = window.scrollY * 0.1;
                     elem.style.transform = `rotate(${value}deg)`; 
                 });
-
                 function resize() {
                     window.scrollTo(0, 0);
                     }
                 window.onresize = resize;
             </script>
         </header>
+        <a href="../index.html"><h2 class="noborder astericks" id="sun">*</h2></a>
         <div class="project" id="tip">
             <div class="projectbody">
                 <ul class="columns">
@@ -242,7 +126,7 @@
                             </h1>
                             <sub class="subtitle">Brand Redesign and Repositioning, Identity, Marketing, Web</sub>
                         </li>
-                        <li class="thirtythree" style="margin-top: 0.5em;">
+                        <li class="thirtythree" style="margin-top: 1.5em;">
                             <p>A timeless identity for a botanical garden that honors the past and looks eagerly towards the future.
                             </p>
                         </li>
@@ -250,161 +134,116 @@
                     
                     <div class="gallery">
                         <li class="hundred"></li>
-                            <img src="../images/phipps/hero-final.jpg">
+                            <img src="../images/phipps2/slogans.gif">
                         </li>
                     </div>
                     <span class="small"></span>
                     <div class="gallery">
                         <div class="sixtysix">
                             <li class="eighty">
-                                <h2>Something old, something new...</h2>
+                                <h2>Catching a brand up to speed to a conservatory with its eyes on the future.</h2>
                                 <span class="small"></span>
-                            <p>The Phipps Conservatory and Botanical Gardens is a fixture in the Pittsburgh community. For nearly two centuries, Phipps has served as an urban oasis, hosting seasonal flower shows and providing respite from the hustle and bustle of industrial Pittsburgh. In the past 15 years, though, Phipps has set their sights on the future. 
+                            <p>For nearly two centuries, Phipps has served as an urban oasis, providing respite from the hustle and bustle of industrial Pittsburgh. In the past 15 years, though, Phipps has pivoted into becoming a leader in sustainability, education, and regional community programs. This brand repositioning project breathes new life into the Phipps brand, with a focus on surfacing the diverse offerings the conservatory provides to the Pittsburgh community, and establishing Phipps as a global leader of sustainable conservation.
                             <span class="small"></span>
-                            As a leader in sustainability, education, and regional community programs, The Phipps has adopted many new faces beyond their identity as a simple garden. This brand repositioning project breathes new light into the Phipps brand, with a focus on surfacing the diverse offerings the garden provides to the Pittsburgh community.
-                            </p>
+                            At the core of this rebrand is an organization steeped in history and tradition, with a keen eye for modernization. A new logo that has the same bones as the time-honored original,a bold and vibrant color palette, and a botanical inspired patterning system create a sense of energy and leadership that reposition The Phipps as a global leader, establishing trust without ostracising younger audiences or coming across as overly corporate. These elements come together to create sub-identities for various Phipps verticals and gain more recognition for all that Phipps does.<br><br>
+                            <sub onclick='processIn()'><a style="text-decoration: none; cursor:pointer">&#x21aa; Read More</a></sub>
                             <span class="medium"></span>
-                            <h3>Impact</h3><span class="small"></span>
-                            <h3 class="eighty">● Shifted to a brand with dual identities that support Phipps core, as well as diverse Phipps functionalities<br>
-                                ● Aligned visual identity with peer cultural institutions<br>
-                                ● Developed a web strategy that aligns core navigation and content structure with principle customer jobs-to-be-done<br>
-                                ● Created roadmap for Phipps’ marketing team to appeal to institution leadership for a digital redesign in the future</h3>
-    
+                            </p>
                             </li>
                         </div>
                         <div class="thirtythree" style="flex-direction:row; margin-top: 3.75em;">
                             <li class="twenty">
-                                <h3>Time<br>
+                                <h3>Type<br>
+                                    Time<br>
                                 Role<br>
                                 Credits</h3>
                             </li>
                             <li class="eighty">
-                                <h3>6 weeks<br>
-                                Sole Designer (Course Project)
+                                <h3>Personal Project<br>
+                                    7 weeks<br>
+                                Sole Designer
                                 <br>
-                                Guidance — Justin Edmund, Andrew Twigg<br>
-                                Special Thanks — Joe Reed, Alexa Sinatra<br>
-                                Photography — Unsplash, various</h3>
+                                Special Thanks — Joe Reed, Alexa Sinatra<br></h3>
                             </li>
                         </div>
                     </div>
                     
                     
                     <span class="medium"></span>
-                    <div class="section">
-                        <li class="section-label">
-                            <sub>Phipps Core</sub>
+                    <div class="gallery">   
+                        <li class="fifty">
+                            <img src="../images/phipps2/business-cards.gif">
                         </li>
-                        <div class="gallery">                        
-                            <li class="thirtythree">
-                                <img src="../images/phipps/phipps_outdoor-sign.jpg">
-                            </li>
-                            <li class="sixtysix">
-                                <img src="../images/phipps/phipps_thin-flag.jpg">
-                            </li>
-                            <li class="hundred">
-                                <img src="../images/phipps/stats.gif">
-                            </li>
-                            <li class="hundred">
-                                <img src="../images/phipps/phipps_garden-signs.jpg">
-                            </li>
-                            <li class="fifty">
-                                <img src="../images/phipps/colors-core.jpg">
-                            </li>
-                             <li class="fifty">
-                                <img src="../images/phipps/typefaces.gif">
-                            </li>
-                        </div>
-                    </div>
-                    
-                    <div class="sixtysix">
-                        <li class="hundred" style="gap: 0;">
-                            <p>At the core of this rebrand is an organization steeped in history and tradition, with a keen eye for modernization. The visual style of Phipps has been elevated with priorities in scalability and flexibility, with three primary typefaces and a palette of cool, contrasting greens and grays.</p>
+                        <li class="fifty">
+                            <img src="../images/phipps2/tshirt.jpg">
+                        </li>   
+                        <li class="hundred">
+                            <img src="../images/phipps2/billboard.jpg">
+                        </li>                  
+                        <li class="fifty">
+                            <img src="../images/phipps2/logotype-animation.gif">
+                            <sub>&#x21aa; Custom logotype combining sharp glass-inspired corners with botanical curves.</sub>
                         </li>
-                    </div>
-                    <span class="medium"></span>
-
-
-                    <div class="section">
-                        <li class="section-label"><sub>Phipps Expanded</sub></li>
-                        <div class="gallery">
+                        
+                        <li class="fifty">
+                            <img src="../images/phipps2/leaf.gif">
+                        </li>
+                        <li class="hundred">
+                            <img src="../images/phipps2/logo-suite.jpg">
+                        </li>
+                        <li class="fifty">
+                            <img src="../images/phipps2/colors.jpg">
+                            <sub>&#x21aa; Lively, nature-inspired colors that create subpalettes for different organizational functions.</sub>
+                        </li>
+                        <li class="fifty">
+                            <img src="../images/phipps2/logocolors.gif">
+                        </li>
+                        <li class="hundred">
+                            <img src="../images/phipps2/poster-templates.gif">
+                        </li>
+                        <!-- <li class="hundred">
+                            <img src="../images/phipps2/slogans.gif">
+                        </li> -->
+                        
+                        <li class="fifty">
+                            <img src="../images/phipps2/ig-story1.jpg">
+                        </li>
                             <li class="fifty">
-                                <img src="../images/phipps/colors-expanded.gif">
-                            </li>
+                            <img src="../images/phipps2/yellow-petal.gif">
+                        </li>
+                        <li class="hundred">
+                            <img src="../images/phipps2/ig-posts.jpg">
+                        </li>
+                        <li class="fifty">
+                            <img src="../images/phipps2/signage.jpg">
+                        </li>
+                        <li class="fifty">
+                            <img src="../images/phipps2/billboard2.jpg">
+                        </li>
+                        <li class="sixtysix crop">
+                            <img src="../images/phipps2/web1.jpg">
+                        </li>
+                        <li class="thirtythree crop">
+                            <img src="../images/phipps2/outdoor-sign.jpg">
+                        </li>                        
+                        <li class="hundred">
+                            <img src="../images/phipps2/mobile-tix.jpg">
+                        </li>
+                        <li class="fifty">
                             
-                            <li class="fifty">
-                                <img src="../images/phipps/business-cards.jpg">
-                            </li>
-                            <li class="hundred">
-                                <img src="../images/phipps/red-billboard.jpg">
-                            </li>
-                            <li class="sixtysix">
-                                <img src="../images/phipps/phipps_ig-posts2.jpg">
-                            </li>
-                            <li class="thirtythree">
-                                <img src="../images/phipps/animated-posters.gif">
-                            </li>
-                        </div>
+                        </li>
                     </div>
                     
                     <div class="sixtysix">
                         <li class="hundred" style="gap: 0;">
-                            <p>The Phipps organization takes on many different, distinct roles in the Pittsburgh community and world at large. As the conservancy has grown, though, these roles have become increasingly microscopic and deteriorating customer recognition. By naming and collapsing different small initiatives and organizations into large, overarching themes of work at Phipps, and by identifying them with a distinct color pattern, this rebrand is able to elevate each focus area into the public's understanding in a fun, approachable, and subtle manner.</p>
+                            <p>Impact</p><span class="small"></span>
+                            <p class="eighty">&#x21aa; Shifted to a brand with dual identities that support Phipps core, as well as diverse Phipps functionalities<br>
+                                &#x21aa; Aligned visual identity with peer cultural institutions<br>
+                                &#x21aa; Developed a web strategy that aligns core navigation and content structure with principle customer jobs-to-be-done<br>
+                                &#x21aa; Created roadmap for Phipps’ marketing team to appeal to institution leadership for a digital redesign in the future</p>
                         </li>
                     </div>
-                    <span class="small"></span>
-
-                    
-                    
-                    <span class="small"></span>
-                    
-                    <div class="section">
-                        <li class="section-label"><sub>Web Identity</sub></li>
-                        <div class="gallery">
-                            <li class="fifty">
-                                <img src="../images/phipps/phipps_mobile-scrollthru.gif">
-                            </li>
-                            <!-- <li class="fifty">
-                                <img src="../images/phipps/components.gif">
-                            </li>
-                            <li class="sixtysix">
-                                <img src="../images/phipps/web-interaction.gif">
-                            </li> -->
-                            <li class="fifty">
-                                <img src="../images/phipps/web-home.jpg">
-                            </li>
-                            
-                        </div>
-                    </div>
-                    <div class="sixtysix">
-                        <li class="hundred" style="gap: 0;">
-                            <p>A visual update to the Phipps site prioritizing clarity and celebration of photography from the gardens, as well as the previously developed Phipps extended color palettes.</p>
-                        </li>
-                    </div>
-                    <span class="medium"></span>
-                    
-                    <div class="section">
-                        <li class="section-label"><sub>Web Strategy</sub></li>
-                        <div class="gallery">
-                            <li class="sixtysix">
-                                <img src="../images/phipps/section-sitemap.jpg">
-                            </li>
-                            <li class="thirtythree">
-                                <img src="../images/phipps/menu-expanded.png">
-                            </li> 
-                        </div>
-                    </div>
-                    <div class="sixtysix">
-                        <li class="hundred" style="gap: 0;">
-                            <p>The Phipps website was possibly the most urgent touchpoint in need of a refresh. Bulky and overflowing, the site struggled from a navigational and organizational standpoint to accomodate an ever-growing archive of information which in turn <strong>created confusion among customers trying to accomplish simple tasks</strong> like buying tickets and planning their visit. By conducting a comprehensive site audit and rooting the web redesign in a update to site architecture strategy, the new Phipps site is not only visually stunning and on-par with peer organizations, but also aligned with core customer needs. <br><br> Above is an example of the types of strategies I proposed when meeting with Phipps leadership. By consolidating navigational sections to minimal, easy to understand labels, site visitors are able to navigate towards their desired paths much more easily. 
-                                <!-- <br><br>Read more about the strategy and site-remapping <a href="_">here</a>. -->
-                            </p>
-                        </li>
-                    </div>
-                    <span class="medium"></span>
-
-
-                    <span class="small"></span>
+                    <span class="large"></span>
                     <div class="hundred" style="align-items: center;">
                         <li class="eighty" style="gap: 16px; text-align: center;">
                             <h2>&#x301D Caleb’s work was a true gift to Phipps Conservatory. On a short timeline, he was able to thoroughly assess the structure of our website, propose thoughtful changes to bring the most customer-demanded resources to the forefront, and find novel opportunities to bring mission-centered messaging and experience-deepening connections to the user flow. His work inspires us to prioritize a redesign in the near future by giving a vivid glimpse of the potential and possibilities. &#x301E</h2>
@@ -420,41 +259,31 @@
         <div class="process-viewport processviewport-start" id="process-viewport">
             <div id="process" class="process">
                 <h2>
-                    Challenge
+                    Strategically catching a brand up to speed with a conservatory with its eyes on the future.
                 </h2>
                 <span class="small"></span>
+                <h3>
+                    Brief
+                </h3>
+                <span class="small">
                 <p>
-                    Marry a classic fixture of Pittsburgh with future aspirations of sustainability and community engagement.
+                    Design an identity and strategy for the Phipps brand that aligns its external presence with customer needs and organizational goals.
                 </p>
-                <span class="medium"></span>
-                <h2>
-                    Story
-                </h2>
-                <span class="small"></span>
+                <br>
+                <br>
+                <h3>
+                    Logo Development
+                </h3>
+                <img src="../images/phipps2/process/og-logo.png">
+                <sub>Original</sub>
+                <br><br>
+                <img src="../images/phipps2/process/logo-process.gif">
+                <sub>Process</sub>
+                <span class="small">
                 <p>
-                    Phipps has captured the imaginations of visitors with beautiful flower shows and seasonal exhibitions since their inception in the 1800s. While the botanical garden still brings joy and wonder to the city with curated shows, Phipps is also turning towards the future, considering how the conservatory can play a role in leading sustainability efforts in the region, as well as serving the community through adult education and community programs.
-                    <br><br>
-                    Rebranding the Phipps posed a unique challenge in that the gardens were not shying away from their historical role. They will always be a botanical respite from the hustle and bustle of the city, they just do more now. This rebrand hinged on that idea of "doing more", from visual identity to web architecture.</p>
-                    <span class="medium"></span>
-                    <h2>
-                        Impact (Identity)
-                    </h2>
-                    <span class="small"></span>
-                    <p>
-                        &#9679; Shifted to a brand with dual identities that support Phipps core, as well as diverse Phipps functionalities<br>
-                        	
-                        &#9679; Aligned visual identity with peer cultural institutions
-                    </p>
-                    <span class="medium"></span>
-                    <h2>
-                        Impact (Web Strategy)
-                    </h2>
-                    <span class="small"></span>
-                    <p>
-                        &#9679; Developed a web strategy that aligns core navigation and content structure with principle customer jobs-to-be-done<br>
-                            
-                        &#9679; Created roadmap for Phipps’ marketing team to appeal to institution leadership for a digital redesign in the future
-                        </p>
+                    I started off with just refining original logo in mind, but as the strategy for the brand repositioning developed, I decided to move away from type and shapes that I associated with the original. Using the goals of establishing 
+                </p>
+                <span class="large"></span>
                 <script>
                     function processArrow() {
                         document.getElementById('white-arrow').style.display='block';
@@ -477,7 +306,7 @@
                     <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub class="link">Email</sub></a></li>
                 </ul>
                 <div class="credit">
-                    <sub>Updated September 2024 | Custom coded using HTML/CSS/JS</sub>
+                    <sub>Updated Feb 2025 | Custom coded using HTML/CSS/JS</sub>
                 </div>
             </div>
         </footer>
