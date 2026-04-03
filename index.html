@@ -20,643 +20,69 @@
     <!-- <img class="noborder" id='backgroundImg' src="images/background.svg" style="position: fixed; width: 100vw;"> -->
     
     <main>
-        <header>
-            <ul class="menu header desktop">
-                <div class="menuitems">
-                    <ul class="miniprojnav" style="z-index: 100;">
-                        <p id=worktop onclick='work()' style="cursor: pointer; border-radius: 2em;" class="menu-active link"><a>Selected Work</a></p>
-                        <p id=playtop onclick='play()' style="cursor: pointer; border-radius: 2em;" class="menu-inactive link"><a>Etc</a></p>
-                        <p id=abouttop onclick='about()' class="menu-inactive link" style="cursor: pointer;border-radius: 2em;"><a>About</a></p>                    
-                    </ul>
-                    <script>
-                        function work() {
-                            var w = (window.innerWidth);
-                            var work = document.getElementById('work');
-                            var mininav=document.getElementById('mininav');
-                            window.scrollTo(0, 0);
-                            work.scrollTo(0,0);
-
-                            worktop.classList.remove('menu-inactive');
-                            worktop.classList.add('menu-active');
-
-                            playtop.classList.remove('menu-active');
-                            playtop.classList.add('menu-inactive');
-
-                            abouttop.classList.remove('menu-active');
-                            abouttop.classList.add('menu-inactive');
-                            
-                            // mininav.style = "position:fixed";
-                            
-
-
-                        }
-                        function play() {
-                            var w = (window.innerWidth);
-                            var play = document.getElementById('play');
-                            var mininav=document.getElementById('mininav');
-                            var projects=document.getElementById('projects');
-
-
-                            window.scrollTo(w, 0);
-                            play.scrollTo(0,0);
-
-                            // mininav.style = "position:relative";
-                            // projects.style = "position:relative";
-
-                            worktop.classList.remove('menu-active');
-                            worktop.classList.add('menu-inactive');
-
-                            playtop.classList.remove('menu-inactive');
-                            playtop.classList.add('menu-active');
-
-                            abouttop.classList.remove('menu-active');
-                            abouttop.classList.add('menu-inactive');
-                        }
-
-                        function about() {
-                            var w = (window.innerWidth);
-                            var about = document.getElementById('about');
-                            var mininav=document.getElementById('mininav');
-                            var projects=document.getElementById('projects');
-
-
-                            window.scrollTo((2*w), 0);
-                            about.scrollTo(0,0);
-
-                            // mininav.style = "position:relative";
-                            // projects.style = "position:relative";
-
-                            worktop.classList.remove('menu-active');
-                            worktop.classList.add('menu-inactive');
-
-                            playtop.classList.remove('menu-active');
-                            playtop.classList.add('menu-inactive');
-
-                            abouttop.classList.remove('menu-inactive');
-                            abouttop.classList.add('menu-active');
-                        }
-
-                        var myScrollFunc = function (){
-                            var x = window.scrollx;
-                            var w = (window.innerWidth);
-                            if (x >= w){
-                                worktop.classList.remove('menu-active');
-                                worktop.classList.add('menu-inactive');
-
-                                playtop.classList.remove('menu-inactive');
-                                playtop.classList.add('menu-active');
-
-                                abouttop.classList.remove('menu-active');
-                                abouttop.classList.add('menu-inactive');
-                            }
-                            if (x >= (2*w)){
-                                worktop.classList.remove('menu-active');
-                            worktop.classList.add('menu-inactive');
-
-                            playtop.classList.remove('menu-active');
-                            playtop.classList.add('menu-inactive');
-
-                            abouttop.classList.remove('menu-inactive');
-                            abouttop.classList.add('menu-active');
-                            }
-                        }
-                        window.addEventListener("scroll", myScrollFunc);
-
-
-                        
-                    </script>
+         <header>
+            <!-- <img src="images/cat-01.png" class="cat2" > -->
+            <div class="columns headermenu">
+                <div class="clockcontainer">
+                    <p id="clock"></p>
+                    <p>Phila. PA</p>
                 </div>
-            </ul>
-            <ul class="menu header mobile">
-                <div class="menuitems">
-                    <ul class="miniprojnav" style="z-index: 100;">
-                        <p style="cursor: pointer; border-radius: 2em;" class="menu-active link"><a>TESTING</a></p>
-                        <p style="cursor: pointer; border-radius: 2em;" class="menu-inactive link"><a href="mobilepages/etc.html">Etc</a></p>
-                        <p class="menu-inactive link" style="cursor: pointer;border-radius: 2em;"><a href="mobilepages/about.html">About</a></p>                    
-                    </ul>
+                <sub id="clock"></sub>
+                <div class="credit">
+                    <p>Have a project? <a href="mailto:sun.cs0327@gmail.com">Get in touch</a></p>
                 </div>
-            </ul>
+            </div>
         </header>
-        <h2 id="sun" onclick='work()' class="noborder astericks">*</h2>
-        <script>
-            var elem = document.getElementById('sun');
-            window.addEventListener('scroll', function() {
-                var value = window.scrollY * 0.1;
-                elem.style.transform = `rotate(${value}deg)`; 
-            });
-
-            function resize() {
-                window.scrollTo(0, 0);
-                }
-            window.onresize = resize;
-        </script>
-
         <ul class="home">
-            <li id="work" class="columns projgroup">
-                <ul id="mininav" class="mininav">
-                    <div class="mininav_head">
-                        <div class="mininav_head_top">
-                            <p style="margin-bottom: 1em;">
-                                CALEB SUN is a Philly-based multidisciplinary designer crafting moving, interactive, story-driven systems.
-                                <br><br>
-                                Currently @ <a href="https://smith-diction.com/" target="_blank">Smith & Diction</a>
-                            </p>
-                            <div class="links">
-                                <a href="mailto:sun.cs0327@gmail.com"><h4>Contact ↗</h4></a>
-                                <a href="https://www.instagram.com/calebsdesign/" target="_blank"><h4>Instagram ↗</h4></a>
-                                <a href="https://www.linkedin.com/in/calebsun/" target="_blank"><h4>LinkedIn ↗</h4></a>
-                            </div>
-                        </div>
-                        <!-- <p style="margin-bottom: 1em;">____________<br>Selected Work</p> -->
-                    </div>
-                    <!-- <a class="mininav_proj" href="projects/lifeblood.html">
-                        <p>[1]</p>
-                        <div>
-                            <p>
-                                Lifeblood
-                            </p>
-                            <sub>Personal_Editorial</sub>
-                        </div>
-                    </a>
-                    <a class="mininav_proj_sub" href="projects/lifeblood.html">
-                        <p>
-                            ⮡ Lifeblood Editorial System
-                        </p>
-                    </a>
-                    <a class="mininav_proj_sub" href="projects/lifeblood.html">
-                        <p>
-                            ⮡ Lifeblood Exhibition
-                        </p>
-                    </a>
-                    <a class="mininav_proj" href="projects/phipps2.html">
-                        <p>[2]</p>
-                        <div>
-                            <p>
-                                Do More With Phipps
-                            </p>
-                            <sub>Personal_Brand Redesign + Repositioning</sub>
-                        </div>
-                    </a>
-                    <a class="mininav_proj" href="projects/alchemyearth.html">
-                        <p>[3]</p>
-                        <div>
-                            <p>
-                                Alchemy Earth
-                            </p>
-                            <sub>Personal_Event Branding</sub>
-                        </div>
-                    </a>
-                    <a class="mininav_proj" href="projects/sixiang.html">
-                        <p>[4]</p>
-                        <div>
-                            <p>
-                                Si Xiang Mooncake
-                            </p>
-                            <sub>Personal_Packaging Design</sub>
-                        </div>
-                    </a>
-                    <a class="mininav_proj" href="projects/5539.html">
-                        <p>[5]</p>
-                        <div>
-                            <p>
-                                5539 Cafe
-                            </p>
-                            <sub>Personal_Event Branding</sub>
-                        </div>
-                    </a>
-                    <a class="mininav_proj" href="projects/ortotaste.html">
-                        <p>[6]</p>
-                        <div>
-                            <p>
-                                Or to Taste
-                            </p>
-                            <sub>Personal_Book Design</sub>
-                        </div>
-                    </a>
-                    <a class="mininav_proj" href="projects/dls.html">
-                        <p>[7]</p>
-                        <div>
-                            <p>
-                                Design Lecture Series
-                            </p>
-                            <sub>Client_Event Branding</sub>
-                        </div>
-                    </a>
-                    <a class="mininav_proj" href="projects/memoryOfMonarch.html">
-                        <p>[8]</p>
-                        <div>
-                            <p>
-                                Memories of a Monarch
-                            </p>
-                            <sub>Personal_Editorial</sub>
-                        </div>
-                    </a>
-                    <a class="mininav_proj" href="projects/dbx.html">
-                        <p>[9]</p>
-                        <div>
-                            <p>
-                                Dropbox
-                            </p>
-                            <sub>Client_Web Design</sub>
-                        </div>
-                    </a>
-                    <a class="mininav_proj" href="projects/guangyu.html">
-                        <p>[10]</p>
-                        <div>
-                            <p>
-                                Guang Yu
-                            </p>
-                            <sub>Personal_Editorial + Video + Interactive</sub>
-                        </div>
-                    </a> -->
-
-                </ul>
-                <ul id="projects" class="projhome">
-                    <a class="projhome_individual square" href="projects/lifeblood.html">
-                        <div class="container">
-                            <img src="images/lifeblood/holdingbook.jpg">
-                        </div>
-                        <div>
-                            <h4>Book Design, Exhibition Design</h4>
-                            <p>Lifeblood</p>
-                            <sub>A series of artifacts in remembrance of Pittsburgh's bygone gay bars.</sub>
-                        </div>
-                    </a>
-                    <a class="projhome_individual square" href="projects/bloodfriends.html"> 
-                        <div class="container">
-                            <img src="images/bloodfriends/bloodfriends-thumbnail.png">
-                        </div>
-                        
-                        <div>
-                            <h4>Film Title Design</h4>
-                            <p>Bloodfriends</p>
-                            <sub>Titles and lower thirds for a film about genetic siblings and chosen family.</sub>
-                        </div>
-                    </a>
-                    
-                    <!-- <a class="projhome_individual square" href="projects/bloodfriends.html">
-                        <img src="images/bloodfriends/hero">
-                        <div>
-                            <h4>Client</h4>
-                            <p>Enby</p>
-                            <sub>Titles and lower thirds for a film about genetic siblings and chosen family.</sub>
-                        </div>
-                    </a> -->
-
-                    <a class="projhome_individual square" href="projects/phipps.html">
-                        <div class="container">
-                            <img src="images/phipps2/tshirt.jpg">
-                        </div>
-                        <div>
-                            <h4>Brand Identity Design</h4>
-                            <p>Phipps</p>
-                            <sub>Rebranding a Pittsburgh institution for the modern age of horticulture.</sub>
-                        </div>
-                    </a>
-                    <a class="projhome_individual square" href="projects/alchemyearth.html">
-                        <div class="container">
-                            <img src="images/alchemy/billboard2.jpg">
-                        </div>
-                        <div>
-                            <h4>Exhibition Identity Design</h4>
-                            <p>Alchemy Earth</p>
-                            <sub>A modern, elegant identity for a ceramic arts biennial held in the birthplace of porcelain.</sub>
-                        </div>
-                    </a>
-                    <a class="projhome_individual square" href="projects/sixiang.html">
-                        <div class="container">
-                            <img src="images/sixiang/smallBoxStackOpen.jpg">
-                        </div>
-                        <div>
-                            <h4>Packaging Identity Design</h4>
-                            <p>Si Xiang Mooncake</p>
-                            <sub>Mooncake packaging for Chinese Americans who can't speak Chinese.</sub>
-                        </div>
-                    </a>
-                    <a class="projhome_individual square" href="projects/dls.html">
-                        <div class="container">
-                            <img src="images/dls/DLS-hero.gif">
-                        </div>
-                        <div>
-                            <h4>Brand Identity Design</h4>
-                            <p>Design Lecture Series</p>
-                            <sub>An identity for the 2024-2025 Design Lecture Series at Carnegie Mellon School of Design that's in perpetual motion.</sub>
-                        </div>
-                    </a>
-                    <a class="projhome_individual square" href="projects/memoryOfMonarch.html">
-                        <div class="container">
-                            <img src="images/memoriesOfAMonarch/poster-outside.jpg">
-                        </div>
-                        <div>
-                            <h4>Poster Design, Book Design</h4>
-                            <p>Memory of a Monarch</p>
-                            <sub>Book and poster documenting the cross-border migratory patterns of monarch butterflies.</sub>
-                        </div>
-                    </a>
-                    <a class="projhome_individual square" href="mailto:sun.cs0327@gmail.com">
-                        <div class="container">
-                            <img src="images/misc/dbx-thumb.gif">
-                        </div>
-                        <div>
-                            <h4>Web Design</h4>
-                            <p>Dropbox Brand Design</p>
-                            <sub>[Confidential]</sub>
-                        </div>
-                    </a>
-                    <!-- <a class="projhome_individual full_width" href="projects/lifeblood.html">
-                        <div class="state-1">
-                            <img src="images/lifeblood/hero.gif">
-                        </div>
-                        <div class="state-2">
-                            <div>
-                                <p>[1]</p>
-                                <h1>Lifeblood</h1>
-                                <p>A series of artifacts in remembrance of Pittsburgh's bygone gay bars.</p>
-                            </div>
-                            <div>
-                                <sub>______<br>Undergraduate Thesis_Archival Research, Editorial Design, Exhibition Design</sub>
-                            </div>
-                        </div>
-                        
-                    </a> -->
-                    <!-- <a class="projhome_individual sixth_width" href="projects/phipps2.html">
-                        <div class="state-1">
-                            <img src="images/phipps2/tshirt.jpg" >
-                        </div>
-                        <div class="state-2">
-                            <div>
-                                <p>[2]</p>
-                                <h1>Do More With Phipps</h1>
-                                <p>A timeless identity for a botanical garden that honors the past and looks eagerly towards the future.</p>
-                            </div>
-                            <div>
-                                <sub>______<br>Undergraduate Thesis_Archival Research, Editorial Design, Exhibition Design</sub>
-                            </div>
-                        </div>
-                        
-                    </a>
-                    <a class="projhome_individual third_width" href="projects/alchemyearth.html">
-                        <div class="state-1">
-                            <img src="images/alchemy/billboard2.jpg">
-                        </div>
-                        <div class="state-2">
-                            <div>
-                                <p>[3]</p>
-                                <h1>Alchemy Earth</h1>
-                                <p>A modern, elegant identity for a ceramic arts biennial held in the birthplace of porcelain.</p>
-                            </div>
-                            <div>
-                                <sub>______<br>Event Identity</sub>
-                            </div>
-                        </div>
-                        
-                    </a>
-                    <a class="projhome_individual third_width" href="projects/sixiang.html">
-                        <div class="state-1">
-                            <img src="images/sixiang/smallBoxStackOpen.jpg">
-                        </div>
-                        <div class="state-2">
-                            <div>
-                                <p>[4]</p>
-                                <h1>Si Xiang Mooncake</h1>
-                                <p>Mooncake packaging for Chinese Americans who can't speak Chinese.</p>
-                            </div>
-                            <div>
-                                <sub>Brand Identity, Repositioning</sub>
-                            </div>
-                        </div>
-                        
-                    </a>
-                    <a class="projhome_individual sixth_width" href="projects/5539.html">
-                        <div class="state-1">
-                            <img src="images/5539/name-plate-logo.gif">
-                        </div>
-                        <div class="state-2">
-                            <div>
-                                <p>[5]</p>
-                                <h1>5539 Cafe</h1>
-                                <p>A down-to-earth, place-based identity for a cafe pop-up hosted by and for friends.</p>
-                            </div>
-                            <div>
-                                <sub>Brand Identity, Repositioning</sub>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="projhome_individual half_width" href="projects/ortotaste.html">
-                        <div class="state-1">
-                            <img src="images/ortotaste/flipthru.gif">
-                        </div>
-                        <div class="state-2">
-                            <div>
-                                <p>[6]</p>
-                                <h1>Or to Taste</h1>
-                                <p>A book about food and memories told by 12 strangers.</p>
-                            </div>
-                            <div>
-                                <sub>______<br>Personal_Book Design, Creative Direction</sub>
-                            </div>
-                        </div>
-                        
-                    </a>
-                    <a class="projhome_individual half_width" href="projects/dls.html">
-                        <div class="state-1">
-                            <img src="images/dls/name-drop.gif" style="object-position: left bottom;">
-                        </div>
-                        <div class="state-2">
-                            <div>
-                                <p>[7]</p>
-                                <h1>Design Lecture Series</h1>
-                                <p>An identity for the 2024-2025 Design Lecture Series at Carnegie Mellon School of Design that's in perpetual motion.</p>
-                            </div>
-                            <div>
-                                <sub>______<br>Client_Event Identity Design</sub>
-                            </div>
-                        </div>
-                        
-                    </a>
-                    <a class="projhome_individual sixth_width" href="projects/memoryOfMonarch.html">
-                        <div class="state-1">
-                            <img src="images/memoriesOfAMonarch/book_scan.gif">
-                        </div>
-                        <div class="state-2">
-                            <div>
-                                <p>[8]</p>
-                                <h1>Memory of a Monarch</h1>
-                                <p>Book and poster documenting the cross-border migratory patterns of monarch butterflies, and the metaphorical, multi-lingual implications of that journey.</p>
-                            </div>
-                            <div>
-                                <sub>______<br>Personal_Editorial Design, Print Production</sub>
-                            </div>
-                        </div>
-                        
-                    </a> -->
-                    <!-- <a class="projhome_individual third_width" href="projects/dbx.html">
-                        <div class="state-1">
-                            <img src="images/misc/dbx-thumb.gif">
-                        </div>
-                        <div class="state-2">
-                            <div>
-                                <p>[9]</p>
-                                <h1>Mineral Transitions for Dynamic Africa</h1>
-                                <p>Dissertation book design for Dr. Fas Lebbie</p>
-                            </div>
-                            <div>
-                                <sub>______<br>Client_Editorial Design</sub>
-                            </div>
-                        </div>
-                    </a> -->
-                    <!-- <a class="projhome_individual third_width" href="projects/dbx.html">
-                        <div class="state-1">
-                            <img src="images/misc/dbx-thumb.gif">
-                        </div>
-                        <div class="state-2">
-                            <div>
-                                <p>[9]</p>
-                                <h1>Dropbox</h1>
-                                <p>[Confidential]<br>Transparency report web redesign</p>
-                            </div>
-                            <div>
-                                <sub>______<br>Client_Website Design</sub>
-                            </div>
-                        </div>
-                    </a> -->
-                </ul>
+            <li>
+                <sub>[01]</sub>
+                <h1>Caleb Sun</h1>
+                <sub>[who]</sub>
             </li>
-            <li id="play" class="columns projgroup ">
-                <div class="projecthome sixtysix">
-                    <div  class="columns proj">
-                        <div class="hundred"> 
-                            <img class="noborder" src="images/etc/year-of-the-snake.png">
-                            <sub>Lunar New Year Postcard<br>Risograph</sub>
-                        </div>
-                    </div> 
-                </div>
-                <div id="sonny" class="projecthome thirtythree">
-                    <a href="projects/sonny.html" class="columns proj">
-                        <div class="hundred"> 
-                            <img src="images/sonny/sonny-1.jpg"
-                            alt="A little orange clothbound book on grass">
-                            <sub>Sonny Angel Book &#8599;<br>Editorial, bookbinding</sub>
-                        </div>
-                    </a>
-                </div>
-                
-                <div id="design-week" class="projecthome thirtythree">
-                    <div class="columns proj">
-                        <div class="hundred"> 
-                            <img src="images/design-week-graphic.gif">
-                            <sub>CMU Design Week 2024</sub>
-                        </div>
-                    </div> 
-                </div>
-                <div id="rive" class="projecthome sixtysix">
-                    <a href="https://vqws5x.csb.app/" target="_blank" class="columns proj">
-                        <div class="hundred"> 
-                            <img src="images/rive/washing-dishes.gif">
-                            <sub>Sisyphus's Dishes<br>Rive, Motion</sub>
-                        </div>
-                    </a> 
-                </div>
-                <div class="projecthome sixtysix">
-                    <a href="https://editor.p5js.org/calebsun/full/U97o-T9mu" target="_blank" class="columns proj">
-                        <div class="hundred"> 
-                            <img src="images/neue-bobbin.gif">
-                            <sub>[In Progress] Neue Bobbin Typeface &#8599;<br>Type Design</sub>
-                        </div>
-                    </a> 
-                </div>
-                <div id="letter" class="projecthome thirtythree">
-                    <a href="projects/letter.html" class="columns proj">
-                        <div class="hundred"> 
-                            <img src="images/letter/letter-1.jpg">
-                            <sub>Letter to a past self &#8599;<br>Laser Cutting</sub>
-                        </div>
-                    </a> 
-                </div>     
-                <div id="ascii" class="projecthome thirtythree">
-                    <a href="projects/ascii.html" class="columns proj">
-                        <div class="hundred"> 
-                            <img src="images/ascii/IMG_5129.jpg" alt="A book with ascii art on it">
-                            <sub>ASCII &#8599;<br>Zine</sub>
-                        </div>
-                    </a> 
-                </div>
-                <div id="sigul" class="projecthome sixtysix">
-                    <a href="projects/sigul.html" class="columns proj">
-                        <div class="hundred"> 
-                            <img src="images/type/hero.gif">
-                            <sub>Singularity Typeface &#8599;<br>Type Design</sub>
-                        </div>
-                    </a> 
-                </div>
-               
-                
+            <li>
+                <sub>[02]</sub>
+                <p>is a Philly-based graphic designer with an expertise in crafting moving, interactive, story-driven systems.</p>
+                <sub>[what]</sub>
             </li>
-            <li id="about" class="columns projgroup">
-                <ul class="columns fifty"> 
-                    <ul class="columns">
-                        <p class="eighty">Caleb Sun is a Philly-based brand and graphic designer.<br><br>He’s passionate about creating artifacts that feel like a breath of fresh air and make people excited about the brands that they interact with through strategic, moving, story-driven systems.<br><br>But he does all sorts of things.</p>
-                        <span class="small"></span>
-                        <li class="fifty about">
-                            <p>
-                                ___<br>
-                                Expertise<br><br>
-                                Branding, digital, motion, print, matcha whisking, farmers market hunting, etc.<br><br>
-                                ___<br>
-                                Experience<br><br>
-                                <a href="https://smith-diction.com/">Smith & Diction ↗</a>   <sub>Present</sub><br>
-                                <a href="https://www.jonwisecreative.com/">JWC Creative ↗</a>   <sub>2025</sub><br>
-                                <a href="http://dropbox.design/">Dropbox ↗</a>   <sub>2024</sub>
-                                <br>
-                                <br>
-                                ___<br>
-                                Education<br><br>
-                                Carnegie Mellon University<br>Graphic Design   <sub>BFA</sub><br>
-                                <br>
-                            </p>
-                        </li>
-                        <li class="fifty about">
-                            <p>
-                                ___<br>
-                                Seeking<br><br>
-                                Freelance web, print, and branding projects about culture, food, queerness, and archives. <br><br>
-                                <a href="mailto:sun.cs0327@gmail.com" style="color:var(--textSub)">&#x2709; Drop a line!</a>
-                                <br><br>
-                                ___<br>
-                                Recognition<br><br>
-                                CMU Design Merit Award   <sub>2025</sub><br>
-                                Lee Goodman Scholarship   <sub>2024</sub><br>
-                                <a href="https://studioforcreativeinquiry.org/frff-grants-microgrants">Frank Ratchye Further Fund Recipient ↗</a>   <sub>2024</sub><br>
-                                CMU Design Merit Award   <sub>2022</sub>
-                            </p>
-                            <br>
-                        </li>
-                        <li class="eighty about">
-                            <h4>Made with: HTML/CSS/JS<br>Typefaces used: Director Degheest by Ange Degheest, Camille Depalle, Eugénie Bidaut, Luna Delabre, Mandy Elbé, May Jolivet, Oriane Charvieux, Benjamin Gomez, Justine Herbel. Distributed by velvetyne.fr</h4>
-                        </li>
-                    </ul>
-                </ul>
-                <ul class="fifty profileimage">
-                    <img class="noborder" id='profileimage' src="images/Subject.png">
-                    
-                </ul>
-                
+            <li>
+                <sub>[03]</sub>
+                <p>He is currently a brand designer at <a href="https://smith-diction.com/" target="_blank">Smith & Diction</a>.</p>
+                <sub>[where]</sub>
+            </li>
+            <li>
+                <sub>[04]</sub>
+                <p>His website is in progress...</p>
+                <sub>[???]</sub>
             </li>
         </ul>
         <footer>
             <!-- <img src="images/cat-01.png" class="cat2" > -->
-            <div class="columns footmenu">
+            <div class="footmenu">
                 <ul class="menu" style="align-items: center;">
-                    <li class="menuitems"><a href="pdfs/sunCaleb-resume25.pdf" target="_blank"><sub class="link">Resume</sub></a></li>
-                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><sub class="link">LinkedIn</sub></a></li>
-                    <li class="menuitems"><a href="https://www.instagram.com/calebsdesign/" target="_blank"><sub class="link">Instagram</sub></a></li>
-                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><sub class="link">Email</sub></a></li>
+                    <li class="menuitems"><a href="pdfs/sunCaleb-resume25.pdf" target="_blank"><p class="link">Resume</p></a></li>
+                    <li class="menuitems"><a href="https://www.linkedin.com/in/calebsun/" target="_blank"><p class="link">LinkedIn</p></a></li>
+                    <li class="menuitems"><a href="https://www.instagram.com/calebsdesign/" target="_blank"><p class="link">Instagram</p></a></li>
+                    <li class="menuitems"><a href=mailto:sun.cs0327@gmail.com><p class="link">Email</p></a></li>
                 </ul>
                 <div class="credit">
-                    <sub>Updated August 2025</sub>
+                    <p>Updated August 2025</p>
                 </div> 
             </div>
         </footer>
     </main>
+  <script>
+    function updateClock() {
+      const t = new Date().toLocaleTimeString('en-US', {
+        timeZone: 'America/New_York',
+        hour12: false,
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+      });
+      document.getElementById('clock').textContent = t;
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+  </script>
   </body>
 </html>
