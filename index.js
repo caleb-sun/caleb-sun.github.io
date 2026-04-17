@@ -155,7 +155,6 @@ const projects = [
             { type: "half",  srcs: ["images/alchemy/tote-bag.jpg", "images/alchemy/tshirt.jpg"] },
             { type: "full",  src: "images/alchemy/speaker.jpg" },
             { type: "half",  srcs: ["images/alchemy/didactic-label.jpg", "images/alchemy/elevator-wayfinding.jpg"] },
-            { type: "full",  src: "images/alchemy/instagram.jpg" },
             { type: "full",  src: "images/alchemy/layouts.gif" },
             { type: "full",  src: "images/alchemy/guidelines.jpg" },
         ],
@@ -173,9 +172,12 @@ const projects = [
         slides: [
             { type: "full",  src: "images/dls/DLS-hero.gif" },
             { type: "half",  srcs: ["images/dls/gray-unit.gif", "images/dls/text-effect.gif"] },
-            { type: "full",  src: "images/dls/instagram.jpg" },
+            { type: "full",  src: "images/dls/layers.gif" },
+            { type: "half",  srcs: ["images/dls/ig-posts.gif", "images/dls/dls-collateral-6.jpg"] },            
             { type: "full",  src: "images/dls/gravity-demo.gif" },
             { type: "half",  srcs: ["images/dls/name-drop.gif", "images/dls/text-effect.gif"] },
+            { type: "full",  src: "images/dls/dylan-stabilized.gif" },
+
         ],
         links: [
         ],
