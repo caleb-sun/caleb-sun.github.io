@@ -478,8 +478,16 @@ function buildGallery() {
         slideshow.className = 'project-slideshow';
 
         // Info panel (left strip, rotated CCW)
-        const info = document.createElement('div');
+        const caseStudyLink = (project.links || []).find(function(l) { return l.caseStudy; });
+        const info = document.createElement(caseStudyLink ? 'a' : 'div');
         info.className = 'slideshow-info';
+        if (caseStudyLink) {
+            info.href = '#';
+            info.addEventListener('click', function(e) {
+                e.preventDefault();
+                openCaseStudy(caseStudyLink.caseStudy);
+            });
+        }
 
         const titleEl = document.createElement('p');
         titleEl.className = 'slideshow-title';

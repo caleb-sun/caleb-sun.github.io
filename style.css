@@ -160,7 +160,7 @@ html {
     src: url(fonts/Director-Regular.otf);
 }
 
-h1,p,sub, p>a{
+h1,p,sub, p>a, h1>a{
     font-family: 'director', sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -516,6 +516,13 @@ main ul:hover::-webkit-scrollbar-thumb {
     padding: 0.5em 0;
     box-sizing: border-box;
 }
+
+a.slideshow-info, a.slideshow-info:hover,
+a.slideshow-info:hover > * {
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
 
 .slideshow-info > * {
     writing-mode: vertical-rl;
