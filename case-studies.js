@@ -64,7 +64,13 @@ const caseStudies = {
             ]},
         ],
         images: [
-            { type: "full", src: "images/lifeblood/holdingbook.jpg" },
+            { type: "half", srcs: ["images/phipps2/billboard2.jpg", "images/phipps2/tshirt.jpg"] },
+            { type: "full",  src: "images/phipps2/ig-posts.jpg" },
+            { type: "half",  srcs: ["images/phipps2/ig-story1.jpg", "images/phipps2/outdoor-sign.jpg"] },
+            { type: "full",  src: "images/phipps2/billboard.jpg" },
+            { type: "half",  srcs: ["images/phipps2/logotype-animation.gif", "images/phipps2/leaf.gif"] },
+            { type: "half",  srcs: ["images/phipps2/business-cards.gif", "images/phipps2/signage.jpg"] },
+            { type: "full",  src: "images/phipps2/poster-templates.gif" },
         ],
     },
 };

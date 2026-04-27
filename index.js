@@ -91,7 +91,7 @@ const projects = [
         ],
         links: [
             { label: "Case Study", caseStudy: "lifeblood" },
-            // { label: "It's Nice That Feature", href: "#" },
+            { label: "X2 ADC 2026 Young Ones Winner" },
         ],
         description: "Lifeblood is a photobook series in celebration of a bygone era of gay bars in Pittsburgh. In collaboration with QBurgh, a contemporary digital queer magazine, this project brings new form to a recently recovered archive of photography from Pittsburgh's gay bars between the 1960's and mid-2000's. It explores how we might access and document queer archives, bringing order and clarity without oversimplifying these traditionally undocumented histories.",
         credits: [
@@ -601,12 +601,25 @@ function buildGallery() {
 
         if (project.description) {
             const descWrap = document.createElement('div');
+            descWrap.className = 'details-description';
             project.description.split('\n').forEach(function(line) {
                 const p = document.createElement('p');
                 p.textContent = line;
                 descWrap.appendChild(p);
             });
             rightCol.appendChild(descWrap);
+
+            let panelHovered = false;
+            rightCol.addEventListener('mouseenter', function() {
+                panelHovered = true;
+                descWrap.classList.remove('details-description');
+            });
+            rightCol.addEventListener('mouseleave', function() {
+                panelHovered = false;
+                setTimeout(function() {
+                    if (!panelHovered) descWrap.classList.add('details-description');
+                }, 310);
+            });
         }
 
         if (project.credits && project.credits.length) {
