@@ -91,7 +91,7 @@ const projects = [
         ],
         links: [
             { label: "Case Study", caseStudy: "lifeblood" },
-            { label: "X2 ADC 2026 Young Ones Winner" },
+            { label: "ADC 2026 Young Ones Silver, Bronze" },
         ],
         description: "Lifeblood is a photobook series in celebration of a bygone era of gay bars in Pittsburgh. In collaboration with QBurgh, a contemporary digital queer magazine, this project brings new form to a recently recovered archive of photography from Pittsburgh's gay bars between the 1960's and mid-2000's. It explores how we might access and document queer archives, bringing order and clarity without oversimplifying these traditionally undocumented histories.",
         credits: [
