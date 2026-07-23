@@ -454,7 +454,8 @@ main ul:hover::-webkit-scrollbar-thumb {
     width: 100%;
 }
 
-.cs-slide-full img {
+.cs-slide-full img,
+.cs-slide-full video {
     width: 100%;
     height: auto;
     display: block;
@@ -465,7 +466,8 @@ main ul:hover::-webkit-scrollbar-thumb {
     gap: 0.5em;
 }
 
-.cs-slide-half img {
+.cs-slide-half img,
+.cs-slide-half video {
     width: calc(50% - 0.25em);
     height: auto;
     display: block;

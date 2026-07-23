@@ -60,6 +60,58 @@ makeFollower('me', 'me-hover');
 makeFollower('eye', 'eye-hover');
 
 // =============================================
+// MEDIA HELPERS — lazy-loaded images & video
+//
+// Any "src"/"srcs" path ending in .mp4/.webm/.mov is rendered as a
+// muted, looping, autoplaying <video> instead of an <img>. Everything
+// else (buildGallery, buildCaseStudyGallery) creates elements through
+// createMediaEl() below, which defers the real src until the element
+// is about to enter the viewport (or, for slideshow slides, until the
+// user navigates to it) via the shared IntersectionObserver.
+// =============================================
+const VIDEO_EXTENSIONS = ['mp4', 'webm', 'mov'];
+
+function isVideoSrc(src) {
+    const ext = src.split('.').pop().toLowerCase();
+    return VIDEO_EXTENSIONS.includes(ext);
+}
+
+function createMediaEl(src, className) {
+    var el;
+    if (isVideoSrc(src)) {
+        el = document.createElement('video');
+        el.muted = true;
+        el.loop = true;
+        el.playsInline = true;
+        el.preload = 'none';
+    } else {
+        el = document.createElement('img');
+        el.draggable = false;
+    }
+    if (className) el.className = className;
+    el.dataset.src = src;
+    return el;
+}
+
+function loadMedia(el) {
+    mediaObserver.unobserve(el);
+    if (!el.dataset.src) return;
+    var src = el.dataset.src;
+    delete el.dataset.src;
+    el.src = src;
+    if (el.tagName === 'VIDEO') {
+        el.load();
+        el.play().catch(function() {});
+    }
+}
+
+const mediaObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) loadMedia(entry.target);
+    });
+}, { rootMargin: '400px 0px' });
+
+// =============================================
 // PROJECTS — edit this array to update the gallery
 //
 // Each project has:
@@ -68,6 +120,7 @@ makeFollower('eye', 'eye-hover');
 //   slides       — array of slides, each either:
 //                    { type: "full", src: "path/to/image.jpg" }
 //                    { type: "half", srcs: ["path/left.jpg", "path/right.jpg"] }
+//                  src/srcs accept .mp4/.webm/.mov too — see MEDIA HELPERS above
 //   links        — array of { label, href } or { label, caseStudy: "key" }
 //   description  — short paragraph shown on the right of the details panel
 //   credits      — array of { role, names: [{ name, href? }, ...] }
@@ -365,15 +418,15 @@ function buildCaseStudyGallery(cs) {
         const div = document.createElement('div');
         if (slide.type === 'full') {
             div.className = 'cs-slide cs-slide-full';
-            const img = document.createElement('img');
-            img.src = slide.src;
-            div.appendChild(img);
+            const media = createMediaEl(slide.src);
+            div.appendChild(media);
+            mediaObserver.observe(media);
         } else {
             div.className = 'cs-slide cs-slide-half';
             slide.srcs.forEach(function(src) {
-                const img = document.createElement('img');
-                img.src = src;
-                div.appendChild(img);
+                const media = createMediaEl(src);
+                div.appendChild(media);
+                mediaObserver.observe(media);
             });
         }
         wrap.appendChild(div);
@@ -515,18 +568,14 @@ function buildGallery() {
             div.className = 'slide' + (i === 0 ? ' active' : '');
 
             if (slide.type === 'full') {
-                const img = document.createElement('img');
-                img.src = slide.src;
-                img.className = 'slide-full';
-                img.draggable = false;
-                div.appendChild(img);
+                const media = createMediaEl(slide.src, 'slide-full');
+                div.appendChild(media);
+                mediaObserver.observe(media);
             } else {
                 slide.srcs.forEach(function(src) {
-                    const img = document.createElement('img');
-                    img.src = src;
-                    img.className = 'slide-half';
-                    img.draggable = false;
-                    div.appendChild(img);
+                    const media = createMediaEl(src, 'slide-half');
+                    div.appendChild(media);
+                    mediaObserver.observe(media);
                 });
             }
 
@@ -540,7 +589,9 @@ function buildGallery() {
         function goTo(n) {
             slideEls[stage._current].classList.remove('active');
             stage._current = ((n % total) + total) % total;
-            slideEls[stage._current].classList.add('active');
+            const activeSlide = slideEls[stage._current];
+            activeSlide.classList.add('active');
+            activeSlide.querySelectorAll('img[data-src], video[data-src]').forEach(loadMedia);
             counterEl.textContent = (stage._current + 1) + ' / ' + total;
         }
 
