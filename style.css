@@ -888,7 +888,7 @@ p.link:hover{
     }
 
     .details-links{
-        min-width: 7em;
+        max-width: 20vw;
     }
     
     .project-slideshow {
