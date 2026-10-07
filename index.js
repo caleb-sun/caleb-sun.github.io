@@ -127,6 +127,57 @@ const mediaObserver = new IntersectionObserver(function(entries) {
 //   tag          — "client" or "personal"
 // =============================================
 const projects = [
+    //{
+    //     title: "Gusto",
+    //     sub: "Brand Refresh — 2026",
+    //     tag: "client",
+    //     slides: [
+
+    //     ]
+    // }
+
+    {
+        title: "Calendly",
+        sub: "Brand Identity — 2026",
+        tag: "client",
+        slides: [
+            { type: "full",  src: "images/calendly/01_Calendly_Header_Textured_3x.jpg" },
+            { type: "half",  srcs: ["images/calendly/06_Calendly_App_Mockup.png", "images/calendly/07_Logo_Sequence.gif"] },
+            { type: "full",  src: "images/calendly/15_Calendly_WordmarkExplainer.gif" },
+            { type: "full",  src: "images/calendly/21_Calendly_Color_Picker.gif" },
+            { type: "full",  src: "images/calendly/22_Calendly_Colors.gif" },
+            { type: "full",  src: "images/calendly/28_Patternly.gif" },
+            { type: "full",  src: "images/calendly/33_Calendly_Type_Breakdown.jpg" },
+            { type: "full",  src: "images/calendly/29_Cal_Typography.jpg" },
+            { type: "full",  src: "images/calendly/34_Calendly_Product_Workflow_Screen.jpg" },
+            { type: "half",  srcs: ["images/calendly/37.2_Gloop_Loading_Motion.gif", "images/calendly/39.2_Calendly_InProdut_Graphics.gif"] },
+        ],
+        links: [
+            { label: "Smith & Diction Case Study", href: "https://medium.com/smith-diction/branding-calendly-d86116281a52"  },
+            { label: "Calendly Website", href: "https://calendly.com"  },
+            { label: "Fast Company", href: "https://www.fastcompany.com/91594105/calendly-gets-a-rippling-gloopy-rebrand-for-the-ai-age"},
+        ],
+        description: "Calendly is a beloved scheduling tool that helps people save time and reduce stress. This new brand identity was designed to reflect the company's repositioning towards a full suite of workplace tools, while maintaining the approachable and friendly tone that users love.",
+        credits: [
+            { role: "Creative Direction + Strategy + Copywriting", names: [{"name": "Chara Smith", href: "https://www.linkedin.com/in/charasmith/"}] },
+            { role: "Art Direction", names: [{"name": "Mike Smith", href: "https://smith-diction.com/" }] },
+            { role: "Brand Design", names: [
+                {"name": "Summer McClure", href: "https://summermcclure.xyz/" }, 
+                {"name": "Dayan D’Aniello", href: "https://day-and.co/"}, 
+                { name: "Tully Ryan", href:"https://www.instagram.com/tullyryanstudio/" },
+                "Caleb Sun",
+                 {"name": "Gavin Potenza", href: "https://datalands.co/"},
+                {"name": "Judson Collier", href: "https://studiojud.com/"},
+            ]},
+            { role: "Motion Design", names: [
+                { name: "Tully Ryan", href:"https://www.instagram.com/tullyryanstudio/" },
+                    "Caleb Sun",
+                { name: "James Dybvig", href:"https://www.ajamesd.com/" },
+                { name: "Justin Lawes", href:"https://justinlawes.com/" },
+            ]},
+        ],
+    },
+    
     {
         title: "Lifeblood",
         sub: "Publication — 2026",
@@ -238,7 +289,7 @@ const projects = [
         credits: [
             { role: "Design", names: [
                 { name: "Caleb Sun"},
-                { name: "Amber Li", href: "https://amberjinli.com/" },
+                { name: "Amber Li &#8599;", href: "https://amberjinli.com/" },
             ]},
         ]
     },
@@ -275,7 +326,7 @@ const projects = [
         credits: [
             { role: "Design", names: [
                 { name: "Caleb Sun"},
-                { name: "Ricky Chen", href: "linkedin.com/in/rckychen/" },
+                { name: "Ricky Chen", href: "https://www.linkedin.com/in/rckychen/" },
             ]},
         ]
     },
@@ -293,7 +344,6 @@ const projects = [
         ],
         links: [
         ],
-        description: "Various projects from across the years",
     },
 ];
 
@@ -373,11 +423,12 @@ function buildCaseStudyHome(cs) {
             role.className = 'credits-role';
             role.textContent = credit.role;
             item.appendChild(role);
-            credit.names.forEach(function(entry) {
-                const nameEl = document.createElement('p');
-                nameEl.className = 'credits-name';
+            const nameEl = document.createElement('p');
+            nameEl.className = 'credits-name';
+            credit.names.forEach(function(entry, i) {
+                if (i > 0) nameEl.appendChild(document.createTextNode(', '));
                 if (typeof entry === 'string') {
-                    nameEl.textContent = entry;
+                    nameEl.appendChild(document.createTextNode(entry));
                 } else if (entry.href) {
                     const a = document.createElement('a');
                     a.href = entry.href;
@@ -385,10 +436,10 @@ function buildCaseStudyHome(cs) {
                     a.textContent = entry.name;
                     nameEl.appendChild(a);
                 } else {
-                    nameEl.textContent = entry.name;
+                    nameEl.appendChild(document.createTextNode(entry.name));
                 }
-                item.appendChild(nameEl);
             });
+            item.appendChild(nameEl);
             creditsList.appendChild(item);
         });
         projectBody.appendChild(creditsList);
@@ -661,11 +712,11 @@ function buildGallery() {
             rightCol.appendChild(descWrap);
 
             let panelHovered = false;
-            rightCol.addEventListener('mouseenter', function() {
+            content.addEventListener('mouseenter', function() {
                 panelHovered = true;
                 descWrap.classList.remove('details-description');
             });
-            rightCol.addEventListener('mouseleave', function() {
+            content.addEventListener('mouseleave', function() {
                 panelHovered = false;
                 setTimeout(function() {
                     if (!panelHovered) descWrap.classList.add('details-description');
@@ -686,11 +737,12 @@ function buildGallery() {
                 role.textContent = credit.role;
                 item.appendChild(role);
 
-                credit.names.forEach(function(entry) {
-                    const nameEl = document.createElement('p');
-                    nameEl.className = 'credits-name';
+                const nameEl = document.createElement('p');
+                nameEl.className = 'credits-name';
+                credit.names.forEach(function(entry, i) {
+                    if (i > 0) nameEl.appendChild(document.createTextNode(', '));
                     if (typeof entry === 'string') {
-                        nameEl.textContent = entry;
+                        nameEl.appendChild(document.createTextNode(entry));
                     } else if (entry.href) {
                         const a = document.createElement('a');
                         a.href = entry.href;
@@ -698,10 +750,10 @@ function buildGallery() {
                         a.textContent = entry.name;
                         nameEl.appendChild(a);
                     } else {
-                        nameEl.textContent = entry.name;
+                        nameEl.appendChild(document.createTextNode(entry.name));
                     }
-                    item.appendChild(nameEl);
                 });
+                item.appendChild(nameEl);
 
                 creditsList.appendChild(item);
             });

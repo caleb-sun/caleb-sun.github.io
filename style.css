@@ -135,9 +135,9 @@ table {
     --background: #f2f2f1;
     --backgroundGray:#e9e9e6;
     --textBase: #45453A;
-    --border: rgb(0, 0, 0);
+    --border: #b7b7b5;
     --highlight: #12D001;
-    --textSub:#93938f;
+    --textSub:#a5a5a4;
 }
 
 /* html */
@@ -169,7 +169,7 @@ h1,p,sub, p>a, h1>a{
 }
 
 sub>a:hover, p>a:hover, a:hover>p, a:hover>sub, a:hover, .back-button:hover{
-    text-decoration: underline dotted 2px !important;
+    text-decoration: underline solid 1px !important;
     text-underline-offset: 3px;
     cursor: crosshair !important;
 }
@@ -177,19 +177,19 @@ sub>a:hover, p>a:hover, a:hover>p, a:hover>sub, a:hover, .back-button:hover{
 /* type sizing */
 
 h1{
-    font-size: 20pt;
-    line-height: 24pt;
+    font-size: 18pt;
+    line-height: 20pt;
     vertical-align: top;
     /* text-transform: uppercase; */
 }
 
 p{
-    font-size: 11pt;
-    line-height: 16pt;
+    font-size: 9.5pt;
+    line-height: 14pt;
 }
 
 strong{
-    font-size: 9pt;
+    font-size: 7.5pt;
     margin-bottom: 14px;
     vertical-align: super;
         color:var(--textSub);
@@ -198,7 +198,7 @@ strong{
 
 
 sub.link {
-    font-size: 9pt;
+    font-size: 7.5pt;
 }
 
 a:link{
@@ -222,8 +222,8 @@ a:visited{
 }
 
 sub, sub>a {
-    font-size: 8pt;
-    line-height:11pt;
+    font-size: 7.5pt;
+    line-height:9pt;
     color:var(--textSub);
 }
 
@@ -236,7 +236,7 @@ main{
     flex-direction: row;
     justify-content: space-between;
     height: 100vh;
-    padding-left: 1em;
+    /* padding-left: 1em; */
     margin-right: 3em;
 }
 
@@ -263,7 +263,7 @@ main ul::-webkit-scrollbar-track {
 
 main ul::-webkit-scrollbar-thumb {
     background-color: transparent;
-    border-radius: 2px;
+    border-radius: 1px;
     transition: background-color 0.4s ease;
 }
 
@@ -278,7 +278,7 @@ main ul:hover::-webkit-scrollbar-thumb {
 }
 
 .home{
-    padding: 1em;
+    padding: 1.5em 2em;
     box-sizing: border-box;
 }
 
@@ -328,10 +328,6 @@ main ul:hover::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column;
     width: 40%;
-}
-
-.home{
-    padding-right: 5%;
 }
 
 .project{
@@ -409,6 +405,7 @@ main ul:hover::-webkit-scrollbar-thumb {
 .credits-role{
     width: 100%;
     margin-bottom: 1em;
+    text-transform: uppercase;
 }
 
 .credits-list{
@@ -417,10 +414,17 @@ main ul:hover::-webkit-scrollbar-thumb {
     gap: 1.5em;
 }
 
+.about-list{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+}
+
 .credits-item{
     display: flex;
     flex-direction: column;
 }
+
 
 .credits-item a:nth-child(1), .colophon>sub:nth-child(n+3){
     margin-top: 0.5em;
@@ -473,6 +477,11 @@ main ul:hover::-webkit-scrollbar-thumb {
     display: block;
 }
 
+
+.border{
+    border-top: 1px solid var(--border);
+    margin-bottom: 0.7em;
+}
 /* gallery */
 
 .gallery {
@@ -481,8 +490,8 @@ main ul:hover::-webkit-scrollbar-thumb {
     gap: 1em;
     width: 62%;
     margin-left: 0.1em;
-    padding: 1em 0.1em 1em 0em;
-    border-left: 2px dotted var(--border);
+    padding: 1.5em 0.1em 1.5em 0em;
+    border-left: 1px solid var(--border);
 }
 
 .gallery-item {
@@ -590,8 +599,8 @@ a.slideshow-info:hover > * {
 .project-details-panel {
     padding-left: 3.2em;
     overflow: hidden;
-    max-height: 3.75em;
-    margin-bottom: 2em;
+    max-height: calc(3.75em + 14pt);
+    margin-bottom: 1.5em;
     transition: max-height 0.3s ease, margin-bottom 0.3s ease;
     position: relative;
     cursor: default;
@@ -600,12 +609,12 @@ a.slideshow-info:hover > * {
 .details-description {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
     overflow: hidden;
 }
 
-.project-details-panel:has(.details-right:hover) {
+.project-details-panel:has(.project-details-content:hover) {
     max-height: 1000px;
     margin-bottom: 3em;
 }
@@ -659,7 +668,7 @@ a.slideshow-info:hover > * {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: var(--border) 2px dotted;
+    border-bottom: var(--border) 1px solid;
     position: fixed;
 }
 
@@ -869,7 +878,7 @@ p.link:hover{
 
     .gallery{
         margin-top: 1em;
-        border-top: 2px dotted var(--textBase);
+        border-top: 2px solid var(--textBase);
         padding-bottom: 5em;
         gap: 2em;
     }
@@ -923,7 +932,7 @@ p.link:hover{
         right: 0;
         left: 0;
         border-bottom: none;
-        border-top: var(--border) 2px dotted;
+        border-top: var(--border) 2px solid;
         background-color: var(--background);
         z-index: 100;
     }

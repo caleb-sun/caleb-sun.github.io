@@ -8,6 +8,7 @@
 // collaboration — optional { label, href } shown as "In collaboration with ___"
 // =============================================
 const caseStudies = {
+
     lifeblood: {
         title: "Lifeblood",
         sub: "Undergraduate Thesis — 2026",
