@@ -488,7 +488,7 @@ main ul:hover::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    width: 62%;
+    width: 70%;
     margin-left: 0.1em;
     padding: 1.5em 0.1em 1.5em 0em;
     border-left: 1px solid var(--border);
