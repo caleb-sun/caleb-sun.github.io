@@ -289,7 +289,7 @@ const projects = [
         credits: [
             { role: "Design", names: [
                 { name: "Caleb Sun"},
-                { name: "Amber Li &#8599;", href: "https://amberjinli.com/" },
+                { name: "Amber Li", href: "https://amberjinli.com/" },
             ]},
         ]
     },
