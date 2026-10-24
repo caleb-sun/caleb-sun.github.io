@@ -160,7 +160,7 @@ html {
     src: url(fonts/Director-Regular.otf);
 }
 
-h1,p,sub, p>a, h1>a{
+h1,h2,p,sub, p>a, h1>a, strong{
     font-family: 'director', sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -168,11 +168,18 @@ h1,p,sub, p>a, h1>a{
     color: var(--textBase);
 }
 
-sub>a:hover, p>a:hover, a:hover>p, a:hover>sub, a:hover, .back-button:hover{
+h2>a{
+    color: var(--textBase);
+    text-decoration:none;
+}
+
+sub>a:hover, p>a:hover, a:hover>p, a:hover>sub, a:hover, .back-button:hover, h2>a:hover{
     text-decoration: underline solid 1px !important;
     text-underline-offset: 3px;
     cursor: crosshair !important;
 }
+
+
 
 /* type sizing */
 
@@ -183,17 +190,22 @@ h1{
     /* text-transform: uppercase; */
 }
 
+h2{
+    font-size:14pt;
+    line-height: 18pt;
+
+}
+
 p{
     font-size: 9.5pt;
     line-height: 14pt;
 }
 
-strong{
+strong, strong>a{
     font-size: 7.5pt;
     margin-bottom: 14px;
     vertical-align: super;
-        color:var(--textSub);
-
+    color:var(--textSub);
 }
 
 
@@ -216,10 +228,10 @@ a:hover>sub{
 a:active{
     text-decoration: none;
 }
-
+/* 
 a:visited{
     color: var(--textBase) !important;
-}
+} */
 
 sub, sub>a {
     font-size: 7.5pt;
@@ -420,6 +432,8 @@ main ul:hover::-webkit-scrollbar-thumb {
     gap: 2.5em;
 }
 
+.subpage .credits-item{}
+
 .credits-item{
     display: flex;
     flex-direction: column;
@@ -483,6 +497,42 @@ main ul:hover::-webkit-scrollbar-thumb {
     margin-bottom: 0.7em;
 }
 /* gallery */
+
+.subpage{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    width: 70%;
+    margin-left: 0.1em;
+    /* match .gallery padding so both shrink identically next to .home */
+    padding: 1.75em 0.1em 10em 0em;
+    border-left: 1px solid var(--border);
+    box-sizing: border-box;
+    /* gap: 1em; */
+}
+
+.subpage ul{
+    padding-left:2em;
+    overflow: visible;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-left: 7.5em;
+
+}
+
+.columns{
+    display:flex;
+    flex-direction: row;
+    /* gap: 1em; */
+    /* width:100%; */
+}
+
+.columns strong{
+    width: 15em;
+}
+
 
 .gallery {
     display: flex;
@@ -682,7 +732,7 @@ a.slideshow-info:hover > * {
     display: flex;
     flex-direction: row;
     gap: 1em;
-    width: 25%;
+    width: 35%;
     align-items: baseline;
 }
 
@@ -852,7 +902,7 @@ p.link:hover{
         margin-top: 4em;
     }
 
-    .home, .gallery, .gallery-item {
+    .home, .gallery, .subpage, .gallery-item {
         width: 100%;
         margin: 0;
         padding: 0;
@@ -870,13 +920,17 @@ p.link:hover{
         margin-top: 0;
     }
 
-    .home, .gallery{
+    .home, .gallery, .subpage{
         padding: 1.5em 1.5em 0.5em 1.5em;
         box-sizing: border-box;
     }
 
+    .subpage > * {
+        padding: 0;
+    }
 
-    .gallery{
+
+    .gallery, .subpage{
         margin-top: 1em;
         border-top: 2px solid var(--textBase);
         padding-bottom: 5em;
