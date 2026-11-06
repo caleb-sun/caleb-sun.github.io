@@ -206,6 +206,27 @@ const projects = [
         ]
     },
     {
+        title: "South Philly Survival Guide",
+        sub: "Publication — 2026",
+        tag: "personal",
+        slides: [
+            { type: "full",  src: "images/survival-guide/exterior-cover.jpg" },
+            { type: "half",  srcs: ["images/survival-guide/interior-cover.jpg", "images/survival-guide/spreads.jpg"] },
+            
+        ],
+        links: [
+            { label: "Shop", href: "https://smithdiction.bigcartel.com/product/south-philly-survival-guide" },
+        ],
+        description: "A guide to top picks in South Philly. Designed, photographed, and printed in Philadelphia, PA.",
+        credits: [
+            { role: "Design", names: ["Caleb Sun"] },
+            { role: "Print", names: [
+                { name: "Fireball Printing (Exterior)", href: "https://fireballprinting.com/" },
+                { name: "Pet Riso Studio (Interior)", href: "https://www.petrisostudio.com/about" }
+            ] }
+        ]
+    },
+    {
         title: "Phipps",
         sub: "Brand Identity — 2025",
         tag: "personal",
@@ -501,6 +522,8 @@ function openCaseStudy(key) {
         savedGalleryNodes = document.createDocumentFragment();
         while (galleryUl.firstChild) savedGalleryNodes.appendChild(galleryUl.firstChild);
 
+        galleryUl.classList.remove('grid-view');
+
         const homeContent = buildCaseStudyHome(cs);
         homeUl.appendChild(homeContent);
         homeUl.querySelector('[data-back]').addEventListener('click', closeCaseStudy);
@@ -539,24 +562,15 @@ function closeCaseStudy() {
         savedHomeNodes = null;
         savedGalleryNodes = null;
         caseStudyOpen = false;
+        galleryUl.classList.toggle('grid-view', currentView === 'grid');
 
-        galleryUl.querySelectorAll('.slideshow-stage').forEach(function(stage) {
-            const slides = stage.querySelectorAll('.slide');
-            const counter = stage.closest('.project-slideshow').querySelector('.slideshow-counter');
-            slides.forEach(function(s) { s.classList.remove('active'); });
-            if (slides.length) {
-                slides[0].classList.add('active');
-                stage._current = 0;
-                if (counter) counter.textContent = '1 / ' + slides.length;
-            }
-        });
+        resetSlideshows(galleryUl);
 
         const navTags = document.querySelector('.right-nav-tags');
         navTags.innerHTML =
-            '<a id="all"><sub>All</sub></a>' +
-            '<a id="client"><sub>Client</sub></a>' +
-            '<a id="personal"><sub>Personal</sub></a>';
-        bindFilterListeners();
+            '<a id="list"><sub>List</sub></a>' +
+            '<a id="grid"><sub>Grid</sub></a>';
+        bindViewListeners();
 
         homeUl.getBoundingClientRect();
         homeUl.classList.remove('col-fading');
@@ -567,12 +581,12 @@ function closeCaseStudy() {
 // =============================================
 // GALLERY RENDERING — no need to edit below
 // =============================================
+let currentView = 'list';  // 'list' | 'grid' — see VIEW TOGGLE below
+
 function buildGallery() {
     const gallery = document.getElementById('gallery');
 
     projects.forEach(function(project) {
-        const total = project.slides.length;
-
         // Wrapper
         const li = document.createElement('li');
         li.className = 'gallery-item';
@@ -585,13 +599,17 @@ function buildGallery() {
         const caseStudyLink = (project.links || []).find(function(l) { return l.caseStudy; });
         const info = document.createElement(caseStudyLink ? 'a' : 'div');
         info.className = 'slideshow-info';
-        if (caseStudyLink) {
-            info.href = '#';
-            info.addEventListener('click', function(e) {
+        if (caseStudyLink) info.href = '#';
+        info.addEventListener('click', function(e) {
+            // Grid: jump to this project in list view; list: open case study
+            if (currentView === 'grid') {
+                e.preventDefault();
+                setView('list', function() { scrollToItem(li); });
+            } else if (caseStudyLink) {
                 e.preventDefault();
                 openCaseStudy(caseStudyLink.caseStudy);
-            });
-        }
+            }
+        });
 
         const titleEl = document.createElement('p');
         titleEl.className = 'slideshow-title';
@@ -603,7 +621,6 @@ function buildGallery() {
 
         const counterEl = document.createElement('sub');
         counterEl.className = 'slideshow-counter';
-        counterEl.textContent = '1 / ' + total;
 
         info.appendChild(titleEl);
         info.appendChild(subEl);
@@ -613,47 +630,58 @@ function buildGallery() {
         const stage = document.createElement('div');
         stage.className = 'slideshow-stage';
 
-        // Build slide elements
-        const slideEls = project.slides.map(function(slide, i) {
+        // Build slide elements — half slides get a list-only side-by-side
+        // slide plus one grid-only slide per image
+        const slideEls = [];
+        function addSlide(srcs, mediaClass, only) {
             const div = document.createElement('div');
-            div.className = 'slide' + (i === 0 ? ' active' : '');
-
-            if (slide.type === 'full') {
-                const media = createMediaEl(slide.src, 'slide-full');
+            div.className = 'slide' + (only ? ' ' + only : '');
+            srcs.forEach(function(src) {
+                const media = createMediaEl(src, mediaClass);
                 div.appendChild(media);
                 mediaObserver.observe(media);
-            } else {
-                slide.srcs.forEach(function(src) {
-                    const media = createMediaEl(src, 'slide-half');
-                    div.appendChild(media);
-                    mediaObserver.observe(media);
-                });
-            }
-
+            });
             stage.appendChild(div);
-            return div;
+            slideEls.push(div);
+        }
+        project.slides.forEach(function(slide) {
+            if (slide.type === 'full') {
+                addSlide([slide.src], 'slide-full');
+            } else {
+                addSlide(slide.srcs, 'slide-half', 'list-only');
+                slide.srcs.forEach(function(src) { addSlide([src], 'slide-full', 'grid-only'); });
+            }
         });
 
-        stage._current = 0;
-
-        // Navigate to slide n
-        function goTo(n) {
-            slideEls[stage._current].classList.remove('active');
-            stage._current = ((n % total) + total) % total;
-            const activeSlide = slideEls[stage._current];
-            activeSlide.classList.add('active');
-            activeSlide.querySelectorAll('img[data-src], video[data-src]').forEach(loadMedia);
-            counterEl.textContent = (stage._current + 1) + ' / ' + total;
+        // Slides that belong to the current view
+        function viewSlides() {
+            const skip = currentView === 'grid' ? 'list-only' : 'grid-only';
+            return slideEls.filter(function(el) { return !el.classList.contains(skip); });
         }
+
+        // Navigate to slide n (load = force-load its media now)
+        function goTo(n, load) {
+            const slides = viewSlides();
+            slideEls.forEach(function(el) { el.classList.remove('active'); });
+            stage._current = ((n % slides.length) + slides.length) % slides.length;
+            const activeSlide = slides[stage._current];
+            activeSlide.classList.add('active');
+            if (load) activeSlide.querySelectorAll('img[data-src], video[data-src]').forEach(loadMedia);
+            counterEl.textContent = (stage._current + 1) + ' / ' + slides.length;
+        }
+
+        // Back to the first slide of the current view (lazy-loads via observer)
+        stage._reset = function() { goTo(0, false); };
+        stage._reset();
 
         // Click left half = previous, right half = next
         stage.addEventListener('click', function(e) {
             const rect = stage.getBoundingClientRect();
             const x = e.clientX - rect.left;
             if (x < rect.width / 2) {
-                goTo(stage._current - 1);
+                goTo(stage._current - 1, true);
             } else {
-                goTo(stage._current + 1);
+                goTo(stage._current + 1, true);
             }
         });
 
@@ -775,42 +803,54 @@ function buildGallery() {
 buildGallery();
 
 // =============================================
-// FILTERING
+// VIEW TOGGLE — list / grid
 // =============================================
-function filterGallery(tag) {
-    var items = document.querySelectorAll('.gallery-item');
-
-    items.forEach(function(item) {
-        var match = tag === 'all' || item.dataset.tag === tag;
-
-        if (match) {
-            item.style.display = '';
-            item.getBoundingClientRect();
-            item.classList.remove('filtered-out');
-        } else {
-            item.classList.add('filtered-out');
-            item.addEventListener('transitionend', function hide() {
-                if (item.classList.contains('filtered-out')) {
-                    item.style.display = 'none';
-                }
-                item.removeEventListener('transitionend', hide);
-            });
-        }
-    });
-
+// onSwap runs once the new layout is in place, before items fade back in
+function setView(view, onSwap) {
     document.querySelectorAll('.right-nav-tags a').forEach(function(a) {
-        a.classList.toggle('nav-active', a.id === tag);
+        a.classList.toggle('nav-active', a.id === view);
+    });
+    if (view === currentView) return;
+    currentView = view;
+
+    // Fade only the items so the column's border line stays visible
+    const galleryUl = document.getElementById('gallery');
+    galleryUl.classList.add('view-fading');
+    galleryUl.addEventListener('transitionend', function swap(e) {
+        if (!e.target.classList.contains('gallery-item') || e.propertyName !== 'opacity') return;
+        galleryUl.removeEventListener('transitionend', swap);
+        galleryUl.classList.toggle('grid-view', currentView === 'grid');
+        resetSlideshows(galleryUl);
+        galleryUl.scrollTop = 0;
+        if (onSwap) onSwap();
+        galleryUl.getBoundingClientRect();
+        galleryUl.classList.remove('view-fading');
     });
 }
 
-function bindFilterListeners() {
-    document.getElementById('all').addEventListener('click',      function() { filterGallery('all'); });
-    document.getElementById('client').addEventListener('click',   function() { filterGallery('client'); });
-    document.getElementById('personal').addEventListener('click', function() { filterGallery('personal'); });
-    document.getElementById('all').classList.add('nav-active');
+// Scroll a gallery item to the top — the gallery column scrolls on
+// desktop, the page scrolls on mobile. offsetTop ignores the fade transform.
+function scrollToItem(li) {
+    const galleryUl = document.getElementById('gallery');
+    if (galleryUl.scrollHeight > galleryUl.clientHeight) {
+        const padTop = parseFloat(getComputedStyle(galleryUl).paddingTop);
+        galleryUl.scrollTop = li.offsetTop - galleryUl.offsetTop - padTop;
+    } else {
+        window.scrollTo(0, li.offsetTop);
+    }
 }
 
-bindFilterListeners();
+function resetSlideshows(root) {
+    root.querySelectorAll('.slideshow-stage').forEach(function(stage) { stage._reset(); });
+}
+
+function bindViewListeners() {
+    document.getElementById('list').addEventListener('click', function() { setView('list'); });
+    document.getElementById('grid').addEventListener('click', function() { setView('grid'); });
+    document.getElementById(currentView).classList.add('nav-active');
+}
+
+bindViewListeners();
 
 // =============================================
 // CLOCK
