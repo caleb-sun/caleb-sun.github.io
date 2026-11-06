@@ -315,22 +315,22 @@ const projects = [
         ]
     },
 
-    {
-        title: "Tickets to Mecca",
-        sub: "Data Vis — 2024",
-        tag: "personal",
-        slides: [
-            { type: "full",  src: "images/tickets-to-mecca/hero.gif" },
-            { type: "full",  src: "images/tickets-to-mecca/label-legend.gif" },
-            { type: "half",  srcs: ["images/tickets-to-mecca/photo-cameroon-individual.JPG", "images/tickets-to-mecca/photo-group.JPG"] },
-        ],
-        links: [
-        ],
-        description: "Data visualization of the visas issued for the 2024 Mecca pilgrimage to Saudi Arabia. Each ticket represents 5000 visas to their corresponding countries with information on region, relative cost, and population.",
-        credits: [
-            { role: "Design", names: ["Caleb Sun"] },
-        ]
-    },
+    // {
+    //     title: "Tickets to Mecca",
+    //     sub: "Data Vis — 2024",
+    //     tag: "personal",
+    //     slides: [
+    //         { type: "full",  src: "images/tickets-to-mecca/hero.gif" },
+    //         { type: "full",  src: "images/tickets-to-mecca/label-legend.gif" },
+    //         { type: "half",  srcs: ["images/tickets-to-mecca/photo-cameroon-individual.JPG", "images/tickets-to-mecca/photo-group.JPG"] },
+    //     ],
+    //     links: [
+    //     ],
+    //     description: "Data visualization of the visas issued for the 2024 Mecca pilgrimage to Saudi Arabia. Each ticket represents 5000 visas to their corresponding countries with information on region, relative cost, and population.",
+    //     credits: [
+    //         { role: "Design", names: ["Caleb Sun"] },
+    //     ]
+    // },
 
     {
         title: "Memory of a Monarch",
