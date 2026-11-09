@@ -184,8 +184,8 @@ sub>a:hover, p>a:hover, a:hover>p, a:hover>sub, a:hover, .back-button:hover, h2>
 /* type sizing */
 
 h1{
-    font-size: 18pt;
-    line-height: 20pt;
+    font-size: 14pt;
+    line-height: 16pt;
     vertical-align: top;
     /* text-transform: uppercase; */
 }
@@ -290,6 +290,7 @@ main ul:hover::-webkit-scrollbar-thumb {
 }
 
 .home{
+    flex: 0 0 29vw;  /* fixed at 29% of the screen; .gallery/.subpage fill the rest */
     padding: 1.5em 2em;
     box-sizing: border-box;
 }
@@ -502,9 +503,9 @@ main ul:hover::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: row;
     gap: 1em;
-    width: 70%;
+    flex: 1;
+    min-width: 0;
     margin-left: 0.1em;
-    /* match .gallery padding so both shrink identically next to .home */
     padding: 1.75em 0.1em 10em 0em;
     border-left: 1px solid var(--border);
     box-sizing: border-box;
@@ -538,7 +539,8 @@ main ul:hover::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    width: 70%;
+    flex: 1;
+    min-width: 0;
     margin-left: 0.1em;
     padding: 1.5em 0.1em 1.5em 0em;
     border-left: 1px solid var(--border);
@@ -563,7 +565,8 @@ main ul:hover::-webkit-scrollbar-thumb {
 
 .gallery.grid-view {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* minmax(0, …) keeps columns equal even when a title is wider */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     align-content: start;
     column-gap: 0;
     row-gap: 1.5em;
@@ -593,6 +596,17 @@ main ul:hover::-webkit-scrollbar-thumb {
 .grid-view .slideshow-info > * {
     writing-mode: horizontal-tb;
     width: auto;
+}
+
+.grid-view .slideshow-title {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.grid-view .slideshow-counter {
+    flex-shrink: 0;
+    padding-left: 0.5em;
 }
 
 .grid-view .slideshow-sub,
@@ -886,6 +900,10 @@ p.link:hover{
     .details-links{
         min-width: 7em;
     }
+    .gallery.grid-view {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 1.5em;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -944,6 +962,7 @@ p.link:hover{
     }
 
     .home, .gallery, .subpage, .gallery-item {
+        flex: none;
         width: 100%;
         margin: 0;
         padding: 0;
@@ -978,10 +997,7 @@ p.link:hover{
         gap: 2em;
     }
 
-    .gallery.grid-view {
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 1.5em;
-    }
+    
 
     .grid-view .gallery-item {
         padding: 0 0.25em;
